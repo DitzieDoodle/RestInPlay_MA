@@ -3334,6 +3334,7 @@ GameObject:
   - component: {fileID: 1777314108}
   - component: {fileID: 1777314107}
   - component: {fileID: 1777314112}
+  - component: {fileID: 1777314113}
   m_Layer: 0
   m_Name: Spine GameObject (skeleton)
   m_TagString: Untagged
@@ -3495,6 +3496,20 @@ MonoBehaviour:
   - {r: 0.62357605, g: 0.7474726, b: 0.764151, a: 1}
   - {r: 0.8915094, g: 0.9819182, b: 1, a: 1}
   - {r: 0.1981132, g: 0.1981132, b: 0.1981132, a: 1}
+--- !u!114 &1777314113
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1777314106}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c96841636e76bde4eb928151d453c2cd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  skeletonRenderer: {fileID: 1777314108}
+  targetColor: {r: 1, g: 0.18396229, b: 0.18396229, a: 1}
 --- !u!1 &1838040704
 GameObject:
   m_ObjectHideFlags: 0
