@@ -54,7 +54,7 @@ namespace Spine.Unity {
 			skeleton.B = color.b * ByteToFloat;
 		}
 
-		public static void SetColor (this Slot slot, Color color) {
+		public static void SetColor (this Slot slot, float r, Color color) {
 			slot.A = color.a;
 			slot.R = color.r;
 			slot.G = color.g;
