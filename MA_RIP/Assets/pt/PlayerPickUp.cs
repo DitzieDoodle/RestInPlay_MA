@@ -59,7 +59,7 @@ public class PlayerPickUp : MonoBehaviour
         isHolding = true;
 
         // Setze das Objekt als Kind des Spielers und halte es an der richtigen Position
-        pickedObject.transform.SetParent(transform);
+        pickedObject.transform.SetParent(transform, true);
         pickedObject.GetComponent<Rigidbody>().isKinematic = true;
 
         // Call the OnPickup method from the PickupItem script
@@ -71,7 +71,7 @@ public class PlayerPickUp : MonoBehaviour
         if (pickedObject != null)
         {
             pickedObject.GetComponent<Rigidbody>().isKinematic = false;
-            pickedObject.transform.SetParent(null);  // Objekt wird vom Spieler getrennt
+            pickedObject.transform.SetParent(null, true);  // Objekt wird vom Spieler getrennt
 
             // Call the OnDrop method from the PickupItem script
             pickedObject.GetComponent<PickUpItem>().OnDrop();

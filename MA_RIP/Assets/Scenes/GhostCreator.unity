@@ -3486,6 +3486,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   skeletonAnimation: {fileID: 1777314108}
+  prevColorButton: {fileID: 504435779}
   nextColorButton: {fileID: 765126720}
   colorPreview: {fileID: 1664838161}
   colorArray:
