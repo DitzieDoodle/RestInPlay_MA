@@ -3,10 +3,12 @@ using UnityEngine.UI;
 using Spine.Unity;
 using Slot = Spine.Slot;
 using UnityColor = UnityEngine.Color;
+using System;
 
 public class GhostColorPicker : MonoBehaviour
 {
     [SerializeField] private SkeletonAnimation skeletonAnimation;
+    [SerializeField] private Button prevColorButton;
     [SerializeField] private Button nextColorButton;
     [SerializeField] private Image colorPreview;
 
@@ -15,6 +17,8 @@ public class GhostColorPicker : MonoBehaviour
     private int currentColorIndex = 0;
 
     private string targetSlotName = "Bodies";  // Der Slot, den wir einfärben
+
+    public Color CurrentColor => colorArray[currentColorIndex];
 
     void Start()
     {
@@ -25,17 +29,18 @@ public class GhostColorPicker : MonoBehaviour
 
         // Füge Listener für Button hinzu
         nextColorButton.onClick.AddListener(ChangeToNextColor);
+        prevColorButton.onClick.AddListener(ChangeToPreviousColor);
     }
 
     public void ChangeToNextColor()
     {
-        currentColorIndex = (currentColorIndex + 1) % colorArray.Length;  // Nächster Index
+        currentColorIndex = mod(currentColorIndex + 1,  colorArray.Length);  // Nächster Index
         UpdateColor();
     }
 
     public void ChangeToPreviousColor()
     {
-        currentColorIndex = (currentColorIndex - 1) % colorArray.Length;  // Nächster Index
+        currentColorIndex = (currentColorIndex - 1 + colorArray.Length) % colorArray.Length;  // Negative Modulo verhindern
         UpdateColor();
     }
 
@@ -60,15 +65,22 @@ public class GhostColorPicker : MonoBehaviour
         }
 
         // Direkt die RGBA-Werte setzen
-        slot.R = color.r;
-        slot.G = color.g;
-        slot.B = color.b;
-        slot.A = color.a;
+        //slot.R = color.r;
+        //slot.G = color.g;
+        //slot.B = color.b;
+        //slot.A = color.a;
+
+        slot.SetColor(color);
 
         // Update das Skelett, damit Änderungen sichtbar werden
-        skeletonAnimation.Skeleton.SetToSetupPose();
+        //skeletonAnimation.Skeleton.SetToSetupPose();
         skeletonAnimation.Update(0);  // Dies sollte das Skelett aktualisieren
         skeletonAnimation.LateUpdate();  // Überprüfe, ob das zu einer sichtbaren Änderung führt
     
-}
+    }
+
+    int mod(int x, int m)
+    {
+        return (x % m + m) % m;
+    }
 }

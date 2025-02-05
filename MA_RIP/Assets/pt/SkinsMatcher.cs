@@ -6,6 +6,7 @@ using UnityEngine.UI;  // Hier fügen wir den Namespace für UI hinzu, damit wir B
 public class SkinsMatcher : MonoBehaviour
 {
     [SerializeField] private SkeletonAnimation skeletonAnimation; // Referenz zum Spine-Charakter
+    [SerializeField] private GhostColorPicker colorPicker;
     private Skin combinedSkin;  // Der kombinierte Skin
 
     // Arrays der Skin-Namen
@@ -25,6 +26,9 @@ public class SkinsMatcher : MonoBehaviour
     public Button previousMouthButton;
     public Button nextBodyButton;
     public Button previousBodyButton;
+
+    private string colorSlotName = "Bodies";  // Der Slot, den wir einfärben
+
 
     void Start()
     {
@@ -96,6 +100,18 @@ public class SkinsMatcher : MonoBehaviour
         skeletonAnimation.Skeleton.SetSkin(combinedSkin);
         skeletonAnimation.Skeleton.SetToSetupPose();
         skeletonAnimation.AnimationState.Apply(skeletonAnimation.Skeleton);
+
+        Slot slot = skeletonAnimation.Skeleton.FindSlot(colorSlotName);
+        if (slot == null)
+        {
+            Debug.LogError($"Slot '{colorSlotName}' not found!");
+            return;
+        }
+
+        slot.SetColor(colorPicker.CurrentColor);
+
+        skeletonAnimation.Update(0);  // Dies sollte das Skelett aktualisieren
+        skeletonAnimation.LateUpdate();  // Überprüfe, ob das zu einer sichtbaren Änderung führt
     }
 
     private void AddSkinToCombined(string skinName, string category)

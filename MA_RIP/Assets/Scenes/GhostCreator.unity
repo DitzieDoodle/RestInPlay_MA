@@ -3355,6 +3355,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   skeletonAnimation: {fileID: 1777314108}
+  colorPicker: {fileID: 1777314112}
   nextEyeButton: {fileID: 1445229172}
   previousEyeButton: {fileID: 603914183}
   nextMouthButton: {fileID: 640791616}
