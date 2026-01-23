@@ -670,7 +670,7 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 357.4891
+        x: 356.57166
         y: 357.5229
         width: 160
         height: 30
@@ -758,7 +758,7 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: Sequence
-        value: SetActive(NPCA_vcam, false); Audio(Jump)
+        value: SetActive(NPCA_vcam, false)
         type: 0
         typeString: CustomFieldType_Text
       - title: Response Menu Sequence
