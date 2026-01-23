@@ -1618,8 +1618,8 @@
     "m_ObjectId": "1a246fecd7b74af6b8ff17e0ac0ddadc",
     "m_Title": "BigGrass",
     "m_Position": {
-        "x": -2328.000244140625,
-        "y": -655.0000610351563
+        "x": -2328.0,
+        "y": -655.0
     }
 }
 
@@ -3260,7 +3260,7 @@
     "m_ObjectId": "6bff451b14a940beb33baaeee2d0eaae",
     "m_Title": "TinyGrass",
     "m_Position": {
-        "x": -1740.0001220703125,
+        "x": -1740.0,
         "y": -35.0
     }
 }
@@ -3738,8 +3738,8 @@
     "m_ObjectId": "7bc0e3fbc19f434d80237da2bb38514c",
     "m_Title": "Highlight",
     "m_Position": {
-        "x": -1062.0001220703125,
-        "y": -941.0000610351563
+        "x": -1062.0,
+        "y": -941.0
     }
 }
 
@@ -5575,8 +5575,8 @@
     "m_ObjectId": "c1992d18df9241fc982977d73a3e5dc8",
     "m_Title": "New Group",
     "m_Position": {
-        "x": -4432.00048828125,
-        "y": -1034.0001220703125
+        "x": -4432.0,
+        "y": -1034.0
     }
 }
 
