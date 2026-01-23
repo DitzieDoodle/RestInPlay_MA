@@ -758,7 +758,7 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: Sequence
-        value: SetActive(NPCA_vcam, false); Audio(Bonk)
+        value: SetActive(NPCA_vcam, false); Audio(Jump)
         type: 0
         typeString: CustomFieldType_Text
       - title: Response Menu Sequence
