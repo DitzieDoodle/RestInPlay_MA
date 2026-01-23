@@ -2,64 +2,47 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
+    [Header("Movement Settings")]
     public float moveSpeed = 5f;
-    public float acceleration = 10f;  // Wie schnell der Player beschleunigt
-    public float deceleration = 10f;  // Wie schnell der Player abbremst
+    public float acceleration = 10f;
+    public float deceleration = 10f;
 
-    public AudioClip interactionSound;
+    [Header("Graphics")]
+    public Transform graphics; // Parent von Spine-Objekt
 
-    private Rigidbody rb;
-    private AudioSource audioSource;
-    private Vector3 moveDirection;
-    private Vector3 currentVelocity = Vector3.zero;
+    private float currentVelocity = 0f;
+    private float inputX;
+    private Vector3 velocity = Vector3.zero; // Für SmoothDamp
+
+    // Original scale speichern, damit wir nicht die globale Skalierung ändern
+    private Vector3 originalScale;
 
     void Start()
     {
-        rb = GetComponent<Rigidbody>();
-        audioSource = gameObject.AddComponent<AudioSource>();
+        if (graphics != null)
+            originalScale = graphics.localScale;
     }
-
     void Update()
     {
-        // Eingabe erfassen (WASD)
-        float moveX = Input.GetAxisRaw("Horizontal"); // A/D oder Pfeiltasten links/rechts
-        float moveZ = Input.GetAxisRaw("Vertical");   // W/S oder Pfeiltasten oben/unten
+        // Input: Horizontal = X, Vertical = Z
+        float inputX = Input.GetAxisRaw("Horizontal");
+        float inputZ = Input.GetAxisRaw("Vertical");
 
-        // Bewege dich RELATIV zur Boden-Plane
-        Vector3 forward = Vector3.Cross(transform.right, Vector3.up).normalized;
-        Vector3 right = Vector3.Cross(Vector3.up, forward).normalized;
+        // Bewegung auf der XZ-Ebene
+        Vector3 movement = new Vector3(inputX, 0f, inputZ).normalized * moveSpeed * Time.deltaTime;
+        transform.position += movement;
 
-        Vector3 targetDirection = (forward * moveZ + right * moveX).normalized;
-
-        // Sanftes Beschleunigen & Abbremsen
-        if (targetDirection.magnitude > 0)
+        // Flip Spine Grafik nur bei X-Bewegung
+        if (graphics != null)
         {
-            currentVelocity = Vector3.MoveTowards(currentVelocity, targetDirection * moveSpeed, acceleration * Time.deltaTime);
+            Vector3 scale = originalScale;
+            if (inputX > 0.01f)
+                scale.x = Mathf.Abs(originalScale.x); // nach rechts
+            else if (inputX < -0.01f)
+                scale.x = -Mathf.Abs(originalScale.x); // nach links
+            graphics.localScale = scale;
         }
-        else
-        {
-            currentVelocity = Vector3.MoveTowards(currentVelocity, Vector3.zero, deceleration * Time.deltaTime);
-        }
-
-        // Interaktion mit "E"
-        if (Input.GetKeyDown(KeyCode.E))
-        {
-            Interact();
-        }
-    }
-
-    void FixedUpdate()
-    {
-        // Bewegung mit Rigidbody anwenden
-        rb.MovePosition(rb.position + currentVelocity * Time.fixedDeltaTime);
-    }
-
-    void Interact()
-    {
-        if (interactionSound != null)
-        {
-            audioSource.PlayOneShot(interactionSound);
-        }
-        Debug.Log("Interaktion ausgelöst!");
     }
 }
+
+
