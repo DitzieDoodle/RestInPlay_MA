@@ -328,7 +328,7 @@ PrefabInstance:
     - target: {fileID: 11426072, guid: 58ac37417e60e534f91138088a3e6f70, type: 3}
       propertyPath: displaySettings.dialogueUI
       value: 
-      objectReference: {fileID: 101180, guid: f56bdcd483172504dbb9ce5e24f9cc33, type: 3}
+      objectReference: {fileID: 101180, guid: 311fa6c85b4819d4eb7a8c9b00f2db8f, type: 3}
     - target: {fileID: 11426072, guid: 58ac37417e60e534f91138088a3e6f70, type: 3}
       propertyPath: displaySettings.subtitleSettings.continueButton
       value: 1
@@ -585,7 +585,7 @@ MonoBehaviour:
   allowBarksDuringConversations: 0
   skipBarkIfNoValidEntries: 0
   cacheBarkLines: 0
-  conversation: New Conversation 4
+  conversation: thoughtwheel
   conversationConversant: {fileID: 0}
   conversationActor: {fileID: 1027413235}
   startConversationEntryID: -1

@@ -1695,11 +1695,11 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: I can't believe it. Why did you have to leave so soon?
+        value: 1
         type: 0
         typeString: 
       - title: Sequence
-        value: 
+        value: urn.SendMessage(SetWobbleOff)
         type: 0
         typeString: 
       conversationID: 6
@@ -1723,7 +1723,7 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 1446.6945
+        x: 1447.9602
         y: 299.21722
         width: 160
         height: 30
@@ -1750,7 +1750,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: We don't even know what kind of urn you'd like...
+        value: 2
         type: 0
         typeString: 
       - title: Sequence
@@ -1805,7 +1805,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: What would they like? hmm...
+        value: 3
         type: 0
         typeString: 
       - title: Sequence
@@ -1866,7 +1866,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
-        value: 
+        value: SetWobbleOff()
         type: 0
         typeString: 
       conversationID: 6
@@ -1876,13 +1876,7 @@ MonoBehaviour:
       delaySimStatus: 0
       falseConditionAction: Block
       conditionPriority: 2
-      outgoingLinks:
-      - originConversationID: 6
-        originDialogueID: 4
-        destinationConversationID: 6
-        destinationDialogueID: 5
-        isConnector: 0
-        priority: 2
+      outgoingLinks: []
       conditionsString: 
       userScript: 
       onExecute:
@@ -1890,7 +1884,7 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 1446.6945
+        x: 1447.9602
         y: 551.2172
         width: 160
         height: 30
@@ -3423,7 +3417,7 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 1457.9193
+        x: 1460.3584
         y: 2345.2283
         width: 160
         height: 30
@@ -3680,7 +3674,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
-        value: 
+        value: SendMessage("SetWobbleOff") on urn
         type: 0
         typeString: 
       conversationID: 6
@@ -3703,8 +3697,8 @@ MonoBehaviour:
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 474.83566, y: 31.792725}
-    canvasZoom: 0.28000045
+    canvasScrollPosition: {x: 1020.66205, y: 0}
+    canvasZoom: 0.7900002
   syncInfo:
     syncActors: 0
     syncItems: 0
