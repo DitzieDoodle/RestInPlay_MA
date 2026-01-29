@@ -1695,7 +1695,8 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: 1
+        value: ' Lorem Ipsum Lorem IpsumLorem Ipsum Lorem IpsumLorem Ipsum Lorem
+          IpsumLorem Ipsum Lorem Ipsum'
         type: 0
         typeString: 
       - title: Sequence
@@ -1750,7 +1751,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: 2
+        value: Lorem Ipsum Lorem IpsumLorem Ipsum Lorem IpsumLorem Ipsum Lorem Ipsum
         type: 0
         typeString: 
       - title: Sequence
@@ -1805,7 +1806,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: 3
+        value: Lorem Ipsum Lorem IpsumLorem Ipsum Lorem IpsumLorem Ipsum Lorem Ipsum
         type: 0
         typeString: 
       - title: Sequence

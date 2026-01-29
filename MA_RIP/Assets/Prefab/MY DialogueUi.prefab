@@ -1216,11 +1216,11 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 20
+    m_FontSize: 22
     m_FontStyle: 0
     m_BestFit: 1
-    m_MinSize: 10
-    m_MaxSize: 20
+    m_MinSize: 2
+    m_MaxSize: 22
     m_Alignment: 3
     m_AlignByGeometry: 0
     m_RichText: 1
@@ -1287,8 +1287,25 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rightToLeft: 0
   charactersPerSecond: 50
-  audioClip: {fileID: 0}
-  alternateAudioClips: []
+  audioClip: {fileID: 8300000, guid: beaac8dbd0e988e4bb5803aacd8088fa, type: 3}
+  alternateAudioClips:
+  - {fileID: 8300000, guid: ea72dd071f46dc54fb8018d30b00e199, type: 3}
+  - {fileID: 8300000, guid: aa80d4bb533828c4c8837a6febd53803, type: 3}
+  - {fileID: 8300000, guid: beaac8dbd0e988e4bb5803aacd8088fa, type: 3}
+  - {fileID: 8300000, guid: d0483e3c59883054c8fc0b122a7e9fcb, type: 3}
+  - {fileID: 8300000, guid: d7ba7d8e9e0df154b9067c8a1c3ee274, type: 3}
+  - {fileID: 8300000, guid: 1cc150c2ab16a66458bf87aa7604d922, type: 3}
+  - {fileID: 8300000, guid: 10ff9a637eceda04d9c0606b7ef7737e, type: 3}
+  - {fileID: 8300000, guid: fb83044861f903243b3fb787575a26f3, type: 3}
+  - {fileID: 8300000, guid: 2670f6d8e8a146340ac05130b4d8e377, type: 3}
+  - {fileID: 8300000, guid: 583e915fd907e8048a6d7766abfd16da, type: 3}
+  - {fileID: 8300000, guid: fd56c2e267aa89c4fa6196133f9d5c60, type: 3}
+  - {fileID: 8300000, guid: d2cce01803f674047bf23e00da798b5e, type: 3}
+  - {fileID: 8300000, guid: ccd232d0093f16d48a31886cd290f097, type: 3}
+  - {fileID: 8300000, guid: 2fb435d21d71e0f4ea7e806f480023a9, type: 3}
+  - {fileID: 8300000, guid: 670c409fe8eb6c5498afb31dab37b264, type: 3}
+  - {fileID: 8300000, guid: d2cce01803f674047bf23e00da798b5e, type: 3}
+  - {fileID: 8300000, guid: 10ff9a637eceda04d9c0606b7ef7737e, type: 3}
   audioSource: {fileID: 0}
   usePlayOneShot: 0
   interruptAudioClip: 0
@@ -1297,7 +1314,7 @@ MonoBehaviour:
   silentCharacters: 
   fullPauseCharacters: 
   quarterPauseCharacters: 
-  fullPauseDuration: 1
+  fullPauseDuration: 0.5
   quarterPauseDuration: 0.25
   removeDuplicateTypewriterEffects: 1
   playOnEnable: 0
@@ -1957,7 +1974,7 @@ RectTransform:
   m_Father: {fileID: 22454240}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 20, y: 20}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -4370,7 +4387,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &22431530
 RectTransform:
   m_ObjectHideFlags: 0
