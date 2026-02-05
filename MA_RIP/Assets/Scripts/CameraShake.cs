@@ -2,15 +2,11 @@
 
 public class CameraShake : MonoBehaviour
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
-    {
-        
-    }
+    public AudioSource shuffle;
 
-    // Update is called once per frame
-    void Update()
+
+    void ShufflingPhotos()
     {
-        
+        shuffle.Play(); 
     }
 }
