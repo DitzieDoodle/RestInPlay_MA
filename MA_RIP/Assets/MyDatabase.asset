@@ -1700,7 +1700,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
-        value: urn.SendMessage(SetWobbleOff)
+        value: 
         type: 0
         typeString: 
       conversationID: 6
@@ -1779,7 +1779,7 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 1446.6945
+        x: 1445.4286
         y: 383.21722
         width: 160
         height: 30
@@ -1867,7 +1867,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
-        value: SetWobbleOff()
+        value: SendMessage(SetWobleOff)
         type: 0
         typeString: 
       conversationID: 6
@@ -1886,7 +1886,7 @@ MonoBehaviour:
       canvasRect:
         serializedVersion: 2
         x: 1447.9602
-        y: 551.2172
+        y: 549.9514
         width: 160
         height: 30
     - id: 5

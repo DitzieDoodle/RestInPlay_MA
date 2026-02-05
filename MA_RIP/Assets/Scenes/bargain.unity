@@ -838,6 +838,28 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   targetMaterial: {fileID: -876546973899608171, guid: ad749d0d66272e64e87d2c572a2ec538, type: 3}
   transitionDuration: 1
+--- !u!82 &726345263 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 7237846594752340792, guid: 3a6bc02de356daa44a7ed67a849b7011, type: 3}
+  m_PrefabInstance: {fileID: 1565298868}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &726345266
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 726345249}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 298d9002e1f72b04d84bb2e1fdb94cee, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  audioSource: {fileID: 726345263}
+  song1: {fileID: 8300000, guid: 78448949513d65e4897bd11311f8c289, type: 3}
+  song2: {fileID: 8300000, guid: f8477dc1b59984b44b81268ac2f36302, type: 3}
+  song3: {fileID: 8300000, guid: 78448949513d65e4897bd11311f8c289, type: 3}
+  fadeDuration: 1
 --- !u!1 &832575517
 GameObject:
   m_ObjectHideFlags: 0
@@ -1493,6 +1515,14 @@ PrefabInstance:
       propertyPath: conversation
       value: Bargain
       objectReference: {fileID: 0}
+    - target: {fileID: 7237846594752340792, guid: 3a6bc02de356daa44a7ed67a849b7011, type: 3}
+      propertyPath: m_Resource
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 7237846594752340792, guid: 3a6bc02de356daa44a7ed67a849b7011, type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 8092594391553973259, guid: 3a6bc02de356daa44a7ed67a849b7011, type: 3}
       propertyPath: Lens.FieldOfView
       value: 61.1
@@ -1510,6 +1540,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 840281661167914458, guid: 3a6bc02de356daa44a7ed67a849b7011, type: 3}
       insertIndex: -1
       addedObject: {fileID: 726345261}
+    - targetCorrespondingSourceObject: {fileID: 840281661167914458, guid: 3a6bc02de356daa44a7ed67a849b7011, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 726345266}
   m_SourcePrefab: {fileID: 100100000, guid: 3a6bc02de356daa44a7ed67a849b7011, type: 3}
 --- !u!1 &1626473818
 GameObject:

@@ -7,25 +7,24 @@ public class WobbleController : MonoBehaviour
     public Material targetMaterial; // Dein Shader-Material
     public float transitionDuration = 1.0f; // Dauer des Fades
 
-    // Shader Property Names (passen, falls anders)
+
     private string colorProperty = "basecolor";
     private string wobbleProperty = "wobbleStrength";
-
-    // Public Methoden zum Aufrufen
+ 
     public void SetWobbleOne()
     {
-        StartCoroutine(FadeShader(Color.white * 0.8f, 0.2f)); // etwas heller, wenig wobble
+        StartCoroutine(FadeShader(Color.white * 0.8f, 0.2f)); 
     }
 
     public void SetWobbleTwo()
     {
-        StartCoroutine(FadeShader(Color.white * 1.0f, 0.1f)); // noch heller, weniger wobble
+        StartCoroutine(FadeShader(Color.white * 1.0f, 0.1f)); 
     }
 
     public void SetWobbleOff()
     {
         Debug.Log("Wobble Off");
-        StartCoroutine(FadeShader(Color.white, 0f)); // volle white, kein wobble
+        StartCoroutine(FadeShader(Color.white, 0f)); 
     }
 
     // Coroutine zum sanften Übergang
