@@ -1,9 +1,13 @@
 using System.Collections;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class BlinkingBlack : MonoBehaviour
 {
+    [Header("Ziel Scene")]
+    public string sceneToLoad = "GameScene";
+
     [SerializeField] private Image fadeImage;
     [SerializeField] private float fadeDuration = 1f; // Dauer in Sekunden
 
@@ -17,6 +21,11 @@ public class BlinkingBlack : MonoBehaviour
     public void Clear()
     {
         StartCoroutine(FadeTo(0f));
+    }
+
+    public void ChangeScene()
+    {
+        SceneManager.LoadScene(sceneToLoad);
     }
 
     private IEnumerator FadeTo(float targetAlpha)
