@@ -288,7 +288,7 @@ MonoBehaviour:
       - originConversationID: 1
         originDialogueID: 0
         destinationConversationID: 1
-        destinationDialogueID: 1
+        destinationDialogueID: 5
         isConnector: 0
         priority: 2
       conditionsString: 
@@ -302,7 +302,7 @@ MonoBehaviour:
         y: 91.86823
         width: 160
         height: 30
-    - id: 1
+    - id: 5
       fields:
       - title: Title
         value: 
@@ -325,9 +325,65 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: 'test test
-
-'
+        value: You just woke up in a hospital bed. You look around and see your family
+          members with worry written on their faces. You can't remember what has
+          happend to you.
+        type: 0
+        typeString: 
+      - title: Sequence
+        value: SendMessage(Clear,,HospitalCanvas)
+        type: 0
+        typeString: 
+      conversationID: 1
+      isRoot: 0
+      isGroup: 0
+      nodeColor: 
+      delaySimStatus: 0
+      falseConditionAction: Block
+      conditionPriority: 2
+      outgoingLinks:
+      - originConversationID: 1
+        originDialogueID: 5
+        destinationConversationID: 1
+        destinationDialogueID: 7
+        isConnector: 0
+        priority: 2
+      conditionsString: 
+      userScript: 
+      onExecute:
+        m_PersistentCalls:
+          m_Calls: []
+      canvasRect:
+        serializedVersion: 2
+        x: 167.02328
+        y: 225.4125
+        width: 160
+        height: 30
+    - id: 7
+      fields:
+      - title: Title
+        value: 
+        type: 0
+        typeString: 
+      - title: Description
+        value: 
+        type: 0
+        typeString: 
+      - title: Actor
+        value: 1
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Conversant
+        value: 2
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Menu Text
+        value: 
+        type: 0
+        typeString: 
+      - title: Dialogue Text
+        value: You try to say something, but you can't speak. You try to reach out
+          but you can't move. All you can do is to look at them.
         type: 0
         typeString: 
       - title: Sequence
@@ -343,9 +399,9 @@ MonoBehaviour:
       conditionPriority: 2
       outgoingLinks:
       - originConversationID: 1
-        originDialogueID: 1
+        originDialogueID: 7
         destinationConversationID: 1
-        destinationDialogueID: 2
+        destinationDialogueID: 8
         isConnector: 0
         priority: 2
       conditionsString: 
@@ -355,11 +411,11 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 172.4591
-        y: 203.17065
+        x: 168.2891
+        y: 327.31122
         width: 160
         height: 30
-    - id: 2
+    - id: 8
       fields:
       - title: Title
         value: 
@@ -382,13 +438,13 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: 'more test
-
-'
+        value: Even though everyone looks worried, you can't help but smile. Seeing
+          your loved ones fills you with a warm feeling and the moment seems lasting
+          forever.
         type: 0
         typeString: 
       - title: Sequence
-        value: 
+        value: SendMessage(FadeToBlack,,HospitalCanvas)
         type: 0
         typeString: 
       conversationID: 1
@@ -400,9 +456,9 @@ MonoBehaviour:
       conditionPriority: 2
       outgoingLinks:
       - originConversationID: 1
-        originDialogueID: 2
+        originDialogueID: 8
         destinationConversationID: 1
-        destinationDialogueID: 3
+        destinationDialogueID: 9
         isConnector: 0
         priority: 2
       conditionsString: 
@@ -412,11 +468,11 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 170.02008
-        y: 305.60968
+        x: 168.28911
+        y: 426.67828
         width: 160
         height: 30
-    - id: 3
+    - id: 9
       fields:
       - title: Title
         value: 
@@ -427,23 +483,23 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Actor
-        value: 2
+        value: 1
         type: 5
         typeString: CustomFieldType_Actor
       - title: Conversant
-        value: 1
+        value: 2
         type: 5
         typeString: CustomFieldType_Actor
       - title: Menu Text
-        value: asdasdads
+        value: 
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: asggwggwwerwe
+        value: Until it doesnt.
         type: 0
         typeString: 
       - title: Sequence
-        value: 
+        value: SendMessage(FadeToBlack,,HospitalCanvas)
         type: 0
         typeString: 
       conversationID: 1
@@ -455,9 +511,9 @@ MonoBehaviour:
       conditionPriority: 2
       outgoingLinks:
       - originConversationID: 1
-        originDialogueID: 3
+        originDialogueID: 9
         destinationConversationID: 1
-        destinationDialogueID: 4
+        destinationDialogueID: 10
         isConnector: 0
         priority: 2
       conditionsString: 
@@ -467,11 +523,11 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 171.2396
-        y: 439.75598
+        x: 172.08655
+        y: 613.38715
         width: 160
         height: 30
-    - id: 4
+    - id: 10
       fields:
       - title: Title
         value: 
@@ -482,11 +538,11 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Actor
-        value: 1
+        value: 2
         type: 5
         typeString: CustomFieldType_Actor
       - title: Conversant
-        value: 2
+        value: 1
         type: 5
         typeString: CustomFieldType_Actor
       - title: Menu Text
@@ -516,13 +572,13 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 174.89813
-        y: 550.73157
+        x: 160.69415
+        y: 768.4504
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 0, y: 1.7647022}
-    canvasZoom: 0.8200002
+    canvasScrollPosition: {x: 0, y: 0}
+    canvasZoom: 0.7900002
   - id: 2
     fields:
     - title: Title
