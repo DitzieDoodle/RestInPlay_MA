@@ -464,9 +464,11 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: Even though everyone looks worried, you can't help but smile. Seeing
+        value: 'Even though everyone looks worried, you can''t help but smile. Seeing
           your loved ones fills you with a warm feeling and the moment seems lasting
           forever.
+
+          Until....'
         type: 0
         typeString: 
       - title: Sequence
@@ -495,7 +497,7 @@ MonoBehaviour:
       canvasRect:
         serializedVersion: 2
         x: 2441.8718
-        y: 1062.5637
+        y: 1061.1353
         width: 160
         height: 30
     - id: 9
@@ -521,7 +523,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: Until it doesnt.
+        value: ' ...it doesnt.'
         type: 0
         typeString: 
       - title: Sequence
@@ -635,7 +637,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: Scary isn't it? How life can end so suddenly.
+        value: "Strange, isn\u2019t it? How swiftly life can fade away."
         type: 0
         typeString: 
       - title: Sequence
@@ -690,7 +692,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: Sometimes, there are no warning signs. No time to prepare yourself
+        value: Sometimes there are no warning signs, no time to prepare yourself
           for the end.
         type: 0
         typeString: 
@@ -1144,7 +1146,8 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: Of course. Everyone is scared when it comes to dying. It is only natural.
+        value: "Of course. Everyone feels fear when faced with death. It\u2019s only
+          natural."
         type: 0
         typeString: 
       - title: Sequence
@@ -1199,8 +1202,8 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: Oh, that is quite alright. This must be a shock to you, learning that
-          you are dead.
+        value: "Oh, that\u2019s quite alright. I understand \u2014 discovering that
+          you\u2019re dead must come as a shock."
         type: 0
         typeString: 
       - title: Sequence
@@ -1310,8 +1313,8 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: After all; Humans are the only living beings that are aware of their
-          inevitable end.
+        value: After all, only humankind bears the burden of knowing its own inevitable
+          end.
         type: 0
         typeString: 
       - title: Sequence
@@ -1655,7 +1658,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
-        value: SetActive(DeathExplain,false);SetActive(DeathEyesClosed,true);
+        value: SetActive(DeathExplain,false);SetActive(DeathRead,true);
         type: 0
         typeString: 
       conversationID: 1
@@ -1710,7 +1713,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
-        value: 
+        value: SetActive(DeathRead,false);SetActive(Death,true);
         type: 0
         typeString: 
       conversationID: 1
@@ -1767,7 +1770,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
-        value: SetActive(DeathExplain,true);SetActive(DeathEyesClosed,false);
+        value: SetActive(DeathExplain,true);SetActive(Death,false);
         type: 0
         typeString: 
       conversationID: 1
@@ -2279,8 +2282,8 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: 'Of course. The idea of watching your family grief from a distance
-          must be hard. '
+        value: Of course. The thought of seeing your family grieve from afar must
+          be painful.
         type: 0
         typeString: 
       - title: Sequence
@@ -2335,7 +2338,8 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: But you should really take this chance and help them with their grief.
+        value: But you should take this chance to help them-to ease their sorrow,
+          even if only a little.
         type: 0
         typeString: 
       - title: Sequence
@@ -2390,7 +2394,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: See this chance as a last gift in your life, haha.
+        value: Consider this your last gift from life itself, hahaha
         type: 0
         typeString: 
       - title: Sequence
@@ -2583,8 +2587,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 2517.4795
-        y: 3657.458
+        x: 2516.0508
+        y: 3680.3152
         width: 160
         height: 30
     - id: 50
@@ -2632,7 +2636,7 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 2514.6914
+        x: 2516.3308
         y: 3940.2866
         width: 160
         height: 30
@@ -2718,7 +2722,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
-        value: SendMessage(FadeToBlack,,HospitalCanvas)
+        value: SendMessage(FadeToBlack,,HospitalCanvas);
         type: 0
         typeString: 
       conversationID: 1
@@ -2747,8 +2751,8 @@ MonoBehaviour:
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 2256.0168, y: 3511.5242}
-    canvasZoom: 1.0300001
+    canvasScrollPosition: {x: 2111.4353, y: 0}
+    canvasZoom: 0.7900003
   - id: 2
     fields:
     - title: Title
