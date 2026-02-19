@@ -1,24 +1,28 @@
-using UnityEngine;
+ï»¿using UnityEngine;
 using Spine.Unity;
 using Spine;
-using UnityEngine.UI;  // Hier fügen wir den Namespace für UI hinzu, damit wir Buttons nutzen können
+using UnityEngine.UI;
 
 public class SkinsMatcher : MonoBehaviour
 {
-    [SerializeField] private SkeletonAnimation skeletonAnimation; // Referenz zum Spine-Charakter
+    [SerializeField] private SkeletonAnimation skeletonAnimation;
     [SerializeField] private GhostColorPicker colorPicker;
-    private Skin combinedSkin;  // Der kombinierte Skin
+    private Skin combinedSkin;
 
     // Arrays der Skin-Namen
-    private string[] Eyes = { "Eyes_A", "Eyes_B", "Eyes_C" }; // Augen-Skins
-    private string[] Mouths = { "Mouth_A", "Mouth_B", "Mouth_C" }; // Mund-Skins
-    private string[] Body = { "Body_A", "Body_B", "Body_C" }; // Körper-Skins
+    private string[] Eyes = { "Eyes_A", "Eyes_B", "Eyes_C" };
+    private string[] Mouths = { "Mouth_A", "Mouth_B", "Mouth_C" };
+    private string[] Body = { "Body_A", "Body_B", "Body_C" };
 
     private int currentEyeIndex = 0;
     private int currentMouthIndex = 0;
     private int currentBodyIndex = 0;
 
-    // UI Button-Referenzen, die im Inspector zugewiesen werden können
+    // ðŸŽ¯ NEU: PlayerPrefs Keys
+    private const string EYES_KEY = "Char_Eyes";
+    private const string MOUTH_KEY = "Char_Mouth";
+    private const string BODY_KEY = "Char_Body";
+
     [Header("UI Buttons")]
     public Button nextEyeButton;
     public Button previousEyeButton;
@@ -27,8 +31,7 @@ public class SkinsMatcher : MonoBehaviour
     public Button nextBodyButton;
     public Button previousBodyButton;
 
-    private string colorSlotName = "Bodies";  // Der Slot, den wir einfärben
-
+    private string colorSlotName = "Bodies";
 
     void Start()
     {
@@ -38,11 +41,13 @@ public class SkinsMatcher : MonoBehaviour
             return;
         }
 
-        // Skin nur einmal beim Start erstellen
+        // ðŸŽ¯ NEU: Gespeicherte Auswahl laden
+        LoadSelection();
+
         combinedSkin = new Skin("combined-skin");
         UpdateSkin();
 
-        // Buttons mit den Methoden verknüpfen
+        // Buttons verknÃ¼pfen
         if (nextEyeButton != null) nextEyeButton.onClick.AddListener(NextEyeSkin);
         if (previousEyeButton != null) previousEyeButton.onClick.AddListener(PreviousEyeSkin);
         if (nextMouthButton != null) nextMouthButton.onClick.AddListener(NextMouthSkin);
@@ -51,67 +56,94 @@ public class SkinsMatcher : MonoBehaviour
         if (previousBodyButton != null) previousBodyButton.onClick.AddListener(PreviousBodySkin);
     }
 
+    // ðŸŽ¯ NEU: Auswahl speichern (wird bei jedem Button-Press aufgerufen)
+    private void SaveSelection()
+    {
+        PlayerPrefs.SetInt(EYES_KEY, currentEyeIndex);
+        PlayerPrefs.SetInt(MOUTH_KEY, currentMouthIndex);
+        PlayerPrefs.SetInt(BODY_KEY, currentBodyIndex);
+        PlayerPrefs.Save();  // WICHTIG: Sofort auf Disk!
+    }
+
+    // ðŸŽ¯ NEU: Auswahl laden
+    private void LoadSelection()
+    {
+        currentEyeIndex = PlayerPrefs.GetInt(EYES_KEY, 0);
+        currentMouthIndex = PlayerPrefs.GetInt(MOUTH_KEY, 0);
+        currentBodyIndex = PlayerPrefs.GetInt(BODY_KEY, 0);
+    }
+
+    // Buttons - JETZT mit automatischer Speicherung!
     public void NextEyeSkin()
     {
         currentEyeIndex = (currentEyeIndex + 1) % Eyes.Length;
         UpdateSkin();
+        SaveSelection();  // ðŸŽ¯ AUTOMATISCH speichern
     }
+
     public void PreviousEyeSkin()
     {
-        currentEyeIndex = (currentEyeIndex - 1 + Eyes.Length) % Eyes.Length;  // Negative Modulo verhindern
+        currentEyeIndex = (currentEyeIndex - 1 + Eyes.Length) % Eyes.Length;
         UpdateSkin();
+        SaveSelection();  // ðŸŽ¯ AUTOMATISCH speichern
     }
 
     public void NextMouthSkin()
     {
         currentMouthIndex = (currentMouthIndex + 1) % Mouths.Length;
         UpdateSkin();
+        SaveSelection();  // ðŸŽ¯ AUTOMATISCH speichern
     }
 
     public void PreviousMouthSkin()
     {
-        currentMouthIndex = (currentMouthIndex - 1 + Mouths.Length) % Mouths.Length;  // Negative Modulo verhindern
+        currentMouthIndex = (currentMouthIndex - 1 + Mouths.Length) % Mouths.Length;
         UpdateSkin();
+        SaveSelection();  // ðŸŽ¯ AUTOMATISCH speichern
     }
 
     public void NextBodySkin()
     {
         currentBodyIndex = (currentBodyIndex + 1) % Body.Length;
         UpdateSkin();
+        SaveSelection();  // ðŸŽ¯ AUTOMATISCH speichern
     }
 
     public void PreviousBodySkin()
     {
-        currentBodyIndex = (currentBodyIndex - 1 + Body.Length) % Body.Length;  // Negative Modulo verhindern
+        currentBodyIndex = (currentBodyIndex - 1 + Body.Length) % Body.Length;
         UpdateSkin();
+        SaveSelection();  // ðŸŽ¯ AUTOMATISCH speichern
     }
+
+    // ðŸŽ¯ NEU: PUBLIC - FÃ¼r andere Scenes abrufbar!
+    public int GetEyeIndex() { return currentEyeIndex; }
+    public int GetMouthIndex() { return currentMouthIndex; }
+    public int GetBodyIndex() { return currentBodyIndex; }
+    public string[] GetEyes() { return Eyes; }
+    public string[] GetMouths() { return Mouths; }
+    public string[] GetBody() { return Body; }
 
     private void UpdateSkin()
     {
-        // Lösche alle vorherigen Skins, bevor du neue hinzufügst
         combinedSkin.Clear();
 
-        // Skins für Augen, Mund und Körper hinzufügen
         AddSkinToCombined(Eyes[currentEyeIndex], "Eye");
         AddSkinToCombined(Mouths[currentMouthIndex], "Mouth");
         AddSkinToCombined(Body[currentBodyIndex], "Body");
 
-        // Setze den Skin und wende ihn auf das Skelett an
         skeletonAnimation.Skeleton.SetSkin(combinedSkin);
         skeletonAnimation.Skeleton.SetToSetupPose();
         skeletonAnimation.AnimationState.Apply(skeletonAnimation.Skeleton);
 
         Slot slot = skeletonAnimation.Skeleton.FindSlot(colorSlotName);
-        if (slot == null)
+        if (slot != null)
         {
-            Debug.LogError($"Slot '{colorSlotName}' not found!");
-            return;
+            slot.SetColor(colorPicker.CurrentColor);
         }
 
-        slot.SetColor(colorPicker.CurrentColor);
-
-        skeletonAnimation.Update(0);  // Dies sollte das Skelett aktualisieren
-        skeletonAnimation.LateUpdate();  // Überprüfe, ob das zu einer sichtbaren Änderung führt
+        skeletonAnimation.Update(0);
+        skeletonAnimation.LateUpdate();
     }
 
     private void AddSkinToCombined(string skinName, string category)
@@ -122,7 +154,6 @@ public class SkinsMatcher : MonoBehaviour
             Debug.LogWarning($"Skin '{skinName}' for category '{category}' not found.");
             return;
         }
-
-        combinedSkin.AddSkin(skin);  // Füge den Skin dem kombinierten Skin hinzu
+        combinedSkin.AddSkin(skin);
     }
 }

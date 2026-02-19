@@ -3720,8 +3720,8 @@ MonoBehaviour:
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 814.33295, y: 117.721466}
-    canvasZoom: 0.7900002
+    canvasScrollPosition: {x: 774.5875, y: 64.73767}
+    canvasZoom: 0.7600002
   - id: 7
     fields:
     - title: Title
@@ -3877,7 +3877,7 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 380.4634
+        x: 382.40518
         y: 153.86566
         width: 160
         height: 30
@@ -3908,6 +3908,10 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
+        value: SendMessage(ShufflingPhotos)
+        type: 0
+        typeString: 
+      - title: Response Menu Sequence
         value: 
         type: 0
         typeString: 
@@ -3932,8 +3936,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 378.52164
-        y: 242.6716
+        x: 381.4342
+        y: 241.70071
         width: 160
         height: 30
     - id: 3
@@ -3963,7 +3967,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
-        value: 
+        value: SendMessage(ShufflingPhotos)
         type: 0
         typeString: 
       conversationID: 7
@@ -3987,8 +3991,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 379.49252
-        y: 332.9701
+        x: 385.3178
+        y: 331.02838
         width: 160
         height: 30
     - id: 4
@@ -4044,7 +4048,7 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 383.4485
+        x: 387.33203
         y: 412.82083
         width: 160
         height: 30
@@ -4396,7 +4400,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
-        value: Audio("cardshuffle", 1, 1)
+        value: 
         type: 0
         typeString: 
       - title: Response Menu Sequence
