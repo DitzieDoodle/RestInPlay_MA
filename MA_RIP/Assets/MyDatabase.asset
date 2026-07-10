@@ -91,6 +91,32 @@ MonoBehaviour:
     spritePortrait: {fileID: 0}
     alternatePortraits: []
     spritePortraits: []
+  - id: 7
+    fields:
+    - title: Name
+      value: Death
+      type: 0
+      typeString: CustomFieldType_Text
+    - title: Pictures
+      value: '[]'
+      type: 3
+      typeString: CustomFieldType_Files
+    - title: Description
+      value: 
+      type: 0
+      typeString: CustomFieldType_Text
+    - title: IsPlayer
+      value: False
+      type: 2
+      typeString: CustomFieldType_Boolean
+    - title: NodeColor
+      value: '#1f074fff'
+      type: 0
+      typeString: CustomFieldType_Text
+    portrait: {fileID: 0}
+    spritePortrait: {fileID: 0}
+    alternatePortraits: []
+    spritePortraits: []
   - id: 2
     fields:
     - title: Name
@@ -140,7 +166,7 @@ MonoBehaviour:
     - title: Name
       value: Bargaining Visitor
       type: 0
-      typeString: 
+      typeString: CustomFieldType_Text
     - title: Pictures
       value: '[]'
       type: 3
@@ -154,9 +180,9 @@ MonoBehaviour:
       type: 2
       typeString: CustomFieldType_Boolean
     - title: NodeColor
-      value: '#4ffdffff'
+      value: '#6c9c5aff'
       type: 0
-      typeString: 
+      typeString: CustomFieldType_Text
     portrait: {fileID: 0}
     spritePortrait: {fileID: 0}
     alternatePortraits: []
@@ -166,7 +192,7 @@ MonoBehaviour:
     - title: Name
       value: Angry Visitor
       type: 0
-      typeString: 
+      typeString: CustomFieldType_Text
     - title: Pictures
       value: '[]'
       type: 3
@@ -183,10 +209,10 @@ MonoBehaviour:
     spritePortrait: {fileID: 0}
     alternatePortraits: []
     spritePortraits: []
-  - id: 7
+  - id: 8
     fields:
     - title: Name
-      value: Death
+      value: Accepting Visitor
       type: 0
       typeString: CustomFieldType_Text
     - title: Pictures
@@ -201,10 +227,50 @@ MonoBehaviour:
       value: False
       type: 2
       typeString: CustomFieldType_Boolean
-    - title: NodeColor
-      value: '#1f074fff'
+    portrait: {fileID: 0}
+    spritePortrait: {fileID: 0}
+    alternatePortraits: []
+    spritePortraits: []
+  - id: 9
+    fields:
+    - title: Name
+      value: Depressed Visitor
       type: 0
       typeString: CustomFieldType_Text
+    - title: Pictures
+      value: '[]'
+      type: 3
+      typeString: CustomFieldType_Files
+    - title: Description
+      value: 
+      type: 0
+      typeString: CustomFieldType_Text
+    - title: IsPlayer
+      value: False
+      type: 2
+      typeString: CustomFieldType_Boolean
+    portrait: {fileID: 0}
+    spritePortrait: {fileID: 0}
+    alternatePortraits: []
+    spritePortraits: []
+  - id: 10
+    fields:
+    - title: Name
+      value: Denying Visitor
+      type: 0
+      typeString: CustomFieldType_Text
+    - title: Pictures
+      value: '[]'
+      type: 3
+      typeString: CustomFieldType_Files
+    - title: Description
+      value: 
+      type: 0
+      typeString: CustomFieldType_Text
+    - title: IsPlayer
+      value: False
+      type: 2
+      typeString: CustomFieldType_Boolean
     portrait: {fileID: 0}
     spritePortrait: {fileID: 0}
     alternatePortraits: []
@@ -523,7 +589,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: ' ...it doesnt.'
+        value: ' ...it doesn''t.'
         type: 0
         typeString: 
       - title: Sequence
@@ -1232,7 +1298,7 @@ MonoBehaviour:
       canvasRect:
         serializedVersion: 2
         x: 2477.378
-        y: 2069.1685
+        y: 2066.8154
         width: 160
         height: 30
     - id: 26
@@ -2751,8 +2817,8 @@ MonoBehaviour:
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 2111.4353, y: 0}
-    canvasZoom: 0.7900003
+    canvasScrollPosition: {x: 1727.3995, y: 812.2315}
+    canvasZoom: 0.85000026
   - id: 2
     fields:
     - title: Title
@@ -3338,7 +3404,7 @@ MonoBehaviour:
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 113.582535, y: 0}
+    canvasScrollPosition: {x: 0, y: 0}
     canvasZoom: 1.03
   - id: 4
     fields:
@@ -3976,8 +4042,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 1447.9602
-        y: 299.21722
+        x: 1446.9293
+        y: 298.18628
         width: 160
         height: 30
     - id: 2
@@ -4087,7 +4153,7 @@ MonoBehaviour:
       canvasRect:
         serializedVersion: 2
         x: 1446.6945
-        y: 467.21722
+        y: 468.1881
         width: 160
         height: 30
     - id: 4
@@ -5950,8 +6016,8 @@ MonoBehaviour:
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 804.8507, y: 241.05344}
-    canvasZoom: 0.7600002
+    canvasScrollPosition: {x: 958.7689, y: 121.97521}
+    canvasZoom: 0.97
   - id: 7
     fields:
     - title: Title
@@ -6221,7 +6287,7 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 385.3178
+        x: 386.2887
         y: 331.02838
         width: 160
         height: 30
@@ -6444,7 +6510,7 @@ MonoBehaviour:
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 84.95254, y: 53.683792}
+    canvasScrollPosition: {x: 83.38396, y: 44.229828}
     canvasZoom: 1.03
   - id: 8
     fields:
