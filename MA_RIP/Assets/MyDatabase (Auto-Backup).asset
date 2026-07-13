@@ -91,6 +91,32 @@ MonoBehaviour:
     spritePortrait: {fileID: 0}
     alternatePortraits: []
     spritePortraits: []
+  - id: 7
+    fields:
+    - title: Name
+      value: Death
+      type: 0
+      typeString: CustomFieldType_Text
+    - title: Pictures
+      value: '[]'
+      type: 3
+      typeString: CustomFieldType_Files
+    - title: Description
+      value: 
+      type: 0
+      typeString: CustomFieldType_Text
+    - title: IsPlayer
+      value: False
+      type: 2
+      typeString: CustomFieldType_Boolean
+    - title: NodeColor
+      value: '#1f074fff'
+      type: 0
+      typeString: CustomFieldType_Text
+    portrait: {fileID: 0}
+    spritePortrait: {fileID: 0}
+    alternatePortraits: []
+    spritePortraits: []
   - id: 2
     fields:
     - title: Name
@@ -140,7 +166,7 @@ MonoBehaviour:
     - title: Name
       value: Bargaining Visitor
       type: 0
-      typeString: 
+      typeString: CustomFieldType_Text
     - title: Pictures
       value: '[]'
       type: 3
@@ -154,9 +180,9 @@ MonoBehaviour:
       type: 2
       typeString: CustomFieldType_Boolean
     - title: NodeColor
-      value: '#4ffdffff'
+      value: '#8414b2ff'
       type: 0
-      typeString: 
+      typeString: CustomFieldType_Text
     portrait: {fileID: 0}
     spritePortrait: {fileID: 0}
     alternatePortraits: []
@@ -166,7 +192,7 @@ MonoBehaviour:
     - title: Name
       value: Angry Visitor
       type: 0
-      typeString: 
+      typeString: CustomFieldType_Text
     - title: Pictures
       value: '[]'
       type: 3
@@ -179,14 +205,18 @@ MonoBehaviour:
       value: False
       type: 2
       typeString: CustomFieldType_Boolean
+    - title: NodeColor
+      value: '#a83636ff'
+      type: 0
+      typeString: 
     portrait: {fileID: 0}
     spritePortrait: {fileID: 0}
     alternatePortraits: []
     spritePortraits: []
-  - id: 7
+  - id: 8
     fields:
     - title: Name
-      value: Death
+      value: Accepting Visitor
       type: 0
       typeString: CustomFieldType_Text
     - title: Pictures
@@ -202,9 +232,61 @@ MonoBehaviour:
       type: 2
       typeString: CustomFieldType_Boolean
     - title: NodeColor
-      value: '#1f074fff'
+      value: '#31844fff'
+      type: 0
+      typeString: 
+    portrait: {fileID: 0}
+    spritePortrait: {fileID: 0}
+    alternatePortraits: []
+    spritePortraits: []
+  - id: 9
+    fields:
+    - title: Name
+      value: Depressed Visitor
       type: 0
       typeString: CustomFieldType_Text
+    - title: Pictures
+      value: '[]'
+      type: 3
+      typeString: CustomFieldType_Files
+    - title: Description
+      value: 
+      type: 0
+      typeString: CustomFieldType_Text
+    - title: IsPlayer
+      value: False
+      type: 2
+      typeString: CustomFieldType_Boolean
+    - title: NodeColor
+      value: '#384badff'
+      type: 0
+      typeString: 
+    portrait: {fileID: 0}
+    spritePortrait: {fileID: 0}
+    alternatePortraits: []
+    spritePortraits: []
+  - id: 10
+    fields:
+    - title: Name
+      value: Denying Visitor
+      type: 0
+      typeString: CustomFieldType_Text
+    - title: Pictures
+      value: '[]'
+      type: 3
+      typeString: CustomFieldType_Files
+    - title: Description
+      value: 
+      type: 0
+      typeString: CustomFieldType_Text
+    - title: IsPlayer
+      value: False
+      type: 2
+      typeString: CustomFieldType_Boolean
+    - title: NodeColor
+      value: '#a8772dff'
+      type: 0
+      typeString: 
     portrait: {fileID: 0}
     spritePortrait: {fileID: 0}
     alternatePortraits: []
@@ -324,8 +406,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 424.39328
-        y: 140.25525
+        x: 2443.1377
+        y: 727.75366
         width: 160
         height: 30
     - id: 5
@@ -381,8 +463,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 421.86163
-        y: 273.79953
+        x: 2438.8818
+        y: 859.57385
         width: 160
         height: 30
     - id: 7
@@ -437,8 +519,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 423.12744
-        y: 375.69824
+        x: 2441.8718
+        y: 963.19666
         width: 160
         height: 30
     - id: 8
@@ -464,9 +546,11 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: Even though everyone looks worried, you can't help but smile. Seeing
+        value: 'Even though everyone looks worried, you can''t help but smile. Seeing
           your loved ones fills you with a warm feeling and the moment seems lasting
           forever.
+
+          Until....'
         type: 0
         typeString: 
       - title: Sequence
@@ -494,8 +578,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 423.12744
-        y: 475.0653
+        x: 2441.8718
+        y: 1061.1353
         width: 160
         height: 30
     - id: 9
@@ -521,11 +605,15 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: Until it doesnt.
+        value: ' ...it doesn''t.'
         type: 0
         typeString: 
       - title: Sequence
-        value: SendMessage(FadeToBlack,,HospitalCanvas)
+        value: SendMessage(FadeToBlack,,HospitalCanvas);SetActive(EKG,false);SetActive(Flatline,true);SetActive(machine,false)
+        type: 0
+        typeString: 
+      - title: Response Menu Sequence
+        value: 
         type: 0
         typeString: 
       conversationID: 1
@@ -549,8 +637,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 423.12744
-        y: 578.2299
+        x: 2441.8718
+        y: 1165.7284
         width: 160
         height: 30
     - id: 11
@@ -576,11 +664,11 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: 
+        value: ...
         type: 0
         typeString: 
       - title: Sequence
-        value: ...
+        value: SetActive(PersonC,false);SetActive(DeathEyesClosed,true)
         type: 0
         typeString: 
       conversationID: 1
@@ -604,8 +692,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 424.13434
-        y: 678.8628
+        x: 2442.8787
+        y: 1266.3612
         width: 160
         height: 30
     - id: 12
@@ -631,11 +719,11 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: 
+        value: "Strange, isn\u2019t it? How swiftly life can fade away."
         type: 0
         typeString: 
       - title: Sequence
-        value: Scary isn't it? How life can end so suddenly.
+        value: SendMessage(Clear,,HospitalCanvas)
         type: 0
         typeString: 
       conversationID: 1
@@ -659,8 +747,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 429.22644
-        y: 804.35913
+        x: 2447.709
+        y: 1391.8575
         width: 160
         height: 30
     - id: 13
@@ -686,12 +774,12 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: 
+        value: Sometimes there are no warning signs, no time to prepare yourself
+          for the end.
         type: 0
         typeString: 
       - title: Sequence
-        value: Sometimes, there are no warning signs. No time to prepare yourself
-          for the end.
+        value: 
         type: 0
         typeString: 
       conversationID: 1
@@ -715,8 +803,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 430.49225
-        y: 874.4828
+        x: 2449.2366
+        y: 1463.0121
         width: 160
         height: 30
     - id: 15
@@ -742,11 +830,11 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: 
+        value: 'And then: you just *die*'
         type: 0
         typeString: 
       - title: Sequence
-        value: 'And then: you just *die*'
+        value: 
         type: 0
         typeString: 
       conversationID: 1
@@ -770,8 +858,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 428.21954
-        y: 966.52826
+        x: 2446.9639
+        y: 1554.0267
         width: 160
         height: 30
     - id: 17
@@ -797,11 +885,11 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: 
+        value: ...
         type: 0
         typeString: 
       - title: Sequence
-        value: ...
+        value: SetActive(DeathEyesClosed,false);SetActive(Death,true)
         type: 0
         typeString: 
       conversationID: 1
@@ -825,8 +913,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 430.49228
-        y: 1057.4373
+        x: 2449.2368
+        y: 1644.9357
         width: 160
         height: 30
     - id: 19
@@ -857,7 +945,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
-        value: 
+        value: SetActive(DeathSmirk,true);SetActive(Death,false);SetActive(Guitar,true);SetActive(throat,true)
         type: 0
         typeString: 
       conversationID: 1
@@ -881,8 +969,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 427.0832
-        y: 1164.2559
+        x: 2445.8276
+        y: 1751.7543
         width: 160
         height: 30
     - id: 20
@@ -912,7 +1000,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
-        value: 
+        value: SetActive(DeathSmirk,false);SetActive(DeathExplain,true);
         type: 0
         typeString: 
       conversationID: 1
@@ -948,8 +1036,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 426.7669
-        y: 1265.0757
+        x: 2446.5422
+        y: 1852.5741
         width: 160
         height: 30
     - id: 21
@@ -1003,8 +1091,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 658.9013
-        y: 1379.0283
+        x: 2682.425
+        y: 1971.6002
         width: 160
         height: 30
     - id: 22
@@ -1058,8 +1146,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 474.8105
-        y: 1376.7559
+        x: 2470.1865
+        y: 1964.0771
         width: 160
         height: 30
     - id: 23
@@ -1113,8 +1201,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 294.12863
-        y: 1375.6194
+        x: 2276.666
+        y: 1963.1178
         width: 160
         height: 30
     - id: 24
@@ -1140,11 +1228,12 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: Of course. Everyone is scared when it comes to dying. It is only natural.
+        value: "Of course. Everyone feels fear when faced with death. It\u2019s only
+          natural."
         type: 0
         typeString: 
       - title: Sequence
-        value: 
+        value: SetActive(Death,true);SetActive(DeathExplain,false);
         type: 0
         typeString: 
       conversationID: 1
@@ -1168,8 +1257,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 182.17078
-        y: 1494.6143
+        x: 2200.1277
+        y: 2082.1128
         width: 160
         height: 30
     - id: 25
@@ -1195,12 +1284,12 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: Oh, that is quite alright. This must be a shock to you, learning that
-          you are dead.
+        value: "Oh, that\u2019s quite alright. I understand \u2014 discovering that
+          you\u2019re dead must come as a shock."
         type: 0
         typeString: 
       - title: Sequence
-        value: 
+        value: SetActive(DeathEyesClosed,true);SetActive(DeathExplain,false);
         type: 0
         typeString: 
       conversationID: 1
@@ -1224,8 +1313,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 458.63367
-        y: 1481.6702
+        x: 2477.378
+        y: 2066.8154
         width: 160
         height: 30
     - id: 26
@@ -1279,8 +1368,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 671.07245
-        y: 1488.0443
+        x: 2689.817
+        y: 2075.5427
         width: 160
         height: 30
     - id: 27
@@ -1306,12 +1395,12 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: After all; Humans are the only living beings that are aware of their
-          inevitable end.
+        value: After all, only humankind bears the burden of knowing its own inevitable
+          end.
         type: 0
         typeString: 
       - title: Sequence
-        value: 
+        value: SetActive(DeathEyesClosed,true);SetActive(Death,false);
         type: 0
         typeString: 
       conversationID: 1
@@ -1335,8 +1424,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 182.62474
-        y: 1572.9695
+        x: 2201.3691
+        y: 2160.4678
         width: 160
         height: 30
     - id: 28
@@ -1362,7 +1451,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: But believe me when I say, you will get used to it. Everyone does.
+        value: 'But believe me when I say, you will get used to it. '
         type: 0
         typeString: 
       - title: Sequence
@@ -1380,7 +1469,7 @@ MonoBehaviour:
       - originConversationID: 1
         originDialogueID: 28
         destinationConversationID: 1
-        destinationDialogueID: 32
+        destinationDialogueID: 51
         isConnector: 0
         priority: 2
       conditionsString: 
@@ -1390,8 +1479,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 460.0146
-        y: 1563.6857
+        x: 2479.5466
+        y: 2151.184
         width: 160
         height: 30
     - id: 29
@@ -1422,7 +1511,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
-        value: 
+        value: SetActive(DeathSmirk,true);SetActive(DeathExplain,false);
         type: 0
         typeString: 
       conversationID: 1
@@ -1446,8 +1535,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 671.76294
-        y: 1565.2551
+        x: 2690.5073
+        y: 2153.7844
         width: 160
         height: 30
     - id: 30
@@ -1477,7 +1566,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
-        value: 
+        value: SetActive(DeathEyesClosed,false);SetActive(Death,true);
         type: 0
         typeString: 
       conversationID: 1
@@ -1501,8 +1590,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 182.62474
-        y: 1650.8046
+        x: 2201.3691
+        y: 2238.3027
         width: 160
         height: 30
     - id: 31
@@ -1536,7 +1625,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
-        value: 
+        value: SetActive(DeathSmrik,false);SetActive(DeathEyesClosed,true);
         type: 0
         typeString: 
       conversationID: 1
@@ -1560,8 +1649,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 671.7629
-        y: 1646.183
+        x: 2690.5073
+        y: 2233.6812
         width: 160
         height: 30
     - id: 32
@@ -1591,6 +1680,10 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
+        value: SetActive(DeathEyesClosedfalse);SetActive(DeathSmirk,false);SetActive(Death,false);SetActive(DeathExplain,true);
+        type: 0
+        typeString: 
+      - title: Response Menu Sequence
         value: 
         type: 0
         typeString: 
@@ -1615,8 +1708,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 469.00717
-        y: 1785.2792
+        x: 2487.7515
+        y: 2364.3025
         width: 160
         height: 30
     - id: 33
@@ -1647,7 +1740,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
-        value: 
+        value: SetActive(DeathExplain,false);SetActive(DeathRead,true);
         type: 0
         typeString: 
       conversationID: 1
@@ -1671,8 +1764,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 472.85257
-        y: 1873.488
+        x: 2491.597
+        y: 2460.9863
         width: 160
         height: 30
     - id: 34
@@ -1702,7 +1795,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
-        value: 
+        value: SetActive(DeathRead,false);SetActive(Death,true);
         type: 0
         typeString: 
       conversationID: 1
@@ -1726,8 +1819,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 472.8527
-        y: 1963.4884
+        x: 2491.5972
+        y: 2550.094
         width: 160
         height: 30
     - id: 35
@@ -1759,7 +1852,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
-        value: 
+        value: SetActive(DeathExplain,true);SetActive(Death,false);
         type: 0
         typeString: 
       conversationID: 1
@@ -1776,12 +1869,6 @@ MonoBehaviour:
         destinationDialogueID: 36
         isConnector: 0
         priority: 2
-      - originConversationID: 1
-        originDialogueID: 35
-        destinationConversationID: 1
-        destinationDialogueID: 37
-        isConnector: 0
-        priority: 2
       conditionsString: 
       userScript: 
       onExecute:
@@ -1789,8 +1876,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 482.26437
-        y: 2045.253
+        x: 2501.0088
+        y: 2632.752
         width: 160
         height: 30
     - id: 36
@@ -1833,7 +1920,13 @@ MonoBehaviour:
       delaySimStatus: 0
       falseConditionAction: Block
       conditionPriority: 2
-      outgoingLinks: []
+      outgoingLinks:
+      - originConversationID: 1
+        originDialogueID: 36
+        destinationConversationID: 1
+        destinationDialogueID: 37
+        isConnector: 0
+        priority: 2
       conditionsString: 
       userScript: 
       onExecute:
@@ -1841,8 +1934,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 309.32327
-        y: 2134.0762
+        x: 2498.656
+        y: 2734.516
         width: 160
         height: 30
     - id: 37
@@ -1872,6 +1965,10 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
+        value: SetActive(DeathExplain,false);SetActive(Death,true);
+        type: 0
+        typeString: 
+      - title: Response Menu Sequence
         value: 
         type: 0
         typeString: 
@@ -1896,8 +1993,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 592.85266
-        y: 2334.0762
+        x: 2510.4207
+        y: 2832.1636
         width: 160
         height: 30
     - id: 38
@@ -1953,8 +2050,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 603.4409
-        y: 2425.2527
+        x: 2521.0088
+        y: 2923.3398
         width: 160
         height: 30
     - id: 39
@@ -1985,6 +2082,10 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
+        value: SetActive(DeathSmirk,true);SetActive(Death,false);SetActive(laugh,true)
+        type: 0
+        typeString: 
+      - title: Response Menu Sequence
         value: 
         type: 0
         typeString: 
@@ -2009,11 +2110,674 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 603.441
-        y: 2503.4883
+        x: 2521.009
+        y: 3001.5757
         width: 160
         height: 30
     - id: 40
+      fields:
+      - title: Title
+        value: 
+        type: 0
+        typeString: 
+      - title: Description
+        value: 
+        type: 0
+        typeString: 
+      - title: Actor
+        value: 7
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Conversant
+        value: 4
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Menu Text
+        value: 
+        type: 0
+        typeString: 
+      - title: Dialogue Text
+        value: How does that sound?
+        type: 0
+        typeString: 
+      - title: Sequence
+        value: SetActive(DeathSmirk,false);SetActive(Death,true);
+        type: 0
+        typeString: 
+      conversationID: 1
+      isRoot: 0
+      isGroup: 0
+      nodeColor: 
+      delaySimStatus: 0
+      falseConditionAction: Block
+      conditionPriority: 2
+      outgoingLinks:
+      - originConversationID: 1
+        originDialogueID: 40
+        destinationConversationID: 1
+        destinationDialogueID: 41
+        isConnector: 0
+        priority: 2
+      - originConversationID: 1
+        originDialogueID: 40
+        destinationConversationID: 1
+        destinationDialogueID: 42
+        isConnector: 0
+        priority: 2
+      conditionsString: 
+      userScript: 
+      onExecute:
+        m_PersistentCalls:
+          m_Calls: []
+      canvasRect:
+        serializedVersion: 2
+        x: 2519.8323
+        y: 3098.6343
+        width: 160
+        height: 30
+    - id: 41
+      fields:
+      - title: Title
+        value: 
+        type: 0
+        typeString: 
+      - title: Description
+        value: 
+        type: 0
+        typeString: 
+      - title: Actor
+        value: 4
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Conversant
+        value: 7
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Menu Text
+        value: 
+        type: 0
+        typeString: 
+      - title: Dialogue Text
+        value: That is very generous, thank you.
+        type: 0
+        typeString: 
+      - title: Sequence
+        value: 
+        type: 0
+        typeString: 
+      conversationID: 1
+      isRoot: 0
+      isGroup: 0
+      nodeColor: 
+      delaySimStatus: 0
+      falseConditionAction: Block
+      conditionPriority: 2
+      outgoingLinks:
+      - originConversationID: 1
+        originDialogueID: 41
+        destinationConversationID: 1
+        destinationDialogueID: 43
+        isConnector: 0
+        priority: 2
+      conditionsString: 
+      userScript: 
+      onExecute:
+        m_PersistentCalls:
+          m_Calls: []
+      canvasRect:
+        serializedVersion: 2
+        x: 2401.009
+        y: 3230.9873
+        width: 160
+        height: 30
+    - id: 42
+      fields:
+      - title: Title
+        value: 
+        type: 0
+        typeString: 
+      - title: Description
+        value: 
+        type: 0
+        typeString: 
+      - title: Actor
+        value: 4
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Conversant
+        value: 7
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Menu Text
+        value: 
+        type: 0
+        typeString: 
+      - title: Dialogue Text
+        value: I'm not so sure about this...
+        type: 0
+        typeString: 
+      - title: Sequence
+        value: 
+        type: 0
+        typeString: 
+      conversationID: 1
+      isRoot: 0
+      isGroup: 0
+      nodeColor: 
+      delaySimStatus: 0
+      falseConditionAction: Block
+      conditionPriority: 2
+      outgoingLinks:
+      - originConversationID: 1
+        originDialogueID: 42
+        destinationConversationID: 1
+        destinationDialogueID: 44
+        isConnector: 0
+        priority: 2
+      conditionsString: 
+      userScript: 
+      onExecute:
+        m_PersistentCalls:
+          m_Calls: []
+      canvasRect:
+        serializedVersion: 2
+        x: 2615.1265
+        y: 3227.458
+        width: 160
+        height: 30
+    - id: 43
+      fields:
+      - title: Title
+        value: 
+        type: 0
+        typeString: 
+      - title: Description
+        value: 
+        type: 0
+        typeString: 
+      - title: Actor
+        value: 7
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Conversant
+        value: 4
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Menu Text
+        value: 
+        type: 0
+        typeString: 
+      - title: Dialogue Text
+        value: Of course. I just want you and your family to be ready when it comes
+          to your final departure into the afterlife.
+        type: 0
+        typeString: 
+      - title: Sequence
+        value: 
+        type: 0
+        typeString: 
+      conversationID: 1
+      isRoot: 0
+      isGroup: 0
+      nodeColor: 
+      delaySimStatus: 0
+      falseConditionAction: Block
+      conditionPriority: 2
+      outgoingLinks:
+      - originConversationID: 1
+        originDialogueID: 43
+        destinationConversationID: 1
+        destinationDialogueID: 46
+        isConnector: 0
+        priority: 2
+      conditionsString: 
+      userScript: 
+      onExecute:
+        m_PersistentCalls:
+          m_Calls: []
+      canvasRect:
+        serializedVersion: 2
+        x: 2398.656
+        y: 3330.399
+        width: 160
+        height: 30
+    - id: 44
+      fields:
+      - title: Title
+        value: 
+        type: 0
+        typeString: 
+      - title: Description
+        value: 
+        type: 0
+        typeString: 
+      - title: Actor
+        value: 7
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Conversant
+        value: 4
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Menu Text
+        value: 
+        type: 0
+        typeString: 
+      - title: Dialogue Text
+        value: Of course. The thought of seeing your family grieve from afar must
+          be painful.
+        type: 0
+        typeString: 
+      - title: Sequence
+        value: SetActive(DeathSmirk,false);SetActive(DeathEyesClosed,true);
+        type: 0
+        typeString: 
+      conversationID: 1
+      isRoot: 0
+      isGroup: 0
+      nodeColor: 
+      delaySimStatus: 0
+      falseConditionAction: Block
+      conditionPriority: 2
+      outgoingLinks:
+      - originConversationID: 1
+        originDialogueID: 44
+        destinationConversationID: 1
+        destinationDialogueID: 45
+        isConnector: 0
+        priority: 2
+      conditionsString: 
+      userScript: 
+      onExecute:
+        m_PersistentCalls:
+          m_Calls: []
+      canvasRect:
+        serializedVersion: 2
+        x: 2617.4795
+        y: 3330.399
+        width: 160
+        height: 30
+    - id: 45
+      fields:
+      - title: Title
+        value: 
+        type: 0
+        typeString: 
+      - title: Description
+        value: 
+        type: 0
+        typeString: 
+      - title: Actor
+        value: 7
+        type: 0
+        typeString: CustomFieldType_Actor
+      - title: Conversant
+        value: 4
+        type: 0
+        typeString: CustomFieldType_Actor
+      - title: Menu Text
+        value: 
+        type: 0
+        typeString: 
+      - title: Dialogue Text
+        value: But you should take this chance to help them-to ease their sorrow,
+          even if only a little.
+        type: 0
+        typeString: 
+      - title: Sequence
+        value: 
+        type: 0
+        typeString: 
+      conversationID: 1
+      isRoot: 0
+      isGroup: 0
+      nodeColor: 
+      delaySimStatus: 0
+      falseConditionAction: Block
+      conditionPriority: 2
+      outgoingLinks:
+      - originConversationID: 1
+        originDialogueID: 45
+        destinationConversationID: 1
+        destinationDialogueID: 47
+        isConnector: 0
+        priority: 2
+      conditionsString: 
+      userScript: 
+      onExecute:
+        m_PersistentCalls:
+          m_Calls: []
+      canvasRect:
+        serializedVersion: 2
+        x: 2619.8323
+        y: 3415.6934
+        width: 160
+        height: 30
+    - id: 46
+      fields:
+      - title: Title
+        value: 
+        type: 0
+        typeString: 
+      - title: Description
+        value: 
+        type: 0
+        typeString: 
+      - title: Actor
+        value: 7
+        type: 0
+        typeString: CustomFieldType_Actor
+      - title: Conversant
+        value: 4
+        type: 0
+        typeString: CustomFieldType_Actor
+      - title: Menu Text
+        value: 
+        type: 0
+        typeString: 
+      - title: Dialogue Text
+        value: Consider this your last gift from life itself, hahaha
+        type: 0
+        typeString: 
+      - title: Sequence
+        value: SetActive(DeathSmirk,true);SetActive(Death,false);
+        type: 0
+        typeString: 
+      conversationID: 1
+      isRoot: 0
+      isGroup: 0
+      nodeColor: 
+      delaySimStatus: 0
+      falseConditionAction: Block
+      conditionPriority: 2
+      outgoingLinks:
+      - originConversationID: 1
+        originDialogueID: 46
+        destinationConversationID: 1
+        destinationDialogueID: 47
+        isConnector: 0
+        priority: 2
+      conditionsString: 
+      userScript: 
+      onExecute:
+        m_PersistentCalls:
+          m_Calls: []
+      canvasRect:
+        serializedVersion: 2
+        x: 2399.8325
+        y: 3420.399
+        width: 160
+        height: 30
+    - id: 47
+      fields:
+      - title: Title
+        value: 
+        type: 0
+        typeString: 
+      - title: Description
+        value: 
+        type: 0
+        typeString: 
+      - title: Actor
+        value: 7
+        type: 0
+        typeString: CustomFieldType_Actor
+      - title: Conversant
+        value: 4
+        type: 0
+        typeString: CustomFieldType_Actor
+      - title: Menu Text
+        value: 
+        type: 0
+        typeString: 
+      - title: Dialogue Text
+        value: Now.
+        type: 0
+        typeString: 
+      - title: Sequence
+        value: SetActive(DeathSmirk,false);SetActive(DeathEyesClosed,false);SetActive(Death,true)
+        type: 0
+        typeString: 
+      conversationID: 1
+      isRoot: 0
+      isGroup: 0
+      nodeColor: 
+      delaySimStatus: 0
+      falseConditionAction: Block
+      conditionPriority: 2
+      outgoingLinks:
+      - originConversationID: 1
+        originDialogueID: 47
+        destinationConversationID: 1
+        destinationDialogueID: 48
+        isConnector: 0
+        priority: 2
+      conditionsString: 
+      userScript: 
+      onExecute:
+        m_PersistentCalls:
+          m_Calls: []
+      canvasRect:
+        serializedVersion: 2
+        x: 2513.95
+        y: 3525.6929
+        width: 160
+        height: 30
+    - id: 48
+      fields:
+      - title: Title
+        value: 
+        type: 0
+        typeString: 
+      - title: Description
+        value: 
+        type: 0
+        typeString: 
+      - title: Actor
+        value: 7
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Conversant
+        value: 4
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Menu Text
+        value: 
+        type: 0
+        typeString: 
+      - title: Dialogue Text
+        value: Let us go. But first...
+        type: 0
+        typeString: 
+      - title: Sequence
+        value: 
+        type: 0
+        typeString: 
+      conversationID: 1
+      isRoot: 0
+      isGroup: 0
+      nodeColor: 
+      delaySimStatus: 0
+      falseConditionAction: Block
+      conditionPriority: 2
+      outgoingLinks:
+      - originConversationID: 1
+        originDialogueID: 48
+        destinationConversationID: 1
+        destinationDialogueID: 49
+        isConnector: 0
+        priority: 2
+      conditionsString: 
+      userScript: 
+      onExecute:
+        m_PersistentCalls:
+          m_Calls: []
+      canvasRect:
+        serializedVersion: 2
+        x: 2516.303
+        y: 3589.923
+        width: 160
+        height: 30
+    - id: 49
+      fields:
+      - title: Title
+        value: 
+        type: 0
+        typeString: 
+      - title: Description
+        value: 
+        type: 0
+        typeString: 
+      - title: Actor
+        value: 7
+        type: 0
+        typeString: CustomFieldType_Actor
+      - title: Conversant
+        value: 4
+        type: 0
+        typeString: CustomFieldType_Actor
+      - title: Menu Text
+        value: 
+        type: 0
+        typeString: 
+      - title: Dialogue Text
+        value: It is time for a little 'make over'.
+        type: 0
+        typeString: 
+      - title: Sequence
+        value: SetActive(Death,false);SetActive(DeathSmirk,true)
+        type: 0
+        typeString: 
+      conversationID: 1
+      isRoot: 0
+      isGroup: 0
+      nodeColor: 
+      delaySimStatus: 0
+      falseConditionAction: Block
+      conditionPriority: 2
+      outgoingLinks:
+      - originConversationID: 1
+        originDialogueID: 49
+        destinationConversationID: 1
+        destinationDialogueID: 52
+        isConnector: 0
+        priority: 2
+      conditionsString: 
+      userScript: 
+      onExecute:
+        m_PersistentCalls:
+          m_Calls: []
+      canvasRect:
+        serializedVersion: 2
+        x: 2516.0508
+        y: 3680.3152
+        width: 160
+        height: 30
+    - id: 50
+      fields:
+      - title: Title
+        value: 
+        type: 0
+        typeString: 
+      - title: Description
+        value: 
+        type: 0
+        typeString: 
+      - title: Actor
+        value: 4
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Conversant
+        value: 7
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Menu Text
+        value: 
+        type: 0
+        typeString: 
+      - title: Dialogue Text
+        value: 
+        type: 0
+        typeString: 
+      - title: Sequence
+        value: SendMessage(ChangeScene,,HospitalCanvas)
+        type: 0
+        typeString: 
+      conversationID: 1
+      isRoot: 0
+      isGroup: 0
+      nodeColor: 
+      delaySimStatus: 0
+      falseConditionAction: Block
+      conditionPriority: 2
+      outgoingLinks: []
+      conditionsString: 
+      userScript: 
+      onExecute:
+        m_PersistentCalls:
+          m_Calls: []
+      canvasRect:
+        serializedVersion: 2
+        x: 2516.3308
+        y: 3940.2866
+        width: 160
+        height: 30
+    - id: 51
+      fields:
+      - title: Title
+        value: 
+        type: 0
+        typeString: 
+      - title: Description
+        value: 
+        type: 0
+        typeString: 
+      - title: Actor
+        value: 7
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Conversant
+        value: 4
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Menu Text
+        value: 
+        type: 0
+        typeString: 
+      - title: Dialogue Text
+        value: Everyone does.
+        type: 0
+        typeString: 
+      - title: Sequence
+        value: SetActive(DeathEyesClosed,false);SetActive(DeathSmirk,true);
+        type: 0
+        typeString: 
+      conversationID: 1
+      isRoot: 0
+      isGroup: 0
+      nodeColor: 
+      delaySimStatus: 0
+      falseConditionAction: Block
+      conditionPriority: 2
+      outgoingLinks:
+      - originConversationID: 1
+        originDialogueID: 51
+        destinationConversationID: 1
+        destinationDialogueID: 32
+        isConnector: 0
+        priority: 2
+      conditionsString: 
+      userScript: 
+      onExecute:
+        m_PersistentCalls:
+          m_Calls: []
+      canvasRect:
+        serializedVersion: 2
+        x: 2482.6963
+        y: 2224.0188
+        width: 160
+        height: 30
+    - id: 52
       fields:
       - title: Title
         value: 
@@ -2040,7 +2804,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
-        value: 
+        value: SendMessage(FadeToBlack,,HospitalCanvas);
         type: 0
         typeString: 
       conversationID: 1
@@ -2050,7 +2814,13 @@ MonoBehaviour:
       delaySimStatus: 0
       falseConditionAction: Block
       conditionPriority: 2
-      outgoingLinks: []
+      outgoingLinks:
+      - originConversationID: 1
+        originDialogueID: 52
+        destinationConversationID: 1
+        destinationDialogueID: 50
+        isConnector: 0
+        priority: 2
       conditionsString: 
       userScript: 
       onExecute:
@@ -2058,13 +2828,13 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 611.6762
-        y: 2605.253
+        x: 2516.6016
+        y: 3799.0403
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 2.3529663, y: 1555.6165}
-    canvasZoom: 0.85000014
+    canvasScrollPosition: {x: 1727.3995, y: 812.2315}
+    canvasZoom: 0.85000026
   - id: 2
     fields:
     - title: Title
@@ -2650,7 +3420,7 @@ MonoBehaviour:
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 113.582535, y: 0}
+    canvasScrollPosition: {x: 0, y: 0}
     canvasZoom: 1.03
   - id: 4
     fields:
@@ -3288,8 +4058,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 1447.9602
-        y: 299.21722
+        x: 1446.9293
+        y: 298.18628
         width: 160
         height: 30
     - id: 2
@@ -3399,7 +4169,7 @@ MonoBehaviour:
       canvasRect:
         serializedVersion: 2
         x: 1446.6945
-        y: 467.21722
+        y: 468.1881
         width: 160
         height: 30
     - id: 4
@@ -5262,8 +6032,8 @@ MonoBehaviour:
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 804.8507, y: 241.05344}
-    canvasZoom: 0.7600002
+    canvasScrollPosition: {x: 958.7689, y: 121.97521}
+    canvasZoom: 0.97
   - id: 7
     fields:
     - title: Title
@@ -5533,7 +6303,7 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 385.3178
+        x: 386.2887
         y: 331.02838
         width: 160
         height: 30
@@ -5756,8 +6526,8 @@ MonoBehaviour:
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 84.95254, y: 53.683792}
-    canvasZoom: 1.03
+    canvasScrollPosition: {x: 0, y: 6.9740705}
+    canvasZoom: 0.85000014
   - id: 8
     fields:
     - title: Title
@@ -6246,6 +7016,448 @@ MonoBehaviour:
         height: 30
     entryGroups: []
     canvasScrollPosition: {x: 3, y: 3}
+    canvasZoom: 1
+  - id: 9
+    fields:
+    - title: Title
+      value: AngryTest
+      type: 0
+      typeString: 
+    - title: Description
+      value: 
+      type: 0
+      typeString: 
+    - title: Actor
+      value: 2
+      type: 5
+      typeString: CustomFieldType_Actor
+    - title: Conversant
+      value: 4
+      type: 5
+      typeString: CustomFieldType_Actor
+    overrideSettings:
+      useOverrides: 0
+      overrideSubtitleSettings: 0
+      showNPCSubtitlesDuringLine: 1
+      showNPCSubtitlesWithResponses: 1
+      showPCSubtitlesDuringLine: 0
+      skipPCSubtitleAfterResponseMenu: 0
+      subtitleCharsPerSecond: 30
+      minSubtitleSeconds: 2
+      continueButton: 0
+      overrideSequenceSettings: 0
+      defaultSequence: 
+      defaultPlayerSequence: 
+      defaultResponseMenuSequence: 
+      overrideInputSettings: 0
+      alwaysForceResponseMenu: 1
+      includeInvalidEntries: 0
+      responseTimeout: 0
+      emTagForOldResponses: 0
+      emTagForInvalidResponses: 0
+      cancelSubtitle:
+        key: 27
+        buttonName: 
+      cancelConversation:
+        key: 27
+        buttonName: 
+    nodeColor: 
+    dialogueEntries:
+    - id: 0
+      fields:
+      - title: Title
+        value: START
+        type: 0
+        typeString: 
+      - title: Description
+        value: 
+        type: 0
+        typeString: 
+      - title: Actor
+        value: 2
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Conversant
+        value: 4
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Menu Text
+        value: 
+        type: 0
+        typeString: 
+      - title: Dialogue Text
+        value: 
+        type: 0
+        typeString: 
+      - title: Sequence
+        value: None()
+        type: 0
+        typeString: 
+      conversationID: 9
+      isRoot: 0
+      isGroup: 0
+      nodeColor: 
+      delaySimStatus: 0
+      falseConditionAction: Block
+      conditionPriority: 2
+      outgoingLinks:
+      - originConversationID: 9
+        originDialogueID: 0
+        destinationConversationID: 9
+        destinationDialogueID: 1
+        isConnector: 0
+        priority: 2
+      conditionsString: 
+      userScript: 
+      onExecute:
+        m_PersistentCalls:
+          m_Calls: []
+      canvasRect:
+        serializedVersion: 2
+        x: 188
+        y: 26
+        width: 160
+        height: 30
+    - id: 1
+      fields:
+      - title: Title
+        value: 
+        type: 0
+        typeString: 
+      - title: Description
+        value: 
+        type: 0
+        typeString: 
+      - title: Actor
+        value: 6
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Conversant
+        value: 4
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Menu Text
+        value: 
+        type: 0
+        typeString: 
+      - title: Dialogue Text
+        value: Im so angry, grrr
+        type: 0
+        typeString: 
+      - title: Sequence
+        value: 
+        type: 0
+        typeString: 
+      conversationID: 9
+      isRoot: 0
+      isGroup: 0
+      nodeColor: 
+      delaySimStatus: 0
+      falseConditionAction: Block
+      conditionPriority: 2
+      outgoingLinks:
+      - originConversationID: 9
+        originDialogueID: 1
+        destinationConversationID: 9
+        destinationDialogueID: 2
+        isConnector: 0
+        priority: 2
+      conditionsString: 
+      userScript: 
+      onExecute:
+        m_PersistentCalls:
+          m_Calls: []
+      canvasRect:
+        serializedVersion: 2
+        x: 189
+        y: 152
+        width: 160
+        height: 30
+    - id: 2
+      fields:
+      - title: Title
+        value: 
+        type: 0
+        typeString: 
+      - title: Description
+        value: 
+        type: 0
+        typeString: 
+      - title: Actor
+        value: 1
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Conversant
+        value: 4
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Menu Text
+        value: 
+        type: 0
+        typeString: 
+      - title: Dialogue Text
+        value: Give flower?
+        type: 0
+        typeString: 
+      - title: Sequence
+        value: 
+        type: 0
+        typeString: 
+      conversationID: 9
+      isRoot: 0
+      isGroup: 0
+      nodeColor: 
+      delaySimStatus: 0
+      falseConditionAction: Block
+      conditionPriority: 2
+      outgoingLinks:
+      - originConversationID: 9
+        originDialogueID: 2
+        destinationConversationID: 9
+        destinationDialogueID: 3
+        isConnector: 0
+        priority: 2
+      - originConversationID: 9
+        originDialogueID: 2
+        destinationConversationID: 9
+        destinationDialogueID: 4
+        isConnector: 0
+        priority: 2
+      - originConversationID: 9
+        originDialogueID: 2
+        destinationConversationID: 9
+        destinationDialogueID: 5
+        isConnector: 0
+        priority: 2
+      conditionsString: 
+      userScript: 
+      onExecute:
+        m_PersistentCalls:
+          m_Calls: []
+      canvasRect:
+        serializedVersion: 2
+        x: 191
+        y: 243
+        width: 160
+        height: 30
+    - id: 3
+      fields:
+      - title: Title
+        value: 
+        type: 0
+        typeString: 
+      - title: Description
+        value: 
+        type: 0
+        typeString: 
+      - title: Actor
+        value: 4
+        type: 0
+        typeString: CustomFieldType_Actor
+      - title: Conversant
+        value: -1
+        type: 0
+        typeString: CustomFieldType_Actor
+      - title: Menu Text
+        value: 
+        type: 0
+        typeString: 
+      - title: Dialogue Text
+        value: 1 flower
+        type: 0
+        typeString: 
+      - title: Sequence
+        value: 
+        type: 0
+        typeString: 
+      conversationID: 9
+      isRoot: 0
+      isGroup: 0
+      nodeColor: 
+      delaySimStatus: 0
+      falseConditionAction: Block
+      conditionPriority: 2
+      outgoingLinks:
+      - originConversationID: 9
+        originDialogueID: 3
+        destinationConversationID: 9
+        destinationDialogueID: 7
+        isConnector: 0
+        priority: 2
+      conditionsString: 
+      userScript: 
+      onExecute:
+        m_PersistentCalls:
+          m_Calls: []
+      canvasRect:
+        serializedVersion: 2
+        x: 4
+        y: 361
+        width: 160
+        height: 30
+    - id: 4
+      fields:
+      - title: Title
+        value: 
+        type: 0
+        typeString: 
+      - title: Description
+        value: 
+        type: 0
+        typeString: 
+      - title: Actor
+        value: 4
+        type: 0
+        typeString: CustomFieldType_Actor
+      - title: Conversant
+        value: -1
+        type: 0
+        typeString: CustomFieldType_Actor
+      - title: Menu Text
+        value: 2 flower
+        type: 0
+        typeString: 
+      - title: Dialogue Text
+        value: 
+        type: 0
+        typeString: 
+      - title: Sequence
+        value: 
+        type: 0
+        typeString: 
+      conversationID: 9
+      isRoot: 0
+      isGroup: 0
+      nodeColor: 
+      delaySimStatus: 0
+      falseConditionAction: Block
+      conditionPriority: 2
+      outgoingLinks:
+      - originConversationID: 9
+        originDialogueID: 4
+        destinationConversationID: 9
+        destinationDialogueID: 7
+        isConnector: 0
+        priority: 2
+      conditionsString: 
+      userScript: 
+      onExecute:
+        m_PersistentCalls:
+          m_Calls: []
+      canvasRect:
+        serializedVersion: 2
+        x: 185
+        y: 364
+        width: 160
+        height: 30
+    - id: 5
+      fields:
+      - title: Title
+        value: 
+        type: 0
+        typeString: 
+      - title: Description
+        value: 
+        type: 0
+        typeString: 
+      - title: Actor
+        value: 4
+        type: 0
+        typeString: CustomFieldType_Actor
+      - title: Conversant
+        value: -1
+        type: 0
+        typeString: CustomFieldType_Actor
+      - title: Menu Text
+        value: '3 flower
+
+'
+        type: 0
+        typeString: 
+      - title: Dialogue Text
+        value: 
+        type: 0
+        typeString: 
+      - title: Sequence
+        value: 
+        type: 0
+        typeString: 
+      conversationID: 9
+      isRoot: 0
+      isGroup: 0
+      nodeColor: 
+      delaySimStatus: 0
+      falseConditionAction: Block
+      conditionPriority: 2
+      outgoingLinks:
+      - originConversationID: 9
+        originDialogueID: 5
+        destinationConversationID: 9
+        destinationDialogueID: 7
+        isConnector: 0
+        priority: 2
+      conditionsString: 
+      userScript: 
+      onExecute:
+        m_PersistentCalls:
+          m_Calls: []
+      canvasRect:
+        serializedVersion: 2
+        x: 389
+        y: 362
+        width: 160
+        height: 30
+    - id: 7
+      fields:
+      - title: Title
+        value: 
+        type: 0
+        typeString: 
+      - title: Description
+        value: 
+        type: 0
+        typeString: 
+      - title: Actor
+        value: 2
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Conversant
+        value: 2
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Menu Text
+        value: 
+        type: 0
+        typeString: 
+      - title: Dialogue Text
+        value: 
+        type: 0
+        typeString: 
+      - title: Sequence
+        value: 
+        type: 0
+        typeString: 
+      conversationID: 9
+      isRoot: 0
+      isGroup: 0
+      nodeColor: 
+      delaySimStatus: 0
+      falseConditionAction: Block
+      conditionPriority: 2
+      outgoingLinks: []
+      conditionsString: 
+      userScript: 
+      onExecute:
+        m_PersistentCalls:
+          m_Calls: []
+      canvasRect:
+        serializedVersion: 2
+        x: 178
+        y: 533
+        width: 160
+        height: 30
+    entryGroups: []
+    canvasScrollPosition: {x: 0, y: 0}
     canvasZoom: 1
   syncInfo:
     syncActors: 0
