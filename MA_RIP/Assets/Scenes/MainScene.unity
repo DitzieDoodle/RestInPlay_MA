@@ -7809,6 +7809,10 @@ PrefabInstance:
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: 21300000, guid: f9aa65039d9a8c047ba3b568a8565179, type: 3}
+    - target: {fileID: 5078504470949472367, guid: 4bde9a95557703f43836befc3c3e8d70, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 8a36df4036717904ea4a0da96c422c23, type: 2}
     - target: {fileID: 5592830673068359384, guid: 4bde9a95557703f43836befc3c3e8d70, type: 3}
       propertyPath: m_LocalScale.x
       value: 0.0556082
