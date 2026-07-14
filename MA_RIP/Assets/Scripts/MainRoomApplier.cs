@@ -1,4 +1,4 @@
-using UnityEngine;
+﻿using UnityEngine;
 using System.Collections.Generic;
 
 public class MainRoomApplier : MonoBehaviour
@@ -16,8 +16,21 @@ public class MainRoomApplier : MonoBehaviour
 
     [SerializeField] private List<PhaseVisuals> phases = new List<PhaseVisuals>();
 
+    private void OnEnable()
+    {
+        // Ab hier auf Änderungen hören
+        GriefProgressManager.OnProgressChanged += ApplyAll;
+    }
+
+    private void OnDisable()
+    {
+        // Sauber abmelden wenn Objekt deaktiviert wird
+        GriefProgressManager.OnProgressChanged -= ApplyAll;
+    }
+
     private void Start()
     {
+        // Initialer Aufruf beim Laden der Scene
         ApplyAll();
     }
 
@@ -29,12 +42,19 @@ public class MainRoomApplier : MonoBehaviour
         {
             int flowers = GriefProgressManager.Instance.GetFlowers(phase.phaseName);
 
+            // 1 Blume  → Hauptfarbe aktiv
             ApplyColorToSprites(phase.mainSprites, phase.mainColor, flowers >= 1);
+
+            // 2 Blumen → Begleitfarbe aktiv
             ApplyColorToSprites(phase.companionSprites, phase.companionColor, flowers >= 2);
 
+            // 3 Blumen → Bonus-Objekte aktiv (z.B. Blumenstrauß, Foto, Kerze)
             bool bonusActive = flowers >= 3;
             foreach (var obj in phase.bonusObjects)
-                obj.SetActive(bonusActive);
+            {
+                if (obj != null)
+                    obj.SetActive(bonusActive);
+            }
         }
     }
 

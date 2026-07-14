@@ -190,7 +190,7 @@ MonoBehaviour:
   - id: 6
     fields:
     - title: Name
-      value: Angry Visitor
+      value: AngryNPC
       type: 0
       typeString: CustomFieldType_Text
     - title: Pictures
@@ -2855,12 +2855,12 @@ MonoBehaviour:
       canvasRect:
         serializedVersion: 2
         x: 2516.6016
-        y: 3799.0403
+        y: 3797.3162
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 1727.3995, y: 812.2315}
-    canvasZoom: 0.85000026
+    canvasScrollPosition: {x: 1941.603, y: 2165.999}
+    canvasZoom: 0.5800005
   - id: 2
     fields:
     - title: Title
@@ -7281,7 +7281,7 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Actor
       - title: Conversant
-        value: -1
+        value: 6
         type: 0
         typeString: CustomFieldType_Actor
       - title: Menu Text
@@ -7293,7 +7293,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
-        value: 
+        value: SendMessage(Testing,,AngryNPC);
         type: 0
         typeString: 
       conversationID: 9
@@ -7317,7 +7317,7 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 4
+        x: 4.970871
         y: 361
         width: 160
         height: 30
@@ -7336,7 +7336,7 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Actor
       - title: Conversant
-        value: -1
+        value: 6
         type: 0
         typeString: CustomFieldType_Actor
       - title: Menu Text
@@ -7348,7 +7348,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
-        value: 
+        value: GiveFlower(2)
         type: 0
         typeString: 
       conversationID: 9
@@ -7391,7 +7391,7 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Actor
       - title: Conversant
-        value: -1
+        value: 6
         type: 0
         typeString: CustomFieldType_Actor
       - title: Menu Text
@@ -7405,7 +7405,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
-        value: 
+        value: GiveFlower(3)
         type: 0
         typeString: 
       conversationID: 9
@@ -7483,8 +7483,8 @@ MonoBehaviour:
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 0, y: 0}
-    canvasZoom: 1
+    canvasScrollPosition: {x: 0, y: 4.1456213}
+    canvasZoom: 1.03
   - id: 10
     fields:
     - title: Title
