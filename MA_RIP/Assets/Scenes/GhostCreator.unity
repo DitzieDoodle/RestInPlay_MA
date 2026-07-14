@@ -3459,7 +3459,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   fadeImage: {fileID: 857468729}
   fadeDuration: 0.8
-  sceneToLoad: bargain
+  sceneToLoad: MainScene
 --- !u!1 &997006002
 GameObject:
   m_ObjectHideFlags: 0
