@@ -5573,6 +5573,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1347223340842357369, guid: 4bde9a95557703f43836befc3c3e8d70, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.22
+      objectReference: {fileID: 0}
     - target: {fileID: 4921631397453053803, guid: 4bde9a95557703f43836befc3c3e8d70, type: 3}
       propertyPath: m_Name
       value: Visitor (2)
@@ -5663,6 +5667,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6689590689283095144, guid: 4bde9a95557703f43836befc3c3e8d70, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8522330966238588148, guid: 4bde9a95557703f43836befc3c3e8d70, type: 3}
+      propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -11132,6 +11140,26 @@ PrefabInstance:
     - target: {fileID: 1033329740092448625, guid: 07b814758e5a67143b2a96f9b2dc3904, type: 3}
       propertyPath: conversation
       value: Urn
+      objectReference: {fileID: 0}
+    - target: {fileID: 1050447805050973080, guid: 07b814758e5a67143b2a96f9b2dc3904, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.050685816
+      objectReference: {fileID: 0}
+    - target: {fileID: 1050447805050973080, guid: 07b814758e5a67143b2a96f9b2dc3904, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.040215135
+      objectReference: {fileID: 0}
+    - target: {fileID: 1050447805050973080, guid: 07b814758e5a67143b2a96f9b2dc3904, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.050685816
+      objectReference: {fileID: 0}
+    - target: {fileID: 1050447805050973080, guid: 07b814758e5a67143b2a96f9b2dc3904, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.178
+      objectReference: {fileID: 0}
+    - target: {fileID: 1050447805050973080, guid: 07b814758e5a67143b2a96f9b2dc3904, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.79
       objectReference: {fileID: 0}
     - target: {fileID: 4545643857735462560, guid: 07b814758e5a67143b2a96f9b2dc3904, type: 3}
       propertyPath: m_overrideName
