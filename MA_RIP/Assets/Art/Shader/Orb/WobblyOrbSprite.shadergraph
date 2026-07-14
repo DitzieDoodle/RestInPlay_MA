@@ -3540,7 +3540,7 @@
     "m_Hidden": false,
     "m_PerRendererData": false,
     "m_customAttributes": [],
-    "m_Value": 1.0,
+    "m_Value": 0.4000000059604645,
     "m_FloatType": 0,
     "m_LiteralFloatMode": false,
     "m_RangeValues": {
@@ -4041,8 +4041,8 @@
     "m_ObjectId": "61ca8fc3fca9488c8397828ef9b08484",
     "m_Title": "New Group",
     "m_Position": {
-        "x": -1098.0,
-        "y": -770.0
+        "x": -1098.0001220703125,
+        "y": -770.000244140625
     }
 }
 
@@ -4578,7 +4578,7 @@
     "m_ObjectId": "7133c0f11f914284adaaa562fd25fb2a",
     "m_Title": "Apply Noise",
     "m_Position": {
-        "x": -2901.0,
+        "x": -2901.000244140625,
         "y": -506.0
     }
 }
@@ -7972,8 +7972,8 @@
     "m_ObjectId": "eb5d768c3fe5450b90e1483c7e86d7fd",
     "m_Title": "Combine & Decrease Strength",
     "m_Position": {
-        "x": -1631.0,
-        "y": 264.0
+        "x": -1631.000244140625,
+        "y": 264.00006103515627
     }
 }
 
@@ -8421,8 +8421,8 @@
     "m_ObjectId": "f4b6a97ef2a14d3d8af2ea25aeff9710",
     "m_Title": "colo",
     "m_Position": {
-        "x": -431.0,
-        "y": 940.0
+        "x": -431.0001220703125,
+        "y": 940.0003051757813
     }
 }
 

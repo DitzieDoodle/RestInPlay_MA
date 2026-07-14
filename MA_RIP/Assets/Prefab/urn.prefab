@@ -620,8 +620,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7ece4261ca5e17641a1592c427fdf9f5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  targetMaterial: {fileID: -876546973899608171, guid: ad749d0d66272e64e87d2c572a2ec538, type: 3}
+  targetMaterial: {fileID: 2100000, guid: 32954851fad0eeb43bf6bf2fba7489d7, type: 2}
   transitionDuration: 1
+  colorProperty: _BaseColor
+  wobbleProperty: _WobbleStrength
+  wobbleOneColor: {r: 0.8, g: 0.8, b: 0.8, a: 0.8}
+  wobbleOneStrength: 0.2
+  wobbleTwoColor: {r: 1, g: 1, b: 1, a: 1}
+  wobbleTwoStrength: 0.5
+  wobbleOffColor: {r: 1, g: 1, b: 1, a: 1}
+  wobbleOffStrength: 0
 --- !u!114 &5099246463381036802
 MonoBehaviour:
   m_ObjectHideFlags: 0

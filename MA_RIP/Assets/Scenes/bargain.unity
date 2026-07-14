@@ -394,15 +394,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7ece4261ca5e17641a1592c427fdf9f5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::WobbleController
-  targetMaterial: {fileID: -876546973899608171, guid: ad749d0d66272e64e87d2c572a2ec538, type: 3}
-  transitionDuration: 1
-  colorProperty: basecolor
-  wobbleProperty: wobbleStrength
-  wobbleOneColor: {r: 0.8, g: 0.8, b: 0.8, a: 0.8}
-  wobbleOneStrength: 0.2
-  wobbleTwoColor: {r: 1, g: 1, b: 1, a: 1}
-  wobbleTwoStrength: 0.5
-  wobbleOffColor: {r: 1, g: 1, b: 1, a: 1}
+  targetMaterial: {fileID: 2100000, guid: 32954851fad0eeb43bf6bf2fba7489d7, type: 2}
+  wobbleProperty: WobbleStrength
+  wobbleOneStrength: 0.1
+  wobbleTwoStrength: 0.05
   wobbleOffStrength: 0
 --- !u!1 &305732729
 GameObject:
@@ -2293,6 +2288,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2188164673568129132, guid: 07b814758e5a67143b2a96f9b2dc3904, type: 3}
+      propertyPath: m_Name
+      value: UrnSprite
+      objectReference: {fileID: 0}
     - target: {fileID: 2677103700429349504, guid: 07b814758e5a67143b2a96f9b2dc3904, type: 3}
       propertyPath: 'sprites.Array.data[0]'
       value: 
@@ -2303,7 +2302,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5431034979615133951, guid: 07b814758e5a67143b2a96f9b2dc3904, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 6.577
+      value: 6.722
       objectReference: {fileID: 0}
     - target: {fileID: 5431034979615133951, guid: 07b814758e5a67143b2a96f9b2dc3904, type: 3}
       propertyPath: m_LocalPosition.y
@@ -2341,6 +2340,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5754998658609994940, guid: 07b814758e5a67143b2a96f9b2dc3904, type: 3}
+      propertyPath: colorProperty
+      value: BaseColor
+      objectReference: {fileID: 0}
+    - target: {fileID: 5754998658609994940, guid: 07b814758e5a67143b2a96f9b2dc3904, type: 3}
+      propertyPath: wobbleProperty
+      value: WobbleStrength
+      objectReference: {fileID: 0}
+    - target: {fileID: 7091833871797479508, guid: 07b814758e5a67143b2a96f9b2dc3904, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 32954851fad0eeb43bf6bf2fba7489d7, type: 2}
     - target: {fileID: 7951175505936743899, guid: 07b814758e5a67143b2a96f9b2dc3904, type: 3}
       propertyPath: 'volumes.Array.data[0]'
       value: 
@@ -2349,8 +2360,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: urn
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
+    m_RemovedComponents:
+    - {fileID: 2677103700429349504, guid: 07b814758e5a67143b2a96f9b2dc3904, type: 3}
+    m_RemovedGameObjects:
+    - {fileID: 3268374410564650174, guid: 07b814758e5a67143b2a96f9b2dc3904, type: 3}
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 07b814758e5a67143b2a96f9b2dc3904, type: 3}
