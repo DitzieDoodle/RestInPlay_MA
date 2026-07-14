@@ -18,10 +18,11 @@ public class SkinsMatcher : MonoBehaviour
     private int currentMouthIndex = 0;
     private int currentBodyIndex = 0;
 
-    // 🎯 NEU: PlayerPrefs Keys
+    // PlayerPrefs Keys
     private const string EYES_KEY = "Char_Eyes";
     private const string MOUTH_KEY = "Char_Mouth";
     private const string BODY_KEY = "Char_Body";
+    private const string NAME_KEY = "Char_Name";
 
     [Header("UI Buttons")]
     public Button nextEyeButton;
@@ -71,6 +72,7 @@ public class SkinsMatcher : MonoBehaviour
         currentEyeIndex = PlayerPrefs.GetInt(EYES_KEY, 0);
         currentMouthIndex = PlayerPrefs.GetInt(MOUTH_KEY, 0);
         currentBodyIndex = PlayerPrefs.GetInt(BODY_KEY, 0);
+        string savedName = PlayerPrefs.GetString(NAME_KEY, "Player"); // Default
     }
 
     // Buttons - JETZT mit automatischer Speicherung!

@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class CharacterSelectionUI : MonoBehaviour
 {
-    public void SelectEyes(int index)
+        public void SelectEyes(int index)
     {
         CharacterSelectionData.Instance.selectedEyesIndex = index;
         CharacterSelectionData.Instance.SaveSelection();
