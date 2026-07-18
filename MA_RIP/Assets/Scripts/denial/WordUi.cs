@@ -1,0 +1,101 @@
+using UnityEngine;
+using UnityEngine.EventSystems;
+
+public class WordUi : MonoBehaviour, IPointerDownHandler, IPointerUpHandler, IDragHandler
+{
+    [SerializeField] float snapDistance = 60f;
+
+    public bool IsRightWord = false;
+
+    WordSlotUi parentSlot;
+    RectTransform rectTransform;
+    RectTransform parentSlotRectTransform;
+    Canvas canvas;
+
+    bool isDragging;
+    bool isSnappedToParentSlot;
+
+    public void OnPointerDown(PointerEventData eventData)
+    {
+        if (eventData.button != PointerEventData.InputButton.Left)
+        {
+            return;
+        }
+
+        isDragging = true;
+        isSnappedToParentSlot = false;
+    }
+
+    public void OnPointerUp(PointerEventData eventData)
+    {
+        if (eventData.button != PointerEventData.InputButton.Left)
+        {
+            return;
+        }
+
+        isDragging = false;
+
+        if (isSnappedToParentSlot && parentSlot != null)
+        {
+            parentSlot.OnWordSelected(this);
+        }
+    }
+
+    public void OnDrag(PointerEventData eventData)
+    {
+        if (!isDragging)
+        {
+            return;
+        }
+
+        Vector3 targetWorldPosition;
+        if (!TryGetPointerWorldPosition(eventData, out targetWorldPosition))
+        {
+            return;
+        }
+
+        rectTransform.position = targetWorldPosition;
+
+        if (parentSlotRectTransform == null)
+        {
+            isSnappedToParentSlot = false;
+            return;
+        }
+
+        float distanceToParentSlot = Vector2.Distance(rectTransform.position, parentSlotRectTransform.position);
+        isSnappedToParentSlot = distanceToParentSlot <= snapDistance;
+
+        if (isSnappedToParentSlot)
+        {
+            rectTransform.position = parentSlotRectTransform.position;
+        }
+    }
+
+    public void SetParentSlot(WordSlotUi slot)
+    {
+        parentSlot = slot;
+        parentSlotRectTransform = slot != null ? slot.GetComponent<RectTransform>() : null;
+    }
+
+    void Awake()
+    {
+        rectTransform = GetComponent<RectTransform>();
+        canvas = GetComponentInParent<Canvas>();
+    }
+
+
+    bool TryGetPointerWorldPosition(PointerEventData eventData, out Vector3 worldPosition)
+    {
+        RectTransform canvasRect = canvas != null ? canvas.rootCanvas.transform as RectTransform : null;
+        RectTransform referenceRect = canvasRect != null ? canvasRect : rectTransform;
+
+        if (RectTransformUtility.ScreenPointToWorldPointInRectangle(referenceRect, eventData.position, eventData.pressEventCamera, out worldPosition))
+        {
+            return true;
+        }
+
+        worldPosition = rectTransform.position;
+        return false;
+    }
+
+}
