@@ -10,15 +10,14 @@ public class PlayerController : MonoBehaviour
     [Header("Graphics")]
     public Transform graphics; // Parent von Spine-Objekt
 
-    private float currentVelocity = 0f;
-    private float inputX;
-    private Vector3 velocity = Vector3.zero; // Für SmoothDamp
+    Rigidbody rb;
 
     // Original scale speichern, damit wir nicht die globale Skalierung ändern
     private Vector3 originalScale;
 
     void Start()
     {
+        rb = GetComponent<Rigidbody>();
         if (graphics != null)
             originalScale = graphics.localScale;
     }
@@ -30,7 +29,7 @@ public class PlayerController : MonoBehaviour
 
         // Bewegung auf der XZ-Ebene
         Vector3 movement = new Vector3(inputX, 0f, inputZ).normalized * moveSpeed * Time.deltaTime;
-        transform.position += movement;
+        rb.MovePosition(transform.position + movement);
 
         // Flip Spine Grafik nur bei X-Bewegung
         if (graphics != null)
