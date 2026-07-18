@@ -7,6 +7,7 @@ public class WordSlotUi : MonoBehaviour
     public UnityEvent OnRightWordSelectedEvent = new();
 
     public List<WordUi> wordUis = new List<WordUi>();
+    public WordUi CurrentWordUi { get; private set; } = null;
 
 
     void Start()
@@ -24,6 +25,7 @@ public class WordSlotUi : MonoBehaviour
         if (selectedWord.IsRightWord)
         {
             HasRightWord = true;
+            CurrentWordUi = selectedWord;
             OnRightWordSelectedEvent?.Invoke();
         }
         else

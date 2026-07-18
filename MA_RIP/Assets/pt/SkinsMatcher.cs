@@ -25,6 +25,7 @@ public class SkinsMatcher : MonoBehaviour
     private const string MOUTH_KEY = "Char_Mouth";
     private const string BODY_KEY = "Char_Body";
     public const string NAME_KEY = "Char_Name";
+    public const string BASE_NAME = "Player";
 
     [Header("UI Buttons")]
     public Button nextEyeButton;

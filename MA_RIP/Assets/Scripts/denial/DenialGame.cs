@@ -6,6 +6,8 @@ public class DenialGame : MonoBehaviour
 {
     List<WordSlotUi> wordSlots = new List<WordSlotUi>();
     public Button nextButton;
+    public string SaveSentenceKey = "";
+    public bool PrefixWithPlayerName = true;
 
     DenialGameHandler denialGameHandler;
 
@@ -44,6 +46,28 @@ public class DenialGame : MonoBehaviour
 
     private void OnNextButtonClicked()
     {
+        SaveSentence();
         denialGameHandler.NextGame();
+    }
+
+    private void SaveSentence()
+    {
+        if (!string.IsNullOrEmpty(SaveSentenceKey))
+        {
+            string sentence = "";
+            foreach (var wordSlot in wordSlots)
+            {
+                sentence += wordSlot.CurrentWordUi.GetWordText() + " ";
+            }
+            sentence = sentence.Trim(); // Remove any trailing space
+
+            if (PrefixWithPlayerName)
+            {
+                string playerName = PlayerPrefs.GetString(SkinsMatcher.NAME_KEY, SkinsMatcher.BASE_NAME);
+                sentence = $"{playerName} {sentence}";
+            }
+
+            PlayerPrefs.SetString(SaveSentenceKey, sentence);
+        }
     }
 }

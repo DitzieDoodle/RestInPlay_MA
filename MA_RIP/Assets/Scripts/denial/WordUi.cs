@@ -1,6 +1,7 @@
 using UnityEngine;
 using UnityEngine.EventSystems;
 using DG.Tweening;
+using TMPro;
 
 public class WordUi : MonoBehaviour, IPointerDownHandler, IPointerUpHandler, IDragHandler
 {
@@ -8,6 +9,12 @@ public class WordUi : MonoBehaviour, IPointerDownHandler, IPointerUpHandler, IDr
     [SerializeField] bool isMoveable = true;
 
     public bool IsRightWord = false;
+
+    public string GetWordText()
+    {
+        return wordText != null ? wordText.text : gameObject.name;
+    }
+    TMP_Text wordText;
 
     WordSlotUi parentSlot;
     RectTransform rectTransform;
@@ -94,6 +101,7 @@ public class WordUi : MonoBehaviour, IPointerDownHandler, IPointerUpHandler, IDr
         rectTransform = GetComponent<RectTransform>();
         canvas = GetComponentInParent<Canvas>();
         canvasGroup = GetComponent<CanvasGroup>();
+        wordText = GetComponentInChildren<TMP_Text>();
     }
 
     public void Deny()
