@@ -4205,7 +4205,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
-        value: SendMessage(SetWobble,0,BargainingNPC);
+        value: SendMessage(SetWobbleOff,,BargainingNPC);
         type: 0
         typeString: 
       conversationID: 6
@@ -6089,8 +6089,8 @@ MonoBehaviour:
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 1019.9927, y: 577.99023}
-    canvasZoom: 0.7000003
+    canvasScrollPosition: {x: 988.8075, y: 565.8217}
+    canvasZoom: 0.6700003
   - id: 7
     fields:
     - title: Title

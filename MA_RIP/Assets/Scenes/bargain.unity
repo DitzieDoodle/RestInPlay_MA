@@ -151,6 +151,10 @@ PrefabInstance:
       propertyPath: conversation
       value: Bargain
       objectReference: {fileID: 0}
+    - target: {fileID: 6500824549087809334, guid: 4bde9a95557703f43836befc3c3e8d70, type: 3}
+      propertyPath: condition.acceptedGameObjects.Array.size
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6689590689283095144, guid: 4bde9a95557703f43836befc3c3e8d70, type: 3}
       propertyPath: m_LocalPosition.x
       value: 8.616
@@ -293,7 +297,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::WobbleController
   targetMaterial: {fileID: 2100000, guid: 32954851fad0eeb43bf6bf2fba7489d7, type: 2}
-  wobbleProperty: WobbleStrength
+  wobbleProperty: _WobbleStrength
   wobbleOneStrength: 0.1
   wobbleTwoStrength: 0.05
   wobbleOffStrength: 0
@@ -874,6 +878,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 60700682309519492, guid: 2c3415db8e88f6840af8770a2fbd756e, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 404184624884095200, guid: 2c3415db8e88f6840af8770a2fbd756e, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 837285436566965724, guid: 2c3415db8e88f6840af8770a2fbd756e, type: 3}
       propertyPath: m_LocalPosition.x
       value: 5.17
@@ -930,6 +942,10 @@ PrefabInstance:
       propertyPath: m_Color.g
       value: 0.6156863
       objectReference: {fileID: 0}
+    - target: {fileID: 1844029283491964127, guid: 2c3415db8e88f6840af8770a2fbd756e, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1972323491510373408, guid: 2c3415db8e88f6840af8770a2fbd756e, type: 3}
       propertyPath: m_LocalScale.z
       value: -71.429405
@@ -942,6 +958,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: walls
       objectReference: {fileID: 0}
+    - target: {fileID: 3205121156864049723, guid: 2c3415db8e88f6840af8770a2fbd756e, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3611415861632264341, guid: 2c3415db8e88f6840af8770a2fbd756e, type: 3}
       propertyPath: m_Color.b
       value: 0.19339621
@@ -952,6 +972,14 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3611415861632264341, guid: 2c3415db8e88f6840af8770a2fbd756e, type: 3}
       propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3986219281378309052, guid: 2c3415db8e88f6840af8770a2fbd756e, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4871323429837279383, guid: 2c3415db8e88f6840af8770a2fbd756e, type: 3}
+      propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5831910052035966314, guid: 2c3415db8e88f6840af8770a2fbd756e, type: 3}
@@ -997,6 +1025,10 @@ PrefabInstance:
     - target: {fileID: 7131210935246269841, guid: 2c3415db8e88f6840af8770a2fbd756e, type: 3}
       propertyPath: m_Color.g
       value: 0.6156863
+      objectReference: {fileID: 0}
+    - target: {fileID: 7405191686614056222, guid: 2c3415db8e88f6840af8770a2fbd756e, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7553322867969634140, guid: 2c3415db8e88f6840af8770a2fbd756e, type: 3}
       propertyPath: m_LocalPosition.z
@@ -1036,6 +1068,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8046568527996212029, guid: 2c3415db8e88f6840af8770a2fbd756e, type: 3}
       propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8784549515986794241, guid: 2c3415db8e88f6840af8770a2fbd756e, type: 3}
+      propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -1567,6 +1603,10 @@ PrefabInstance:
     - target: {fileID: 5754998658609994940, guid: 07b814758e5a67143b2a96f9b2dc3904, type: 3}
       propertyPath: wobbleProperty
       value: WobbleStrength
+      objectReference: {fileID: 0}
+    - target: {fileID: 5754998658609994940, guid: 07b814758e5a67143b2a96f9b2dc3904, type: 3}
+      propertyPath: wobbleOffStrength
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7091833871797479508, guid: 07b814758e5a67143b2a96f9b2dc3904, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
