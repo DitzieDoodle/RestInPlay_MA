@@ -1,8 +1,11 @@
 using System.Collections.Generic;
 using UnityEngine;
-
+using UnityEngine.Events;
 public class WordSlotUi : MonoBehaviour
 {
+    public bool HasRightWord { get; private set; } = false;
+    public UnityEvent OnRightWordSelectedEvent = new();
+
     public List<WordUi> wordUis = new List<WordUi>();
 
 
@@ -20,11 +23,12 @@ public class WordSlotUi : MonoBehaviour
         // Zum Beispiel könnten Sie überprüfen, ob das ausgewählte Wort korrekt ist.
         if (selectedWord.IsRightWord)
         {
-            Debug.Log("Richtiges Wort ausgewählt!");
+            HasRightWord = true;
+            OnRightWordSelectedEvent?.Invoke();
         }
         else
         {
-            Debug.Log("Falsches Wort ausgewählt!");
+            selectedWord.Deny();
         }
     }
 }

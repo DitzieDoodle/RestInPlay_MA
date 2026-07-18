@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.EventSystems;
+using DG.Tweening;
 
 public class WordUi : MonoBehaviour, IPointerDownHandler, IPointerUpHandler, IDragHandler
 {
@@ -12,6 +13,7 @@ public class WordUi : MonoBehaviour, IPointerDownHandler, IPointerUpHandler, IDr
     RectTransform rectTransform;
     RectTransform parentSlotRectTransform;
     Canvas canvas;
+    CanvasGroup canvasGroup;
 
     bool isDragging;
     bool isSnappedToParentSlot;
@@ -91,8 +93,19 @@ public class WordUi : MonoBehaviour, IPointerDownHandler, IPointerUpHandler, IDr
     {
         rectTransform = GetComponent<RectTransform>();
         canvas = GetComponentInParent<Canvas>();
+        canvasGroup = GetComponent<CanvasGroup>();
     }
 
+    public void Deny()
+    {
+        rectTransform.DOShakePosition(0.5f, 10f, 20, 90f, false, true).OnComplete(() =>
+        {
+            canvasGroup.DOFade(0f, 0.5f).OnComplete(() =>
+            {
+                gameObject.SetActive(false);
+            });
+        });
+    }
 
     bool TryGetPointerWorldPosition(PointerEventData eventData, out Vector3 worldPosition)
     {
@@ -108,4 +121,18 @@ public class WordUi : MonoBehaviour, IPointerDownHandler, IPointerUpHandler, IDr
         return false;
     }
 
+
+    // void OnDrawGizmos()
+    // {
+    //     if (IsRightWord)
+    //     {
+    //         Gizmos.color = Color.green;
+    //     }
+    //     else
+    //     {
+    //         Gizmos.color = Color.red;
+    //     }
+
+    //     Gizmos.DrawWireCube(transform.position, transform.localScale);
+    // }
 }
