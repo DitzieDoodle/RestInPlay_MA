@@ -2,6 +2,8 @@
 using Spine.Unity;
 using Spine;
 using UnityEngine.UI;
+using System;
+using TMPro;
 
 public class SkinsMatcher : MonoBehaviour
 {
@@ -22,7 +24,7 @@ public class SkinsMatcher : MonoBehaviour
     private const string EYES_KEY = "Char_Eyes";
     private const string MOUTH_KEY = "Char_Mouth";
     private const string BODY_KEY = "Char_Body";
-    private const string NAME_KEY = "Char_Name";
+    public const string NAME_KEY = "Char_Name";
 
     [Header("UI Buttons")]
     public Button nextEyeButton;
@@ -31,6 +33,7 @@ public class SkinsMatcher : MonoBehaviour
     public Button previousMouthButton;
     public Button nextBodyButton;
     public Button previousBodyButton;
+    public TMP_InputField playerNameInputField;
 
     private string colorSlotName = "Bodies";
 
@@ -55,6 +58,17 @@ public class SkinsMatcher : MonoBehaviour
         if (previousMouthButton != null) previousMouthButton.onClick.AddListener(PreviousMouthSkin);
         if (nextBodyButton != null) nextBodyButton.onClick.AddListener(NextBodySkin);
         if (previousBodyButton != null) previousBodyButton.onClick.AddListener(PreviousBodySkin);
+        if (playerNameInputField != null)
+        {
+            playerNameInputField.text = PlayerPrefs.GetString(NAME_KEY, "Player");
+            playerNameInputField.onEndEdit.AddListener(SetPlayerName);
+        }
+    }
+
+    private void SetPlayerName(string playerName)
+    {
+        PlayerPrefs.SetString(NAME_KEY, playerName);
+        PlayerPrefs.Save();
     }
 
     // 🎯 NEU: Auswahl speichern (wird bei jedem Button-Press aufgerufen)

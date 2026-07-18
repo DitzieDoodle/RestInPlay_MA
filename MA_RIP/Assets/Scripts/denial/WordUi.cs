@@ -4,6 +4,7 @@ using UnityEngine.EventSystems;
 public class WordUi : MonoBehaviour, IPointerDownHandler, IPointerUpHandler, IDragHandler
 {
     [SerializeField] float snapDistance = 60f;
+    [SerializeField] bool isMoveable = true;
 
     public bool IsRightWord = false;
 
@@ -17,6 +18,10 @@ public class WordUi : MonoBehaviour, IPointerDownHandler, IPointerUpHandler, IDr
 
     public void OnPointerDown(PointerEventData eventData)
     {
+        if (!isMoveable)
+        {
+            return;
+        }
         if (eventData.button != PointerEventData.InputButton.Left)
         {
             return;
@@ -28,6 +33,11 @@ public class WordUi : MonoBehaviour, IPointerDownHandler, IPointerUpHandler, IDr
 
     public void OnPointerUp(PointerEventData eventData)
     {
+        if (!isMoveable)
+        {
+            return;
+        }
+
         if (eventData.button != PointerEventData.InputButton.Left)
         {
             return;
@@ -43,7 +53,7 @@ public class WordUi : MonoBehaviour, IPointerDownHandler, IPointerUpHandler, IDr
 
     public void OnDrag(PointerEventData eventData)
     {
-        if (!isDragging)
+        if (!isDragging || !isMoveable)
         {
             return;
         }

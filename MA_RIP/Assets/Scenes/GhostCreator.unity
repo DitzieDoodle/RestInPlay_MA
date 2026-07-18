@@ -4919,6 +4919,7 @@ MonoBehaviour:
   previousMouthButton: {fileID: 379093576}
   nextBodyButton: {fileID: 1838040706}
   previousBodyButton: {fileID: 997006004}
+  playerNameInputField: {fileID: 113221154}
 --- !u!114 &1777314108
 MonoBehaviour:
   m_ObjectHideFlags: 0
