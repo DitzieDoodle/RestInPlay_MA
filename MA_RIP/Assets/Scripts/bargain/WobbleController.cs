@@ -4,13 +4,11 @@ public class MaterialWobbleController : MonoBehaviour
 {
     [Header("Material Settings")]
     public Material targetMaterial;
-    public string wobbleProperty = "_WobbleStrength";
+    public string wobbleProperty = "WobbleStrength";
 
     public float wobbleOneStrength = 0.2f;
     public float wobbleTwoStrength = 0.5f;
     public float wobbleOffStrength = 0f;
-
-    // ▼ Methoden, die du direkt aus Dialog-Nodes aufrufen kannst
 
     public void SetWobbleOne()
     {
@@ -25,6 +23,7 @@ public class MaterialWobbleController : MonoBehaviour
     public void SetWobbleOff()
     {
         SetWobble(wobbleOffStrength);
+        Debug.Log("WobbleOff");
     }
 
     // ▼ Generische Setter-Methode (optional)

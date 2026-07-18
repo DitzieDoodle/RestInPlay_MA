@@ -3209,7 +3209,7 @@ MonoBehaviour:
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 163.03734, y: 110.905975}
+    canvasScrollPosition: {x: 163.77129, y: 334.0253}
     canvasZoom: 1.0899999
   - id: 3
     fields:
@@ -4205,7 +4205,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
-        value: SendMessage(SetWobbleOff,,BargainingNPC);
+        value: SendMessage(SetWobble,0,BargainingNPC);
         type: 0
         typeString: 
       conversationID: 6
@@ -4229,8 +4229,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 1244.9037
-        y: 775.8655
+        x: 1251.7607
+        y: 772.4369
         width: 160
         height: 30
     - id: 7
@@ -6089,8 +6089,8 @@ MonoBehaviour:
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 1193.384, y: 0}
-    canvasZoom: 0.85000014
+    canvasScrollPosition: {x: 1019.9927, y: 577.99023}
+    canvasZoom: 0.7000003
   - id: 7
     fields:
     - title: Title
@@ -8398,8 +8398,8 @@ MonoBehaviour:
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 0, y: 0}
-    canvasZoom: 1
+    canvasScrollPosition: {x: 0, y: 160.00002}
+    canvasZoom: 0.64000034
   - id: 12
     fields:
     - title: Title
@@ -11276,7 +11276,7 @@ MonoBehaviour:
       canvasRect:
         serializedVersion: 2
         x: 163.17355
-        y: 90.6281
+        y: 96.10756
         width: 160
         height: 30
     - id: 2
@@ -11428,13 +11428,13 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 165.65674
+        x: 164.85674
         y: 163.62376
         width: 160
         height: 30
     entryGroups: []
     canvasScrollPosition: {x: 0, y: 0}
-    canvasZoom: 1
+    canvasZoom: 0.7300002
   - id: 21
     fields:
     - title: Title
@@ -11643,8 +11643,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 158.40002
-        y: 175.6
+        x: 159.77933
+        y: 199.04825
         width: 160
         height: 30
     - id: 3
@@ -11699,8 +11699,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 158.40002
-        y: 225.6
+        x: 159.77933
+        y: 251.80685
         width: 160
         height: 30
     - id: 5
@@ -11748,8 +11748,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 161.6
-        y: 423.60004
+        x: 162.97931
+        y: 449.8069
         width: 160
         height: 30
     - id: 6
@@ -11803,8 +11803,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 160.10217
-        y: 288.3659
+        x: 161.48148
+        y: 314.57275
         width: 160
         height: 30
     - id: 7
@@ -11858,13 +11858,13 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 182.37024
-        y: 349.9123
+        x: 158.18254
+        y: 381.89233
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 0, y: 172.79199}
-    canvasZoom: 0.97
+    canvasScrollPosition: {x: 0, y: 3.5630026}
+    canvasZoom: 0.5800004
   syncInfo:
     syncActors: 0
     syncItems: 0
