@@ -4,13 +4,14 @@ public class PlayerController : MonoBehaviour
 {
     [Header("Movement Settings")]
     public float moveSpeed = 5f;
-    public float acceleration = 10f;
-    public float deceleration = 10f;
 
     [Header("Graphics")]
     public Transform graphics; // Parent von Spine-Objekt
 
     Rigidbody rb;
+
+    float inputX;
+    float inputZ;
 
     // Original scale speichern, damit wir nicht die globale Skalierung ändern
     private Vector3 originalScale;
@@ -21,15 +22,18 @@ public class PlayerController : MonoBehaviour
         if (graphics != null)
             originalScale = graphics.localScale;
     }
+    void FixedUpdate()
+    {
+        Vector3 movement = new Vector3(inputX, 0f, inputZ).normalized * moveSpeed;
+
+        // Rigidbody bewegen
+        rb.linearVelocity = movement;
+    }
     void Update()
     {
         // Input: Horizontal = X, Vertical = Z
-        float inputX = Input.GetAxisRaw("Horizontal");
-        float inputZ = Input.GetAxisRaw("Vertical");
-
-        // Bewegung auf der XZ-Ebene
-        Vector3 movement = new Vector3(inputX, 0f, inputZ).normalized * moveSpeed * Time.deltaTime;
-        rb.MovePosition(transform.position + movement);
+        inputX = Input.GetAxisRaw("Horizontal");
+        inputZ = Input.GetAxisRaw("Vertical");
 
         // Flip Spine Grafik nur bei X-Bewegung
         if (graphics != null)
