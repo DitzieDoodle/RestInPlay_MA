@@ -5024,7 +5024,7 @@ MonoBehaviour:
       canvasRect:
         serializedVersion: 2
         x: 1187.298
-        y: 1814.2773
+        y: 1815.1702
         width: 160
         height: 30
     - id: 22
@@ -5563,7 +5563,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
-        value: 
+        value: SendMessage(SetColorNatural,,urn);
         type: 0
         typeString: 
       conversationID: 6
@@ -5618,7 +5618,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
-        value: 
+        value: SendMessage(SetColorMellow,,urn);
         type: 0
         typeString: 
       conversationID: 6
@@ -5673,7 +5673,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
-        value: 
+        value: SendMessage(SetColorPop,,urn);
         type: 0
         typeString: 
       conversationID: 6
@@ -5697,7 +5697,7 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 1523.7974
+        x: 1524.6903
         y: 1436.4213
         width: 160
         height: 30
@@ -5728,7 +5728,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
-        value: 
+        value: SendMessage(SetColorCool,urn);
         type: 0
         typeString: 
       conversationID: 6
@@ -5752,8 +5752,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 1701.9077
-        y: 1396.5686
+        x: 1702.8005
+        y: 1395.6757
         width: 160
         height: 30
     - id: 45
@@ -6087,8 +6087,8 @@ MonoBehaviour:
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 1075.5737, y: 398.28003}
-    canvasZoom: 0.67000043
+    canvasScrollPosition: {x: 454.66867, y: 172.52734}
+    canvasZoom: 0.43000057
   - id: 7
     fields:
     - title: Title

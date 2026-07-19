@@ -4,7 +4,7 @@ using UnityEngine.Audio;
 public class UrnMaker : MonoBehaviour
 {
     [Header("Sprites")]
-    public Sprite metal ;
+    public Sprite metal;
     public Sprite wood;
     public Sprite ceramic;
     public Sprite jar;
@@ -91,6 +91,27 @@ public class UrnMaker : MonoBehaviour
 
     }
 
+    // Color Changer
+
+    public void SetColorNatural()
+    {
+        SetColorFromHex("#AB8777");
+    }
+
+    public void SetColorMellow()
+    {
+        SetColorFromHex("F1E363");
+    }
+
+    public void SetColorPop()
+    {
+        SetColorFromHex("F94FFF");
+    }
+    public void SetColorCool()
+    {
+        SetColorFromHex("589DFF");
+    }
+
 
     // decor sprite changer
     public void SetWhoops()
@@ -133,6 +154,26 @@ public class UrnMaker : MonoBehaviour
 
         audioSource.clip = heartSFX;
         audioSource.Play();
+    }
+
+    public void SetColorFromHex(string hexCode)
+    {
+        if (UrnRenderer == null) return;
+
+        Color color;
+        // Wichtig: Hex-Code muss mit # beginnen
+        if (!hexCode.StartsWith("#"))
+            hexCode = "#" + hexCode;
+
+        if (ColorUtility.TryParseHtmlString(hexCode, out color))
+        {
+            UrnRenderer.color = color;
+        }
+        else
+        {
+            Debug.LogWarning("Ungültiger Hex-Farbcode: " + hexCode);
+        }
+
     }
 
 }
