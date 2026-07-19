@@ -5809,8 +5809,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 1544.7651
-        y: 1437.2277
+        x: 1523.7974
+        y: 1436.4213
         width: 160
         height: 30
     - id: 44
@@ -6005,7 +6005,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
-        value: SendMessage(StartTalkingSquash,,BargainingNPC)
+        value: SendMessage(StartTalkingSquash,,BargainingNPC);SetActive(NPC_vcam,true);
         type: 0
         typeString: 
       conversationID: 6
@@ -6029,7 +6029,7 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 1451.5609
+        x: 1452.8768
         y: 237.33487
         width: 160
         height: 30
@@ -6089,8 +6089,8 @@ MonoBehaviour:
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 945.524, y: 112.090546}
-    canvasZoom: 0.6700003
+    canvasScrollPosition: {x: 1097.4879, y: 0}
+    canvasZoom: 0.7600002
   - id: 7
     fields:
     - title: Title
@@ -7226,8 +7226,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 189
-        y: 152
+        x: 190.13635
+        y: 153.13638
         width: 160
         height: 30
     - id: 2
@@ -10714,8 +10714,8 @@ MonoBehaviour:
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 0, y: 0}
-    canvasZoom: 0.9100001
+    canvasScrollPosition: {x: 0.25463104, y: 0}
+    canvasZoom: 0.97
   - id: 18
     fields:
     - title: Title
