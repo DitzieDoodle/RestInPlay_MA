@@ -25,9 +25,9 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 200006910753894639}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: 0, y: -0.726, z: -0.055}
-  m_LocalScale: {x: 7.0459995, y: 2.7866213, z: 1.7159}
+  m_LocalRotation: {x: 0.8191521, y: -0, z: -0, w: 0.57357645}
+  m_LocalPosition: {x: 0, y: 0.089281455, z: 0.0018929243}
+  m_LocalScale: {x: 3.0885408, y: 1.221487, z: 0.75214714}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 6056088403269330737}
@@ -101,6 +101,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4980108163063879694}
   - component: {fileID: 3411533256217710039}
+  - component: {fileID: 8421722458180030706}
   m_Layer: 0
   m_Name: shade
   m_TagString: Untagged
@@ -116,9 +117,9 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2676007436675285478}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 1.314, z: -0.042}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalRotation: {x: 0.17364816, y: -0, z: -0, w: 0.9848078}
+  m_LocalPosition: {x: 0, y: 0.9280675, z: 0.3118508}
+  m_LocalScale: {x: 0.43833962, y: 0.43833968, z: 0.43833968}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 6056088403269330737}
@@ -182,6 +183,18 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
+--- !u!114 &8421722458180030706
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2676007436675285478}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3454b4c2afd04a14d87e67eb2dc69cac, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ColorableSprite
 --- !u!1 &4777023596000210622
 GameObject:
   m_ObjectHideFlags: 0
@@ -192,6 +205,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1414438740021983072}
   - component: {fileID: 2805887027975629980}
+  - component: {fileID: 2415972568760022331}
   m_Layer: 0
   m_Name: middlepart
   m_TagString: Untagged
@@ -207,9 +221,9 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4777023596000210622}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.408, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalRotation: {x: 0.17364816, y: -0, z: -0, w: 0.9848078}
+  m_LocalPosition: {x: 0, y: 0.54723746, z: 0.19189882}
+  m_LocalScale: {x: 0.43833962, y: 0.43833968, z: 0.43833968}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 6056088403269330737}
@@ -273,6 +287,18 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
+--- !u!114 &2415972568760022331
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4777023596000210622}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3454b4c2afd04a14d87e67eb2dc69cac, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ColorableSprite
 --- !u!1 &5105093711531359507
 GameObject:
   m_ObjectHideFlags: 0
@@ -283,6 +309,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3045996364024040036}
   - component: {fileID: 138749897823831495}
+  - component: {fileID: 526591751753287447}
   m_Layer: 0
   m_Name: legs
   m_TagString: Untagged
@@ -298,9 +325,9 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5105093711531359507}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -0.631, z: 0.04}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalRotation: {x: 0.17364816, y: -0, z: -0, w: 0.9848078}
+  m_LocalPosition: {x: 0, y: 0.11285996, z: 0.052457213}
+  m_LocalScale: {x: 0.43833962, y: 0.43833968, z: 0.43833968}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 6056088403269330737}
@@ -364,6 +391,18 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
+--- !u!114 &526591751753287447
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5105093711531359507}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3454b4c2afd04a14d87e67eb2dc69cac, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ColorableSprite
 --- !u!1 &7051163306603499904
 GameObject:
   m_ObjectHideFlags: 0
@@ -388,9 +427,9 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7051163306603499904}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.17364816, y: 0, z: 0, w: 0.9848078}
-  m_LocalPosition: {x: 14.13, y: 0.441, z: 1.29}
-  m_LocalScale: {x: 0.43833962, y: 0.43833962, z: 0.43833962}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 6.938462, y: 0, z: 1.3562452}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1414438740021983072}
@@ -399,7 +438,7 @@ Transform:
   - {fileID: 2491359965858113624}
   - {fileID: 369337255388519006}
   m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 20, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &8897024456340122437
 GameObject:
   m_ObjectHideFlags: 0
@@ -426,9 +465,9 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8897024456340122437}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 1.504, z: -0.06}
-  m_LocalScale: {x: 0.92929, y: 0.92929, z: 0.92929}
+  m_LocalRotation: {x: 0.17364816, y: -0, z: -0, w: 0.9848078}
+  m_LocalPosition: {x: 0, y: 1.0093278, z: 0.33209765}
+  m_LocalScale: {x: 0.40734464, y: 0.4073447, z: 0.4073447}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 6056088403269330737}

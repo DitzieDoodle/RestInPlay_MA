@@ -1,0 +1,106 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &288015481619956289
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2605664877770532000}
+  - component: {fileID: 6437965065480223038}
+  - component: {fileID: 7594755399263291428}
+  - component: {fileID: 1849264034908681877}
+  m_Layer: 0
+  m_Name: GameManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2605664877770532000
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 288015481619956289}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &6437965065480223038
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 288015481619956289}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c919655386da56d499087a999e7d8ced, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  volumes: []
+  fade: 0
+  fadeSpeed: 1
+--- !u!114 &7594755399263291428
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 288015481619956289}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 899d5a5b328de5f42a5007149a3382fb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ColorHandler
+  colorMap:
+  - colorType: 2
+    colorSlot: 1
+    color: {r: 1, g: 0.5019608, b: 0, a: 1}
+  - colorType: 2
+    colorSlot: 2
+    color: {r: 1, g: 0.7768221, b: 0.5518868, a: 1}
+  - colorType: 1
+    colorSlot: 1
+    color: {r: 0.8666667, g: 0.003921569, b: 0.14509805, a: 1}
+  - colorType: 1
+    colorSlot: 2
+    color: {r: 0.8396226, g: 0.32872015, b: 0.4123223, a: 1}
+  - colorType: 4
+    colorSlot: 1
+    color: {r: 1, g: 0.9882353, b: 0, a: 1}
+  - colorType: 4
+    colorSlot: 2
+    color: {r: 1, g: 0.99550503, b: 0.6179246, a: 1}
+  - colorType: 3
+    colorSlot: 1
+    color: {r: 0.19215687, g: 0.28235295, b: 0.7372549, a: 1}
+  - colorType: 3
+    colorSlot: 2
+    color: {r: 0.38501248, g: 0.4524307, b: 0.7924528, a: 1}
+  - colorType: 0
+    colorSlot: 1
+    color: {r: 0.25882354, g: 1, b: 0, a: 1}
+  - colorType: 0
+    colorSlot: 2
+    color: {r: 0.58396214, g: 1, b: 0.43867922, a: 1}
+--- !u!114 &1849264034908681877
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 288015481619956289}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bd37d2b1bdac3e1478456af99f5d3089, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: '::'
