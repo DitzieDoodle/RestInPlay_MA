@@ -33,14 +33,10 @@ public class UrnMaker : MonoBehaviour
 
 
 
-    private SpriteRenderer UrnRenderer;
-    private SpriteRenderer DecorRenderer;
+    public SpriteRenderer UrnRenderer;
+    public SpriteRenderer DecorRenderer;
     void Awake()
     {
-        UrnRenderer = GetComponent<SpriteRenderer>();
-        DecorRenderer = GetComponent<SpriteRenderer>();
-
-
         // AudioSource entweder von diesem GameObject oder neu erstellen
         audioSource = GetComponent<AudioSource>();
         if (audioSource == null)
@@ -57,6 +53,8 @@ public class UrnMaker : MonoBehaviour
 
         audioSource.clip = metalSFX;
         audioSource.Play();
+
+        Debug.Log("Sprite is now Metal");
     }
 
     public void SetSpriteWood()
@@ -66,6 +64,8 @@ public class UrnMaker : MonoBehaviour
 
         audioSource.clip = woodSFX;
         audioSource.Play();
+
+        Debug.Log("Sprite is now Wood");
     }
 
     public void SetSpriteCeramic()
@@ -75,6 +75,9 @@ public class UrnMaker : MonoBehaviour
 
         audioSource.clip = ceramicSFX;
         audioSource.Play();
+
+        Debug.Log("Sprite is now Ceramic");
+
     }
 
     public void SetSpriteJar()
@@ -84,6 +87,8 @@ public class UrnMaker : MonoBehaviour
 
         audioSource.clip = jarSFX;
         audioSource.Play();
+        Debug.Log("Sprite is now a Jar haha");
+
     }
 
 
@@ -91,7 +96,7 @@ public class UrnMaker : MonoBehaviour
     public void SetWhoops()
     {
         if (whoops == null || DecorRenderer == null) return;
-        DecorRenderer.sprite = jar;
+        DecorRenderer.sprite = whoops;
 
         audioSource.clip = whoopsSFX;
         audioSource.Play();
@@ -99,7 +104,7 @@ public class UrnMaker : MonoBehaviour
     public void SetCross()
     {
         if (cross == null || DecorRenderer == null) return;
-        DecorRenderer.sprite = jar;
+        DecorRenderer.sprite = cross;
 
         audioSource.clip = crossSFX;
         audioSource.Play();
@@ -108,7 +113,7 @@ public class UrnMaker : MonoBehaviour
     public void SetFlower()
     {
         if (flower == null || DecorRenderer == null) return;
-        DecorRenderer.sprite = jar;
+        DecorRenderer.sprite = flower;
 
         audioSource.clip = flowerSFX;
         audioSource.Play();
@@ -116,7 +121,7 @@ public class UrnMaker : MonoBehaviour
     public void SetStar()
     {
         if (star == null || DecorRenderer == null) return;
-        DecorRenderer.sprite = jar;
+        DecorRenderer.sprite = star;
 
         audioSource.clip = starSFX;
         audioSource.Play();
@@ -124,7 +129,7 @@ public class UrnMaker : MonoBehaviour
     public void SetHeart()
     {
         if (heart == null || DecorRenderer == null) return;
-        DecorRenderer.sprite = jar;
+        DecorRenderer.sprite = heart;
 
         audioSource.clip = heartSFX;
         audioSource.Play();
