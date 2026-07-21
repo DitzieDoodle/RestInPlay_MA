@@ -9,7 +9,6 @@ public class FlowerPickupable : MonoBehaviour
     private Transform originalParent;
     private Vector3 originalPosition;
     private Quaternion originalRotation;
-    private VaseSlot currentSlot;
 
     public AudioSource pickUp;
 
@@ -65,13 +64,7 @@ public class FlowerPickupable : MonoBehaviour
     {
         IsCarried = false;
 
-        if (currentSlot != null)
-        {
-            currentSlot.occupied = false;
-            currentSlot = null;
-        }
-
-        transform.SetParent(null, true);
+        transform.SetParent(originalParent);
 
         if (rb != null)
         {
@@ -85,6 +78,7 @@ public class FlowerPickupable : MonoBehaviour
 
     public void SnapToSlot(Transform slot)
     {
+        Debug.Log($"SnapToSlot called, slot={slot.name}");
         IsCarried = false;
 
         if (rb != null)
@@ -98,23 +92,12 @@ public class FlowerPickupable : MonoBehaviour
         if (col != null)
             col.enabled = false;
 
-        currentSlot = slot.GetComponent<VaseSlot>();
+        Debug.Log($"Flower '{gameObject.name}' isPartOfPrefabAsset: {UnityEditor.PrefabUtility.IsPartOfPrefabAsset(gameObject)}");
+        Debug.Log($"Slot '{slot.name}' isPartOfPrefabAsset: {UnityEditor.PrefabUtility.IsPartOfPrefabAsset(slot.gameObject)}");
 
         transform.SetParent(slot, false);
         transform.localPosition = Vector3.zero;
         transform.localRotation = Quaternion.identity;
-        transform.localScale = Vector3.one;
-    }
-
-    public void RemoveFromSlot()
-    {
-        if (currentSlot != null)
-        {
-            currentSlot.occupied = false;
-            currentSlot = null;
-        }
-
-        transform.SetParent(null, true);
         transform.localScale = Vector3.one;
     }
 }
