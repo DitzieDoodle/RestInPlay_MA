@@ -4,7 +4,8 @@ using UnityEngine;
 public class VaseBouquet : MonoBehaviour
 {
     public VaseSlot[] slots;
-
+    private bool bouquetCompleted;
+    public GameObject acceptanceEnding;
 
     private void Awake()
     {
@@ -46,6 +47,25 @@ public class VaseBouquet : MonoBehaviour
 
         flower.SnapToSlot(chosen.transform);
 
+
+        CheckBouquetCompleted();
+
         return true;
+    }
+
+    private void CheckBouquetCompleted()
+    {
+        if (bouquetCompleted) return;
+        if (!IsFull) return;
+
+        bouquetCompleted = true;
+        OnBouquetCompleted();
+    }
+
+    private void OnBouquetCompleted()
+    {
+        acceptanceEnding.SetActive(true);
+        Debug.Log("Bouquet complete!");
+
     }
 }
