@@ -5,6 +5,13 @@ public class VaseBouquet : MonoBehaviour
 {
     public VaseSlot[] slots;
 
+
+    private void Awake()
+    {
+        foreach (var s in slots)
+            Debug.Log(s.name + " -> " + s.gameObject.scene.name);
+    }
+
     public bool IsFull
     {
         get

@@ -74,19 +74,26 @@ public class FlowerPickupable : MonoBehaviour
 
     public void SnapToSlot(Transform slot)
     {
+        Debug.Log($"SnapToSlot called, slot={slot.name}");
         IsCarried = false;
 
         if (rb != null)
         {
             rb.isKinematic = true;
             rb.useGravity = false;
+            rb.linearVelocity = Vector3.zero;
+            rb.angularVelocity = Vector3.zero;
         }
 
         if (col != null)
             col.enabled = false;
 
-        transform.SetParent(slot);
+        Debug.Log($"Flower '{gameObject.name}' isPartOfPrefabAsset: {UnityEditor.PrefabUtility.IsPartOfPrefabAsset(gameObject)}");
+        Debug.Log($"Slot '{slot.name}' isPartOfPrefabAsset: {UnityEditor.PrefabUtility.IsPartOfPrefabAsset(slot.gameObject)}");
+
+        transform.SetParent(slot, false);
         transform.localPosition = Vector3.zero;
         transform.localRotation = Quaternion.identity;
+        transform.localScale = Vector3.one;
     }
 }

@@ -6,6 +6,7 @@ public class PlayerFlowerCarry : MonoBehaviour
     public FlowerPickupable carriedFlower;
 
     private FlowerPickupable nearbyFlower;
+    public VaseDepositZone currentDepositZone;
 
     public void SetNearbyFlower(FlowerPickupable flower)
     {
@@ -26,6 +27,10 @@ public class PlayerFlowerCarry : MonoBehaviour
             {
                 if (nearbyFlower != null)
                     TryPickup(nearbyFlower);
+            }
+            else if (currentDepositZone != null)
+            {
+                DropCurrentFlowerToVase(currentDepositZone.vase);
             }
         }
 

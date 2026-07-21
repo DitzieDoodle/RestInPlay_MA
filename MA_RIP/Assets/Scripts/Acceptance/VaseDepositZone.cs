@@ -6,12 +6,14 @@ public class VaseDepositZone : MonoBehaviour
 
     private PlayerFlowerCarry playerInZone;
 
+
     private void OnTriggerEnter(Collider other)
     {
         PlayerFlowerCarry carry = other.GetComponent<PlayerFlowerCarry>();
         if (carry != null)
         {
             playerInZone = carry;
+            carry.currentDepositZone = this;
         }
     }
 
@@ -21,17 +23,7 @@ public class VaseDepositZone : MonoBehaviour
         if (carry != null && carry == playerInZone)
         {
             playerInZone = null;
-        }
-    }
-
-    private void Update()
-    {
-        if (playerInZone == null) return;
-        if (playerInZone.carriedFlower == null) return;
-
-        if (Input.GetKeyDown(KeyCode.E))
-        {
-            playerInZone.DropCurrentFlowerToVase(vase);
+            carry.currentDepositZone = null;
         }
     }
 }
