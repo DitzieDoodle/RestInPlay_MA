@@ -10,6 +10,9 @@ public class FlowerPickupable : MonoBehaviour
     private Vector3 originalPosition;
     private Quaternion originalRotation;
 
+    public AudioSource pickUp;
+
+
     private void Awake()
     {
         rb = GetComponent<Rigidbody>();
@@ -54,6 +57,7 @@ public class FlowerPickupable : MonoBehaviour
         transform.SetParent(handPoint);
         transform.localPosition = Vector3.zero;
         transform.localRotation = Quaternion.identity;
+        pickUp.Play();
     }
 
     public void DropToWorld()
