@@ -5219,7 +5219,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
-        value: SetActive(NPC_vcam,true);
+        value: 'SetActive(urn_vcam,false);SetActive(NPC_vcam,true); '
         type: 0
         typeString: 
       conversationID: 6
@@ -6312,8 +6312,8 @@ MonoBehaviour:
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 743.9534, y: 914.76514}
-    canvasZoom: 0.82000035
+    canvasScrollPosition: {x: 776.7204, y: 1936.3882}
+    canvasZoom: 1.0000002
   - id: 7
     fields:
     - title: Title
@@ -7295,7 +7295,7 @@ MonoBehaviour:
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 3, y: 3}
+    canvasScrollPosition: {x: 0, y: 243}
     canvasZoom: 1
   - id: 9
     fields:
@@ -7547,7 +7547,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
-        value: SendMessage(Testing,,AngryNPC);
+        value: SendMessage(SetAngerLevelMain,,GameManager);
         type: 0
         typeString: 
       conversationID: 9
@@ -7564,7 +7564,7 @@ MonoBehaviour:
         destinationDialogueID: 7
         isConnector: 0
         priority: 2
-      conditionsString: 
+      conditionsString: Variable["FlowerCount"] >= 1
       userScript: 
       onExecute:
         m_PersistentCalls:
@@ -7602,7 +7602,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
-        value: GiveFlower(2)
+        value: SendMessage(SetAngerLevelSecondary,,GameManager);
         type: 0
         typeString: 
       conversationID: 9
@@ -7619,7 +7619,7 @@ MonoBehaviour:
         destinationDialogueID: 7
         isConnector: 0
         priority: 2
-      conditionsString: 
+      conditionsString: Variable["FlowerCount"] >= 2
       userScript: 
       onExecute:
         m_PersistentCalls:
@@ -7659,7 +7659,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
-        value: GiveFlower(3)
+        value: SendMessage(SetAngerLevelTertiary,,GameManager);
         type: 0
         typeString: 
       conversationID: 9
@@ -7676,7 +7676,7 @@ MonoBehaviour:
         destinationDialogueID: 7
         isConnector: 0
         priority: 2
-      conditionsString: 
+      conditionsString: Variable["FlowerCount"] >= 3
       userScript: 
       onExecute:
         m_PersistentCalls:
@@ -7737,7 +7737,7 @@ MonoBehaviour:
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 0.44955027, y: 0}
+    canvasScrollPosition: {x: 0, y: 46.59091}
     canvasZoom: 0.8800001
   - id: 10
     fields:
@@ -7989,7 +7989,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
-        value: 
+        value: SendMessage(SetDepressionLevelMain,,GameManager);
         type: 0
         typeString: 
       conversationID: 10
@@ -8006,7 +8006,7 @@ MonoBehaviour:
         destinationDialogueID: 7
         isConnector: 0
         priority: 2
-      conditionsString: 
+      conditionsString: Variable["FlowerCount"] >= 1
       userScript: 
       onExecute:
         m_PersistentCalls:
@@ -8044,7 +8044,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
-        value: 
+        value: SendMessage(SetDepressionLevelSecondary,,GameManager);
         type: 0
         typeString: 
       conversationID: 10
@@ -8061,7 +8061,7 @@ MonoBehaviour:
         destinationDialogueID: 7
         isConnector: 0
         priority: 2
-      conditionsString: 
+      conditionsString: Variable["FlowerCount"] >= 2
       userScript: 
       onExecute:
         m_PersistentCalls:
@@ -8101,7 +8101,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
-        value: 
+        value: SendMessage(SetDepressionLevelTertiary,,GameManager);
         type: 0
         typeString: 
       conversationID: 10
@@ -8118,7 +8118,7 @@ MonoBehaviour:
         destinationDialogueID: 7
         isConnector: 0
         priority: 2
-      conditionsString: 
+      conditionsString: Variable["FlowerCount"] >= 3
       userScript: 
       onExecute:
         m_PersistentCalls:
@@ -8179,7 +8179,7 @@ MonoBehaviour:
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 0, y: 19}
+    canvasScrollPosition: {x: 0, y: 153}
     canvasZoom: 1
   - id: 11
     fields:
@@ -8431,7 +8431,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
-        value: SendMessage(RemoveOneFlower,,Flower Handler);
+        value: SendMessage(SetBargainingLevelMain,,GameManager);
         type: 0
         typeString: 
       conversationID: 11
@@ -8486,7 +8486,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
-        value: SendMessage(RemoveTwoFlowers,,Flower Handler);
+        value: SendMessage(SetBargainingLevelSecondary,,GameManager);
         type: 0
         typeString: 
       conversationID: 11
@@ -8511,7 +8511,7 @@ MonoBehaviour:
       canvasRect:
         serializedVersion: 2
         x: 186.79922
-        y: 364
+        y: 362.93616
         width: 160
         height: 30
     - id: 5
@@ -8533,9 +8533,7 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Actor
       - title: Menu Text
-        value: '3 flower
-
-'
+        value: 3 flower
         type: 0
         typeString: 
       - title: Dialogue Text
@@ -8543,7 +8541,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
-        value: SendMessage(RemoveThreeFlowers,,Flower Handler);
+        value: SendMessage(SetBargainingLevelTertiary,,GameManager);
         type: 0
         typeString: 
       conversationID: 11
@@ -8567,8 +8565,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 391.22278
-        y: 360.50986
+        x: 393.35046
+        y: 361.5737
         width: 160
         height: 30
     - id: 7
@@ -8617,11 +8615,11 @@ MonoBehaviour:
       canvasRect:
         serializedVersion: 2
         x: 178
-        y: 533
+        y: 531.86365
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 3.4090881, y: 4.5454407}
+    canvasScrollPosition: {x: 0, y: 0}
     canvasZoom: 0.8800001
   - id: 12
     fields:
@@ -8873,7 +8871,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
-        value: 
+        value: SendMessage(SetAcceptanceLevelMain,,GameManager);
         type: 0
         typeString: 
       conversationID: 12
@@ -8890,7 +8888,7 @@ MonoBehaviour:
         destinationDialogueID: 7
         isConnector: 0
         priority: 2
-      conditionsString: 
+      conditionsString: Variable["FlowerCount"] >= 1
       userScript: 
       onExecute:
         m_PersistentCalls:
@@ -8928,7 +8926,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
-        value: 
+        value: SendMessage(SetAcceptanceLevelSecondary,,GameManager);
         type: 0
         typeString: 
       conversationID: 12
@@ -8945,14 +8943,14 @@ MonoBehaviour:
         destinationDialogueID: 7
         isConnector: 0
         priority: 2
-      conditionsString: 
+      conditionsString: Variable["FlowerCount"] >= 2
       userScript: 
       onExecute:
         m_PersistentCalls:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 185
+        x: 184
         y: 364
         width: 160
         height: 30
@@ -8985,7 +8983,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
-        value: 
+        value: SendMessage(SetAcceptanceLevelTertiary,,GameManager);
         type: 0
         typeString: 
       conversationID: 12
@@ -9002,7 +9000,7 @@ MonoBehaviour:
         destinationDialogueID: 7
         isConnector: 0
         priority: 2
-      conditionsString: 
+      conditionsString: Variable["FlowerCount"] >= 3
       userScript: 
       onExecute:
         m_PersistentCalls:
@@ -9063,8 +9061,8 @@ MonoBehaviour:
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 0, y: 0}
-    canvasZoom: 1
+    canvasScrollPosition: {x: 0, y: 173.33673}
+    canvasZoom: 0.9100001
   - id: 13
     fields:
     - title: Title
@@ -9315,7 +9313,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
-        value: 
+        value: SendMessage(SetDenialLevelMain,,GameManager);
         type: 0
         typeString: 
       conversationID: 13
@@ -9332,7 +9330,7 @@ MonoBehaviour:
         destinationDialogueID: 7
         isConnector: 0
         priority: 2
-      conditionsString: 
+      conditionsString: Variable["FlowerCount"] >= 1
       userScript: 
       onExecute:
         m_PersistentCalls:
@@ -9370,7 +9368,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
-        value: 
+        value: SendMessage(SetDenialLevelSecondary,,GameManager);
         type: 0
         typeString: 
       conversationID: 13
@@ -9387,7 +9385,7 @@ MonoBehaviour:
         destinationDialogueID: 7
         isConnector: 0
         priority: 2
-      conditionsString: 
+      conditionsString: Variable["FlowerCount"] >= 2
       userScript: 
       onExecute:
         m_PersistentCalls:
@@ -9427,7 +9425,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
-        value: 
+        value: SendMessage(SetDenialLevelTertiary,,GameManager);
         type: 0
         typeString: 
       conversationID: 13
@@ -9444,14 +9442,14 @@ MonoBehaviour:
         destinationDialogueID: 7
         isConnector: 0
         priority: 2
-      conditionsString: 
+      conditionsString: Variable["FlowerCount"] >= 3
       userScript: 
       onExecute:
         m_PersistentCalls:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 389
+        x: 390
         y: 362
         width: 160
         height: 30
@@ -9505,7 +9503,7 @@ MonoBehaviour:
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 0, y: 0}
+    canvasScrollPosition: {x: 0, y: 168}
     canvasZoom: 1
   - id: 14
     fields:
@@ -10061,7 +10059,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: Eine Musikanlage.
+        value: A stereo.
         type: 0
         typeString: 
       - title: Sequence
@@ -10165,7 +10163,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: "Was f\xFCr Musik m\xF6chtest du auf deiner Trauerfeier h\xF6ren?"
+        value: What kind of music would you like to listen to at your service?
         type: 0
         typeString: 
       - title: Sequence
