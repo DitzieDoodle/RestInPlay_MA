@@ -6663,7 +6663,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
-        value: SetActive(urn_vcam,false);SetActive(BargainingNPCA,false);SetActive(BargainingNPCC,false);
+        value: SetActive(urn_vcam,false);SetActive(BargainingNPCC,false);SetActive(BargainingNPCA,false);
         type: 0
         typeString: 
       conversationID: 6
@@ -6687,13 +6687,13 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 1445.0192
+        x: 1446.1182
         y: 2803.1685
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 1270.8231, y: 141.4418}
-    canvasZoom: 0.8500004
+    canvasScrollPosition: {x: 1157.2452, y: 2250.2317}
+    canvasZoom: 0.8500002
   - id: 7
     fields:
     - title: Title
