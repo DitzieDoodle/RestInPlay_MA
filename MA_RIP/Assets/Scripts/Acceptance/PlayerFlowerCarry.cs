@@ -8,6 +8,8 @@ public class PlayerFlowerCarry : MonoBehaviour
     private FlowerPickupable nearbyFlower;
     public VaseDepositZone currentDepositZone;
 
+    public AudioSource ding;
+
     public void SetNearbyFlower(FlowerPickupable flower)
     {
         nearbyFlower = flower;
@@ -58,6 +60,7 @@ public class PlayerFlowerCarry : MonoBehaviour
 
         if (accepted)
             carriedFlower = null;
+        ding.Play();
     }
 
     public void DropCurrentFlowerToWorld()
