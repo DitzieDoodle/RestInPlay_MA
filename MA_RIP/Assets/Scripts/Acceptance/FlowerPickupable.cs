@@ -92,9 +92,6 @@ public class FlowerPickupable : MonoBehaviour
         if (col != null)
             col.enabled = false;
 
-        Debug.Log($"Flower '{gameObject.name}' isPartOfPrefabAsset: {UnityEditor.PrefabUtility.IsPartOfPrefabAsset(gameObject)}");
-        Debug.Log($"Slot '{slot.name}' isPartOfPrefabAsset: {UnityEditor.PrefabUtility.IsPartOfPrefabAsset(slot.gameObject)}");
-
         transform.SetParent(slot, false);
         transform.localPosition = Vector3.zero;
         transform.localRotation = Quaternion.identity;
