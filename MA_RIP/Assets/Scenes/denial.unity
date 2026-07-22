@@ -596,6 +596,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: bookAudio
       objectReference: {fileID: 0}
+    - target: {fileID: 2236845798289174567, guid: 47d3008a1572411498587349fe7a4b2c, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.039
+      objectReference: {fileID: 0}
     - target: {fileID: 2340835521272953611, guid: 47d3008a1572411498587349fe7a4b2c, type: 3}
       propertyPath: m_Color.b
       value: 0.8431373
@@ -640,6 +644,14 @@ PrefabInstance:
       propertyPath: m_Color.r
       value: 0.7294118
       objectReference: {fileID: 0}
+    - target: {fileID: 5921374623651352803, guid: 47d3008a1572411498587349fe7a4b2c, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.055
+      objectReference: {fileID: 0}
+    - target: {fileID: 5921374623651352803, guid: 47d3008a1572411498587349fe7a4b2c, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -1.432
+      objectReference: {fileID: 0}
     - target: {fileID: 6584014547515872732, guid: 47d3008a1572411498587349fe7a4b2c, type: 3}
       propertyPath: m_Name
       value: pedestal
@@ -682,6 +694,14 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6657294347224150123, guid: 47d3008a1572411498587349fe7a4b2c, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7012916589689773272, guid: 47d3008a1572411498587349fe7a4b2c, type: 3}
+      propertyPath: m_Name
+      value: book_vcam
+      objectReference: {fileID: 0}
+    - target: {fileID: 7012916589689773272, guid: 47d3008a1572411498587349fe7a4b2c, type: 3}
+      propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7069398517186178187, guid: 47d3008a1572411498587349fe7a4b2c, type: 3}
@@ -9278,11 +9298,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 4921631397453053803, guid: 4bde9a95557703f43836befc3c3e8d70, type: 3}
       propertyPath: m_Name
-      value: TestNPC
+      value: DenyingVisitor
       objectReference: {fileID: 0}
     - target: {fileID: 6500824549087809334, guid: 4bde9a95557703f43836befc3c3e8d70, type: 3}
       propertyPath: conversation
-      value: DenyingTest
+      value: Denial
       objectReference: {fileID: 0}
     - target: {fileID: 6500824549087809334, guid: 4bde9a95557703f43836befc3c3e8d70, type: 3}
       propertyPath: onExecute.m_PersistentCalls.m_Calls.Array.size
