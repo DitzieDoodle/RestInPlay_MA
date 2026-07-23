@@ -7,10 +7,15 @@ public class VaseBouquet : MonoBehaviour
     private bool bouquetCompleted;
     public GameObject acceptanceEnding;
 
+    public bool IsLocked => bouquetCompleted;
+
     private void Awake()
     {
         foreach (var s in slots)
-            Debug.Log(s.name + " -> " + s.gameObject.scene.name);
+        {
+            s.parentVase = this;
+            Debug.Log($"[Vase Awake] slot={s.name}, id={s.GetInstanceID()}, occupied={s.occupied}");
+        }
     }
 
     public bool IsFull
@@ -45,8 +50,7 @@ public class VaseBouquet : MonoBehaviour
         VaseSlot chosen = freeSlots[Random.Range(0, freeSlots.Count)];
         chosen.occupied = true;
 
-        flower.SnapToSlot(chosen.transform);
-
+        flower.SnapToSlot(chosen);
 
         CheckBouquetCompleted();
 
@@ -66,6 +70,5 @@ public class VaseBouquet : MonoBehaviour
     {
         acceptanceEnding.SetActive(true);
         Debug.Log("Bouquet complete!");
-
     }
 }

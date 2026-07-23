@@ -3,6 +3,7 @@ using UnityEngine;
 public class FlowerPickupable : MonoBehaviour
 {
     public bool IsCarried { get; private set; }
+    public VaseSlot CurrentSlot { get; private set; }
 
     private Rigidbody rb;
     private Collider col;
@@ -11,7 +12,6 @@ public class FlowerPickupable : MonoBehaviour
     private Quaternion originalRotation;
 
     public AudioSource pickUp;
-
 
     private void Awake()
     {
@@ -44,6 +44,7 @@ public class FlowerPickupable : MonoBehaviour
     public void PickUp(Transform handPoint)
     {
         IsCarried = true;
+        CurrentSlot = null;
 
         if (rb != null)
         {
@@ -51,18 +52,20 @@ public class FlowerPickupable : MonoBehaviour
             rb.useGravity = false;
         }
 
-        if (col != null)
-            col.enabled = false;
+        // Collider bleibt aktiv (nur Trigger), damit Enter/Exit weiter zuverlässig feuern.
 
         transform.SetParent(handPoint);
         transform.localPosition = Vector3.zero;
         transform.localRotation = Quaternion.identity;
-        pickUp.Play();
+
+        if (pickUp != null)
+            pickUp.Play();
     }
 
     public void DropToWorld()
     {
         IsCarried = false;
+        CurrentSlot = null;
 
         transform.SetParent(originalParent);
 
@@ -76,10 +79,10 @@ public class FlowerPickupable : MonoBehaviour
             col.enabled = true;
     }
 
-    public void SnapToSlot(Transform slot)
+    public void SnapToSlot(VaseSlot slot)
     {
-        Debug.Log($"SnapToSlot called, slot={slot.name}");
         IsCarried = false;
+        CurrentSlot = slot;
 
         if (rb != null)
         {
@@ -89,12 +92,18 @@ public class FlowerPickupable : MonoBehaviour
             rb.angularVelocity = Vector3.zero;
         }
 
-        if (col != null)
-            col.enabled = false;
-
-        transform.SetParent(slot, false);
+        transform.SetParent(slot.transform, false);
         transform.localPosition = Vector3.zero;
         transform.localRotation = Quaternion.identity;
         transform.localScale = Vector3.one;
+    }
+
+    public void RemoveFromSlot()
+    {
+        if (CurrentSlot != null)
+        {
+            CurrentSlot.occupied = false;
+            CurrentSlot = null;
+        }
     }
 }
