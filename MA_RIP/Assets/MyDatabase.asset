@@ -5391,7 +5391,7 @@ MonoBehaviour:
       canvasRect:
         serializedVersion: 2
         x: 1456.6163
-        y: 106.61429
+        y: 105.394775
         width: 160
         height: 30
     - id: 48
@@ -15545,7 +15545,11 @@ MonoBehaviour:
       - title: Sequence
         value: 'SetActive(TransitionSFX,true);SetActive(SceneFader,true);SendMessage(FadeToScene,,SceneFader);
 
-          Continue()'
+          Continue();'
+        type: 0
+        typeString: 
+      - title: Response Menu Sequence
+        value: 
         type: 0
         typeString: 
       conversationID: 30
@@ -15828,7 +15832,7 @@ MonoBehaviour:
       - originConversationID: 31
         originDialogueID: 4
         destinationConversationID: 31
-        destinationDialogueID: 8
+        destinationDialogueID: 9
         isConnector: 0
         priority: 2
       conditionsString: 
@@ -15838,8 +15842,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 83
-        y: 523
+        x: 66.80255
+        y: 466.85986
         width: 160
         height: 30
     - id: 5
@@ -15998,7 +16002,7 @@ MonoBehaviour:
       canvasRect:
         serializedVersion: 2
         x: 279
-        y: 633
+        y: 632
         width: 160
         height: 30
     - id: 8
@@ -16012,11 +16016,11 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Actor
-        value: 2
+        value: 4
         type: 5
         typeString: CustomFieldType_Actor
       - title: Conversant
-        value: 4
+        value: 2
         type: 5
         typeString: CustomFieldType_Actor
       - title: Menu Text
@@ -16028,9 +16032,119 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
-        value: 'SetActive(TransitionSFX,true);SetActive(SceneFader,true);SendMessage(FadeToScene,,SceneFader);
+        value: 'SetActive(BargainingSceneFader,true);SendMessage(FadeToScene,,BargainingSceneFader);
 
-          Continue()'
+          StopConversation()'
+        type: 0
+        typeString: 
+      conversationID: 31
+      isRoot: 0
+      isGroup: 0
+      nodeColor: 
+      delaySimStatus: 0
+      falseConditionAction: Block
+      conditionPriority: 2
+      outgoingLinks:
+      - originConversationID: 31
+        originDialogueID: 8
+        destinationConversationID: 31
+        destinationDialogueID: 10
+        isConnector: 0
+        priority: 2
+      conditionsString: 
+      userScript: 
+      onExecute:
+        m_PersistentCalls:
+          m_Calls: []
+      canvasRect:
+        serializedVersion: 2
+        x: 71.917435
+        y: 673
+        width: 160
+        height: 30
+    - id: 9
+      fields:
+      - title: Title
+        value: 
+        type: 0
+        typeString: 
+      - title: Description
+        value: 
+        type: 0
+        typeString: 
+      - title: Actor
+        value: 4
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Conversant
+        value: 2
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Menu Text
+        value: 
+        type: 0
+        typeString: 
+      - title: Dialogue Text
+        value: 
+        type: 0
+        typeString: 
+      - title: Sequence
+        value: SetActive(TransitionSFX,true);
+        type: 0
+        typeString: 
+      conversationID: 31
+      isRoot: 0
+      isGroup: 0
+      nodeColor: 
+      delaySimStatus: 0
+      falseConditionAction: Block
+      conditionPriority: 2
+      outgoingLinks:
+      - originConversationID: 31
+        originDialogueID: 9
+        destinationConversationID: 31
+        destinationDialogueID: 8
+        isConnector: 0
+        priority: 2
+      conditionsString: 
+      userScript: 
+      onExecute:
+        m_PersistentCalls:
+          m_Calls: []
+      canvasRect:
+        serializedVersion: 2
+        x: 63.038162
+        y: 585.1656
+        width: 160
+        height: 30
+    - id: 10
+      fields:
+      - title: Title
+        value: 
+        type: 0
+        typeString: 
+      - title: Description
+        value: 
+        type: 0
+        typeString: 
+      - title: Actor
+        value: 4
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Conversant
+        value: 2
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Menu Text
+        value: 
+        type: 0
+        typeString: 
+      - title: Dialogue Text
+        value: 
+        type: 0
+        typeString: 
+      - title: Sequence
+        value: 
         type: 0
         typeString: 
       conversationID: 31
@@ -16048,13 +16162,13 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 88
-        y: 634
+        x: 74.66972
+        y: 783.5504
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 0, y: 0}
-    canvasZoom: 1
+    canvasScrollPosition: {x: 1.7519059, y: 68.42131}
+    canvasZoom: 1.0899999
   - id: 32
     fields:
     - title: Title
@@ -16483,7 +16597,7 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 279
+        x: 280
         y: 633
         width: 160
         height: 30
@@ -16514,9 +16628,64 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
-        value: 'SetActive(TransitionSFX,true);SetActive(SceneFader,true);SendMessage(FadeToScene,,SceneFader);
+        value: 'SetActive(TransitionSFX,true);
 
-          Continue()'
+          Continue();'
+        type: 0
+        typeString: 
+      conversationID: 32
+      isRoot: 0
+      isGroup: 0
+      nodeColor: 
+      delaySimStatus: 0
+      falseConditionAction: Block
+      conditionPriority: 2
+      outgoingLinks:
+      - originConversationID: 32
+        originDialogueID: 8
+        destinationConversationID: 32
+        destinationDialogueID: 9
+        isConnector: 0
+        priority: 2
+      conditionsString: 
+      userScript: 
+      onExecute:
+        m_PersistentCalls:
+          m_Calls: []
+      canvasRect:
+        serializedVersion: 2
+        x: 86
+        y: 632
+        width: 160
+        height: 30
+    - id: 9
+      fields:
+      - title: Title
+        value: 
+        type: 0
+        typeString: 
+      - title: Description
+        value: 
+        type: 0
+        typeString: 
+      - title: Actor
+        value: 4
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Conversant
+        value: 2
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Menu Text
+        value: 
+        type: 0
+        typeString: 
+      - title: Dialogue Text
+        value: 
+        type: 0
+        typeString: 
+      - title: Sequence
+        value: SetActive(AngrySceneFader,true);SendMessage(FadeToScene,,AngrySceneFader);Continue();
         type: 0
         typeString: 
       conversationID: 32
@@ -16534,12 +16703,12 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 85
-        y: 633
+        x: 89
+        y: 754
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 0, y: 0}
+    canvasScrollPosition: {x: 67, y: 5}
     canvasZoom: 1
   - id: 33
     fields:
@@ -17000,7 +17169,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
-        value: 'SetActive(TransitionSFX,true);SetActive(SceneFader,true);SendMessage(FadeToScene,,SceneFader);
+        value: 'SetActive(TransitionSFX,true);SetActive(DenialSceneFader,true);SendMessage(FadeToScene,,DenialSceneFader);
 
           Continue()'
         type: 0

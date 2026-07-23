@@ -14,35 +14,31 @@ public class SceneFader : MonoBehaviour
 
     void Start()
     {
-        // NUR Fade-IN beim Start, KEINE Scene laden!
+
         if (fadeImage != null)
         {
             Color c = fadeImage.color;
             c.a = 1f;
             fadeImage.color = c;
-            StartCoroutine(FadeInOnly());  // NEUER: Nur Fade-IN!
+            StartCoroutine(FadeInOnly()); 
         }
     }
 
-    // Button ruft nur DAS auf
     public void StartFade()
     {
-        StartCoroutine(FadeToScene());  // NEUER: Fade + Scene-Load
+        StartCoroutine(FadeToScene()); 
     }
 
-    // NEU: Nur Fade-IN (ohne Scene-Load)
     private IEnumerator FadeInOnly()
     {
         yield return StartCoroutine(Fade(1f, 0f, false));  // false = keine Scene
     }
 
-    // NEU: Fade + Scene-Load
     private IEnumerator FadeToScene()
     {
         yield return StartCoroutine(Fade(0f, 1f, true));  // true = Scene laden
     }
 
-    // FIX: Parameter für Scene-Load hinzugefügt
     private IEnumerator Fade(float startAlpha, float endAlpha, bool loadScene)
     {
         float t = 0f;
@@ -60,7 +56,6 @@ public class SceneFader : MonoBehaviour
             yield return null;
         }
 
-        // Scene NUR laden wenn explizit angefordert!
         if (loadScene && !string.IsNullOrEmpty(sceneToLoad))
         {
             SceneManager.LoadScene(sceneToLoad);

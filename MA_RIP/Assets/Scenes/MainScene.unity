@@ -4079,7 +4079,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8214116785745161972, guid: 0bb0476c06ed64246813381dfa409307, type: 3}
       propertyPath: sceneToLoad
-      value: Hospital
+      value: acceptance
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -5946,9 +5946,9 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
-  m_Resource: {fileID: 8300000, guid: e079e417dc3e8b34787879af3cff9b72, type: 3}
+  m_Resource: {fileID: 8300000, guid: 74bcdd413231541468075f9941b711e4, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 0.285
+  m_Volume: 0.777
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -8009,6 +8009,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 782546016938932454, guid: 0bb0476c06ed64246813381dfa409307, type: 3}
+      propertyPath: m_Name
+      value: BargainingSceneFader
+      objectReference: {fileID: 0}
     - target: {fileID: 1167586669423596352, guid: 0bb0476c06ed64246813381dfa409307, type: 3}
       propertyPath: conversation
       value: BargainingStart
@@ -8091,7 +8095,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8214116785745161972, guid: 0bb0476c06ed64246813381dfa409307, type: 3}
       propertyPath: sceneToLoad
-      value: Bargaining
+      value: bargaining
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -8862,7 +8866,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
-  m_Resource: {fileID: 8300000, guid: e079e417dc3e8b34787879af3cff9b72, type: 3}
+  m_Resource: {fileID: 8300000, guid: 05384438a6750f64c8dbaf8ee66fb8b3, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 0.285
   m_Pitch: 1
@@ -12338,9 +12342,17 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 11400000, guid: 1ddf13999859a9148bb1d7f47f69438b, type: 2}
     - target: {fileID: 11426072, guid: 58ac37417e60e534f91138088a3e6f70, type: 3}
+      propertyPath: allowOnlyOneInstance
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 11426072, guid: 58ac37417e60e534f91138088a3e6f70, type: 3}
       propertyPath: displaySettings.dialogueUI
       value: 
       objectReference: {fileID: 101180, guid: f56bdcd483172504dbb9ce5e24f9cc33, type: 3}
+    - target: {fileID: 11426072, guid: 58ac37417e60e534f91138088a3e6f70, type: 3}
+      propertyPath: allowSimultaneousConversations
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 11426072, guid: 58ac37417e60e534f91138088a3e6f70, type: 3}
       propertyPath: displaySettings.subtitleSettings.continueButton
       value: 1
@@ -16746,7 +16758,7 @@ AudioSource:
   m_audioClip: {fileID: 0}
   m_Resource: {fileID: 8300000, guid: e079e417dc3e8b34787879af3cff9b72, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 0.285
+  m_Volume: 0.523
   m_Pitch: 1
   Loop: 1
   Mute: 0
@@ -18752,6 +18764,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 782546016938932454, guid: 0bb0476c06ed64246813381dfa409307, type: 3}
+      propertyPath: m_Name
+      value: AngrySceneFader
+      objectReference: {fileID: 0}
     - target: {fileID: 1167586669423596352, guid: 0bb0476c06ed64246813381dfa409307, type: 3}
       propertyPath: conversation
       value: AngerStart
@@ -19413,6 +19429,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 782546016938932454, guid: 0bb0476c06ed64246813381dfa409307, type: 3}
+      propertyPath: m_Name
+      value: DepressedSceneFader
+      objectReference: {fileID: 0}
     - target: {fileID: 1167586669423596352, guid: 0bb0476c06ed64246813381dfa409307, type: 3}
       propertyPath: conversation
       value: DepressionStart
@@ -19994,7 +20014,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8214116785745161972, guid: 0bb0476c06ed64246813381dfa409307, type: 3}
       propertyPath: sceneToLoad
-      value: Anger
+      value: Denial
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -23595,27 +23615,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 709988510890003947}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &5540363760074845459
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5584674692084340560}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!65 &5547718713141568239
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -23648,7 +23647,6 @@ GameObject:
   - component: {fileID: 4811256067728406864}
   - component: {fileID: 2704641586518457497}
   - component: {fileID: 9059450926156624862}
-  - component: {fileID: 5540363760074845459}
   m_Layer: 0
   m_Name: Cube (8)
   m_TagString: Untagged

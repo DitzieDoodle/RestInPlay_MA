@@ -15,8 +15,14 @@ EditorBuildSettings:
     path: Assets/Scenes/anger.unity
     guid: 99c9720ab356a0642a771bea13969a05
   - enabled: 1
-    path: Assets/Scenes/bargain.unity
+    path: Assets/Scenes/denial.unity
+    guid: 3491e4c2e694a3f418d4524000e7b9f1
+  - enabled: 1
+    path: Assets/Scenes/bargaining.unity
     guid: c60198345f7d1444f92d0cbb6ef8af38
+  - enabled: 1
+    path: Assets/Scenes/acceptance.unity
+    guid: 80c39da8a440c0c46af8174dc5728cdb
   - enabled: 1
     path: Assets/Scenes/MainScene.unity
     guid: f35b3a65cfa82af45aa985d9e529d51b
