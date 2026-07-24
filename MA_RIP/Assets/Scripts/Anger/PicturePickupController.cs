@@ -78,9 +78,19 @@ public class PicturePickupController : MonoBehaviour
         }
     }
 
+    private static float Distance2D(Vector3 a, Vector3 b)
+    {
+        // Z-Tiefe ignorieren, da Player und Objekte im 2.5D-Setup auf
+        // unterschiedlichen Z-Ebenen liegen können, obwohl sie visuell
+        // nebeneinander stehen (Sortierung/Depth-Offset).
+        Vector2 a2 = new Vector2(a.x, a.y);
+        Vector2 b2 = new Vector2(b.x, b.y);
+        return Vector2.Distance(a2, b2);
+    }
+
     private void HandlePickupCheck()
     {
-        bool inRange = Vector3.Distance(playerTransform.position, pictureTransform.position) <= pickupRange;
+        bool inRange = Distance2D(playerTransform.position, pictureTransform.position) <= pickupRange;
 
         if (inRange && !pickupPromptVisible)
         {
@@ -120,7 +130,7 @@ public class PicturePickupController : MonoBehaviour
 
     private void HandlePlaceCheck()
     {
-        bool inRange = Vector3.Distance(playerTransform.position, honorSpot.position) <= placeRange;
+        bool inRange = Distance2D(playerTransform.position, honorSpot.position) <= placeRange;
 
         if (inRange && !placePromptVisible)
         {

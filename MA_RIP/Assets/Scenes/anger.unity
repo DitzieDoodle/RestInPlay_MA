@@ -1659,7 +1659,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 87392c0849c70a5478ca64cbbcd71e80, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PicturePickupController
-  pictureTransform: {fileID: 0}
+  pictureTransform: {fileID: 1344314557}
   playerTransform: {fileID: 1432639127}
   holdPoint: {fileID: 2107787940}
   honorSpot: {fileID: 748546599}
