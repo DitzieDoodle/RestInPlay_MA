@@ -44,6 +44,39 @@ public class PictureThrowController : MonoBehaviour
     private int placementCount = 0;
     public int PlacementCount => placementCount;
 
+    [Header("Juice / Feedback (optional - leer lassen, um zu deaktivieren)")]
+    [Tooltip("AudioSource, über die SFX abgespielt werden")]
+    [SerializeField] private AudioSource audioSource;
+
+    [Tooltip("Wird beim Loslassen/Wegwerfen abgespielt - mehrere Varianten für Abwechslung")]
+    [SerializeField] private AudioClip[] throwSfx;
+
+    [Tooltip("Wird beim Aufprall abgespielt")]
+    [SerializeField] private AudioClip[] impactSfx;
+
+    [Tooltip("Leichte Tonhöhen-Variation pro Abspielung, damit es nicht repetitiv klingt")]
+    [SerializeField] private Vector2 pitchRange = new Vector2(0.92f, 1.08f);
+
+    [Tooltip("Partikel-Effekt beim Aufprall (z.B. Staub/Papierfetzen)")]
+    [SerializeField] private ParticleSystem impactParticles;
+
+    [Tooltip("Trail hinter dem Bild während des Flugs (optional)")]
+    [SerializeField] private TrailRenderer pictureTrail;
+
+    [Tooltip("Kamera, die beim Aufprall wackelt (meist Camera.main)")]
+    [SerializeField] private Transform cameraToShake;
+    [SerializeField] private float shakeStrength = 0.15f;
+    [SerializeField] private float shakeDuration = 0.2f;
+
+    [Tooltip("Kurzes Einfrieren der Zeit beim Aufprall für mehr 'Wucht'")]
+    [SerializeField] private bool useHitStop = true;
+    [SerializeField] private float hitStopTimeScale = 0.05f;
+    [SerializeField] private float hitStopDuration = 0.04f;
+
+    [Tooltip("Kleine Anticipation (Vorbereitung) kurz bevor der Wurf startet")]
+    [SerializeField] private bool useAnticipation = true;
+    [SerializeField] private float anticipationDuration = 0.1f;
+
     [Header("Events")]
     [Tooltip("Wird ausgelöst, sobald der Wurf beginnt (z.B. für Sound/Kamera-Shake)")]
     public UnityEvent OnPictureThrown;
@@ -66,12 +99,56 @@ public class PictureThrowController : MonoBehaviour
     public Vector3 InitialScale => initialScale;
     public Transform InitialParent => initialParent;
 
+    private void PlayRandomSfx(AudioClip[] clips)
+    {
+        if (audioSource == null || clips == null || clips.Length == 0) return;
+
+        AudioClip clip = clips[Random.Range(0, clips.Length)];
+        audioSource.pitch = Random.Range(pitchRange.x, pitchRange.y);
+        audioSource.PlayOneShot(clip);
+    }
+
+    private void PlayImpactFeedback()
+    {
+        PlayRandomSfx(impactSfx);
+
+        if (impactParticles != null)
+        {
+            impactParticles.transform.position = pictureTransform.position;
+            impactParticles.Play();
+        }
+
+        if (cameraToShake != null)
+        {
+            cameraToShake.DOShakePosition(shakeDuration, shakeStrength, vibrato: 12, randomness: 90, fadeOut: true);
+        }
+
+        if (useHitStop)
+        {
+            StartCoroutine(HitStopCoroutine());
+        }
+    }
+
+    private System.Collections.IEnumerator HitStopCoroutine()
+    {
+        float originalTimeScale = Time.timeScale;
+        Time.timeScale = hitStopTimeScale;
+        // unscaled warten, damit der Hit-Stop nicht durch die eigene Zeitverlangsamung verlängert wird
+        yield return new WaitForSecondsRealtime(hitStopDuration);
+        Time.timeScale = originalTimeScale;
+    }
+
     private void Awake()
     {
         initialPosition = pictureTransform.position;
         initialRotation = pictureTransform.rotation;
         initialScale = pictureTransform.localScale;
         initialParent = pictureTransform.parent;
+
+        if (pictureTrail != null)
+        {
+            pictureTrail.emitting = false;
+        }
     }
 
     /// <summary>
@@ -104,6 +181,29 @@ public class PictureThrowController : MonoBehaviour
         float randomRotation = Random.Range(rotationRange.x, rotationRange.y) * (Random.value > 0.5f ? 1f : -1f);
 
         currentSequence = DOTween.Sequence();
+
+        if (useAnticipation)
+        {
+            // kurzes "Ausholen" - leichtes Zusammenziehen, bevor es losgeht.
+            // Macht den Wurf lesbarer und wirkt absichtsvoller/wütender.
+            currentSequence.Append(
+                pictureTransform.DOScale(initialScale * 0.9f, anticipationDuration).SetEase(Ease.OutQuad)
+            );
+            currentSequence.AppendCallback(() => PlayRandomSfx(throwSfx));
+            currentSequence.AppendCallback(() =>
+            {
+                if (pictureTrail != null) pictureTrail.emitting = true;
+            });
+            currentSequence.Append(
+                pictureTransform.DOScale(initialScale, 0.08f)
+            );
+        }
+        else
+        {
+            PlayRandomSfx(throwSfx);
+            if (pictureTrail != null) pictureTrail.emitting = true;
+        }
+
         currentSequence.Append(
             pictureTransform.DOJump(target.position, jumpPower, 1, throwDuration)
                 .SetEase(Ease.OutQuad)
@@ -130,6 +230,10 @@ public class PictureThrowController : MonoBehaviour
 
             // Rotation exakt auf den gemerkten Ausgangswert zurücksetzen
             pictureTransform.DORotateQuaternion(initialRotation, 0.15f);
+
+            if (pictureTrail != null) pictureTrail.emitting = false;
+
+            PlayImpactFeedback();
 
             throwCount++;
             OnPictureLanded?.Invoke();
