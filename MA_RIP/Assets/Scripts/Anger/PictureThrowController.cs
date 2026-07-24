@@ -1,6 +1,7 @@
 using UnityEngine;
 using UnityEngine.Events;
 using DG.Tweening;
+using Unity.Cinemachine;
 
 /// <summary>
 /// Steuert das Wegwerfen und Zurückstellen des Spieler-Fotos in der Wut-Phase.
@@ -63,10 +64,10 @@ public class PictureThrowController : MonoBehaviour
     [Tooltip("Trail hinter dem Bild während des Flugs (optional)")]
     [SerializeField] private TrailRenderer pictureTrail;
 
-    [Tooltip("Kamera, die beim Aufprall wackelt (meist Camera.main)")]
-    [SerializeField] private Transform cameraToShake;
-    [SerializeField] private float shakeStrength = 0.15f;
-    [SerializeField] private float shakeDuration = 0.2f;
+    [Tooltip("CinemachineImpulseSource für Camera Shake - erzeugt einen Impuls, den jede aktive Vcam mit CinemachineImpulseListener aufnimmt")]
+    [SerializeField] private CinemachineImpulseSource impulseSource;
+    [Tooltip("Stärke-Multiplikator für den Impuls (1 = die im ImpulseSource eingestellte Standardstärke)")]
+    [SerializeField] private float impulseForce = 1f;
 
     [Tooltip("Kurzes Einfrieren der Zeit beim Aufprall für mehr 'Wucht'")]
     [SerializeField] private bool useHitStop = true;
@@ -99,6 +100,31 @@ public class PictureThrowController : MonoBehaviour
     public Vector3 InitialScale => initialScale;
     public Transform InitialParent => initialParent;
 
+    /// <summary>
+    /// Aus dem Dialogsystem aufrufen, um gezielt einen Camera-Shake auszulösen
+    /// (z.B. wenn der NPC mit der Faust auf den Tisch schlägt, ohne dass
+    /// gleichzeitig geworfen wird).
+    /// </summary>
+    public void TriggerCameraShake()
+    {
+        if (impulseSource != null)
+        {
+            impulseSource.GenerateImpulse(impulseForce);
+        }
+    }
+
+    /// <summary>
+    /// Wie TriggerCameraShake(), aber mit eigenem Stärke-Multiplikator -
+    /// praktisch, falls du im Dialog zwischen leichtem und starkem Shake
+    /// unterscheiden willst.
+    /// </summary>
+    public void TriggerCameraShake(float forceMultiplier)
+    {
+        if (impulseSource != null)
+        {
+            impulseSource.GenerateImpulse(impulseForce * forceMultiplier);
+        }
+    }
     private void PlayRandomSfx(AudioClip[] clips)
     {
         if (audioSource == null || clips == null || clips.Length == 0) return;
@@ -118,9 +144,9 @@ public class PictureThrowController : MonoBehaviour
             impactParticles.Play();
         }
 
-        if (cameraToShake != null)
+        if (impulseSource != null)
         {
-            cameraToShake.DOShakePosition(shakeDuration, shakeStrength, vibrato: 12, randomness: 90, fadeOut: true);
+            impulseSource.GenerateImpulse(impulseForce);
         }
 
         if (useHitStop)

@@ -5,11 +5,14 @@ public class PlayerController : MonoBehaviour
     [Header("Movement Settings")]
     public float moveSpeed = 5f;
 
+    [Tooltip("Multiplikator auf moveSpeed, z.B. 0.5 = halbe Geschwindigkeit. Wird von außen gesetzt (z.B. beim Tragen des Bildes).")]
+    [Range(0.1f, 1f)]
+    public float speedMultiplier = 1f;
+
     [Header("Graphics")]
     public Transform graphics; // Parent von Spine-Objekt
 
     Rigidbody rb;
-
     float inputX;
     float inputZ;
 
@@ -22,13 +25,15 @@ public class PlayerController : MonoBehaviour
         if (graphics != null)
             originalScale = graphics.localScale;
     }
+
     void FixedUpdate()
     {
-        Vector3 movement = new Vector3(inputX, 0f, inputZ).normalized * moveSpeed;
+        Vector3 movement = new Vector3(inputX, 0f, inputZ).normalized * moveSpeed * speedMultiplier;
 
         // Rigidbody bewegen
         rb.linearVelocity = movement;
     }
+
     void Update()
     {
         // Input: Horizontal = X, Vertical = Z
@@ -46,6 +51,21 @@ public class PlayerController : MonoBehaviour
             graphics.localScale = scale;
         }
     }
+
+    /// <summary>
+    /// Setzt den Geschwindigkeits-Multiplikator (z.B. 0.5 für halbe Geschwindigkeit
+    /// beim Tragen des Bildes). 1 = normale Geschwindigkeit.
+    /// </summary>
+    public void SetSpeedMultiplier(float multiplier)
+    {
+        speedMultiplier = multiplier;
+    }
+
+    /// <summary>
+    /// Setzt die Geschwindigkeit wieder auf normal (1x) zurück.
+    /// </summary>
+    public void ResetSpeedMultiplier()
+    {
+        speedMultiplier = 1f;
+    }
 }
-
-

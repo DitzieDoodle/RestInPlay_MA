@@ -16,6 +16,11 @@ public class PicturePickupController : MonoBehaviour
     [Header("References")]
     [SerializeField] private Transform pictureTransform;
     [SerializeField] private Transform playerTransform;
+    [SerializeField] private PlayerController playerController;
+
+    [Tooltip("Geschwindigkeits-Multiplikator, während der Spieler das Bild trägt (z.B. 0.5 = halbes Tempo)")]
+    [Range(0.1f, 1f)]
+    [SerializeField] private float carrySpeedMultiplier = 0.5f;
 
     [Tooltip("Leeres Child-Objekt am Spieler, an dem das Bild beim Tragen 'klebt' (z.B. vor der Brust)")]
     [SerializeField] private Transform holdPoint;
@@ -126,6 +131,11 @@ public class PicturePickupController : MonoBehaviour
         pictureTransform.DOLocalMove(Vector3.zero, pickupSnapDuration).SetEase(Ease.OutQuad);
         pictureTransform.DORotateQuaternion(throwController.InitialRotation, pickupSnapDuration);
 
+        if (playerController != null)
+        {
+            playerController.SetSpeedMultiplier(carrySpeedMultiplier);
+        }
+
         OnPictureCarried?.Invoke();
     }
 
@@ -158,6 +168,11 @@ public class PicturePickupController : MonoBehaviour
         {
             OnHidePlacePrompt?.Invoke();
             placePromptVisible = false;
+        }
+
+        if (playerController != null)
+        {
+            playerController.ResetSpeedMultiplier();
         }
 
         // aus der Hand lösen, Weltposition beibehalten, dann sauber einschweben lassen
