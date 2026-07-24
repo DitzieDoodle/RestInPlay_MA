@@ -46,6 +46,35 @@ public class PictureThrowController : MonoBehaviour
 
     private Sequence currentSequence;
     private Transform lastTarget;
+    private Vector3 initialPosition;
+    private Quaternion initialRotation;
+    private Vector3 initialScale;
+    private Transform initialParent;
+
+    public Vector3 InitialPosition => initialPosition;
+    public Quaternion InitialRotation => initialRotation;
+    public Vector3 InitialScale => initialScale;
+    public Transform InitialParent => initialParent;
+
+    private void Awake()
+    {
+        initialPosition = pictureTransform.position;
+        initialRotation = pictureTransform.rotation;
+        initialScale = pictureTransform.localScale;
+        initialParent = pictureTransform.parent;
+    }
+
+    /// <summary>
+    /// Setzt das Bild exakt auf die beim Start gemerkten Ausgangswerte zurück
+    /// (Position, Rotation inkl. 80°-Neigung, Scale, Parent) - ohne Tween, für Sofort-Reset.
+    /// </summary>
+    public void SnapToInitialTransform()
+    {
+        pictureTransform.SetParent(initialParent, true);
+        pictureTransform.position = initialPosition;
+        pictureTransform.rotation = initialRotation;
+        pictureTransform.localScale = initialScale;
+    }
 
     /// <summary>
     /// Aus dem Dialogsystem aufrufen, sobald der NPC das Bild wegwirft.
@@ -69,16 +98,29 @@ public class PictureThrowController : MonoBehaviour
             pictureTransform.DOJump(target.position, jumpPower, 1, throwDuration)
                 .SetEase(Ease.OutQuad)
         );
+        float startZ = pictureTransform.eulerAngles.z;
+        float endZ = startZ + randomRotation;
         currentSequence.Join(
-            pictureTransform.DORotate(new Vector3(0f, 0f, randomRotation), throwDuration, RotateMode.FastBeyond360)
+            DOTween.To(() => startZ, z =>
+            {
+                startZ = z;
+                Vector3 e = initialRotation.eulerAngles;
+                pictureTransform.rotation = Quaternion.Euler(e.x, e.y, z);
+            }, endZ, throwDuration)
         );
 
         OnPictureThrown?.Invoke();
 
         currentSequence.OnComplete(() =>
         {
-            // kleiner "Impact" beim Aufkommen
-            pictureTransform.DOPunchScale(new Vector3(0.2f, -0.2f, 0f), 0.2f, 5, 0.5f);
+            // kleiner "Impact" beim Aufkommen - dezent, damit die Skalierung
+            // nie in Richtung 0 oder negativ ausschlägt (sonst wirkt es wie
+            // ein kurzes Verschwinden/Invertieren)
+            pictureTransform.DOPunchScale(new Vector3(0.08f, 0.08f, 0f), 0.2f, 3, 0.3f);
+
+            // Rotation exakt auf den gemerkten Ausgangswert zurücksetzen
+            pictureTransform.DORotateQuaternion(initialRotation, 0.15f);
+
             throwCount++;
             OnPictureLanded?.Invoke();
         });
@@ -96,12 +138,17 @@ public class PictureThrowController : MonoBehaviour
 
         currentSequence = DOTween.Sequence();
         currentSequence.Append(
-            pictureTransform.DOMove(honorSpot.position, placeBackDuration).SetEase(Ease.OutBack)
+            pictureTransform.DOMove(initialPosition, placeBackDuration).SetEase(Ease.OutBack)
         );
         currentSequence.Join(
-            pictureTransform.DORotate(Vector3.zero, placeBackDuration)
+            pictureTransform.DORotateQuaternion(initialRotation, placeBackDuration)
         );
-        currentSequence.OnComplete(() => OnPicturePlacedBack?.Invoke());
+        currentSequence.OnComplete(() =>
+        {
+            // Exakter Snap am Ende, damit keine Tween-/Float-Ungenauigkeiten übrig bleiben
+            SnapToInitialTransform();
+            OnPicturePlacedBack?.Invoke();
+        });
 
         currentSequence.Play();
     }

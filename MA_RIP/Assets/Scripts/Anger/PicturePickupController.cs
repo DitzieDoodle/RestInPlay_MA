@@ -119,11 +119,12 @@ public class PicturePickupController : MonoBehaviour
             pickupPromptVisible = false;
         }
 
-        // sanftes "Einfangen" in die Hand statt hartem Snap
+        // sanftes "Einfangen" in die Hand statt hartem Snap.
+        // Ziel-Rotation ist die exakt gemerkte Ausgangsrotation (inkl. 80°-Neigung).
         pictureTransform.DOKill();
         pictureTransform.SetParent(holdPoint, true);
         pictureTransform.DOLocalMove(Vector3.zero, pickupSnapDuration).SetEase(Ease.OutQuad);
-        pictureTransform.DOLocalRotate(Vector3.zero, pickupSnapDuration);
+        pictureTransform.DORotateQuaternion(throwController.InitialRotation, pickupSnapDuration);
 
         OnPictureCarried?.Invoke();
     }
@@ -164,9 +165,14 @@ public class PicturePickupController : MonoBehaviour
         pictureTransform.SetParent(null, true);
 
         Sequence placeSeq = DOTween.Sequence();
-        placeSeq.Append(pictureTransform.DOMove(honorSpot.position, placeBackDuration).SetEase(Ease.OutBack));
-        placeSeq.Join(pictureTransform.DORotate(Vector3.zero, placeBackDuration));
-        placeSeq.OnComplete(() => throwController.OnPicturePlacedBack?.Invoke());
+        placeSeq.Append(pictureTransform.DOMove(throwController.InitialPosition, placeBackDuration).SetEase(Ease.OutBack));
+        placeSeq.Join(pictureTransform.DORotateQuaternion(throwController.InitialRotation, placeBackDuration));
+        placeSeq.OnComplete(() =>
+        {
+            // Exakter Snap auf Ausgangswerte inkl. ursprünglichem Parent
+            throwController.SnapToInitialTransform();
+            throwController.OnPicturePlacedBack?.Invoke();
+        });
         placeSeq.Play();
     }
 
