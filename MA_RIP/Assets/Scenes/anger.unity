@@ -1297,6 +1297,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3541262880040816387, guid: 654592da1f5e2134284593dac498f5e4, type: 3}
+      propertyPath: m_Name
+      value: ButtonCanvas
+      objectReference: {fileID: 0}
+    - target: {fileID: 3541262880040816387, guid: 654592da1f5e2134284593dac498f5e4, type: 3}
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}

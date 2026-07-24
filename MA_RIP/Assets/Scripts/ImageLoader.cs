@@ -32,6 +32,7 @@ public class ImageLoader : MonoBehaviour
             ApplyTexture(tex);
 
             SaveToPrefs(tex);//Speichern
+            submitButton.SetActive(true);
         }
     }
 
@@ -61,7 +62,7 @@ public class ImageLoader : MonoBehaviour
 
         mat.mainTextureScale = tiling;
         mat.mainTextureOffset = offset;
-        submitButton.SetActive(true); 
+
     }
 
     void SaveToPrefs(Texture2D tex)

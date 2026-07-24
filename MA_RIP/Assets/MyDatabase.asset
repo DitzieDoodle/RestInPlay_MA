@@ -6906,7 +6906,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
-        value: SetActive(CanvasCam,true);SetActive(ImageUploadButton,true)
+        value: SetActive(CanvasCam,true);SetActive(ButtonCanvas,true)
         type: 0
         typeString: 
       conversationID: 7
