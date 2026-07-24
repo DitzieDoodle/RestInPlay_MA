@@ -169,9 +169,8 @@ public class PicturePickupController : MonoBehaviour
         placeSeq.Join(pictureTransform.DORotateQuaternion(throwController.InitialRotation, placeBackDuration));
         placeSeq.OnComplete(() =>
         {
-            // Exakter Snap auf Ausgangswerte inkl. ursprünglichem Parent
             throwController.SnapToInitialTransform();
-            throwController.OnPicturePlacedBack?.Invoke();
+            throwController.NotifyPlacedBack();
         });
         placeSeq.Play();
     }

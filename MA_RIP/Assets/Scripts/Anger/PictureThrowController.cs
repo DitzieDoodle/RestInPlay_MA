@@ -34,6 +34,16 @@ public class PictureThrowController : MonoBehaviour
     [SerializeField] private int throwCount = 0;
     public int ThrowCount => throwCount;
 
+    [Header("Fortschritt / Dialog-Checkpoints")]
+    [Tooltip("Ein GameObject pro Wiederholung. Wird der Reihe nach aktiviert, sobald das Bild erfolgreich zurückgestellt wurde. Index 0 = nach dem 1. Mal, Index 1 = nach dem 2. Mal usw. Das GameObject sollte deinen Dialog per OnEnable/OnStart triggern.")]
+    [SerializeField] private GameObject[] progressCheckpoints;
+
+    [Tooltip("Wird ausgelöst, sobald alle Checkpoints durchlaufen wurden (z.B. Phase abgeschlossen)")]
+    public UnityEvent OnAllCheckpointsComplete;
+
+    private int placementCount = 0;
+    public int PlacementCount => placementCount;
+
     [Header("Events")]
     [Tooltip("Wird ausgelöst, sobald der Wurf beginnt (z.B. für Sound/Kamera-Shake)")]
     public UnityEvent OnPictureThrown;
@@ -129,6 +139,32 @@ public class PictureThrowController : MonoBehaviour
     }
 
     /// <summary>
+    /// Zentrale Stelle, die IMMER aufgerufen wird, wenn das Bild erfolgreich
+    /// zurückgestellt wurde (egal ob direkt oder nach dem Tragen durch den
+    /// Spieler). Schaltet den nächsten Checkpoint (z.B. Dialog-Trigger-GameObject)
+    /// scharf und zählt den Fortschritt hoch.
+    /// </summary>
+    public void NotifyPlacedBack()
+    {
+        if (progressCheckpoints != null && placementCount < progressCheckpoints.Length)
+        {
+            GameObject checkpoint = progressCheckpoints[placementCount];
+            if (checkpoint != null)
+            {
+                checkpoint.SetActive(true);
+            }
+        }
+
+        placementCount++;
+
+        OnPicturePlacedBack?.Invoke();
+
+        if (progressCheckpoints != null && placementCount >= progressCheckpoints.Length)
+        {
+            OnAllCheckpointsComplete?.Invoke();
+        }
+    }
+    /// <summary>
     /// Aus dem Dialog- oder Interaktionssystem aufrufen, wenn der Spieler
     /// das Bild wieder auf den Ehrenplatz stellt.
     /// </summary>
@@ -147,7 +183,7 @@ public class PictureThrowController : MonoBehaviour
         {
             // Exakter Snap am Ende, damit keine Tween-/Float-Ungenauigkeiten übrig bleiben
             SnapToInitialTransform();
-            OnPicturePlacedBack?.Invoke();
+            NotifyPlacedBack();
         });
 
         currentSequence.Play();
@@ -170,11 +206,24 @@ public class PictureThrowController : MonoBehaviour
     }
 
     /// <summary>
-    /// Optional: Eskalationsstufe zurücksetzen, z.B. beim Betreten der Phase.
+    /// Optional: Eskalationsstufe und Checkpoint-Fortschritt zurücksetzen,
+    /// z.B. beim (Neu-)Betreten der Phase.
     /// </summary>
     public void ResetEscalation()
     {
         throwCount = 0;
         lastTarget = null;
+        placementCount = 0;
+
+        if (progressCheckpoints != null)
+        {
+            foreach (GameObject checkpoint in progressCheckpoints)
+            {
+                if (checkpoint != null)
+                {
+                    checkpoint.SetActive(false);
+                }
+            }
+        }
     }
 }
