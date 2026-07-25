@@ -57,7 +57,7 @@ public class GhostColorPicker : MonoBehaviour
         {
             UnityColor selectedColor = colorArray[currentColorIndex];
             ChangeSlotColor(targetSlotName, selectedColor);
-            colorPreview.color = selectedColor;  // Vorschau aktualisieren
+            if (colorPreview) colorPreview.color = selectedColor;  // Vorschau aktualisieren
             Debug.Log($"Applied color {selectedColor} to slot '{targetSlotName}'");
         }
     }

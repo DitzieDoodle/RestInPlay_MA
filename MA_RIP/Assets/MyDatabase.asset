@@ -6741,7 +6741,9 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
-        value: SendMessage(StartTalkingSquash,,AngryVisitor);SetActive(NPC_vcam,true);SetActive(AngrySFX,true);SendMessage(PlayRandomSound,,AngryVisitor)
+        value: 'SetActive(NPC_vcam,true);
+
+          SendMessage(PlayRandomSound,,AngryVisitor)'
         type: 0
         typeString: 
       conversationID: 7
@@ -6766,7 +6768,7 @@ MonoBehaviour:
       canvasRect:
         serializedVersion: 2
         x: 376.2303
-        y: 96.187805
+        y: 95.156876
         width: 160
         height: 30
     - id: 9
@@ -7096,8 +7098,8 @@ MonoBehaviour:
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 34.11412, y: 979.8439}
-    canvasZoom: 0.8800001
+    canvasScrollPosition: {x: 0, y: 0}
+    canvasZoom: 0.97
   - id: 9
     fields:
     - title: Title
@@ -17596,7 +17598,7 @@ MonoBehaviour:
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 0, y: 317.10513}
+    canvasScrollPosition: {x: 0, y: 0}
     canvasZoom: 1
   - id: 35
     fields:

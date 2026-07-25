@@ -149,7 +149,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ab8b685e62a9aeb4a9472b30ec2d86d9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  initialDatabase: {fileID: 0}
+  initialDatabase: {fileID: 11400000, guid: 1ddf13999859a9148bb1d7f47f69438b, type: 2}
   displaySettings:
     conversationOverrideSettings:
       useOverrides: 0
@@ -177,7 +177,7 @@ MonoBehaviour:
       cancelConversation:
         key: 27
         buttonName: 
-    dialogueUI: {fileID: 101180, guid: 5ba51781a19f8a843abeb2d304d0d26e, type: 3}
+    dialogueUI: {fileID: 101180, guid: f56bdcd483172504dbb9ce5e24f9cc33, type: 3}
     defaultCanvas: {fileID: 22325660}
     localizationSettings:
       language: 
@@ -189,9 +189,9 @@ MonoBehaviour:
       showPCSubtitlesDuringLine: 0
       allowPCSubtitleReminders: 0
       skipPCSubtitleAfterResponseMenu: 1
-      subtitleCharsPerSecond: 30
+      subtitleCharsPerSecond: 25
       minSubtitleSeconds: 2
-      continueButton: 0
+      continueButton: 2
       requireContinueOnLastLine: 0
       richTextEmphases: 1
       informSequenceStartAndEnd: 0
@@ -245,7 +245,7 @@ MonoBehaviour:
     asyncGameObjectBatchSize: 1000
     asyncDialogueEntryBatchSize: 100
     initializeNewVariables: 1
-  allowSimultaneousConversations: 0
+  allowSimultaneousConversations: 1
   interruptActiveConversations: 0
   stopEvaluationAtFirstValid: 0
   reevaluateLinksAfterSubtitle: 0

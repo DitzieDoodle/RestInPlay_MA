@@ -7,14 +7,14 @@ using UnityEngine;
 public class PlayRandomGruntSFX : MonoBehaviour
 {
     [Header("References")]
-    [Tooltip("Falls leer, wird automatisch eine AudioSource an diesem GameObject gesucht/hinzugefügt")]
+    [Tooltip("Falls leer, wird automatisch eine AudioSource an diesem GameObject gesucht/hinzugefï¿½gt")]
     [SerializeField] private AudioSource audioSource;
 
     [Header("Sounds")]
     [SerializeField] private AudioClip[] clips;
 
     [Header("Variation (optional)")]
-    [Tooltip("Leichte Tonhöhen-Variation pro Abspielung, damit es nicht repetitiv klingt")]
+    [Tooltip("Leichte Tonhï¿½hen-Variation pro Abspielung, damit es nicht repetitiv klingt")]
     [SerializeField] private bool randomizePitch = true;
     [SerializeField] private Vector2 pitchRange = new Vector2(0.95f, 1.05f);
 
@@ -36,7 +36,7 @@ public class PlayRandomGruntSFX : MonoBehaviour
     }
 
     /// <summary>
-    /// Spielt einen zufälligen Clip aus dem Array ab.
+    /// Spielt einen zufï¿½lligen Clip aus dem Array ab.
     /// Aus dem Dialogsystem, UnityEvents oder Code aufrufbar.
     /// </summary>
     public void PlayRandomSound()
@@ -60,8 +60,8 @@ public class PlayRandomGruntSFX : MonoBehaviour
     }
 
     /// <summary>
-    /// Wie PlayRandomSound(), aber mit fester Lautstärke (0-1) statt der
-    /// AudioSource-Standardlautstärke - praktisch für Feintuning im Dialog.
+    /// Wie PlayRandomSound(), aber mit fester Lautstï¿½rke (0-1) statt der
+    /// AudioSource-Standardlautstï¿½rke - praktisch fï¿½r Feintuning im Dialog.
     /// </summary>
     public void PlayRandomSound(float volume)
     {
