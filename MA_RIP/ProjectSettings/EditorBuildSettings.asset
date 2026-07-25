@@ -21,7 +21,7 @@ EditorBuildSettings:
     path: Assets/Scenes/bargaining.unity
     guid: c60198345f7d1444f92d0cbb6ef8af38
   - enabled: 1
-    path: Assets/Scenes/acceptance.unity
+    path: Assets/Scenes/Acceptance.unity
     guid: 80c39da8a440c0c46af8174dc5728cdb
   - enabled: 1
     path: Assets/Scenes/MainScene.unity

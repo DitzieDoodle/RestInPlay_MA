@@ -6906,7 +6906,9 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
-        value: SetActive(CanvasCam,true);SetActive(ButtonCanvas,true)
+        value: 'SetActive(CanvasCam,true);
+
+          SetActive(ButtonCanvas,true);'
         type: 0
         typeString: 
       conversationID: 7
@@ -7094,8 +7096,8 @@ MonoBehaviour:
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 97.26341, y: 0}
-    canvasZoom: 0.6100004
+    canvasScrollPosition: {x: 34.11412, y: 979.8439}
+    canvasZoom: 0.8800001
   - id: 9
     fields:
     - title: Title
@@ -8418,8 +8420,8 @@ MonoBehaviour:
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 13.636337, y: 0}
-    canvasZoom: 0.8800001
+    canvasScrollPosition: {x: 0, y: 0}
+    canvasZoom: 0.8200002
   - id: 12
     fields:
     - title: Title
@@ -17763,7 +17765,8 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
-        value: SendMessage(ThrowPicture,,AngryVisitor)
+        value: "SendMessage(ThrowPicture,,AngryVisitor); \nSetActive(NPC_vcam, false);\nSetActive(CanvasCam,
+          false);"
         type: 0
         typeString: 
       - title: Response Menu Sequence
@@ -17790,7 +17793,7 @@ MonoBehaviour:
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 0, y: 22}
+    canvasScrollPosition: {x: 0, y: 66}
     canvasZoom: 1
   - id: 36
     fields:
@@ -18232,7 +18235,14 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
-        value: SendMessage(ThrowPicture,,AngryVisitor);SetActive(CanvasCam,false);SendMessage(TriggerCameraShake,,AngryVisitor)
+        value: 'SendMessage(ThrowPicture,,AngryVisitor);
+
+          SetActive(NPC_vcam,
+          false);
+
+          SetActive(CanvasCam, false);
+
+          SendMessage(TriggerCameraShake,,AngryVisitor);'
         type: 0
         typeString: 
       - title: Response Menu Sequence
@@ -18320,8 +18330,8 @@ MonoBehaviour:
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 36, y: 0}
-    canvasZoom: 1
+    canvasScrollPosition: {x: 0, y: 484.50775}
+    canvasZoom: 0.9100001
   - id: 38
     fields:
     - title: Title
@@ -18505,7 +18515,9 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
-        value: 
+        value: 'SetActive(NPC_vcam, false);
+
+          SetActive(CanvasCam, false);'
         type: 0
         typeString: 
       conversationID: 38

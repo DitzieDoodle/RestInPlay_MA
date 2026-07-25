@@ -1,14 +1,27 @@
+using PixelCrushers.DialogueSystem;
 using UnityEngine;
 
 public class GameHandler : MonoBehaviour
 {
     FlowerHandler flowerHandler;
     ColorHandler colorHandler;
+    PlayerController playerController;
+    DialogueSystemEvents dialogueSystemEvents;
+    Usable selectedUsable;
+
 
     void Start()
     {
         flowerHandler = FindAnyObjectByType<FlowerHandler>();
         colorHandler = FindAnyObjectByType<ColorHandler>();
+        playerController = FindAnyObjectByType<PlayerController>();
+        dialogueSystemEvents = FindAnyObjectByType<DialogueSystemEvents>();
+        if (dialogueSystemEvents != null)
+        {
+            dialogueSystemEvents.conversationEvents.onConversationStart.AddListener(OnConversationStart);
+            dialogueSystemEvents.conversationEvents.onConversationEnd.AddListener(OnConversationEnd);
+        }
+        playerController.GetComponent<Selector>().onSelectedUsable.AddListener(OnUsableSelected);
     }
 
 
@@ -80,6 +93,30 @@ public class GameHandler : MonoBehaviour
     {
         SetLevel(ColorHandler.ColorType.Acceptance, ColorHandler.ColorLevel.Tertiary);
         // Show Acceptance Extra GameObjects
+    }
+
+    public void OnConversationEnd(Transform transform)
+    {
+        playerController.EnableMovement();
+        if (selectedUsable != null)
+        {
+            selectedUsable.GetComponentInParent<NpcSquash>()?.StopTalkingSquash();
+        }
+    }
+
+    public void OnConversationStart(Transform transform)
+    {
+        playerController.DisableMovement();
+        if (selectedUsable != null)
+        {
+            selectedUsable.GetComponentInParent<NpcSquash>()?.StartTalkingSquash();
+        }
+    }
+
+    private void OnUsableSelected(Usable usable)
+    {
+        // Handle the usable selection here
+        selectedUsable = usable;
     }
 
     private void SetLevel(ColorHandler.ColorType colorType, ColorHandler.ColorLevel colorLevel)

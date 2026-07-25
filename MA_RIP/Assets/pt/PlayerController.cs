@@ -15,6 +15,7 @@ public class PlayerController : MonoBehaviour
     Rigidbody rb;
     float inputX;
     float inputZ;
+    private bool movementEnabled = true;
 
     // Original scale speichern, damit wir nicht die globale Skalierung ändern
     private Vector3 originalScale;
@@ -31,7 +32,10 @@ public class PlayerController : MonoBehaviour
         Vector3 movement = new Vector3(inputX, 0f, inputZ).normalized * moveSpeed * speedMultiplier;
 
         // Rigidbody bewegen
-        rb.linearVelocity = movement;
+        if (movementEnabled)
+            rb.linearVelocity = movement;
+        else
+            rb.linearVelocity = Vector3.zero;
     }
 
     void Update()
@@ -41,7 +45,7 @@ public class PlayerController : MonoBehaviour
         inputZ = Input.GetAxisRaw("Vertical");
 
         // Flip Spine Grafik nur bei X-Bewegung
-        if (graphics != null)
+        if (graphics != null && movementEnabled)
         {
             Vector3 scale = originalScale;
             if (inputX > 0.01f)
@@ -59,6 +63,16 @@ public class PlayerController : MonoBehaviour
     public void SetSpeedMultiplier(float multiplier)
     {
         speedMultiplier = multiplier;
+    }
+
+    public void EnableMovement()
+    {
+        movementEnabled = true; // Setze den Geschwindigkeits-Multiplikator auf 1 (normale Geschwindigkeit)
+    }
+
+    public void DisableMovement()
+    {
+        movementEnabled = false; // Setze den Geschwindigkeits-Multiplikator auf 0 (keine Bewegung)
     }
 
     /// <summary>

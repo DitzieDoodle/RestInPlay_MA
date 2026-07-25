@@ -88,6 +88,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveSpeed: 5
+  speedMultiplier: 1
   graphics: {fileID: 7174836134823177142}
 --- !u!114 &8059042541321056889
 MonoBehaviour:
@@ -165,15 +166,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 624654ff0a68ee844994f728ddf3d991, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  selectAt: 0
+  selectAt: 1
   layerMask:
     serializedVersion: 2
     m_Bits: 1
   distanceFrom: 1
-  maxSelectionDistance: 30
+  maxSelectionDistance: 2
   runRaycasts: 1
-  raycastAll: 0
-  selectBehindUIObjects: 0
+  raycastAll: 1
+  selectBehindUIObjects: 1
   useDefaultGUI: 1
   guiSkin: {fileID: 0}
   guiStyleName: label
@@ -187,12 +188,12 @@ MonoBehaviour:
     outOfRange: {fileID: 0}
     width: 64
     height: 64
-  useKey: 32
+  useKey: 323
   useButton: E
   m_defaultUseMessage: E to interact
   broadcastToChildren: 1
   actorTransform: {fileID: 0}
-  tooFarMessage: 
+  tooFarMessage: Too far
   onSelectedUsable:
     m_PersistentCalls:
       m_Calls: []
