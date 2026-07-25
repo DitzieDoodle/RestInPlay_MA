@@ -15441,7 +15441,11 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
-        value: 'SetActive(TransitionSFX,true);SetActive(SceneFader,true);SendMessage(FadeToScene,,SceneFader);
+        value: 'SetActive(TransitionSFX,true);
+
+          SetActive(DepressedSceneFader,true);
+
+          SendMessage(FadeToScene,,DepressedSceneFader);
 
           Continue();'
         type: 0
@@ -15470,8 +15474,8 @@ MonoBehaviour:
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 79, y: 0}
-    canvasZoom: 1
+    canvasScrollPosition: {x: 0, y: 230.37967}
+    canvasZoom: 0.7900002
   - id: 31
     fields:
     - title: Title
@@ -15930,7 +15934,9 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
-        value: 'SetActive(BargainingSceneFader,true);SendMessage(FadeToScene,,BargainingSceneFader);
+        value: 'SetActive(BargainingSceneFader,true);
+
+          SendMessage(FadeToScene,,BargainingSceneFader);
 
           StopConversation()'
         type: 0
@@ -16060,13 +16066,13 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 74.66972
+        x: 76.611465
         y: 783.5504
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 0, y: 0}
-    canvasZoom: 1.0899999
+    canvasScrollPosition: {x: 0, y: 400.1344}
+    canvasZoom: 1.03
   - id: 32
     fields:
     - title: Title
@@ -17018,7 +17024,11 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
-        value: SendMessage(StopTalkingSquash,,DenyingVisitor);SetActive(DenyingCam,false);SetActive(DenyingSFX,false);Continue();
+        value: 'SetActive(DenyingCam,false);
+
+          SetActive(DenyingSFX,false);
+
+          Continue();'
         type: 0
         typeString: 
       conversationID: 33
@@ -17067,9 +17077,13 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
-        value: 'SetActive(TransitionSFX,true);SetActive(DenialSceneFader,true);SendMessage(FadeToScene,,DenialSceneFader);
+        value: 'SetActive(TransitionSFX,true);
 
-          Continue()'
+          SetActive(DenialSceneFader,true)
+
+          SendMessage(FadeToScene,,DenialSceneFader);
+
+          Continue();'
         type: 0
         typeString: 
       conversationID: 33
@@ -17092,7 +17106,7 @@ MonoBehaviour:
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 0, y: 0}
+    canvasScrollPosition: {x: 0, y: 312.52875}
     canvasZoom: 1
   - id: 34
     fields:
@@ -17553,7 +17567,11 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
-        value: 'SetActive(TransitionSFX,true);SetActive(SceneFader,true);SendMessage(FadeToScene,,SceneFader);
+        value: 'SetActive(TransitionSFX,true);
+
+          SetActive(AcceptanceSceneFader,true);
+
+          SendMessage(FadeToScene,,AcceptanceSceneFader);
 
           Continue()'
         type: 0
@@ -17578,7 +17596,7 @@ MonoBehaviour:
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 0, y: 0}
+    canvasScrollPosition: {x: 0, y: 317.10513}
     canvasZoom: 1
   - id: 35
     fields:

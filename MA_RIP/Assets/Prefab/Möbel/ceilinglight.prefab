@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 5364191573743144038}
   - component: {fileID: 2121231545148264658}
   - component: {fileID: 4549954144903195918}
+  - component: {fileID: 1978028329785120818}
   m_Layer: 0
   m_Name: ceilinglight
   m_TagString: Untagged
@@ -105,6 +106,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3454b4c2afd04a14d87e67eb2dc69cac, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ColorableSprite
+--- !u!114 &1978028329785120818
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 381291058214761135}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 30fad8da37412f947bc6197e656fa5c3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: '::'
 --- !u!1 &4300928672345312432
 GameObject:
   m_ObjectHideFlags: 0

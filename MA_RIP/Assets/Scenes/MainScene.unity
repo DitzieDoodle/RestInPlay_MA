@@ -4406,6 +4406,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 782546016938932454, guid: 0bb0476c06ed64246813381dfa409307, type: 3}
+      propertyPath: m_Name
+      value: AcceptanceSceneFader
+      objectReference: {fileID: 0}
     - target: {fileID: 1167586669423596352, guid: 0bb0476c06ed64246813381dfa409307, type: 3}
       propertyPath: conversation
       value: AcceptanceStart
@@ -15405,6 +15409,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 831600377573565706, guid: 1ae1798c5cbd63f448c50a8340b5d160, type: 3}
+      propertyPath: m_CastShadows
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 831600377573565706, guid: 1ae1798c5cbd63f448c50a8340b5d160, type: 3}
+      propertyPath: m_ReceiveShadows
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 831600377573565706, guid: 1ae1798c5cbd63f448c50a8340b5d160, type: 3}
+      propertyPath: m_StaticShadowCaster
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4569629429835575107, guid: 1ae1798c5cbd63f448c50a8340b5d160, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.039
@@ -18946,7 +18962,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8214116785745161972, guid: 0bb0476c06ed64246813381dfa409307, type: 3}
       propertyPath: sceneToLoad
-      value: Anger
+      value: anger
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -20076,6 +20092,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 782546016938932454, guid: 0bb0476c06ed64246813381dfa409307, type: 3}
+      propertyPath: m_Name
+      value: DenialSceneFader
+      objectReference: {fileID: 0}
     - target: {fileID: 1167586669423596352, guid: 0bb0476c06ed64246813381dfa409307, type: 3}
       propertyPath: conversation
       value: DenialStart
@@ -23616,6 +23636,10 @@ PrefabInstance:
     - target: {fileID: 7248872548550789529, guid: c32e80aaea32a33468d3c626d8bbb0a3, type: 3}
       propertyPath: m_SortingOrder
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7695309144799343768, guid: c32e80aaea32a33468d3c626d8bbb0a3, type: 3}
+      propertyPath: m_Mesh
+      value: 
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

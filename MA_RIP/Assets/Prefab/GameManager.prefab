@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 7594755399263291428}
   - component: {fileID: 1849264034908681877}
   - component: {fileID: 4249779673666616681}
+  - component: {fileID: 267108578515741160}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -123,6 +124,18 @@ MonoBehaviour:
   mouthSkeleton: {fileID: 0}
   bodySkeleton: {fileID: 0}
   defaultColor: {r: 1, g: 1, b: 1, a: 1}
+--- !u!114 &267108578515741160
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 288015481619956289}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 05449081bb3107443b3add5a45cbe436, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: '::'
 --- !u!1 &4897934283520448802
 GameObject:
   m_ObjectHideFlags: 0

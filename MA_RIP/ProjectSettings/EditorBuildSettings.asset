@@ -15,6 +15,9 @@ EditorBuildSettings:
     path: Assets/Scenes/angertest.unity
     guid: 99c9720ab356a0642a771bea13969a05
   - enabled: 1
+    path: Assets/Scenes/anger.unity
+    guid: 799a2ae1bf63da145a5de1a36262b460
+  - enabled: 1
     path: Assets/Scenes/denial.unity
     guid: 3491e4c2e694a3f418d4524000e7b9f1
   - enabled: 1
