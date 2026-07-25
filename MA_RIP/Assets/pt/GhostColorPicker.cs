@@ -7,34 +7,41 @@ using System;
 
 public class GhostColorPicker : MonoBehaviour
 {
+    const string PREFS_KEY = "GhostColorIndex";
+
     [SerializeField] private SkeletonAnimation skeletonAnimation;
     [SerializeField] private Button prevColorButton;
     [SerializeField] private Button nextColorButton;
     [SerializeField] private Image colorPreview;
 
     [Header("Colors")]
-    [SerializeField] private UnityColor[] colorArray;  // Array mit Farben, die im Inspector festgelegt werden können
+    [SerializeField] private UnityColor[] colorArray;  // Array mit Farben, die im Inspector festgelegt werden kï¿½nnen
     private int currentColorIndex = 0;
 
-    private string targetSlotName = "Bodies";  // Der Slot, den wir einfärben
+
+    private string targetSlotName = "Bodies";  // Der Slot, den wir einfï¿½rben
 
     public Color CurrentColor => colorArray[currentColorIndex];
 
-    void Start()
+    void Awake()
     {
+        currentColorIndex = PlayerPrefs.GetInt(PREFS_KEY, 0);
         if (colorArray.Length > 0)
         {
             UpdateColor();  // Setze die initiale Farbe
         }
 
-        // Füge Listener für Button hinzu
-        nextColorButton.onClick.AddListener(ChangeToNextColor);
-        prevColorButton.onClick.AddListener(ChangeToPreviousColor);
+        // Fï¿½ge Listener fï¿½r Button hinzu
+        nextColorButton?.onClick.AddListener(ChangeToNextColor);
+        prevColorButton?.onClick.AddListener(ChangeToPreviousColor);
+
+        // Lade den gespeicherten Index, falls vorhanden
+        UpdateColor();
     }
 
     public void ChangeToNextColor()
     {
-        currentColorIndex = mod(currentColorIndex + 1,  colorArray.Length);  // Nächster Index
+        currentColorIndex = mod(currentColorIndex + 1, colorArray.Length);  // Nï¿½chster Index
         UpdateColor();
     }
 
@@ -72,11 +79,15 @@ public class GhostColorPicker : MonoBehaviour
 
         slot.SetColor(color);
 
-        // Update das Skelett, damit Änderungen sichtbar werden
+        // Update das Skelett, damit ï¿½nderungen sichtbar werden
         //skeletonAnimation.Skeleton.SetToSetupPose();
         skeletonAnimation.Update(0);  // Dies sollte das Skelett aktualisieren
-        skeletonAnimation.LateUpdate();  // Überprüfe, ob das zu einer sichtbaren Änderung führt
-    
+        skeletonAnimation.LateUpdate();  // ï¿½berprï¿½fe, ob das zu einer sichtbaren ï¿½nderung fï¿½hrt
+
+        PlayerPrefs.SetInt(PREFS_KEY, currentColorIndex);
+        PlayerPrefs.Save();
+
+        Debug.Log($"Color for slot '{slotName}' changed to {color}. Current index saved as {currentColorIndex}.");
     }
 
     int mod(int x, int m)
