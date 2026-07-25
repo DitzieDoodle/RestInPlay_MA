@@ -68,7 +68,18 @@ public class ColorHandler : MonoBehaviour
             colorMappingsDict[(mapping.colorType, mapping.colorSlot)] = mapping.color;
         }
 
+        LoadPlayerPrefs();
         UpdateColorableSprites();
+    }
+
+    private void LoadPlayerPrefs()
+    {
+        foreach (ColorType colorType in System.Enum.GetValues(typeof(ColorType)))
+        {
+            int levelValue = PlayerPrefs.GetInt(colorType.ToString(), 0);
+            ColorLevel level = (ColorLevel)levelValue;
+            colorLevels[colorType] = level;
+        }
     }
 
     public void AddLevelAcceptance()
@@ -99,6 +110,8 @@ public class ColorHandler : MonoBehaviour
     public void SetLevel(ColorType colorType, ColorLevel level)
     {
         colorLevels[colorType] = level;
+        PlayerPrefs.SetInt(colorType.ToString(), (int)level);
+        PlayerPrefs.Save();
         UpdateColorableSprites();
     }
 
@@ -109,6 +122,8 @@ public class ColorHandler : MonoBehaviour
             ColorLevel currentLevel = colorLevels[colorType];
             ColorLevel nextLevel = GetNextLevel(currentLevel);
             colorLevels[colorType] = nextLevel;
+            PlayerPrefs.SetInt(colorType.ToString(), (int)nextLevel);
+            PlayerPrefs.Save();
         }
 
         UpdateColorableSprites();
@@ -169,7 +184,9 @@ public class ColorHandler : MonoBehaviour
             case ColorLevel.Main:
                 return ColorLevel.Secondary;
             case ColorLevel.Secondary:
-                return ColorLevel.Secondary;
+                return ColorLevel.Tertiary;
+            case ColorLevel.Tertiary:
+                return ColorLevel.Tertiary;
             default:
                 return ColorLevel.None;
         }
