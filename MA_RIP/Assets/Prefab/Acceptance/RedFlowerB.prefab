@@ -140,6 +140,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::FlowerPickupable
   pickUp: {fileID: 7554438278022257325}
+  Identifier: RedFlowerB
 --- !u!65 &2826344691087726095
 BoxCollider:
   m_ObjectHideFlags: 0

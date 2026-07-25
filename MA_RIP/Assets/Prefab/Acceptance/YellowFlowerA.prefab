@@ -49,6 +49,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::FlowerPickupable
   pickUp: {fileID: 6614118159605929132}
+  Identifier: YellowFlowerA
 --- !u!65 &2486270213329315630
 BoxCollider:
   m_ObjectHideFlags: 0

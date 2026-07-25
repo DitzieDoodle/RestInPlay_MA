@@ -12,6 +12,7 @@ public class FlowerPickupable : MonoBehaviour
     private Quaternion originalRotation;
 
     public AudioSource pickUp;
+    public string Identifier;
 
     private void Awake()
     {
@@ -52,7 +53,7 @@ public class FlowerPickupable : MonoBehaviour
             rb.useGravity = false;
         }
 
-        // Collider bleibt aktiv (nur Trigger), damit Enter/Exit weiter zuverlässig feuern.
+        // Collider bleibt aktiv (nur Trigger), damit Enter/Exit weiter zuverlï¿½ssig feuern.
 
         transform.SetParent(handPoint);
         transform.localPosition = Vector3.zero;
