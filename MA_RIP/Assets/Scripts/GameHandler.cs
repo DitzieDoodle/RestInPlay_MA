@@ -8,6 +8,7 @@ public class GameHandler : MonoBehaviour
     PlayerController playerController;
     DialogueSystemEvents dialogueSystemEvents;
     Usable selectedUsable;
+    Selector playerSelector;
 
 
     void Start()
@@ -21,7 +22,8 @@ public class GameHandler : MonoBehaviour
             dialogueSystemEvents.conversationEvents.onConversationStart.AddListener(OnConversationStart);
             dialogueSystemEvents.conversationEvents.onConversationEnd.AddListener(OnConversationEnd);
         }
-        playerController.GetComponent<Selector>().onSelectedUsable.AddListener(OnUsableSelected);
+        playerSelector = playerController.GetComponent<Selector>();
+        playerSelector?.onSelectedUsable.AddListener(OnUsableSelected);
     }
 
 
@@ -97,20 +99,24 @@ public class GameHandler : MonoBehaviour
 
     public void OnConversationEnd(Transform transform)
     {
+        Debug.Log("Conversation ended with: " + transform.name);
         playerController.EnableMovement();
         if (selectedUsable != null)
         {
             selectedUsable.GetComponentInParent<NpcSquash>()?.StopTalkingSquash();
         }
+        playerSelector.enabled = true;
     }
 
     public void OnConversationStart(Transform transform)
     {
+        Debug.Log("Conversation started with: " + transform.name);
         playerController.DisableMovement();
         if (selectedUsable != null)
         {
             selectedUsable.GetComponentInParent<NpcSquash>()?.StartTalkingSquash();
         }
+        playerSelector.enabled = false;
     }
 
     private void OnUsableSelected(Usable usable)
