@@ -9,6 +9,7 @@ public class GameHandler : MonoBehaviour
     DialogueSystemEvents dialogueSystemEvents;
     Usable selectedUsable;
     Selector playerSelector;
+    ProximitySelector proximitySelector;
 
 
     void Start()
@@ -24,6 +25,8 @@ public class GameHandler : MonoBehaviour
         }
         playerSelector = playerController.GetComponent<Selector>();
         playerSelector?.onSelectedUsable.AddListener(OnUsableSelected);
+        proximitySelector = playerController.GetComponent<ProximitySelector>();
+        proximitySelector?.onSelectedUsable.AddListener(OnUsableSelected);
     }
 
 
@@ -105,7 +108,8 @@ public class GameHandler : MonoBehaviour
         {
             selectedUsable.GetComponentInParent<NpcSquash>()?.StopTalkingSquash();
         }
-        playerSelector.enabled = true;
+        if (playerSelector) playerSelector.enabled = true;
+        if (proximitySelector) proximitySelector.enabled = true;
     }
 
     public void OnConversationStart(Transform transform)
@@ -116,7 +120,8 @@ public class GameHandler : MonoBehaviour
         {
             selectedUsable.GetComponentInParent<NpcSquash>()?.StartTalkingSquash();
         }
-        playerSelector.enabled = false;
+        if (playerSelector) playerSelector.enabled = false;
+        if (proximitySelector) proximitySelector.enabled = false;
     }
 
     private void OnUsableSelected(Usable usable)
