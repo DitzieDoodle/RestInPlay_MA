@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using DG.Tweening;
+using UnityEngine.UI;
 
 public class DepressionMinigameManager : MonoBehaviour
 {
@@ -12,8 +13,7 @@ public class DepressionMinigameManager : MonoBehaviour
     [SerializeField] private Transform waterBlock;
     [SerializeField] private float minWaterY = -2f;
     [SerializeField] private float maxWaterY = 2f;
-    [SerializeField] private float waterRiseInterval = 3f;
-    [SerializeField] private float waterRiseStep = 0.1f;
+    [SerializeField] private float waterRiseDuration = 30f; // Zeit von min -> max, wenn nie unterbrochen
     [SerializeField] private float waterFallStep = 0.35f;
     [SerializeField] private float waterTweenDuration = 0.6f;
 
@@ -21,6 +21,19 @@ public class DepressionMinigameManager : MonoBehaviour
     [SerializeField] private PlayerController playerController;
     [SerializeField] private float speedAtMinWater = 1f;
     [SerializeField] private float speedAtMaxWater = 0.25f;
+
+    [Header("Atmosphere")]
+    [SerializeField] private CanvasGroup vignetteCanvasGroup;
+    [SerializeField] private float vignetteAlphaAtMin = 0f;
+    [SerializeField] private float vignetteAlphaAtMax = 0.75f;
+    [SerializeField] private AudioSource musicSource;
+    [SerializeField] private float musicPitchAtMin = 1f;
+    [SerializeField] private float musicPitchAtMax = 0.85f;
+
+    [Header("Screen Fade")]
+    [SerializeField] private CanvasGroup fadeCanvasGroup;
+    [SerializeField] private float fadeDuration = 1.5f;
+    [SerializeField] private string sceneToLoad; // Name der Scene, im Inspector setzen
 
     [Header("Candles")]
     [SerializeField] private List<Candle> candles = new List<Candle>();
@@ -30,14 +43,12 @@ public class DepressionMinigameManager : MonoBehaviour
     [SerializeField] private AudioClip waterMaxReachedSfx;
     [SerializeField] private AudioClip depressionWonSfx;
 
-    [Header("Screen Fader")]
-    [SerializeField] private SceneFader screenFader;
+
 
     private float currentWaterY;
     private bool minigameRunning;
     private bool allCandlesLit;
     private Candle currentTarget;
-    private Coroutine waterRiseCoroutine;
     private Tween waterTween;
 
     private void Awake()
@@ -48,8 +59,11 @@ public class DepressionMinigameManager : MonoBehaviour
     private void Start()
     {
         currentWaterY = minWaterY;
-        TweenWaterTo(currentWaterY);
+        if (waterBlock != null)
+            waterBlock.position = new Vector3(waterBlock.position.x, currentWaterY, waterBlock.position.z);
+
         ApplyPlayerSpeed();
+        ApplyAtmosphere();
     }
 
     private void Update()
@@ -70,41 +84,43 @@ public class DepressionMinigameManager : MonoBehaviour
         minigameRunning = true;
         allCandlesLit = false;
         currentTarget = null;
+        currentWaterY = minWaterY;
 
         foreach (var candle in candles)
             candle.ResetCandle();
 
-        if (waterRiseCoroutine != null)
-            StopCoroutine(waterRiseCoroutine);
+        if (waterBlock != null)
+            waterBlock.position = new Vector3(waterBlock.position.x, currentWaterY, waterBlock.position.z);
+
+        PickRandomTarget();
+
+        ApplyPlayerSpeed();
+        ApplyAtmosphere();
+
+        StartRiseTween(waterRiseDuration);
+    }
+
+    // Startet (bzw. setzt fort) das kontinuierliche Ansteigen zu maxWaterY über die übergebene Dauer
+    private void StartRiseTween(float duration)
+    {
+        if (waterBlock == null) return;
 
         if (waterTween != null && waterTween.IsActive())
             waterTween.Kill();
 
-        waterRiseCoroutine = StartCoroutine(WaterRiseLoop());
-        PickRandomTarget();
-
-        ApplyPlayerSpeed();
-    }
-
-    private IEnumerator WaterRiseLoop()
-    {
-        while (minigameRunning && !allCandlesLit)
-        {
-            yield return new WaitForSeconds(waterRiseInterval);
-
-            if (!minigameRunning || allCandlesLit)
-                yield break;
-
-            currentWaterY = Mathf.Min(currentWaterY + waterRiseStep, maxWaterY);
-            TweenWaterTo(currentWaterY);
-            ApplyPlayerSpeed();
-
-            if (currentWaterY >= maxWaterY)
+        waterTween = waterBlock.DOMoveY(maxWaterY, duration)
+            .SetEase(Ease.Linear)
+            .OnUpdate(() =>
             {
+                currentWaterY = waterBlock.position.y;
+                ApplyPlayerSpeed();
+                ApplyAtmosphere();
+            })
+            .OnComplete(() =>
+            {
+                currentWaterY = maxWaterY;
                 OnWaterMaxReached();
-                yield break;
-            }
-        }
+            });
     }
 
     private void PickRandomTarget()
@@ -139,20 +155,42 @@ public class DepressionMinigameManager : MonoBehaviour
         candle.Light();
         currentTarget = null;
 
-        currentWaterY = Mathf.Max(currentWaterY - waterFallStep, minWaterY);
-        TweenWaterTo(currentWaterY);
-        ApplyPlayerSpeed();
+        // Anstieg stoppen, Wasser kurz absenken, danach mit gleicher Geschwindigkeit weitersteigen lassen
+        if (waterTween != null && waterTween.IsActive())
+            waterTween.Kill();
 
-        if (currentWaterY >= maxWaterY)
-        {
-            OnWaterMaxReached();
-            return;
-        }
+        float targetY = Mathf.Max(currentWaterY - waterFallStep, minWaterY);
 
-        CheckWinState();
+        waterBlock.DOMoveY(targetY, waterTweenDuration)
+            .SetEase(Ease.InOutSine)
+            .OnUpdate(() =>
+            {
+                currentWaterY = waterBlock.position.y;
+                ApplyPlayerSpeed();
+                ApplyAtmosphere();
+            })
+            .OnComplete(() =>
+            {
+                currentWaterY = targetY;
+                ApplyPlayerSpeed();
+                ApplyAtmosphere();
 
-        if (minigameRunning && !allCandlesLit)
-            PickRandomTarget();
+                CheckWinState();
+
+                if (minigameRunning && !allCandlesLit)
+                {
+                    PickRandomTarget();
+
+                    // Restdauer proportional zur verbleibenden Strecke, damit die Steig-Geschwindigkeit konstant bleibt
+                    float totalDistance = maxWaterY - minWaterY;
+                    float remainingDistance = maxWaterY - currentWaterY;
+                    float remainingDuration = totalDistance > 0f
+                        ? waterRiseDuration * (remainingDistance / totalDistance)
+                        : 0f;
+
+                    StartRiseTween(remainingDuration);
+                }
+            });
     }
 
     private void CheckWinState()
@@ -171,11 +209,12 @@ public class DepressionMinigameManager : MonoBehaviour
     {
         minigameRunning = false;
 
-        if (waterRiseCoroutine != null)
-            StopCoroutine(waterRiseCoroutine);
+        if (waterTween != null && waterTween.IsActive())
+            waterTween.Kill();
 
         ClearAllIndicators();
         ResetPlayerSpeed();
+        ResetAtmosphere();
 
         if (currentWaterY < maxWaterY)
         {
@@ -192,23 +231,42 @@ public class DepressionMinigameManager : MonoBehaviour
         minigameRunning = false;
         allCandlesLit = false;
 
-        if (waterRiseCoroutine != null)
-            StopCoroutine(waterRiseCoroutine);
-
-        ClearAllIndicators();
-
         if (waterTween != null && waterTween.IsActive())
             waterTween.Kill();
 
+        ClearAllIndicators();
         ResetPlayerSpeed();
+        ResetAtmosphere();
 
         if (audioSource != null && waterMaxReachedSfx != null)
             audioSource.PlayOneShot(waterMaxReachedSfx);
 
-        if (screenFader != null)
-            screenFader.FadeToScene();
-        else
-            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        Debug.Log("WaterMaxReached");
+
+        FadeToBlackAndLoadScene();
+    }
+
+    private void FadeToBlackAndLoadScene()
+    {
+        Debug.Log("check1");
+        if (fadeCanvasGroup == null)
+        {
+            Debug.LogWarning("Kein fadeCanvasGroup zugewiesen – Scene wird direkt geladen.");
+            SceneManager.LoadScene(sceneToLoad);
+            return;
+        }
+
+        Debug.Log("check");
+        fadeCanvasGroup.alpha = 0f;
+        fadeCanvasGroup.blocksRaycasts = true;
+
+        fadeCanvasGroup.DOFade(1f, fadeDuration)
+            .SetEase(Ease.InOutSine)
+            .OnComplete(() =>
+            {
+                SceneManager.LoadScene(sceneToLoad);
+               
+            });
     }
 
     public void DepressionWon()
@@ -228,16 +286,6 @@ public class DepressionMinigameManager : MonoBehaviour
         }
     }
 
-    private void TweenWaterTo(float y)
-    {
-        if (waterBlock == null) return;
-
-        if (waterTween != null && waterTween.IsActive())
-            waterTween.Kill();
-
-        waterTween = waterBlock.DOMoveY(y, waterTweenDuration).SetEase(Ease.InOutSine);
-    }
-
     private void ApplyPlayerSpeed()
     {
         if (playerController == null) return;
@@ -253,5 +301,25 @@ public class DepressionMinigameManager : MonoBehaviour
         if (playerController == null) return;
 
         playerController.ResetWaterSpeedMultiplier();
+    }
+
+    private void ApplyAtmosphere()
+    {
+        float t = Mathf.InverseLerp(minWaterY, maxWaterY, currentWaterY);
+
+        if (vignetteCanvasGroup != null)
+            vignetteCanvasGroup.alpha = Mathf.Lerp(vignetteAlphaAtMin, vignetteAlphaAtMax, t);
+
+        if (musicSource != null)
+            musicSource.pitch = Mathf.Lerp(musicPitchAtMin, musicPitchAtMax, t);
+    }
+
+    private void ResetAtmosphere()
+    {
+        if (vignetteCanvasGroup != null)
+            vignetteCanvasGroup.alpha = vignetteAlphaAtMin;
+
+        if (musicSource != null)
+            musicSource.pitch = musicPitchAtMin;
     }
 }
