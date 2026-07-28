@@ -34,7 +34,7 @@ public class SceneFader : MonoBehaviour
         yield return StartCoroutine(Fade(1f, 0f, false));  // false = keine Scene
     }
 
-    private IEnumerator FadeToScene()
+    public IEnumerator FadeToScene()
     {
         yield return StartCoroutine(Fade(0f, 1f, true));  // true = Scene laden
     }
