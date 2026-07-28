@@ -53,10 +53,4 @@ public class Candle : MonoBehaviour
         if (audioSource != null && lightSfx != null)
             audioSource.PlayOneShot(lightSfx);
     }
-
-    private void OnMouseDown()
-    {
-        if (DepressionMinigameManager.Instance != null)
-            DepressionMinigameManager.Instance.TryLightCandle(this);
-    }
 }

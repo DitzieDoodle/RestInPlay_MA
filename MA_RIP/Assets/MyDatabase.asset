@@ -18855,7 +18855,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
-        value: SendMessage(StartMinigame,,DepressionGameManager)
+        value: SendMessage(StartMinigame,,DepressionGameManager);SetActive(Npc_vcam,false)
         type: 0
         typeString: 
       conversationID: 39

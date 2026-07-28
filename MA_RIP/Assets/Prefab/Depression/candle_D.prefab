@@ -176,7 +176,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe6448f6ae2ee5e4291466c5d95c6291, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Candle
-  indicator: {fileID: 6079381394482794752}
+  indicator: {fileID: 3842651094063234113}
+  flame: {fileID: 6079381394482794752}
   audioSource: {fileID: 8679163016168262190}
   lightSfx: {fileID: 8300000, guid: d35670c74ad3db243ada0085d257fa41, type: 3}
 --- !u!1 &3639650374540750844

@@ -5,19 +5,21 @@ public class PlayerController : MonoBehaviour
     [Header("Movement Settings")]
     public float moveSpeed = 5f;
 
-    [Tooltip("Multiplikator auf moveSpeed, z.B. 0.5 = halbe Geschwindigkeit. Wird von außen gesetzt (z.B. beim Tragen des Bildes).")]
+    [Tooltip("Manueller Multiplikator für andere Effekte, z.B. Bild tragen.")]
     [Range(0.1f, 1f)]
     public float speedMultiplier = 1f;
 
+    [Tooltip("Zusätzlicher Multiplikator für Wasser/Depression-Minigame.")]
+    [Range(0.1f, 1f)]
+    public float waterSpeedMultiplier = 1f;
+
     [Header("Graphics")]
-    public Transform graphics; // Parent von Spine-Objekt
+    public Transform graphics;
 
     Rigidbody rb;
     float inputX;
     float inputZ;
     private bool movementEnabled = true;
-
-    // Original scale speichern, damit wir nicht die globale Skalierung ändern
     private Vector3 originalScale;
 
     void Start()
@@ -29,9 +31,9 @@ public class PlayerController : MonoBehaviour
 
     void FixedUpdate()
     {
-        Vector3 movement = new Vector3(inputX, 0f, inputZ).normalized * moveSpeed * speedMultiplier;
+        float finalSpeedMultiplier = speedMultiplier * waterSpeedMultiplier;
+        Vector3 movement = new Vector3(inputX, 0f, inputZ).normalized * moveSpeed * finalSpeedMultiplier;
 
-        // Rigidbody bewegen
         if (movementEnabled)
             rb.linearVelocity = movement;
         else
@@ -40,44 +42,46 @@ public class PlayerController : MonoBehaviour
 
     void Update()
     {
-        // Input: Horizontal = X, Vertical = Z
         inputX = Input.GetAxisRaw("Horizontal");
         inputZ = Input.GetAxisRaw("Vertical");
 
-        // Flip Spine Grafik nur bei X-Bewegung
         if (graphics != null && movementEnabled)
         {
             Vector3 scale = originalScale;
             if (inputX > 0.01f)
-                scale.x = Mathf.Abs(originalScale.x); // nach rechts
+                scale.x = Mathf.Abs(originalScale.x);
             else if (inputX < -0.01f)
-                scale.x = -Mathf.Abs(originalScale.x); // nach links
+                scale.x = -Mathf.Abs(originalScale.x);
+
             graphics.localScale = scale;
         }
     }
 
-    /// <summary>
-    /// Setzt den Geschwindigkeits-Multiplikator (z.B. 0.5 für halbe Geschwindigkeit
-    /// beim Tragen des Bildes). 1 = normale Geschwindigkeit.
-    /// </summary>
     public void SetSpeedMultiplier(float multiplier)
     {
         speedMultiplier = multiplier;
     }
 
+    public void SetWaterSpeedMultiplier(float multiplier)
+    {
+        waterSpeedMultiplier = Mathf.Clamp(multiplier, 0.1f, 1f);
+    }
+
+    public void ResetWaterSpeedMultiplier()
+    {
+        waterSpeedMultiplier = 1f;
+    }
+
     public void EnableMovement()
     {
-        movementEnabled = true; // Setze den Geschwindigkeits-Multiplikator auf 1 (normale Geschwindigkeit)
+        movementEnabled = true;
     }
 
     public void DisableMovement()
     {
-        movementEnabled = false; // Setze den Geschwindigkeits-Multiplikator auf 0 (keine Bewegung)
+        movementEnabled = false;
     }
 
-    /// <summary>
-    /// Setzt die Geschwindigkeit wieder auf normal (1x) zurück.
-    /// </summary>
     public void ResetSpeedMultiplier()
     {
         speedMultiplier = 1f;

@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using DG.Tweening;
 
 public class DepressionMinigameManager : MonoBehaviour
 {
@@ -14,6 +15,12 @@ public class DepressionMinigameManager : MonoBehaviour
     [SerializeField] private float waterRiseInterval = 3f;
     [SerializeField] private float waterRiseStep = 0.1f;
     [SerializeField] private float waterFallStep = 0.35f;
+    [SerializeField] private float waterTweenDuration = 0.6f;
+
+    [Header("Player Speed")]
+    [SerializeField] private PlayerController playerController;
+    [SerializeField] private float speedAtMinWater = 1f;
+    [SerializeField] private float speedAtMaxWater = 0.25f;
 
     [Header("Candles")]
     [SerializeField] private List<Candle> candles = new List<Candle>();
@@ -31,6 +38,7 @@ public class DepressionMinigameManager : MonoBehaviour
     private bool allCandlesLit;
     private Candle currentTarget;
     private Coroutine waterRiseCoroutine;
+    private Tween waterTween;
 
     private void Awake()
     {
@@ -40,7 +48,19 @@ public class DepressionMinigameManager : MonoBehaviour
     private void Start()
     {
         currentWaterY = minWaterY;
-        SetWaterY(currentWaterY);
+        TweenWaterTo(currentWaterY);
+        ApplyPlayerSpeed();
+    }
+
+    private void Update()
+    {
+        if (!minigameRunning) return;
+
+        if (Input.GetKeyDown(KeyCode.E))
+        {
+            if (currentTarget != null)
+                TryLightCandle(currentTarget);
+        }
     }
 
     public void StartMinigame()
@@ -57,9 +77,13 @@ public class DepressionMinigameManager : MonoBehaviour
         if (waterRiseCoroutine != null)
             StopCoroutine(waterRiseCoroutine);
 
-        waterRiseCoroutine = StartCoroutine(WaterRiseLoop());
+        if (waterTween != null && waterTween.IsActive())
+            waterTween.Kill();
 
+        waterRiseCoroutine = StartCoroutine(WaterRiseLoop());
         PickRandomTarget();
+
+        ApplyPlayerSpeed();
     }
 
     private IEnumerator WaterRiseLoop()
@@ -72,7 +96,8 @@ public class DepressionMinigameManager : MonoBehaviour
                 yield break;
 
             currentWaterY = Mathf.Min(currentWaterY + waterRiseStep, maxWaterY);
-            SetWaterY(currentWaterY);
+            TweenWaterTo(currentWaterY);
+            ApplyPlayerSpeed();
 
             if (currentWaterY >= maxWaterY)
             {
@@ -115,7 +140,8 @@ public class DepressionMinigameManager : MonoBehaviour
         currentTarget = null;
 
         currentWaterY = Mathf.Max(currentWaterY - waterFallStep, minWaterY);
-        SetWaterY(currentWaterY);
+        TweenWaterTo(currentWaterY);
+        ApplyPlayerSpeed();
 
         if (currentWaterY >= maxWaterY)
         {
@@ -149,6 +175,7 @@ public class DepressionMinigameManager : MonoBehaviour
             StopCoroutine(waterRiseCoroutine);
 
         ClearAllIndicators();
+        ResetPlayerSpeed();
 
         if (currentWaterY < maxWaterY)
         {
@@ -169,6 +196,11 @@ public class DepressionMinigameManager : MonoBehaviour
             StopCoroutine(waterRiseCoroutine);
 
         ClearAllIndicators();
+
+        if (waterTween != null && waterTween.IsActive())
+            waterTween.Kill();
+
+        ResetPlayerSpeed();
 
         if (audioSource != null && waterMaxReachedSfx != null)
             audioSource.PlayOneShot(waterMaxReachedSfx);
@@ -196,12 +228,30 @@ public class DepressionMinigameManager : MonoBehaviour
         }
     }
 
-    private void SetWaterY(float y)
+    private void TweenWaterTo(float y)
     {
         if (waterBlock == null) return;
 
-        Vector3 pos = waterBlock.position;
-        pos.y = y;
-        waterBlock.position = pos;
+        if (waterTween != null && waterTween.IsActive())
+            waterTween.Kill();
+
+        waterTween = waterBlock.DOMoveY(y, waterTweenDuration).SetEase(Ease.InOutSine);
+    }
+
+    private void ApplyPlayerSpeed()
+    {
+        if (playerController == null) return;
+
+        float t = Mathf.InverseLerp(minWaterY, maxWaterY, currentWaterY);
+        float waterMultiplier = Mathf.Lerp(speedAtMinWater, speedAtMaxWater, t);
+
+        playerController.SetWaterSpeedMultiplier(waterMultiplier);
+    }
+
+    private void ResetPlayerSpeed()
+    {
+        if (playerController == null) return;
+
+        playerController.ResetWaterSpeedMultiplier();
     }
 }
