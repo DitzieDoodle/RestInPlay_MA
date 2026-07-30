@@ -10349,7 +10349,7 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 164
+        x: 165
         y: 190
         width: 160
         height: 30
@@ -10404,7 +10404,7 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 162
+        x: 164
         y: 278
         width: 160
         height: 30
@@ -10461,7 +10461,7 @@ MonoBehaviour:
       canvasRect:
         serializedVersion: 2
         x: 163
-        y: 355
+        y: 354
         width: 160
         height: 30
     - id: 5
@@ -10657,7 +10657,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
-        value: 
+        value: SendMessage(GameWon,,DenyingVisitor)
         type: 0
         typeString: 
       conversationID: 28
@@ -10681,7 +10681,7 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 166
+        x: 167
         y: 881
         width: 160
         height: 30
@@ -10785,12 +10785,12 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 163
+        x: 162
         y: 1053
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 0, y: 0}
+    canvasScrollPosition: {x: 0, y: 371}
     canvasZoom: 1
   - id: 33
     fields:
@@ -11284,7 +11284,7 @@ MonoBehaviour:
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 22, y: 243.52875}
+    canvasScrollPosition: {x: 78, y: 87.52875}
     canvasZoom: 1
   - id: 13
     fields:
