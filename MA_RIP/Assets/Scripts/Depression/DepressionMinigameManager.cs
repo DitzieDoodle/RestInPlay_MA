@@ -4,10 +4,13 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using DG.Tweening;
 using UnityEngine.UI;
+using PixelCrushers.DialogueSystem;
 
 public class DepressionMinigameManager : MonoBehaviour
 {
     public static DepressionMinigameManager Instance { get; private set; }
+
+    public GameObject gameWonTrigger;
 
     [Header("Water")]
     [SerializeField] private Transform waterBlock;
@@ -41,7 +44,7 @@ public class DepressionMinigameManager : MonoBehaviour
     [Header("Audio")]
     [SerializeField] private AudioSource audioSource;
     [SerializeField] private AudioClip waterMaxReachedSfx;
-    [SerializeField] private AudioClip depressionWonSfx;
+    //[SerializeField] private AudioClip depressionWonSfx;
 
 
 
@@ -272,9 +275,10 @@ public class DepressionMinigameManager : MonoBehaviour
 
     public void DepressionWon()
     {
-        if (audioSource != null && depressionWonSfx != null)
-            audioSource.PlayOneShot(depressionWonSfx);
+      //  if (audioSource != null && depressionWonSfx != null)
+        //    audioSource.PlayOneShot(depressionWonSfx);
 
+        gameWonTrigger.SetActive(true);
         Debug.Log("DepressionWon() called");
     }
 

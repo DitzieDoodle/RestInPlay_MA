@@ -7987,7 +7987,7 @@ MonoBehaviour:
   - id: 11
     fields:
     - title: Title
-      value: Flower Test
+      value: Give Flowers
       type: 0
       typeString: 
     - title: Description
@@ -8071,7 +8071,7 @@ MonoBehaviour:
       - originConversationID: 11
         originDialogueID: 0
         destinationConversationID: 11
-        destinationDialogueID: 1
+        destinationDialogueID: 2
         isConnector: 0
         priority: 2
       conditionsString: 
@@ -8083,61 +8083,6 @@ MonoBehaviour:
         serializedVersion: 2
         x: 188
         y: 24
-        width: 160
-        height: 30
-    - id: 1
-      fields:
-      - title: Title
-        value: 
-        type: 0
-        typeString: 
-      - title: Description
-        value: Can we talk about it?
-        type: 0
-        typeString: 
-      - title: Actor
-        value: 5
-        type: 5
-        typeString: CustomFieldType_Actor
-      - title: Conversant
-        value: 4
-        type: 5
-        typeString: CustomFieldType_Actor
-      - title: Menu Text
-        value: 
-        type: 0
-        typeString: 
-      - title: Dialogue Text
-        value: I'm so sad...
-        type: 0
-        typeString: 
-      - title: Sequence
-        value: 
-        type: 0
-        typeString: 
-      conversationID: 11
-      isRoot: 0
-      isGroup: 0
-      nodeColor: 
-      delaySimStatus: 0
-      falseConditionAction: Block
-      conditionPriority: 2
-      outgoingLinks:
-      - originConversationID: 11
-        originDialogueID: 1
-        destinationConversationID: 11
-        destinationDialogueID: 2
-        isConnector: 0
-        priority: 2
-      conditionsString: 
-      userScript: 
-      onExecute:
-        m_PersistentCalls:
-          m_Calls: []
-      canvasRect:
-        serializedVersion: 2
-        x: 192.54544
-        y: 93.86365
         width: 160
         height: 30
     - id: 2
@@ -8163,7 +8108,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: Give flower?
+        value: How many flowers would you like to leave in quiet remembrance?
         type: 0
         typeString: 
       - title: Sequence
@@ -8203,8 +8148,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 191
-        y: 243
+        x: 186.12195
+        y: 196.65857
         width: 160
         height: 30
     - id: 3
@@ -8281,11 +8226,11 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Actor
       - title: Menu Text
-        value: 2 flower
+        value: 
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: 
+        value: 2 flowers
         type: 0
         typeString: 
       - title: Sequence
@@ -8336,11 +8281,11 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Actor
       - title: Menu Text
-        value: 3 flower
+        value: 
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: 
+        value: 3 flowers
         type: 0
         typeString: 
       - title: Sequence
@@ -8417,8 +8362,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 178
-        y: 531.86365
+        x: 186.53656
+        y: 529.4246
         width: 160
         height: 30
     entryGroups: []
@@ -13528,7 +13473,7 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 163
+        x: 164
         y: 433
         width: 160
         height: 30
@@ -19456,7 +19401,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
-        value: SetActive(NPC_vcam,false);
+        value: SetActive(NPC_vcam,false);SetActive(FlowerFinish,true)
         type: 0
         typeString: 
       conversationID: 40
