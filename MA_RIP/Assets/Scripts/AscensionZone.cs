@@ -30,6 +30,8 @@ public class AscensionZone : MonoBehaviour
     [Header("UI")]
     [SerializeField] private GameObject progressBarRoot;
     [SerializeField] private Image progressBarFill; // Image Type = Filled, Fill Method = Horizontal
+    [Tooltip("Das 'Hold Space' TMP-Textobjekt. Wird nur angezeigt, solange der Player in der Zone steht.")]
+    [SerializeField] private GameObject holdSpaceHint;
 
     [Header("Vignette")]
     [SerializeField] private Image vignetteImage; // Canvas-Image, startet mit Alpha 0
@@ -46,6 +48,14 @@ public class AscensionZone : MonoBehaviour
     [Tooltip("Separate AudioSource für den One-Shot-Sound, damit sie sich nicht mit dem Charging-Loop ins Gehege kommt.")]
     [SerializeField] private AudioSource sfxAudioSource;
     [SerializeField] private AudioClip chargeCompleteSfx;
+
+    [Header("Zone Ambient Sound (Fade In/Out)")]
+    [Tooltip("Eigene AudioSource, läuft dauerhaft auf Loop solange der Player in der Zone steht, ohne Pitch-/Charge-Bezug.")]
+    [SerializeField] private AudioSource ambientAudioSource; // Loop = true, Play On Awake = false
+    [SerializeField] private AudioClip ambientClip;
+    [SerializeField] private float ambientTargetVolume = 1f;
+    [SerializeField] private float ambientFadeInDuration = 1f;
+    [SerializeField] private float ambientFadeOutDuration = 1f;
 
     [Header("Ascension")]
     [Tooltip("Scripts, die beim Aufsteigen deaktiviert werden (z.B. Movement-/Input-Controller).")]
@@ -74,6 +84,9 @@ public class AscensionZone : MonoBehaviour
         if (progressBarRoot != null)
             progressBarRoot.SetActive(false);
 
+        if (holdSpaceHint != null)
+            holdSpaceHint.SetActive(false);
+
         if (ascensionVCam != null)
             ascensionVCam.gameObject.SetActive(false);
 
@@ -90,6 +103,12 @@ public class AscensionZone : MonoBehaviour
             Color vc = vignetteImage.color;
             vc.a = 0f;
             vignetteImage.color = vc;
+        }
+
+        if (ambientAudioSource != null)
+        {
+            ambientAudioSource.loop = true;
+            ambientAudioSource.volume = 0f;
         }
     }
 
@@ -118,11 +137,16 @@ public class AscensionZone : MonoBehaviour
         if (progressBarRoot != null)
             progressBarRoot.SetActive(true);
 
+        if (holdSpaceHint != null)
+            holdSpaceHint.SetActive(true);
+
         if (ascensionVCam != null)
         {
             ascensionVCam.gameObject.SetActive(true);
             ApplyZoom(0f);
         }
+
+        FadeInAmbientSound();
     }
 
     private void ExitZone()
@@ -133,11 +157,15 @@ public class AscensionZone : MonoBehaviour
         if (progressBarRoot != null)
             progressBarRoot.SetActive(false);
 
+        if (holdSpaceHint != null)
+            holdSpaceHint.SetActive(false);
+
         if (ascensionVCam != null)
             ascensionVCam.gameObject.SetActive(false);
 
         UpdateVignette();
         UpdateChargingSound(false);
+        FadeOutAmbientSound();
     }
 
     private void Update()
@@ -215,10 +243,46 @@ public class AscensionZone : MonoBehaviour
         }
     }
 
+    private void FadeInAmbientSound()
+    {
+        if (ambientAudioSource == null || ambientClip == null) return;
+
+        ambientAudioSource.DOKill();
+
+        if (!ambientAudioSource.isPlaying)
+        {
+            ambientAudioSource.clip = ambientClip;
+            ambientAudioSource.loop = true;
+            ambientAudioSource.volume = 0f;
+            ambientAudioSource.Play();
+        }
+
+        ambientAudioSource.DOFade(ambientTargetVolume, ambientFadeInDuration);
+    }
+
+    private void FadeOutAmbientSound()
+    {
+        if (ambientAudioSource == null) return;
+
+        ambientAudioSource.DOKill();
+
+        ambientAudioSource
+            .DOFade(0f, ambientFadeOutDuration)
+            .OnComplete(() => ambientAudioSource.Stop());
+    }
+
     private void StartAscension()
     {
         isAscending = true;
         UpdateChargingSound(false); // Loop stoppen, sobald der finale Aufstieg beginnt
+
+        if (holdSpaceHint != null)
+            holdSpaceHint.SetActive(false);
+
+        // Player als Tracking Target entfernen -> Kamera bleibt stehen,
+        // man sieht den Player (Schatten) aus der Vcam-Position aufsteigen.
+        if (ascensionVCam != null)
+            ascensionVCam.Target.TrackingTarget = null;
 
         if (sfxAudioSource != null && chargeCompleteSfx != null)
             sfxAudioSource.PlayOneShot(chargeCompleteSfx);
