@@ -19661,6 +19661,18 @@ PrefabInstance:
       propertyPath: m_Name
       value: DepressedVisitor
       objectReference: {fileID: 0}
+    - target: {fileID: 6364798877859357148, guid: 0bb0476c06ed64246813381dfa409307, type: 3}
+      propertyPath: m_Color.b
+      value: 0.909804
+      objectReference: {fileID: 0}
+    - target: {fileID: 6364798877859357148, guid: 0bb0476c06ed64246813381dfa409307, type: 3}
+      propertyPath: m_Color.g
+      value: 0.47058827
+      objectReference: {fileID: 0}
+    - target: {fileID: 6364798877859357148, guid: 0bb0476c06ed64246813381dfa409307, type: 3}
+      propertyPath: m_Color.r
+      value: 0.3019608
+      objectReference: {fileID: 0}
     - target: {fileID: 6619232010604953176, guid: 0bb0476c06ed64246813381dfa409307, type: 3}
       propertyPath: m_overrideName
       value: Depressed Visitor
@@ -19695,7 +19707,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8214116785745161972, guid: 0bb0476c06ed64246813381dfa409307, type: 3}
       propertyPath: sceneToLoad
-      value: Hospital
+      value: depression
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
