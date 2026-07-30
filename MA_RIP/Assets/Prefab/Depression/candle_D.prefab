@@ -179,7 +179,7 @@ MonoBehaviour:
   indicator: {fileID: 3842651094063234113}
   flame: {fileID: 6079381394482794752}
   audioSource: {fileID: 8679163016168262190}
-  lightSfx: {fileID: 8300000, guid: d35670c74ad3db243ada0085d257fa41, type: 3}
+  lightSfx: {fileID: 8300000, guid: 7e26b3abc1d5e0d4982a85b581837784, type: 3}
 --- !u!1 &3639650374540750844
 GameObject:
   m_ObjectHideFlags: 0
@@ -5433,7 +5433,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
   m_Resource: {fileID: 0}
-  m_PlayOnAwake: 1
+  m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
   Loop: 0

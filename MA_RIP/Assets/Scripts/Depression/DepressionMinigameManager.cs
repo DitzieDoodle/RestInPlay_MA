@@ -151,6 +151,7 @@ public class DepressionMinigameManager : MonoBehaviour
         if (candle == null) return;
         if (candle.IsLit) return;
         if (candle != currentTarget) return;
+        if (!candle.IsPlayerInRange) return;
 
         candle.Light();
         currentTarget = null;
