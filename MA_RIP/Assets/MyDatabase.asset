@@ -8238,7 +8238,7 @@ MonoBehaviour:
       - originConversationID: 6
         originDialogueID: 54
         destinationConversationID: 6
-        destinationDialogueID: 63
+        destinationDialogueID: 65
         isConnector: 0
         priority: 2
       conditionsString: 
@@ -8600,7 +8600,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
-        value: SetActive(BargainingNPCC,true);SendMessage(StartTalkingSquash,,BargainingNPCC);
+        value: SetActive(BargainingNPCC,true);SendMessage(StartTalkingSquash,,BargainingNPCC);SetActive(BargainingNPCA,false)
         type: 0
         typeString: 
       conversationID: 6
@@ -8680,7 +8680,7 @@ MonoBehaviour:
       canvasRect:
         serializedVersion: 2
         x: 1444.1182
-        y: 2800.9492
+        y: 2800.0317
         width: 160
         height: 30
     - id: 64
@@ -8744,9 +8744,64 @@ MonoBehaviour:
         y: 2922.9492
         width: 160
         height: 30
+    - id: 65
+      fields:
+      - title: Title
+        value: 
+        type: 0
+        typeString: 
+      - title: Description
+        value: 
+        type: 0
+        typeString: 
+      - title: Actor
+        value: 5
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Conversant
+        value: 4
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Menu Text
+        value: 
+        type: 0
+        typeString: 
+      - title: Dialogue Text
+        value: 
+        type: 0
+        typeString: 
+      - title: Sequence
+        value: SetActive(BargainingNPCWon,true)
+        type: 0
+        typeString: 
+      conversationID: 6
+      isRoot: 0
+      isGroup: 0
+      nodeColor: 
+      delaySimStatus: 0
+      falseConditionAction: Block
+      conditionPriority: 2
+      outgoingLinks:
+      - originConversationID: 6
+        originDialogueID: 65
+        destinationConversationID: 6
+        destinationDialogueID: 63
+        isConnector: 0
+        priority: 2
+      conditionsString: 
+      userScript: 
+      onExecute:
+        m_PersistentCalls:
+          m_Calls: []
+      canvasRect:
+        serializedVersion: 2
+        x: 1571.2103
+        y: 2721.2922
+        width: 160
+        height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 1260.499, y: 2385.4214}
-    canvasZoom: 1.0000001
+    canvasScrollPosition: {x: 1315.6497, y: 2455.8125}
+    canvasZoom: 1.09
   - id: 31
     fields:
     - title: Title
@@ -9692,7 +9747,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
-        value: 
+        value: SetActive(NPC_vcam,false)
         type: 0
         typeString: 
       conversationID: 27
@@ -9717,7 +9772,7 @@ MonoBehaviour:
       canvasRect:
         serializedVersion: 2
         x: 171
-        y: 513
+        y: 512
         width: 160
         height: 30
     - id: 6
@@ -9766,7 +9821,7 @@ MonoBehaviour:
       canvasRect:
         serializedVersion: 2
         x: 173
-        y: 619
+        y: 618
         width: 160
         height: 30
     entryGroups: []
