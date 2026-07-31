@@ -9,6 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7174836134823177142}
+  - component: {fileID: 1946436346320453637}
   m_Layer: 0
   m_Name: graphic
   m_TagString: Untagged
@@ -36,6 +37,25 @@ Transform:
   - {fileID: 4569397620566741981}
   m_Father: {fileID: 1249620081059609920}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1946436346320453637
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 792337220316162990}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2d5946809c5466f41accb5a190838c59, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Levitate
+  amplitude: 0.008
+  duration: 3
+  ease: 4
+  randomizeStartOffset: 1
+  addRotationSway: 0
+  rotationSwayAngle: 3
+  rotationSwayDuration: 2
 --- !u!1 &1162452421166695377
 GameObject:
   m_ObjectHideFlags: 0
@@ -90,6 +110,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   moveSpeed: 5
   speedMultiplier: 1
+  waterSpeedMultiplier: 1
   graphics: {fileID: 7174836134823177142}
 --- !u!114 &8059042541321056889
 MonoBehaviour:
