@@ -4929,7 +4929,7 @@ GameObject:
   - component: {fileID: 363208746}
   - component: {fileID: 363208748}
   m_Layer: 0
-  m_Name: AscendManager
+  m_Name: Departure
   m_TagString: Untagged
   m_Icon: {fileID: 7866945982896999795, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
@@ -14291,11 +14291,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1497804416943787101, guid: 0bb0476c06ed64246813381dfa409307, type: 3}
       propertyPath: m_Color.b
-      value: 0.0047169924
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1497804416943787101, guid: 0bb0476c06ed64246813381dfa409307, type: 3}
       propertyPath: m_Color.g
-      value: 0.58310586
+      value: 0.48956752
       objectReference: {fileID: 0}
     - target: {fileID: 1497804416943787101, guid: 0bb0476c06ed64246813381dfa409307, type: 3}
       propertyPath: m_Color.r
@@ -14418,7 +14418,10 @@ PrefabInstance:
       value: bargaining
       objectReference: {fileID: 0}
     m_RemovedComponents: []
-    m_RemovedGameObjects: []
+    m_RemovedGameObjects:
+    - {fileID: 2738554573745950552, guid: 0bb0476c06ed64246813381dfa409307, type: 3}
+    - {fileID: 2812881936016064847, guid: 0bb0476c06ed64246813381dfa409307, type: 3}
+    - {fileID: 2737942899522290694, guid: 0bb0476c06ed64246813381dfa409307, type: 3}
     m_AddedGameObjects:
     - targetCorrespondingSourceObject: {fileID: 4885303684528794706, guid: 0bb0476c06ed64246813381dfa409307, type: 3}
       insertIndex: 0
@@ -37879,7 +37882,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4885303684528794706, guid: 0bb0476c06ed64246813381dfa409307, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -9.55
+      value: -9.6
       objectReference: {fileID: 0}
     - target: {fileID: 4885303684528794706, guid: 0bb0476c06ed64246813381dfa409307, type: 3}
       propertyPath: m_LocalRotation.w
