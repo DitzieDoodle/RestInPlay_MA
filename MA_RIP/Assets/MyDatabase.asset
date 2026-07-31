@@ -4304,7 +4304,7 @@ MonoBehaviour:
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 18, y: 124.05151}
+    canvasScrollPosition: {x: 0, y: 87.05151}
     canvasZoom: 1
   - id: 37
     fields:
@@ -7236,8 +7236,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 1441.1392
-        y: 2405.937
+        x: 1442.3586
+        y: 2404.7175
         width: 160
         height: 30
     - id: 37
@@ -7348,7 +7348,7 @@ MonoBehaviour:
       canvasRect:
         serializedVersion: 2
         x: 1441.7804
-        y: 2510.2395
+        y: 2509.1406
         width: 160
         height: 30
     - id: 39
@@ -8220,8 +8220,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: But I've tried my best. I've know you for so long after all. I'm sure
-          you would like this very special urn I've made for you.
+        value: I just want it to be perfect for you....
         type: 0
         typeString: 
       - title: Sequence
@@ -8250,7 +8249,7 @@ MonoBehaviour:
       canvasRect:
         serializedVersion: 2
         x: 1445.5222
-        y: 2634.3528
+        y: 2636.43
         width: 160
         height: 30
     - id: 55
@@ -8299,7 +8298,7 @@ MonoBehaviour:
       canvasRect:
         serializedVersion: 2
         x: 1443.4989
-        y: 3003.4214
+        y: 3002.4214
         width: 160
         height: 30
     - id: 56
@@ -8656,7 +8655,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
-        value: SetActive(urn_vcam,false);SetActive(BargainingNPCC,false);SetActive(BargainingNPCA,false);
+        value: SetActive(urn_vcam,false);SetActive(BargainingNPCC,false);
         type: 0
         typeString: 
       conversationID: 6
@@ -8670,6 +8669,67 @@ MonoBehaviour:
       - originConversationID: 6
         originDialogueID: 63
         destinationConversationID: 6
+        destinationDialogueID: 64
+        isConnector: 0
+        priority: 2
+      conditionsString: 
+      userScript: 
+      onExecute:
+        m_PersistentCalls:
+          m_Calls: []
+      canvasRect:
+        serializedVersion: 2
+        x: 1444.1182
+        y: 2800.9492
+        width: 160
+        height: 30
+    - id: 64
+      fields:
+      - title: Title
+        value: 
+        type: 0
+        typeString: 
+      - title: Description
+        value: 
+        type: 0
+        typeString: 
+      - title: Actor
+        value: 4
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Conversant
+        value: 5
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Menu Text
+        value: 
+        type: 0
+        typeString: 
+      - title: Dialogue Text
+        value: 
+        type: 0
+        typeString: 
+      - title: Sequence
+        value: 
+        type: 0
+        typeString: 
+      conversationID: 6
+      isRoot: 0
+      isGroup: 0
+      nodeColor: 
+      delaySimStatus: 0
+      falseConditionAction: Block
+      conditionPriority: 2
+      outgoingLinks:
+      - originConversationID: 6
+        originDialogueID: 64
+        destinationConversationID: 11
+        destinationDialogueID: 0
+        isConnector: 0
+        priority: 2
+      - originConversationID: 6
+        originDialogueID: 64
+        destinationConversationID: 6
         destinationDialogueID: 55
         isConnector: 0
         priority: 2
@@ -8680,13 +8740,13 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 1446.1182
-        y: 2803.1685
+        x: 1643.1182
+        y: 2922.9492
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 1331.7926, y: 0}
-    canvasZoom: 0.82000023
+    canvasScrollPosition: {x: 1260.499, y: 2385.4214}
+    canvasZoom: 1.0000001
   - id: 31
     fields:
     - title: Title
@@ -9282,7 +9342,7 @@ MonoBehaviour:
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 0, y: 400.1344}
+    canvasScrollPosition: {x: 0, y: 306.9305}
     canvasZoom: 1.03
   - id: 27
     fields:
@@ -9357,7 +9417,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
-        value: None()
+        value: 
         type: 0
         typeString: 
       conversationID: 27
@@ -9381,8 +9441,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 160
-        y: 30
+        x: 161
+        y: 28
         width: 160
         height: 30
     - id: 1
@@ -9412,7 +9472,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
-        value: SendMessage(StartTalkingSquash,,BargainingWonNPC)
+        value: 
         type: 0
         typeString: 
       conversationID: 27
@@ -9437,7 +9497,7 @@ MonoBehaviour:
       canvasRect:
         serializedVersion: 2
         x: 161
-        y: 117
+        y: 116
         width: 160
         height: 30
     - id: 2
@@ -9491,8 +9551,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 165
-        y: 198
+        x: 164
+        y: 199
         width: 160
         height: 30
     - id: 3
@@ -9547,7 +9607,7 @@ MonoBehaviour:
       canvasRect:
         serializedVersion: 2
         x: 165
-        y: 301
+        y: 300
         width: 160
         height: 30
     - id: 4
@@ -9632,7 +9692,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
-        value: SendMessage(StopTalkingSquash,,BargainingWonNPC);SetActive(NPC_vcam,false);
+        value: 
         type: 0
         typeString: 
       conversationID: 27
@@ -9657,7 +9717,7 @@ MonoBehaviour:
       canvasRect:
         serializedVersion: 2
         x: 171
-        y: 514
+        y: 513
         width: 160
         height: 30
     - id: 6
@@ -9706,7 +9766,7 @@ MonoBehaviour:
       canvasRect:
         serializedVersion: 2
         x: 173
-        y: 620
+        y: 619
         width: 160
         height: 30
     entryGroups: []
@@ -11284,7 +11344,7 @@ MonoBehaviour:
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 78, y: 87.52875}
+    canvasScrollPosition: {x: 1, y: 3}
     canvasZoom: 1
   - id: 13
     fields:
