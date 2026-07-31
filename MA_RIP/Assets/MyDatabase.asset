@@ -1673,7 +1673,7 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 167
+        x: 165
         y: 394
         width: 160
         height: 30
@@ -3429,8 +3429,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 167
-        y: 276
+        x: 158
+        y: 269
         width: 160
         height: 30
     - id: 3
@@ -3460,7 +3460,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
-        value: 
+        value: SetActive(Mouth,false)
         type: 0
         typeString: 
       conversationID: 32
@@ -3490,8 +3490,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 167
-        y: 394
+        x: 168
+        y: 400
         width: 160
         height: 30
     - id: 4
@@ -3545,7 +3545,7 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 83
+        x: 82
         y: 523
         width: 160
         height: 30
@@ -8985,7 +8985,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
-        value: 
+        value: SetActive(Mouth,false)
         type: 0
         typeString: 
       conversationID: 31
@@ -9016,7 +9016,7 @@ MonoBehaviour:
       canvasRect:
         serializedVersion: 2
         x: 167
-        y: 394
+        y: 393.0291
         width: 160
         height: 30
     - id: 4
@@ -9125,8 +9125,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 271
-        y: 523
+        x: 270.0291
+        y: 520.0874
         width: 160
         height: 30
     - id: 6
@@ -9343,7 +9343,7 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 63.038162
+        x: 62.06729
         y: 585.1656
         width: 160
         height: 30
@@ -9397,7 +9397,7 @@ MonoBehaviour:
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 0, y: 306.9305}
+    canvasScrollPosition: {x: 4.85437, y: 59.357697}
     canvasZoom: 1.03
   - id: 27
     fields:
@@ -11091,7 +11091,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
-        value: 
+        value: SetActive(Mouth,false)
         type: 0
         typeString: 
       conversationID: 33
@@ -12516,7 +12516,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
-        value: 
+        value: SetActive(Mouth,false)
         type: 0
         typeString: 
       conversationID: 30

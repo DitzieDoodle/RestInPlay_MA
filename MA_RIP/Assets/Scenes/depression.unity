@@ -2163,7 +2163,7 @@ PrefabInstance:
     - target: {fileID: 147518790048295784, guid: 5c92fb9d2433cf24cbc18e8b22d9b25c, type: 3}
       propertyPath: m_Mesh
       value: 
-      objectReference: {fileID: 1177151112}
+      objectReference: {fileID: 1157946657}
     - target: {fileID: 1279707355248613973, guid: 5c92fb9d2433cf24cbc18e8b22d9b25c, type: 3}
       propertyPath: m_Name
       value: Water
@@ -5254,7 +5254,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5080925854057357872, guid: 4bde9a95557703f43836befc3c3e8d70, type: 3}
       propertyPath: m_overrideName
-      value: Depressed visitor
+      value: Depression
       objectReference: {fileID: 0}
     - target: {fileID: 5080925854057357872, guid: 4bde9a95557703f43836befc3c3e8d70, type: 3}
       propertyPath: maxUseDistance
@@ -5271,6 +5271,10 @@ PrefabInstance:
     - target: {fileID: 5592830673068359384, guid: 4bde9a95557703f43836befc3c3e8d70, type: 3}
       propertyPath: m_LocalPosition.z
       value: -0.29
+      objectReference: {fileID: 0}
+    - target: {fileID: 6113946042259209476, guid: 4bde9a95557703f43836befc3c3e8d70, type: 3}
+      propertyPath: m_Name
+      value: sprite
       objectReference: {fileID: 0}
     - target: {fileID: 6282275855940724817, guid: 4bde9a95557703f43836befc3c3e8d70, type: 3}
       propertyPath: m_AnchorMax.y
@@ -5651,13 +5655,13 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 2617626107688945289, guid: dbfdf3064d14ab9419b5ca32f61844f6, type: 3}
   m_PrefabInstance: {fileID: 6289701661012268626}
   m_PrefabAsset: {fileID: 0}
---- !u!43 &1177151112
+--- !u!43 &1157946657
 Mesh:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: WaterVolume--194202
+  m_Name: WaterVolume--471728
   serializedVersion: 12
   m_SubMeshes:
   - serializedVersion: 2
