@@ -4018,7 +4018,7 @@ Camera:
     height: 1
   near clip plane: 0.1
   far clip plane: 5000
-  field of view: 100
+  field of view: 89.1
   orthographic: 0
   orthographic size: 10
   m_Depth: -1
@@ -4044,8 +4044,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 330585543}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.27915868, y: 0, z: 0, w: 0.960245}
-  m_LocalPosition: {x: 14.32, y: 2.18, z: -10.29}
+  m_LocalRotation: {x: 0.39231566, y: 0, z: 0, w: 0.9198307}
+  m_LocalPosition: {x: 14.22, y: 1.5999999, z: -9.5199995}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -4934,7 +4934,7 @@ GameObject:
   m_Icon: {fileID: 7866945982896999795, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!65 &363208746
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -5016,7 +5016,7 @@ MonoBehaviour:
   ascendEase: 2
   fadeImage: {fileID: 340198137}
   fadeDuration: 1.5
-  sceneToLoad: depression
+  sceneToLoad: End
 --- !u!1 &373557706
 GameObject:
   m_ObjectHideFlags: 0
