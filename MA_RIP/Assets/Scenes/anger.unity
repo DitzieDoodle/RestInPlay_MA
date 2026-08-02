@@ -5308,8 +5308,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 90.2, y: 24.2}
-  m_SizeDelta: {x: 280, y: 148.5}
+  m_AnchoredPosition: {x: 77.75, y: 24.2}
+  m_SizeDelta: {x: 230.18, y: 148.5}
   m_Pivot: {x: 0.5, y: 0}
 --- !u!95 &691449382
 Animator:
@@ -5384,7 +5384,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0, g: 0, b: 0, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -8825,6 +8825,18 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 599383825909019288, guid: 4bde9a95557703f43836befc3c3e8d70, type: 3}
+      propertyPath: m_Color.b
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 599383825909019288, guid: 4bde9a95557703f43836befc3c3e8d70, type: 3}
+      propertyPath: m_Color.g
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 599383825909019288, guid: 4bde9a95557703f43836befc3c3e8d70, type: 3}
+      propertyPath: m_Color.r
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1247303808944225888, guid: 4bde9a95557703f43836befc3c3e8d70, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.141
@@ -12565,8 +12577,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchoredPosition: {x: -4.6, y: -12.2}
+  m_SizeDelta: {x: -9.3, y: 12.2}
   m_Pivot: {x: 0.5, y: 0}
 --- !u!114 &1489379230
 MonoBehaviour:
@@ -13536,7 +13548,7 @@ MonoBehaviour:
     m_uiText: {fileID: 1348702199}
   useMessageText:
     m_uiText: {fileID: 1050276621}
-  inRangeColor: {r: 1, g: 0.40091679, b: 0.11792451, a: 1}
+  inRangeColor: {r: 0.8773585, g: 0.052568283, b: 0, a: 1}
   outOfRangeColor: {r: 0.5, g: 0.5, b: 0.5, a: 1}
   reticleInRange: {fileID: 1489379234}
   reticleOutOfRange: {fileID: 270234163}

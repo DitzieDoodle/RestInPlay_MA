@@ -13229,6 +13229,14 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2248459808527427931, guid: 4bde9a95557703f43836befc3c3e8d70, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 202.65
+      objectReference: {fileID: 0}
+    - target: {fileID: 2248459808527427931, guid: 4bde9a95557703f43836befc3c3e8d70, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 65.36
+      objectReference: {fileID: 0}
     - target: {fileID: 2683576695198686157, guid: 4bde9a95557703f43836befc3c3e8d70, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -13259,7 +13267,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5080925854057357872, guid: 4bde9a95557703f43836befc3c3e8d70, type: 3}
       propertyPath: m_overrideName
-      value: Denying Visitor
+      value: Denial
       objectReference: {fileID: 0}
     - target: {fileID: 5080925854057357872, guid: 4bde9a95557703f43836befc3c3e8d70, type: 3}
       propertyPath: m_overrideUseMessage
@@ -13344,6 +13352,18 @@ PrefabInstance:
     - target: {fileID: 7360493077174089250, guid: 4bde9a95557703f43836befc3c3e8d70, type: 3}
       propertyPath: m_Center.y
       value: -0.13778676
+      objectReference: {fileID: 0}
+    - target: {fileID: 8901041089175118140, guid: 4bde9a95557703f43836befc3c3e8d70, type: 3}
+      propertyPath: inRangeColor.b
+      value: 0.735849
+      objectReference: {fileID: 0}
+    - target: {fileID: 8901041089175118140, guid: 4bde9a95557703f43836befc3c3e8d70, type: 3}
+      propertyPath: inRangeColor.g
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8901041089175118140, guid: 4bde9a95557703f43836befc3c3e8d70, type: 3}
+      propertyPath: inRangeColor.r
+      value: 0.42452815
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
