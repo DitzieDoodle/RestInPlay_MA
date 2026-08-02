@@ -739,6 +739,50 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
+--- !u!1 &20412718 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6197034783104509702, guid: 0bb0476c06ed64246813381dfa409307, type: 3}
+  m_PrefabInstance: {fileID: 2059904918}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &20412725
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 20412718}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0cde78c001ab7bc4aa0ae71799ea0d95, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::NpcColorReveal
+  spriteRenderer: {fileID: 828102939}
+  hiddenColor: {r: 0, g: 0, b: 0, a: 1}
+  revealColor: {r: 0.75294125, g: 0.16078432, b: 0.058823533, a: 1}
+  fadeDuration: 0.6
+  fadeEase: 4
+  playerTag: Player
+--- !u!65 &20412726
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 20412718}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &31034384
 GameObject:
   m_ObjectHideFlags: 0
@@ -2169,6 +2213,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 1780540072472984242, guid: f7accc274a2da5c4abb43e1346c97a23, type: 3}
   m_PrefabInstance: {fileID: 133880246}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &146487327 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6134655873243123379, guid: 0bb0476c06ed64246813381dfa409307, type: 3}
+  m_PrefabInstance: {fileID: 2026353966}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &201655238
 GameObject:
   m_ObjectHideFlags: 0
@@ -3169,6 +3218,11 @@ Transform:
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4921631397453053803, guid: 4bde9a95557703f43836befc3c3e8d70, type: 3}
   m_PrefabInstance: {fileID: 288227377}
+  m_PrefabAsset: {fileID: 0}
+--- !u!212 &238016638 stripped
+SpriteRenderer:
+  m_CorrespondingSourceObject: {fileID: 1497804416943787101, guid: 0bb0476c06ed64246813381dfa409307, type: 3}
+  m_PrefabInstance: {fileID: 1928533682}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &245939830
 PrefabInstance:
@@ -7050,6 +7104,18 @@ PrefabInstance:
       propertyPath: m_Name
       value: AcceptanceSceneFader
       objectReference: {fileID: 0}
+    - target: {fileID: 783864723094165579, guid: 0bb0476c06ed64246813381dfa409307, type: 3}
+      propertyPath: inRangeColor.b
+      value: 0.6039216
+      objectReference: {fileID: 0}
+    - target: {fileID: 783864723094165579, guid: 0bb0476c06ed64246813381dfa409307, type: 3}
+      propertyPath: inRangeColor.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 783864723094165579, guid: 0bb0476c06ed64246813381dfa409307, type: 3}
+      propertyPath: inRangeColor.r
+      value: 0.019607844
+      objectReference: {fileID: 0}
     - target: {fileID: 1167586669423596352, guid: 0bb0476c06ed64246813381dfa409307, type: 3}
       propertyPath: conversation
       value: AcceptanceStart
@@ -7191,7 +7257,10 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 4885303684528794706, guid: 0bb0476c06ed64246813381dfa409307, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1154411995}
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 6134655873243123379, guid: 0bb0476c06ed64246813381dfa409307, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 884581470}
   m_SourcePrefab: {fileID: 100100000, guid: 0bb0476c06ed64246813381dfa409307, type: 3}
 --- !u!4 &538756470 stripped
 Transform:
@@ -9358,6 +9427,11 @@ PrefabInstance:
       insertIndex: 2
       addedObject: {fileID: 1283166458}
   m_SourcePrefab: {fileID: 100100000, guid: 4bde9a95557703f43836befc3c3e8d70, type: 3}
+--- !u!212 &709529140 stripped
+SpriteRenderer:
+  m_CorrespondingSourceObject: {fileID: 1497804416943787101, guid: 0bb0476c06ed64246813381dfa409307, type: 3}
+  m_PrefabInstance: {fileID: 538756469}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &712658660
 GameObject:
   m_ObjectHideFlags: 0
@@ -10164,6 +10238,24 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4885303684528794706, guid: 0bb0476c06ed64246813381dfa409307, type: 3}
   m_PrefabInstance: {fileID: 2026353966}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &747462412
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 146487327}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0cde78c001ab7bc4aa0ae71799ea0d95, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::NpcColorReveal
+  spriteRenderer: {fileID: 1619040764}
+  hiddenColor: {r: 0, g: 0, b: 0, a: 1}
+  revealColor: {r: 0.33490568, g: 0.5431641, b: 1, a: 1}
+  fadeDuration: 0.3
+  fadeEase: 4
+  playerTag: Player
 --- !u!1001 &754185082
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -11143,6 +11235,11 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
+--- !u!212 &828102939 stripped
+SpriteRenderer:
+  m_CorrespondingSourceObject: {fileID: 1497804416943787101, guid: 0bb0476c06ed64246813381dfa409307, type: 3}
+  m_PrefabInstance: {fileID: 2059904918}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &829442743
 GameObject:
   m_ObjectHideFlags: 0
@@ -12556,6 +12653,29 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 9.999999, y: 2.220446e-16, z: 10}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!1 &884581463 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6134655873243123379, guid: 0bb0476c06ed64246813381dfa409307, type: 3}
+  m_PrefabInstance: {fileID: 538756469}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &884581470
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 884581463}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0cde78c001ab7bc4aa0ae71799ea0d95, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::NpcColorReveal
+  spriteRenderer: {fileID: 709529140}
+  hiddenColor: {r: 0, g: 0, b: 0, a: 1}
+  revealColor: {r: 0.019607844, g: 1, b: 0.6039216, a: 1}
+  fadeDuration: 0.3
+  fadeEase: 4
+  playerTag: Player
 --- !u!1 &884654508
 GameObject:
   m_ObjectHideFlags: 0
@@ -14681,7 +14801,10 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 4885303684528794706, guid: 0bb0476c06ed64246813381dfa409307, type: 3}
       insertIndex: -1
       addedObject: {fileID: 4190302}
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 6134655873243123379, guid: 0bb0476c06ed64246813381dfa409307, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1787593009}
   m_SourcePrefab: {fileID: 100100000, guid: 0bb0476c06ed64246813381dfa409307, type: 3}
 --- !u!4 &1036113815 stripped
 Transform:
@@ -18992,6 +19115,11 @@ SpriteRenderer:
 Transform:
   m_CorrespondingSourceObject: {fileID: 1247303808944225888, guid: 4bde9a95557703f43836befc3c3e8d70, type: 3}
   m_PrefabInstance: {fileID: 1792291932}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1269118979 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6134655873243123379, guid: 0bb0476c06ed64246813381dfa409307, type: 3}
+  m_PrefabInstance: {fileID: 2059904918}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &1273426469
 GameObject:
@@ -26433,6 +26561,11 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
+--- !u!212 &1444914528 stripped
+SpriteRenderer:
+  m_CorrespondingSourceObject: {fileID: 1497804416943787101, guid: 0bb0476c06ed64246813381dfa409307, type: 3}
+  m_PrefabInstance: {fileID: 1036113814}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1452566337
 GameObject:
   m_ObjectHideFlags: 0
@@ -30471,6 +30604,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 5579537686266532842, guid: 9063214ebc95b8c4e8e6e869f47e3b6d, type: 3}
   m_PrefabInstance: {fileID: 1617725916}
   m_PrefabAsset: {fileID: 0}
+--- !u!212 &1619040764 stripped
+SpriteRenderer:
+  m_CorrespondingSourceObject: {fileID: 1497804416943787101, guid: 0bb0476c06ed64246813381dfa409307, type: 3}
+  m_PrefabInstance: {fileID: 2026353966}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1619345121
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -31578,6 +31716,11 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
+--- !u!1 &1672514998 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6134655873243123379, guid: 0bb0476c06ed64246813381dfa409307, type: 3}
+  m_PrefabInstance: {fileID: 1928533682}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1673596969
 GameObject:
   m_ObjectHideFlags: 0
@@ -34237,6 +34380,29 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1787185708}
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &1787593002 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6134655873243123379, guid: 0bb0476c06ed64246813381dfa409307, type: 3}
+  m_PrefabInstance: {fileID: 1036113814}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1787593009
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1787593002}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0cde78c001ab7bc4aa0ae71799ea0d95, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::NpcColorReveal
+  spriteRenderer: {fileID: 1444914528}
+  hiddenColor: {r: 0, g: 0, b: 0, a: 1}
+  revealColor: {r: 0.8396226, g: 0.5028753, b: 0, a: 1}
+  fadeDuration: 0.3
+  fadeEase: 4
+  playerTag: Player
 --- !u!1 &1788153750
 GameObject:
   m_ObjectHideFlags: 0
@@ -34396,7 +34562,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1800746053571818398, guid: 4bde9a95557703f43836befc3c3e8d70, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2187510414225561723, guid: 4bde9a95557703f43836befc3c3e8d70, type: 3}
       propertyPath: m_AnchorMax.y
@@ -37488,6 +37654,18 @@ PrefabInstance:
       propertyPath: m_Name
       value: AngrySceneFader
       objectReference: {fileID: 0}
+    - target: {fileID: 783864723094165579, guid: 0bb0476c06ed64246813381dfa409307, type: 3}
+      propertyPath: inRangeColor.b
+      value: 0.058823533
+      objectReference: {fileID: 0}
+    - target: {fileID: 783864723094165579, guid: 0bb0476c06ed64246813381dfa409307, type: 3}
+      propertyPath: inRangeColor.g
+      value: 0.16078432
+      objectReference: {fileID: 0}
+    - target: {fileID: 783864723094165579, guid: 0bb0476c06ed64246813381dfa409307, type: 3}
+      propertyPath: inRangeColor.r
+      value: 0.75294125
+      objectReference: {fileID: 0}
     - target: {fileID: 1167586669423596352, guid: 0bb0476c06ed64246813381dfa409307, type: 3}
       propertyPath: conversation
       value: AngerStart
@@ -37629,13 +37807,34 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 4885303684528794706, guid: 0bb0476c06ed64246813381dfa409307, type: 3}
       insertIndex: -1
       addedObject: {fileID: 764838247}
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 6134655873243123379, guid: 0bb0476c06ed64246813381dfa409307, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1928533690}
   m_SourcePrefab: {fileID: 100100000, guid: 0bb0476c06ed64246813381dfa409307, type: 3}
 --- !u!4 &1928533683 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4885303684528794706, guid: 0bb0476c06ed64246813381dfa409307, type: 3}
   m_PrefabInstance: {fileID: 1928533682}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1928533690
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1672514998}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0cde78c001ab7bc4aa0ae71799ea0d95, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::NpcColorReveal
+  spriteRenderer: {fileID: 238016638}
+  hiddenColor: {r: 0, g: 0, b: 0, a: 1}
+  revealColor: {r: 0.75294125, g: 0.16078432, b: 0.058823533, a: 1}
+  fadeDuration: 0.3
+  fadeEase: 4
+  playerTag: Player
 --- !u!1 &1946037365
 GameObject:
   m_ObjectHideFlags: 0
@@ -38567,6 +38766,18 @@ PrefabInstance:
       propertyPath: m_Name
       value: DepressedSceneFader
       objectReference: {fileID: 0}
+    - target: {fileID: 783864723094165579, guid: 0bb0476c06ed64246813381dfa409307, type: 3}
+      propertyPath: inRangeColor.b
+      value: 0.6627451
+      objectReference: {fileID: 0}
+    - target: {fileID: 783864723094165579, guid: 0bb0476c06ed64246813381dfa409307, type: 3}
+      propertyPath: inRangeColor.g
+      value: 0.38431376
+      objectReference: {fileID: 0}
+    - target: {fileID: 783864723094165579, guid: 0bb0476c06ed64246813381dfa409307, type: 3}
+      propertyPath: inRangeColor.r
+      value: 0.25882354
+      objectReference: {fileID: 0}
     - target: {fileID: 1167586669423596352, guid: 0bb0476c06ed64246813381dfa409307, type: 3}
       propertyPath: conversation
       value: DepressionStart
@@ -38683,6 +38894,22 @@ PrefabInstance:
       propertyPath: m_overrideUseMessage
       value: listen
       objectReference: {fileID: 0}
+    - target: {fileID: 6933419596091443274, guid: 0bb0476c06ed64246813381dfa409307, type: 3}
+      propertyPath: m_Size.x
+      value: 1.4286118
+      objectReference: {fileID: 0}
+    - target: {fileID: 6933419596091443274, guid: 0bb0476c06ed64246813381dfa409307, type: 3}
+      propertyPath: m_Size.z
+      value: 1.7230711
+      objectReference: {fileID: 0}
+    - target: {fileID: 6933419596091443274, guid: 0bb0476c06ed64246813381dfa409307, type: 3}
+      propertyPath: m_Center.x
+      value: -0.012895584
+      objectReference: {fileID: 0}
+    - target: {fileID: 6933419596091443274, guid: 0bb0476c06ed64246813381dfa409307, type: 3}
+      propertyPath: m_Center.z
+      value: 0.1429553
+      objectReference: {fileID: 0}
     - target: {fileID: 8015730330804510988, guid: 0bb0476c06ed64246813381dfa409307, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -38720,7 +38947,10 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 4885303684528794706, guid: 0bb0476c06ed64246813381dfa409307, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1788153751}
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 6134655873243123379, guid: 0bb0476c06ed64246813381dfa409307, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 747462412}
   m_SourcePrefab: {fileID: 100100000, guid: 0bb0476c06ed64246813381dfa409307, type: 3}
 --- !u!1 &2028927587
 GameObject:
@@ -39244,6 +39474,18 @@ PrefabInstance:
       propertyPath: m_Name
       value: DenialSceneFader
       objectReference: {fileID: 0}
+    - target: {fileID: 783864723094165579, guid: 0bb0476c06ed64246813381dfa409307, type: 3}
+      propertyPath: inRangeColor.b
+      value: 0.8584906
+      objectReference: {fileID: 0}
+    - target: {fileID: 783864723094165579, guid: 0bb0476c06ed64246813381dfa409307, type: 3}
+      propertyPath: inRangeColor.g
+      value: 0.19032574
+      objectReference: {fileID: 0}
+    - target: {fileID: 783864723094165579, guid: 0bb0476c06ed64246813381dfa409307, type: 3}
+      propertyPath: inRangeColor.r
+      value: 0.62434715
+      objectReference: {fileID: 0}
     - target: {fileID: 1167586669423596352, guid: 0bb0476c06ed64246813381dfa409307, type: 3}
       propertyPath: conversation
       value: DenialStart
@@ -39385,13 +39627,40 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 4885303684528794706, guid: 0bb0476c06ed64246813381dfa409307, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1095808448}
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 6134655873243123379, guid: 0bb0476c06ed64246813381dfa409307, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2059904926}
+    - targetCorrespondingSourceObject: {fileID: 6197034783104509702, guid: 0bb0476c06ed64246813381dfa409307, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 20412726}
+    - targetCorrespondingSourceObject: {fileID: 6197034783104509702, guid: 0bb0476c06ed64246813381dfa409307, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 20412725}
   m_SourcePrefab: {fileID: 100100000, guid: 0bb0476c06ed64246813381dfa409307, type: 3}
 --- !u!4 &2059904919 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4885303684528794706, guid: 0bb0476c06ed64246813381dfa409307, type: 3}
   m_PrefabInstance: {fileID: 2059904918}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &2059904926
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1269118979}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0cde78c001ab7bc4aa0ae71799ea0d95, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::NpcColorReveal
+  spriteRenderer: {fileID: 828102939}
+  hiddenColor: {r: 0, g: 0, b: 0, a: 1}
+  revealColor: {r: 0.43529415, g: 0.14117648, b: 0.6, a: 1}
+  fadeDuration: 0.3
+  fadeEase: 4
+  playerTag: Player
 --- !u!1001 &2064150351
 PrefabInstance:
   m_ObjectHideFlags: 0
