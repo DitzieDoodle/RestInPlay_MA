@@ -1,8 +1,12 @@
+using System.Collections.Generic;
 using PixelCrushers.DialogueSystem;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class GameHandler : MonoBehaviour
 {
+    public UnityEvent OnGameCanComplete = new();
+
     FlowerHandler flowerHandler;
     ColorHandler colorHandler;
     PlayerController playerController;
@@ -10,6 +14,10 @@ public class GameHandler : MonoBehaviour
     Usable selectedUsable;
     Selector playerSelector;
     ProximitySelector proximitySelector;
+
+    Dictionary<ColorHandler.ColorType, bool> colorTypeCompleted = new();
+
+    public bool CanComplete { get; private set; } = false;
 
 
     void Start()
@@ -27,6 +35,12 @@ public class GameHandler : MonoBehaviour
         playerSelector?.onSelectedUsable.AddListener(OnUsableSelected);
         proximitySelector = playerController.GetComponent<ProximitySelector>();
         proximitySelector?.onSelectedUsable.AddListener(OnUsableSelected);
+
+        colorTypeCompleted[ColorHandler.ColorType.Denial] = false;
+        colorTypeCompleted[ColorHandler.ColorType.Anger] = false;
+        colorTypeCompleted[ColorHandler.ColorType.Bargaining] = false;
+        colorTypeCompleted[ColorHandler.ColorType.Depression] = false;
+        colorTypeCompleted[ColorHandler.ColorType.Acceptance] = false;
     }
 
 
@@ -145,5 +159,23 @@ public class GameHandler : MonoBehaviour
         {
             flowerHandler.RemoveFlowers(3);
         }
+
+        colorTypeCompleted[colorType] = true;
+
+        CheckGameCompletion();
+    }
+
+    private void CheckGameCompletion()
+    {
+        foreach (var completed in colorTypeCompleted.Values)
+        {
+            if (!completed)
+            {
+                return; // If any color type is not completed, exit the method
+            }
+        }
+
+        CanComplete = true;
+        OnGameCanComplete?.Invoke();
     }
 }

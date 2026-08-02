@@ -5,7 +5,7 @@ using DG.Tweening;
 using Unity.Cinemachine;
 
 /// <summary>
-/// Zone, in der der Spieler SPACE gedrückt halten muss, um als Geist
+/// Zone, in der der Spieler SPACE gedrï¿½ckt halten muss, um als Geist
 /// in den Himmel aufzusteigen. Box Collider (Is Trigger = true) wird
 /// als Zonenbegrenzung genutzt.
 /// </summary>
@@ -13,14 +13,14 @@ using Unity.Cinemachine;
 public class AscensionZone : MonoBehaviour
 {
     [Header("Player Erkennung")]
-    [Tooltip("Nur Objekte mit diesem Tag lösen die Zone aus.")]
+    [Tooltip("Nur Objekte mit diesem Tag lï¿½sen die Zone aus.")]
     [SerializeField] private string playerTag = "Player";
 
     [Header("Virtual Camera")]
     [SerializeField] private CinemachineCamera ascensionVCam;
     [Tooltip("Vertical FOV der VCam beim Betreten der Zone.")]
     [SerializeField] private float fovStart = 48.4f;
-    [Tooltip("Vertical FOV wenn die Bar komplett voll ist (kleinerer Wert = näher rangezoomt).")]
+    [Tooltip("Vertical FOV wenn die Bar komplett voll ist (kleinerer Wert = nï¿½her rangezoomt).")]
     [SerializeField] private float fovEnd = 25f;
 
     [Header("Aufladen")]
@@ -45,12 +45,12 @@ public class AscensionZone : MonoBehaviour
     [SerializeField] private float chargingPitchEnd = 1.3f;
 
     [Header("Charge Complete SFX")]
-    [Tooltip("Separate AudioSource für den One-Shot-Sound, damit sie sich nicht mit dem Charging-Loop ins Gehege kommt.")]
+    [Tooltip("Separate AudioSource fï¿½r den One-Shot-Sound, damit sie sich nicht mit dem Charging-Loop ins Gehege kommt.")]
     [SerializeField] private AudioSource sfxAudioSource;
     [SerializeField] private AudioClip chargeCompleteSfx;
 
     [Header("Zone Ambient Sound (Fade In/Out)")]
-    [Tooltip("Eigene AudioSource, läuft dauerhaft auf Loop solange der Player in der Zone steht, ohne Pitch-/Charge-Bezug.")]
+    [Tooltip("Eigene AudioSource, lï¿½uft dauerhaft auf Loop solange der Player in der Zone steht, ohne Pitch-/Charge-Bezug.")]
     [SerializeField] private AudioSource ambientAudioSource; // Loop = true, Play On Awake = false
     [SerializeField] private AudioClip ambientClip;
     [SerializeField] private float ambientTargetVolume = 1f;
@@ -75,6 +75,10 @@ public class AscensionZone : MonoBehaviour
     private Transform playerInZone;
     private float progress; // 0..1
     private bool isAscending;
+
+    bool isEnabled = false;
+
+    GameHandler gameHandler;
 
     private void Awake()
     {
@@ -110,10 +114,40 @@ public class AscensionZone : MonoBehaviour
             ambientAudioSource.loop = true;
             ambientAudioSource.volume = 0f;
         }
+
+        gameHandler = FindAnyObjectByType<GameHandler>();
+    }
+
+    void Start()
+    {
+        CheckEnabled();
+    }
+
+    void CheckEnabled()
+    {
+        if (gameHandler == null) return;
+
+        if (!gameHandler.CanComplete)
+        {
+            isEnabled = false;
+            foreach (Transform child in transform)
+            {
+                child.gameObject.SetActive(false);
+            }
+            gameHandler.OnGameCanComplete.AddListener(CheckEnabled);
+            return;
+        }
+
+        foreach (Transform child in transform)
+        {
+            child.gameObject.SetActive(true);
+        }
+        isEnabled = true;
     }
 
     private void OnTriggerEnter(Collider other)
     {
+        if (!isEnabled) return;
         if (isAscending) return;
         if (!other.CompareTag(playerTag)) return;
 
@@ -123,6 +157,7 @@ public class AscensionZone : MonoBehaviour
 
     private void OnTriggerExit(Collider other)
     {
+        if (!isEnabled) return;
         if (isAscending) return;
         if (playerInZone == null || other.transform != playerInZone) return;
 
@@ -170,6 +205,7 @@ public class AscensionZone : MonoBehaviour
 
     private void Update()
     {
+        if (!isEnabled) return;
         if (isAscending) return;
         if (playerInZone == null) return;
 
@@ -190,7 +226,7 @@ public class AscensionZone : MonoBehaviour
         }
         else
         {
-            // Space losgelassen, bevor die Bar voll war -> Fortschritt zurücksetzen
+            // Space losgelassen, bevor die Bar voll war -> Fortschritt zurï¿½cksetzen
             progress = 0f;
             UpdateProgressUI();
             ApplyZoom(0f);
