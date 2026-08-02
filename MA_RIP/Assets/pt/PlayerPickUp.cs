@@ -63,7 +63,7 @@ public class PlayerPickUp : MonoBehaviour
         pickedObject.GetComponent<Rigidbody>().isKinematic = true;
 
         // Call the OnPickup method from the PickupItem script
-        pickedObject.GetComponent<PickUpItem>().OnPickup();
+        pickedObject.GetComponent<PickUpItem>()?.OnPickup();
     }
 
     void DropObject()
@@ -74,7 +74,7 @@ public class PlayerPickUp : MonoBehaviour
             pickedObject.transform.SetParent(null, true);  // Objekt wird vom Spieler getrennt
 
             // Call the OnDrop method from the PickupItem script
-            pickedObject.GetComponent<PickUpItem>().OnDrop();
+            pickedObject.GetComponent<PickUpItem>()?.OnDrop();
 
             pickedObject = null;
             isHolding = false;
