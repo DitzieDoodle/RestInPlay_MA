@@ -5,6 +5,8 @@ public class GriefGameObjectHolder : MonoBehaviour
     [SerializeField] ColorHandler.ColorType griefType;
     GameHandler gameHandler;
 
+    ColorHandler colorHandler;
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -12,13 +14,26 @@ public class GriefGameObjectHolder : MonoBehaviour
         if (gameHandler != null)
         {
             gameHandler.OnGameUpdated.AddListener(UpdateGriefGameObjects);
-            UpdateGriefGameObjects();
         }
+
+        colorHandler = FindAnyObjectByType<ColorHandler>();
+        if (colorHandler != null)
+        {
+            colorHandler.OnColorChangedEvent.AddListener(UpdateGriefGameObjects);
+        }
+
+        UpdateGriefGameObjects();
     }
 
     void UpdateGriefGameObjects()
     {
-        if (gameHandler.colorTypeCompleted.TryGetValue(griefType, out bool isCompleted))
+        if (!gameHandler || !colorHandler)
+        {
+            SetChildrenActive(false);
+            return;
+        }
+
+        if (gameHandler.colorTypeCompleted.TryGetValue(griefType, out bool isCompleted) && colorHandler.GetLevelValue(griefType) >= 3)
         {
             SetChildrenActive(isCompleted);
         }
