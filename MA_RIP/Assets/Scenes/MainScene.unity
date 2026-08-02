@@ -22888,6 +22888,7 @@ GameObject:
   - component: {fileID: 1017359584}
   - component: {fileID: 1017359586}
   - component: {fileID: 1017359585}
+  - component: {fileID: 1017359587}
   m_Layer: 5
   m_Name: Text (TMP)
   m_TagString: Untagged
@@ -23014,6 +23015,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1017359583}
   m_CullTransparentMesh: 1
+--- !u!114 &1017359587
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1017359583}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9652aaced28394f46a11c53a18b68dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ShowPlayerSentence
 --- !u!1 &1017875567
 GameObject:
   m_ObjectHideFlags: 0
@@ -41387,6 +41400,7 @@ GameObject:
   - component: {fileID: 1500151780}
   - component: {fileID: 1500151782}
   - component: {fileID: 1500151781}
+  - component: {fileID: 1500151783}
   m_Layer: 5
   m_Name: Text (TMP)
   m_TagString: Untagged
@@ -41402,7 +41416,7 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1500151779}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0.0017700195}
   m_LocalScale: {x: 0.91161, y: 0.91161, z: 0.91161}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -41410,9 +41424,9 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -1.98, y: 0}
-  m_SizeDelta: {x: 84.7, y: 50}
-  m_Pivot: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -1.9800099, y: 22.795023}
+  m_SizeDelta: {x: 84.7, y: 40.1}
+  m_Pivot: {x: 0.5, y: 1}
 --- !u!114 &1500151781
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -41460,7 +41474,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 18.15
+  m_fontSize: 18
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -41513,6 +41527,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1500151779}
   m_CullTransparentMesh: 1
+--- !u!114 &1500151783
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1500151779}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9652aaced28394f46a11c53a18b68dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ShowPlayerSentence
 --- !u!1001 &1502288913
 PrefabInstance:
   m_ObjectHideFlags: 0

@@ -4,9 +4,10 @@ using UnityEngine;
 using UnityEngine.UI;
 public class DenialGame : MonoBehaviour
 {
+    public const string SaveSentenceKey = "PlayerSentence";
+
     List<WordSlotUi> wordSlots = new List<WordSlotUi>();
     public Button nextButton;
-    public string SaveSentenceKey = "";
     public bool PrefixWithPlayerName = true;
 
     DenialGameHandler denialGameHandler;
