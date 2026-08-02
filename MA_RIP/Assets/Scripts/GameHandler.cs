@@ -1,11 +1,15 @@
 using System.Collections.Generic;
+using System.Linq;
 using PixelCrushers.DialogueSystem;
 using UnityEngine;
 using UnityEngine.Events;
 
 public class GameHandler : MonoBehaviour
 {
+    public const string GameStateKey = "GameState";
+
     public UnityEvent OnGameCanComplete = new();
+    public UnityEvent OnGameUpdated = new();
 
     FlowerHandler flowerHandler;
     ColorHandler colorHandler;
@@ -15,9 +19,18 @@ public class GameHandler : MonoBehaviour
     Selector playerSelector;
     ProximitySelector proximitySelector;
 
-    Dictionary<ColorHandler.ColorType, bool> colorTypeCompleted = new();
+    ColorHandler.ColorType currentGriefType;
+
+
+
+    public Dictionary<ColorHandler.ColorType, bool> colorTypeCompleted { get; private set; } = new();
 
     public bool CanComplete { get; private set; } = false;
+
+    public string GetGameStateKeyForGriefType(ColorHandler.ColorType griefType)
+    {
+        return $"{GameStateKey}_{griefType}";
+    }
 
 
     void Start()
@@ -41,8 +54,79 @@ public class GameHandler : MonoBehaviour
         colorTypeCompleted[ColorHandler.ColorType.Bargaining] = false;
         colorTypeCompleted[ColorHandler.ColorType.Depression] = false;
         colorTypeCompleted[ColorHandler.ColorType.Acceptance] = false;
+
+        LoadGameState();
+
+        OnGameUpdated?.Invoke();
     }
 
+    private void LoadGameState()
+    {
+        foreach (var colorType in colorTypeCompleted.Keys.ToList())
+        {
+            string key = GetGameStateKeyForGriefType(colorType);
+            bool isCompleted = PlayerPrefs.GetInt(key, 0) == 1;
+            colorTypeCompleted[colorType] = isCompleted;
+        }
+    }
+
+    private void SaveGameState()
+    {
+        foreach (var kvp in colorTypeCompleted)
+        {
+            string key = GetGameStateKeyForGriefType(kvp.Key);
+            PlayerPrefs.SetInt(key, kvp.Value ? 1 : 0);
+        }
+        PlayerPrefs.Save();
+    }
+
+    public void SetFlowerMain()
+    {
+        SetLevel(currentGriefType, ColorHandler.ColorLevel.Main);
+    }
+
+    public void SetFlowerSecondary()
+    {
+        SetLevel(currentGriefType, ColorHandler.ColorLevel.Secondary);
+    }
+
+    public void SetFlowerTertiary()
+    {
+        SetLevel(currentGriefType, ColorHandler.ColorLevel.Tertiary);
+    }
+
+    public void SetGriefToDenial()
+    {
+        SetCurrentGriefType(ColorHandler.ColorType.Denial);
+    }
+
+    public void SetGriefToAnger()
+    {
+        SetCurrentGriefType(ColorHandler.ColorType.Anger);
+    }
+
+    public void SetGriefToBargaining()
+    {
+        SetCurrentGriefType(ColorHandler.ColorType.Bargaining);
+    }
+
+    public void SetGriefToDepression()
+    {
+        SetCurrentGriefType(ColorHandler.ColorType.Depression);
+    }
+
+    public void SetGriefToAcceptance()
+    {
+        SetCurrentGriefType(ColorHandler.ColorType.Acceptance);
+    }
+
+
+
+    public void SetCurrentGriefType(ColorHandler.ColorType griefType)
+    {
+        // This method can be used to set the current grief type if needed
+        currentGriefType = griefType;
+    }
 
     public void SetDenialLevelMain()
     {
@@ -163,6 +247,8 @@ public class GameHandler : MonoBehaviour
         colorTypeCompleted[colorType] = true;
 
         CheckGameCompletion();
+        SaveGameState();
+        OnGameUpdated?.Invoke();
     }
 
     private void CheckGameCompletion()

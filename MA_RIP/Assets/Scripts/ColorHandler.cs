@@ -1,9 +1,12 @@
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class ColorHandler : MonoBehaviour
 {
+    public UnityEvent OnColorChangedEvent = new();
+
     public enum ColorType
     {
         Acceptance,
@@ -70,7 +73,10 @@ public class ColorHandler : MonoBehaviour
 
         LoadPlayerPrefs();
         UpdateColorableSprites();
+
+        OnColorChangedEvent?.Invoke();
     }
+
 
     private void LoadPlayerPrefs()
     {
@@ -80,6 +86,24 @@ public class ColorHandler : MonoBehaviour
             ColorLevel level = (ColorLevel)levelValue;
             colorLevels[colorType] = level;
         }
+    }
+
+    public ColorLevel GetLevel(ColorType colorType)
+    {
+        if (colorLevels.ContainsKey(colorType))
+        {
+            return colorLevels[colorType];
+        }
+        return ColorLevel.None;
+    }
+
+    public int GetLevelValue(ColorType colorType)
+    {
+        if (colorLevels.ContainsKey(colorType))
+        {
+            return (int)colorLevels[colorType];
+        }
+        return 0;
     }
 
     public void AddLevelAcceptance()
@@ -113,6 +137,8 @@ public class ColorHandler : MonoBehaviour
         PlayerPrefs.SetInt(colorType.ToString(), (int)level);
         PlayerPrefs.Save();
         UpdateColorableSprites();
+
+        OnColorChangedEvent?.Invoke();
     }
 
     public void AddLevel(ColorType colorType)
@@ -127,6 +153,8 @@ public class ColorHandler : MonoBehaviour
         }
 
         UpdateColorableSprites();
+
+        OnColorChangedEvent?.Invoke();
     }
 
     public void UpdateColorableSprites()

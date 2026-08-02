@@ -16,7 +16,7 @@ public class MusicBoxManager : MonoBehaviour
     [SerializeField] private AudioSource source2;  // zweite AudioSource (neu anlegen)
 
 
-    [Header("Clips für Zufallsauswahl")]
+    [Header("Clips fï¿½r Zufallsauswahl")]
     public List<AudioClip> randomClips = new List<AudioClip>();
 
     [Header("Settings")]
@@ -39,11 +39,9 @@ public class MusicBoxManager : MonoBehaviour
 
         currentSource = source1;
         nextSource = source2;
-
-        DontDestroyOnLoad(gameObject); // optional: Musik über Szenen behalten
     }
 
-    // Öffentliche Methoden für deine Dialog-Nodes
+    // ï¿½ffentliche Methoden fï¿½r deine Dialog-Nodes
     public void PlayMelancholic()
     {
         PlayMusic(melancholic);
@@ -78,7 +76,7 @@ public class MusicBoxManager : MonoBehaviour
     {
         if (randomClips == null || randomClips.Count == 0)
         {
-            Debug.LogWarning("MusicManager: randomClips ist leer – kein Zufallsclip verfügbar.");
+            Debug.LogWarning("MusicManager: randomClips ist leer ï¿½ kein Zufallsclip verfï¿½gbar.");
             return;
         }
 
@@ -96,7 +94,7 @@ public class MusicBoxManager : MonoBehaviour
 
         AudioClip currentClip = currentSource.clip;
 
-        // ziehe zufällig, bis ein anderer Clip gefunden ist (max. ein paar Versuche)
+        // ziehe zufï¿½llig, bis ein anderer Clip gefunden ist (max. ein paar Versuche)
         for (int i = 0; i < 10; i++)
         {
             int index = Random.Range(0, randomClips.Count);
@@ -121,7 +119,7 @@ public class MusicBoxManager : MonoBehaviour
             return;
         }
 
-        // Wenn dieser Clip bereits läuft, nichts tun
+        // Wenn dieser Clip bereits lï¿½uft, nichts tun
         if (currentSource.clip == clip && currentSource.isPlaying)
             return;
 

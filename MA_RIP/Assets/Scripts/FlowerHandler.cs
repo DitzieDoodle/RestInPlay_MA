@@ -50,18 +50,15 @@ public class FlowerHandler : MonoBehaviour
     public void RemoveOneFlower()
     {
         RemoveFlowers(1);
-        Debug.Log("Removed one flower. Current count: " + FlowerCount);
     }
 
     public void RemoveTwoFlowers()
     {
         RemoveFlowers(2);
-        Debug.Log("Removed two flower. Current count: " + FlowerCount);
     }
 
     public void RemoveThreeFlowers()
     {
         RemoveFlowers(3);
-        Debug.Log("Removed three flower. Current count: " + FlowerCount);
     }
 }

@@ -12,7 +12,6 @@ GameObject:
   - component: {fileID: 6437965065480223038}
   - component: {fileID: 7594755399263291428}
   - component: {fileID: 1849264034908681877}
-  - component: {fileID: 4249779673666616681}
   - component: {fileID: 267108578515741160}
   m_Layer: 0
   m_Name: GameManager
@@ -65,6 +64,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 899d5a5b328de5f42a5007149a3382fb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ColorHandler
+  OnColorChangedEvent:
+    m_PersistentCalls:
+      m_Calls: []
   colorMap:
   - colorType: 2
     colorSlot: 1
@@ -108,22 +110,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bd37d2b1bdac3e1478456af99f5d3089, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
---- !u!114 &4249779673666616681
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 288015481619956289}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 852d0d82f13c81340963e514a0a20122, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::CharacterLoader
-  eyeSkeleton: {fileID: 0}
-  mouthSkeleton: {fileID: 0}
-  bodySkeleton: {fileID: 0}
-  defaultColor: {r: 1, g: 1, b: 1, a: 1}
+  OnGameCanComplete:
+    m_PersistentCalls:
+      m_Calls: []
+  OnGameUpdated:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!114 &267108578515741160
 MonoBehaviour:
   m_ObjectHideFlags: 0
