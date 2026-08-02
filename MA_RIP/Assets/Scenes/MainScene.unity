@@ -6477,7 +6477,7 @@ Camera:
     height: 1
   near clip plane: 0.1
   far clip plane: 5000
-  field of view: 89.1
+  field of view: 100
   orthographic: 0
   orthographic size: 10
   m_Depth: -1
@@ -6503,8 +6503,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 330585543}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.39231566, y: 0, z: 0, w: 0.9198307}
-  m_LocalPosition: {x: 14.22, y: 1.3, z: -9.5199995}
+  m_LocalRotation: {x: 0.27915868, y: 0, z: 0, w: 0.960245}
+  m_LocalPosition: {x: 14.32, y: 4.5606074, z: -14.510704}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -12002,7 +12002,7 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 8321177682936025519, guid: c32e80aaea32a33468d3c626d8bbb0a3, type: 3}
   m_PrefabInstance: {fileID: 5050516747599167573}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &538083570
+--- !u!114 &538083577
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -12011,74 +12011,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 538083566}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 00b2d199b96b516448144ab30fb26aed, type: 3}
+  m_Script: {fileID: 11500000, guid: 44d70cc20219cd84593f67d248eafe36, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Unity.Cinemachine::Unity.Cinemachine.CinemachineImpulseListener
-  ApplyAfter: 2
-  ChannelMask: 1
-  Gain: 1
-  Use2DDistance: 0
-  UseCameraSpace: 1
-  SignalCombinationMode: 0
-  ReactionSettings:
-    m_SecondaryNoise: {fileID: 0}
-    AmplitudeGain: 1
-    FrequencyGain: 1
-    Duration: 1
-    m_NoiseOffsets: {x: -165.13907, y: 28.541473, z: -699.33276}
---- !u!114 &538083571
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 538083566}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 180ecf9b41d478f468eb3e9083753217, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Unity.Cinemachine::Unity.Cinemachine.CinemachineImpulseSource
-  ImpulseDefinition:
-    ImpulseChannel: 1
-    ImpulseShape: 2
-    CustomImpulseShape:
-      serializedVersion: 2
-      m_Curve: []
-      m_PreInfinity: 2
-      m_PostInfinity: 2
-      m_RotationOrder: 4
-    ImpulseDuration: 0.2
-    ImpulseType: 0
-    DissipationRate: 0.25
-    RawSignal: {fileID: 0}
-    AmplitudeGain: 1
-    FrequencyGain: 1
-    RepeatMode: 0
-    Randomize: 1
-    TimeEnvelope:
-      AttackShape:
-        serializedVersion: 2
-        m_Curve: []
-        m_PreInfinity: 2
-        m_PostInfinity: 2
-        m_RotationOrder: 4
-      DecayShape:
-        serializedVersion: 2
-        m_Curve: []
-        m_PreInfinity: 2
-        m_PostInfinity: 2
-        m_RotationOrder: 4
-      AttackTime: 0
-      SustainTime: 0.2
-      DecayTime: 0.7
-      ScaleWithImpact: 1
-      HoldForever: 0
-    ImpactRadius: 100
-    DirectionMode: 0
-    DissipationMode: 2
-    DissipationDistance: 100
-    PropagationSpeed: 343
-  DefaultVelocity: {x: 0, y: -1, z: 0}
+  m_EditorClassIdentifier: Unity.Cinemachine::Unity.Cinemachine.CinemachineCameraOffset
+  Offset: {x: 0, y: 0, z: 0}
+  ApplyAfter: 1
+  PreserveComposition: 0
 --- !u!1001 &538756469
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -65319,6 +65257,18 @@ PrefabInstance:
       propertyPath: m_SortingOrder
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 7382664499752525270, guid: c32e80aaea32a33468d3c626d8bbb0a3, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.18999958
+      objectReference: {fileID: 0}
+    - target: {fileID: 7382664499752525270, guid: c32e80aaea32a33468d3c626d8bbb0a3, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1.88
+      objectReference: {fileID: 0}
+    - target: {fileID: 7382664499752525270, guid: c32e80aaea32a33468d3c626d8bbb0a3, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -1.6700001
+      objectReference: {fileID: 0}
     - target: {fileID: 7695309144799343768, guid: c32e80aaea32a33468d3c626d8bbb0a3, type: 3}
       propertyPath: m_Mesh
       value: 
@@ -65333,10 +65283,7 @@ PrefabInstance:
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 8321177682936025519, guid: c32e80aaea32a33468d3c626d8bbb0a3, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 538083571}
-    - targetCorrespondingSourceObject: {fileID: 8321177682936025519, guid: c32e80aaea32a33468d3c626d8bbb0a3, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 538083570}
+      addedObject: {fileID: 538083577}
   m_SourcePrefab: {fileID: 100100000, guid: c32e80aaea32a33468d3c626d8bbb0a3, type: 3}
 --- !u!65 &5154636767505582064
 BoxCollider:

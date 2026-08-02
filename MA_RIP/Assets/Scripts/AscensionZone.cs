@@ -82,6 +82,13 @@ public class AscensionZone : MonoBehaviour
 
     private void Awake()
     {
+        Initialize();
+
+        gameHandler = FindAnyObjectByType<GameHandler>();
+    }
+
+    void Initialize()
+    {
         zoneCollider = GetComponent<BoxCollider>();
         zoneCollider.isTrigger = true;
 
@@ -114,8 +121,6 @@ public class AscensionZone : MonoBehaviour
             ambientAudioSource.loop = true;
             ambientAudioSource.volume = 0f;
         }
-
-        gameHandler = FindAnyObjectByType<GameHandler>();
     }
 
     void Start()
@@ -142,6 +147,7 @@ public class AscensionZone : MonoBehaviour
         {
             child.gameObject.SetActive(true);
         }
+        Initialize();
         isEnabled = true;
     }
 
