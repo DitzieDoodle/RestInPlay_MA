@@ -847,7 +847,7 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 164
+        x: 165.06384
         y: 721
         width: 160
         height: 30
@@ -934,7 +934,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
-        value: SendMessage(EndTalkingSquash,,AcceptingNPC);SetActive(NPC_vcam,false);
+        value: SendMessage(EndTalkingSquash,,AcceptingNPC);SetActive(NPC_vcam,false);SetActive(HowToPlay,true)
         type: 0
         typeString: 
       conversationID: 25
@@ -1013,7 +1013,7 @@ MonoBehaviour:
         height: 30
     entryGroups: []
     canvasScrollPosition: {x: 0, y: 0}
-    canvasZoom: 0.85000014
+    canvasZoom: 0.94000006
   - id: 26
     fields:
     - title: Title
@@ -1418,7 +1418,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
-        value: SetActive(vasecam,true);
+        value: SetActive(vasecam,true);SetActive(HowToPlay,false)
         type: 0
         typeString: 
       - title: Response Menu Sequence
@@ -1512,7 +1512,7 @@ MonoBehaviour:
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 0, y: 586.4644}
+    canvasScrollPosition: {x: 0, y: 0}
     canvasZoom: 0.97
   - id: 34
     fields:
@@ -2602,7 +2602,7 @@ MonoBehaviour:
       canvasRect:
         serializedVersion: 2
         x: 375.587
-        y: 166.36566
+        y: 167.23523
         width: 160
         height: 30
     - id: 2
@@ -2974,7 +2974,7 @@ MonoBehaviour:
 
           SendMessage(PlayRandomSound,,AngryVisitor)
 
-          SendMessage(TriggerCameraShake,,AngryVisitor);'
+          SendMessage(TriggerCameraShake,,AngryVisitor);SetActive(HowToPlay,true)'
         type: 0
         typeString: 
       conversationID: 7
@@ -3165,7 +3165,7 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 387.47226
+        x: 388.34183
         y: 1218.9427
         width: 160
         height: 30
@@ -3379,13 +3379,13 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 554.1805
+        x: 555.05005
         y: 71.61319
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 222.68376, y: 1078.0487}
-    canvasZoom: 1.1799998
+    canvasScrollPosition: {x: 47.82614, y: 936.5221}
+    canvasZoom: 1.1499999
   - id: 32
     fields:
     - title: Title
@@ -3925,7 +3925,7 @@ MonoBehaviour:
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 0, y: 282}
+    canvasScrollPosition: {x: 0, y: 44}
     canvasZoom: 1
   - id: 42
     fields:
@@ -4014,7 +4014,7 @@ MonoBehaviour:
       - originConversationID: 42
         originDialogueID: 0
         destinationConversationID: 42
-        destinationDialogueID: 1
+        destinationDialogueID: 10
         isConnector: 0
         priority: 2
       conditionsString: 
@@ -4079,8 +4079,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 169.03093
-        y: 132
+        x: 316.03094
+        y: 149
         width: 160
         height: 30
     - id: 3
@@ -4244,7 +4244,7 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 196.9279
+        x: 197.9279
         y: 568.0515
         width: 160
         height: 30
@@ -4413,8 +4413,63 @@ MonoBehaviour:
         y: 747.0515
         width: 160
         height: 30
+    - id: 10
+      fields:
+      - title: Title
+        value: 
+        type: 0
+        typeString: 
+      - title: Description
+        value: 
+        type: 0
+        typeString: 
+      - title: Actor
+        value: 6
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Conversant
+        value: 4
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Menu Text
+        value: 
+        type: 0
+        typeString: 
+      - title: Dialogue Text
+        value: 
+        type: 0
+        typeString: 
+      - title: Sequence
+        value: SetActive(HowToPlay,false)
+        type: 0
+        typeString: 
+      conversationID: 42
+      isRoot: 0
+      isGroup: 0
+      nodeColor: 
+      delaySimStatus: 0
+      falseConditionAction: Block
+      conditionPriority: 2
+      outgoingLinks:
+      - originConversationID: 42
+        originDialogueID: 10
+        destinationConversationID: 42
+        destinationDialogueID: 1
+        isConnector: 0
+        priority: 2
+      conditionsString: 
+      userScript: 
+      onExecute:
+        m_PersistentCalls:
+          m_Calls: []
+      canvasRect:
+        serializedVersion: 2
+        x: 424.12372
+        y: 71.09278
+        width: 160
+        height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 0, y: 87.05151}
+    canvasScrollPosition: {x: 0, y: 0}
     canvasZoom: 1
   - id: 37
     fields:
@@ -4765,7 +4820,7 @@ MonoBehaviour:
 
           SetActive(CanvasCam, false);
 
-          SendMessage(TriggerCameraShake,,AngryVisitor);SendMessage(PlayRandomSound,,AngryVisitor)'
+          SendMessage(TriggerCameraShake,,AngryVisitor);SendMessage(PlayRandomSound,,AngryVisitor);SetActive(HowToPlay,true)'
         type: 0
         typeString: 
       - title: Response Menu Sequence
@@ -12549,7 +12604,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
-        value: SendMessage(StartMinigame,,DepressionGameManager);SetActive(NPC_vcam,false);SetActive(Sobbing,true)
+        value: SendMessage(StartMinigame,,DepressionGameManager);SetActive(NPC_vcam,false);SetActive(Sobbing,true);SetActive(HowToPlay,true)
         type: 0
         typeString: 
       - title: Response Menu Sequence
@@ -13806,7 +13861,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
-        value: 
+        value: SetActive(HowToPlay,false)
         type: 0
         typeString: 
       conversationID: 40
@@ -14056,7 +14111,7 @@ MonoBehaviour:
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 41.339592, y: 299.67932}
+    canvasScrollPosition: {x: 0, y: 0}
     canvasZoom: 1.06
   - id: 24
     fields:
@@ -19273,7 +19328,7 @@ MonoBehaviour:
 
           SendMessage(TriggerCameraShake,,AngryVisitor);
 
-          SendMessage(PlayRandomSound,,AngryVisitor)'
+          SendMessage(PlayRandomSound,,AngryVisitor);SetActive(HowToPlay,true)'
         type: 0
         typeString: 
       conversationID: 35
@@ -19296,7 +19351,7 @@ MonoBehaviour:
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 18.841492, y: 329.8969}
+    canvasScrollPosition: {x: 16.779633, y: 0}
     canvasZoom: 0.97
   - id: 3
     fields:
