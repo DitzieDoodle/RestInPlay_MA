@@ -56,6 +56,7 @@ public class GameHandler : MonoBehaviour
         colorTypeCompleted[ColorHandler.ColorType.Acceptance] = false;
 
         LoadGameState();
+        CheckGameCompletion();
 
         OnGameUpdated?.Invoke();
     }
@@ -67,6 +68,8 @@ public class GameHandler : MonoBehaviour
             string key = GetGameStateKeyForGriefType(colorType);
             bool isCompleted = PlayerPrefs.GetInt(key, 0) == 1;
             colorTypeCompleted[colorType] = isCompleted;
+
+            Debug.Log($"Loaded game state for {colorType}: {(isCompleted ? "Completed" : "Not Completed")}");
         }
     }
 
