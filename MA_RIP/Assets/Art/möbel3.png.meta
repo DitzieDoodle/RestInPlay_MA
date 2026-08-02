@@ -1350,6 +1350,50 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
+    - serializedVersion: 2
+      name: "m\xF6bel3_57"
+      rect:
+        serializedVersion: 2
+        x: 1820
+        y: 534
+        width: 66
+        height: 164
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dbcf350466db2c044b54391fdf218463
+      internalID: -473391642
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "m\xF6bel3_58"
+      rect:
+        serializedVersion: 2
+        x: 1771
+        y: 543
+        width: 49
+        height: 79
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3c8db41bf3ae4a642ad61e781e0a47ad
+      internalID: -1122801677
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     customData: 
     physicsShape: []
@@ -1419,6 +1463,8 @@ TextureImporter:
       "m\xF6bel3_54": 1526633331
       "m\xF6bel3_55": 476436307
       "m\xF6bel3_56": -905799157
+      "m\xF6bel3_57": -473391642
+      "m\xF6bel3_58": -1122801677
       "m\xF6bel3_6": 20560355
       "m\xF6bel3_7": -1807107235
       "m\xF6bel3_8": -1480739632
