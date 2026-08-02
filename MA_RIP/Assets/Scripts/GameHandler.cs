@@ -80,6 +80,11 @@ public class GameHandler : MonoBehaviour
         PlayerPrefs.Save();
     }
 
+    public void SetFlowerNone()
+    {
+        SetLevel(currentGriefType, ColorHandler.ColorLevel.None);
+    }
+
     public void SetFlowerMain()
     {
         SetLevel(currentGriefType, ColorHandler.ColorLevel.Main);
