@@ -33,6 +33,7 @@ public class WordUi : MonoBehaviour, IPointerDownHandler, IPointerUpHandler, IDr
     RectTransform parentSlotRectTransform;
     Canvas canvas;
     CanvasGroup canvasGroup;
+    IdleFloatAnimation idleAnimation;
     bool isDragging;
     bool isHovering;
     bool isSnappedToParentSlot;
@@ -43,6 +44,7 @@ public class WordUi : MonoBehaviour, IPointerDownHandler, IPointerUpHandler, IDr
         canvas = GetComponentInParent<Canvas>();
         canvasGroup = GetComponent<CanvasGroup>();
         wordText = GetComponentInChildren<TMP_Text>();
+        idleAnimation = GetComponent<IdleFloatAnimation>();
 
         if (targetImage == null)
         {
@@ -61,6 +63,12 @@ public class WordUi : MonoBehaviour, IPointerDownHandler, IPointerUpHandler, IDr
         if (!isMoveable) return;
         if (eventData.button != PointerEventData.InputButton.Left) return;
 
+        // WICHTIG: Animation zuerst stoppen, bevor irgendwas anderes passiert
+        if (idleAnimation != null)
+        {
+            idleAnimation.StopAnimation(false); // false = NICHT auf Startposition zurücksetzen
+        }
+
         isDragging = true;
         isSnappedToParentSlot = false;
         UpdateVisualState();
@@ -77,6 +85,10 @@ public class WordUi : MonoBehaviour, IPointerDownHandler, IPointerUpHandler, IDr
         if (isSnappedToParentSlot && parentSlot != null)
         {
             parentSlot.OnWordSelected(this);
+        }
+        else if (idleAnimation != null)
+        {
+            idleAnimation.StartAnimation();
         }
     }
 
@@ -121,7 +133,6 @@ public class WordUi : MonoBehaviour, IPointerDownHandler, IPointerUpHandler, IDr
         parentSlotRectTransform = slot != null ? slot.GetComponent<RectTransform>() : null;
     }
 
-    // Ruf diese Methode von WordSlotUi auf, wenn das Wort richtig ist
     public void PlayCorrectFeedback()
     {
         if (audioSource != null && correctSfx != null)
@@ -130,7 +141,6 @@ public class WordUi : MonoBehaviour, IPointerDownHandler, IPointerUpHandler, IDr
         }
     }
 
-    // Ruf diese Methode von WordSlotUi auf, wenn das Wort falsch ist
     public void PlayWrongFeedback()
     {
         if (audioSource != null && wrongSfx != null)

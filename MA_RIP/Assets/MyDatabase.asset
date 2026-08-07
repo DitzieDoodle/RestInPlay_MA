@@ -11151,7 +11151,7 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 167
+        x: 168.42859
         y: 880
         width: 160
         height: 30
@@ -11261,7 +11261,7 @@ MonoBehaviour:
         height: 30
     entryGroups: []
     canvasScrollPosition: {x: 0, y: 0}
-    canvasZoom: 0.97
+    canvasZoom: 0.7000003
   - id: 33
     fields:
     - title: Title
