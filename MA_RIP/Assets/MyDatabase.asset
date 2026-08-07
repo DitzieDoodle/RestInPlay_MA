@@ -24002,7 +24002,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
-        value: SetActive(NPC_vcamB,true);SetActive(NPC_vcamA,false);SetActive(MouthA,false);SetActive(MouthB,true)
+        value: SetActive(NPC_vcamB,true);SetActive(NPC_vcamA,false);SetActive(MouthDouA,false);SetActive(MouthB,true);SendMessage(StopTalkingSquash,,VisitorC)
         type: 0
         typeString: 
       conversationID: 49
@@ -24026,8 +24026,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 377.12344
-        y: 277.56717
+        x: 379.39615
+        y: 279.83987
         width: 160
         height: 30
     - id: 6
@@ -24113,7 +24113,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
-        value: SetActive(NPC_vcamB,false);SetActive(NPC_vcamA,true);SetActive(MouthA,true);SetActive(MouthB,false);SetActive(Mouth,true)
+        value: SetActive(NPC_vcamB,false);SetActive(NPC_vcamA,true);SetActive(MouthA,true);SetActive(MouthB,false);SetActive(MouthDouA,true);SendMessage(StartTalkingSquash,,VisitorC)
         type: 0
         typeString: 
       conversationID: 49
@@ -26222,7 +26222,7 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 354.12344
+        x: 356.12344
         y: 285.56717
         width: 160
         height: 30
