@@ -788,7 +788,7 @@ GameObject:
   - component: {fileID: 83535661}
   - component: {fileID: 83535660}
   m_Layer: 5
-  m_Name: Slot2  -important to me
+  m_Name: Slot2  -a memory
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1169,6 +1169,7 @@ GameObject:
   m_Component:
   - component: {fileID: 100301329}
   - component: {fileID: 100301328}
+  - component: {fileID: 100301330}
   m_Layer: 0
   m_Name: Game Won Trigger
   m_TagString: Untagged
@@ -1227,7 +1228,7 @@ MonoBehaviour:
   allowBarksDuringConversations: 0
   skipBarkIfNoValidEntries: 0
   cacheBarkLines: 0
-  conversation: Flower Test
+  conversation: Denial Won
   conversationConversant: {fileID: 0}
   conversationActor: {fileID: 0}
   startConversationEntryID: -1
@@ -1245,7 +1246,52 @@ MonoBehaviour:
   monitorConversationDistanceFrequency: 1
   showCursorDuringConversation: 0
   pauseGameDuringConversation: 0
-  setActiveActions: []
+  setActiveActions:
+  - condition:
+      luaConditions: []
+      questConditions: []
+      acceptedTags: []
+      acceptedGameObjects: []
+      luaWizardIndex: 0
+      lastEvaluationValue: 0
+    target: {fileID: 1431105112}
+    state: 1
+  - condition:
+      luaConditions: []
+      questConditions: []
+      acceptedTags: []
+      acceptedGameObjects: []
+      luaWizardIndex: 0
+      lastEvaluationValue: 0
+    target: {fileID: 1789995023}
+    state: 1
+  - condition:
+      luaConditions: []
+      questConditions: []
+      acceptedTags: []
+      acceptedGameObjects: []
+      luaWizardIndex: 0
+      lastEvaluationValue: 0
+    target: {fileID: 1255004793444660543}
+    state: 1
+  - condition:
+      luaConditions: []
+      questConditions: []
+      acceptedTags: []
+      acceptedGameObjects: []
+      luaWizardIndex: 0
+      lastEvaluationValue: 0
+    target: {fileID: 0}
+    state: 0
+  - condition:
+      luaConditions: []
+      questConditions: []
+      acceptedTags: []
+      acceptedGameObjects: []
+      luaWizardIndex: 0
+      lastEvaluationValue: 0
+    target: {fileID: 0}
+    state: 0
   setEnabledActions: []
   setAnimatorStateActions: []
   onExecute:
@@ -1270,6 +1316,111 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &100301330
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 100301327}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c593457cd8105e148906690e1707c592, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp-firstpass::PixelCrushers.DialogueSystem.Wrappers.DialogueSystemTrigger
+  trigger: 2
+  condition:
+    luaConditions: []
+    questConditions: []
+    acceptedTags: []
+    acceptedGameObjects: []
+    luaWizardIndex: -1
+    lastEvaluationValue: 0
+  setQuestState: 1
+  questName: 
+  questState: 0
+  setQuestEntryState: 0
+  questEntryNumber: 1
+  questEntryState: 0
+  setAnotherQuestEntryState: 0
+  anotherQuestEntryNumber: 1
+  anotherQuestEntryState: 0
+  luaCode: 
+  sequence: 
+  sequenceSpeaker: {fileID: 0}
+  sequenceListener: {fileID: 0}
+  waitOneFrameOnStartOrEnable: 1
+  alertMessage: 
+  textTable: {fileID: 0}
+  alertDuration: 0
+  sendMessages: []
+  barkSource: 0
+  barkConversation: 
+  barkEntryID: -1
+  barkEntryTitle: 
+  barkText: 
+  barkTextSequence: 
+  barker: {fileID: 0}
+  barkTarget: {fileID: 0}
+  barkOrder: 0
+  allowBarksDuringConversations: 0
+  skipBarkIfNoValidEntries: 0
+  cacheBarkLines: 0
+  conversation: 
+  conversationConversant: {fileID: 0}
+  conversationActor: {fileID: 0}
+  startConversationEntryID: -1
+  startConversationEntryTitle: 
+  overrideDialogueUI: {fileID: 0}
+  exclusive: 0
+  replace: 0
+  queue: 0
+  skipIfNoValidEntries: 0
+  preventRestartOnSameFrameEnded: 0
+  stopConversationOnTriggerExit: 0
+  marginToAllowTriggerExit: 0.2
+  stopConversationIfTooFar: 0
+  maxConversationDistance: 5
+  monitorConversationDistanceFrequency: 1
+  showCursorDuringConversation: 0
+  pauseGameDuringConversation: 0
+  setActiveActions:
+  - condition:
+      luaConditions: []
+      questConditions: []
+      acceptedTags: []
+      acceptedGameObjects: []
+      luaWizardIndex: 0
+      lastEvaluationValue: 0
+    target: {fileID: 1431105112}
+    state: 1
+  - condition:
+      luaConditions: []
+      questConditions: []
+      acceptedTags: []
+      acceptedGameObjects: []
+      luaWizardIndex: 0
+      lastEvaluationValue: 0
+    target: {fileID: 1789995023}
+    state: 1
+  - condition:
+      luaConditions: []
+      questConditions: []
+      acceptedTags: []
+      acceptedGameObjects: []
+      luaWizardIndex: 0
+      lastEvaluationValue: 0
+    target: {fileID: 0}
+    state: 1
+  setEnabledActions: []
+  setAnimatorStateActions: []
+  onExecute:
+    m_PersistentCalls:
+      m_Calls: []
+  useConversationTitlePicker: 1
+  useBarkTitlePicker: 1
+  useQuestNamePicker: 1
+  selectedDatabase: {fileID: 11400000, guid: 1ddf13999859a9148bb1d7f47f69438b, type: 2}
 --- !u!1 &114658456
 GameObject:
   m_ObjectHideFlags: 0
@@ -2771,7 +2922,6 @@ GameObject:
   - component: {fileID: 278154918}
   - component: {fileID: 278154917}
   - component: {fileID: 278154916}
-  - component: {fileID: 278154915}
   - component: {fileID: 278154914}
   m_Layer: 5
   m_Name: Player Name
@@ -2813,28 +2963,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: '::'
   textComponent: {fileID: 0}
---- !u!114 &278154915
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 278154912}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e3355d4396f531344a1f781b4bad4536, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: '::'
-  snapDistance: 60
-  isMoveable: 1
-  IsRightWord: 0
-  audioSource: {fileID: 0}
-  correctSfx: {fileID: 0}
-  wrongSfx: {fileID: 0}
-  targetImage: {fileID: 0}
-  normalColor: {r: 1, g: 1, b: 1, a: 1}
-  hoverColor: {r: 1, g: 1, b: 1, a: 1}
-  dragColor: {r: 1, g: 1, b: 1, a: 1}
 --- !u!225 &278154916
 CanvasGroup:
   m_ObjectHideFlags: 0
@@ -2940,7 +3068,7 @@ MonoBehaviour:
       m_Calls: []
   wordUis:
   - {fileID: 232877655}
-  - {fileID: 0}
+  - {fileID: 64498450}
 --- !u!114 &280785353
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3229,7 +3357,7 @@ Transform:
   m_GameObject: {fileID: 330585543}
   serializedVersion: 2
   m_LocalRotation: {x: 0.27915868, y: 0, z: 0, w: 0.960245}
-  m_LocalPosition: {x: 7.03, y: 1.88, z: -6.85}
+  m_LocalPosition: {x: 7.2000003, y: 1.88, z: 0.9499999}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -4554,6 +4682,8 @@ MonoBehaviour:
   wordUis:
   - {fileID: 1755449731}
   - {fileID: 1182729449}
+  - {fileID: 83535660}
+  - {fileID: 797278693}
 --- !u!114 &492313780
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4626,7 +4756,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1780540072472984242, guid: f7accc274a2da5c4abb43e1346c97a23, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -1.339
+      value: -3.228
       objectReference: {fileID: 0}
     - target: {fileID: 1780540072472984242, guid: f7accc274a2da5c4abb43e1346c97a23, type: 3}
       propertyPath: m_LocalRotation.w
@@ -4701,7 +4831,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1780540072472984242, guid: f7accc274a2da5c4abb43e1346c97a23, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 2.52
+      value: 0.63100004
       objectReference: {fileID: 0}
     - target: {fileID: 1780540072472984242, guid: f7accc274a2da5c4abb43e1346c97a23, type: 3}
       propertyPath: m_LocalRotation.w
@@ -4871,7 +5001,6 @@ GameObject:
   - component: {fileID: 555602067}
   - component: {fileID: 555602066}
   - component: {fileID: 555602065}
-  - component: {fileID: 555602064}
   - component: {fileID: 555602063}
   m_Layer: 5
   m_Name: Player Name
@@ -4913,28 +5042,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: '::'
   textComponent: {fileID: 0}
---- !u!114 &555602064
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 555602061}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e3355d4396f531344a1f781b4bad4536, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: '::'
-  snapDistance: 60
-  isMoveable: 1
-  IsRightWord: 0
-  audioSource: {fileID: 0}
-  correctSfx: {fileID: 0}
-  wrongSfx: {fileID: 0}
-  targetImage: {fileID: 0}
-  normalColor: {r: 1, g: 1, b: 1, a: 1}
-  hoverColor: {r: 1, g: 1, b: 1, a: 1}
-  dragColor: {r: 1, g: 1, b: 1, a: 1}
 --- !u!225 &555602065
 CanvasGroup:
   m_ObjectHideFlags: 0
@@ -5991,7 +6098,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1780540072472984242, guid: f7accc274a2da5c4abb43e1346c97a23, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 3.98
+      value: 3.62
       objectReference: {fileID: 0}
     - target: {fileID: 1780540072472984242, guid: f7accc274a2da5c4abb43e1346c97a23, type: 3}
       propertyPath: m_LocalRotation.w
@@ -6319,7 +6426,6 @@ GameObject:
   - component: {fileID: 793847262}
   - component: {fileID: 793847261}
   - component: {fileID: 793847260}
-  - component: {fileID: 793847259}
   m_Layer: 5
   m_Name: Player Name (1)
   m_TagString: Untagged
@@ -6347,28 +6453,6 @@ RectTransform:
   m_AnchoredPosition: {x: -468.42, y: -1}
   m_SizeDelta: {x: 332.85, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &793847259
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 793847257}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e3355d4396f531344a1f781b4bad4536, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: '::'
-  snapDistance: 60
-  isMoveable: 1
-  IsRightWord: 0
-  audioSource: {fileID: 0}
-  correctSfx: {fileID: 0}
-  wrongSfx: {fileID: 0}
-  targetImage: {fileID: 0}
-  normalColor: {r: 1, g: 1, b: 1, a: 1}
-  hoverColor: {r: 1, g: 1, b: 1, a: 1}
-  dragColor: {r: 1, g: 1, b: 1, a: 1}
 --- !u!225 &793847260
 CanvasGroup:
   m_ObjectHideFlags: 0
@@ -7402,7 +7486,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1780540072472984242, guid: f7accc274a2da5c4abb43e1346c97a23, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 3.34
+      value: 1.451
       objectReference: {fileID: 0}
     - target: {fileID: 1780540072472984242, guid: f7accc274a2da5c4abb43e1346c97a23, type: 3}
       propertyPath: m_LocalRotation.w
@@ -7767,7 +7851,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: my best friend
+  m_text: here for me
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: e29aeb49b5a1f7c41b9bf9284c119256, type: 2}
   m_sharedMaterial: {fileID: 8331235707719290799, guid: e29aeb49b5a1f7c41b9bf9284c119256, type: 2}
@@ -7794,7 +7878,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 51.1
+  m_fontSize: 61.05
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -8328,7 +8412,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1780540072472984242, guid: f7accc274a2da5c4abb43e1346c97a23, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 3.459
+      value: 3.099
       objectReference: {fileID: 0}
     - target: {fileID: 1780540072472984242, guid: f7accc274a2da5c4abb43e1346c97a23, type: 3}
       propertyPath: m_LocalRotation.w
@@ -8533,7 +8617,6 @@ GameObject:
   - component: {fileID: 1057927462}
   - component: {fileID: 1057927461}
   - component: {fileID: 1057927460}
-  - component: {fileID: 1057927459}
   - component: {fileID: 1057927458}
   m_Layer: 5
   m_Name: Player Name
@@ -8575,28 +8658,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: '::'
   textComponent: {fileID: 0}
---- !u!114 &1057927459
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1057927456}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e3355d4396f531344a1f781b4bad4536, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: '::'
-  snapDistance: 60
-  isMoveable: 1
-  IsRightWord: 0
-  audioSource: {fileID: 0}
-  correctSfx: {fileID: 0}
-  wrongSfx: {fileID: 0}
-  targetImage: {fileID: 0}
-  normalColor: {r: 1, g: 1, b: 1, a: 1}
-  hoverColor: {r: 1, g: 1, b: 1, a: 1}
-  dragColor: {r: 1, g: 1, b: 1, a: 1}
 --- !u!225 &1057927460
 CanvasGroup:
   m_ObjectHideFlags: 0
@@ -8662,7 +8723,7 @@ GameObject:
   - component: {fileID: 1059057527}
   - component: {fileID: 1059057526}
   m_Layer: 5
-  m_Name: Slot2  - a good friend
+  m_Name: Slot2  -a loved memory
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -9302,7 +9363,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1780540072472984242, guid: f7accc274a2da5c4abb43e1346c97a23, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -1.221
+      value: -3.11
       objectReference: {fileID: 0}
     - target: {fileID: 1780540072472984242, guid: f7accc274a2da5c4abb43e1346c97a23, type: 3}
       propertyPath: m_LocalRotation.w
@@ -10344,7 +10405,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: important to me
+  m_text: a memory
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: e29aeb49b5a1f7c41b9bf9284c119256, type: 2}
   m_sharedMaterial: {fileID: 8331235707719290799, guid: e29aeb49b5a1f7c41b9bf9284c119256, type: 2}
@@ -10371,7 +10432,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 57.3
+  m_fontSize: 66.35
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -10434,6 +10495,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1277833472}
   - component: {fileID: 1277833473}
+  - component: {fileID: 1277833474}
   m_Layer: 0
   m_Name: DenyingWon
   m_TagString: Untagged
@@ -10506,7 +10568,7 @@ MonoBehaviour:
   allowBarksDuringConversations: 0
   skipBarkIfNoValidEntries: 0
   cacheBarkLines: 0
-  conversation: Give Flowers
+  conversation: Denial Won
   conversationConversant: {fileID: 0}
   conversationActor: {fileID: 0}
   startConversationEntryID: -1
@@ -10524,7 +10586,112 @@ MonoBehaviour:
   monitorConversationDistanceFrequency: 1
   showCursorDuringConversation: 0
   pauseGameDuringConversation: 0
-  setActiveActions: []
+  setActiveActions:
+  - condition:
+      luaConditions: []
+      questConditions: []
+      acceptedTags: []
+      acceptedGameObjects: []
+      luaWizardIndex: 0
+      lastEvaluationValue: 0
+    target: {fileID: 1431105112}
+    state: 0
+  - condition:
+      luaConditions: []
+      questConditions: []
+      acceptedTags: []
+      acceptedGameObjects: []
+      luaWizardIndex: 0
+      lastEvaluationValue: 0
+    target: {fileID: 1789995023}
+    state: 1
+  setEnabledActions: []
+  setAnimatorStateActions: []
+  onExecute:
+    m_PersistentCalls:
+      m_Calls: []
+  useConversationTitlePicker: 1
+  useBarkTitlePicker: 1
+  useQuestNamePicker: 1
+  selectedDatabase: {fileID: 11400000, guid: 1ddf13999859a9148bb1d7f47f69438b, type: 2}
+--- !u!114 &1277833474
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1277833471}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c593457cd8105e148906690e1707c592, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp-firstpass::PixelCrushers.DialogueSystem.Wrappers.DialogueSystemTrigger
+  trigger: 2
+  condition:
+    luaConditions: []
+    questConditions: []
+    acceptedTags: []
+    acceptedGameObjects: []
+    luaWizardIndex: -1
+    lastEvaluationValue: 0
+  setQuestState: 1
+  questName: 
+  questState: 0
+  setQuestEntryState: 0
+  questEntryNumber: 1
+  questEntryState: 0
+  setAnotherQuestEntryState: 0
+  anotherQuestEntryNumber: 1
+  anotherQuestEntryState: 0
+  luaCode: 
+  sequence: 
+  sequenceSpeaker: {fileID: 0}
+  sequenceListener: {fileID: 0}
+  waitOneFrameOnStartOrEnable: 1
+  alertMessage: 
+  textTable: {fileID: 0}
+  alertDuration: 0
+  sendMessages: []
+  barkSource: 0
+  barkConversation: 
+  barkEntryID: -1
+  barkEntryTitle: 
+  barkText: 
+  barkTextSequence: 
+  barker: {fileID: 0}
+  barkTarget: {fileID: 0}
+  barkOrder: 0
+  allowBarksDuringConversations: 0
+  skipBarkIfNoValidEntries: 0
+  cacheBarkLines: 0
+  conversation: 
+  conversationConversant: {fileID: 0}
+  conversationActor: {fileID: 0}
+  startConversationEntryID: -1
+  startConversationEntryTitle: 
+  overrideDialogueUI: {fileID: 0}
+  exclusive: 0
+  replace: 0
+  queue: 0
+  skipIfNoValidEntries: 0
+  preventRestartOnSameFrameEnded: 0
+  stopConversationOnTriggerExit: 0
+  marginToAllowTriggerExit: 0.2
+  stopConversationIfTooFar: 0
+  maxConversationDistance: 5
+  monitorConversationDistanceFrequency: 1
+  showCursorDuringConversation: 0
+  pauseGameDuringConversation: 0
+  setActiveActions:
+  - condition:
+      luaConditions: []
+      questConditions: []
+      acceptedTags: []
+      acceptedGameObjects: []
+      luaWizardIndex: 0
+      lastEvaluationValue: 0
+    target: {fileID: 1431105112}
+    state: 1
   setEnabledActions: []
   setAnimatorStateActions: []
   onExecute:
@@ -12250,6 +12417,11 @@ MonoBehaviour:
     FrequencyGain: 1
     Duration: 1
     m_NoiseOffsets: {x: 0, y: 0, z: 0}
+--- !u!4 &1431105112 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 1347223340842357369, guid: 4bde9a95557703f43836befc3c3e8d70, type: 3}
+  m_PrefabInstance: {fileID: 1255004793444660542}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1439138476
 GameObject:
   m_ObjectHideFlags: 0
@@ -13542,7 +13714,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6225424318108941505, guid: d4558f6b821a58b4f9c28634c54a64df, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -1.732
+      value: -3.6209998
       objectReference: {fileID: 0}
     - target: {fileID: 6225424318108941505, guid: d4558f6b821a58b4f9c28634c54a64df, type: 3}
       propertyPath: m_LocalRotation.w
@@ -15115,6 +15287,8 @@ MonoBehaviour:
   wordUis:
   - {fileID: 1566237831}
   - {fileID: 1059057526}
+  - {fileID: 1471280619}
+  - {fileID: 855384308}
 --- !u!114 &1666445747
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15612,7 +15786,7 @@ GameObject:
   - component: {fileID: 1755449732}
   - component: {fileID: 1755449731}
   m_Layer: 5
-  m_Name: Slot2 correct  - my best friend
+  m_Name: Slot2 correct  - here for me
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -15960,6 +16134,16 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
+--- !u!1 &1789995022 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2777367108702983111, guid: d4558f6b821a58b4f9c28634c54a64df, type: 3}
+  m_PrefabInstance: {fileID: 1569718889}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &1789995023 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 141497155045149250, guid: d4558f6b821a58b4f9c28634c54a64df, type: 3}
+  m_PrefabInstance: {fileID: 1569718889}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1790397252
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -16127,7 +16311,31 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1830475893}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1789995022}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1431105109}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
 --- !u!114 &1830475893
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -16200,7 +16408,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1780540072472984242, guid: f7accc274a2da5c4abb43e1346c97a23, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -1.421
+      value: -3.31
       objectReference: {fileID: 0}
     - target: {fileID: 1780540072472984242, guid: f7accc274a2da5c4abb43e1346c97a23, type: 3}
       propertyPath: m_LocalRotation.w
@@ -16314,7 +16522,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: a good friend
+  m_text: a loved memory
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: e29aeb49b5a1f7c41b9bf9284c119256, type: 2}
   m_sharedMaterial: {fileID: 8331235707719290799, guid: e29aeb49b5a1f7c41b9bf9284c119256, type: 2}
@@ -16454,7 +16662,8 @@ MonoBehaviour:
       m_Calls: []
   wordUis:
   - {fileID: 1049833363}
-  - {fileID: 0}
+  - {fileID: 468055608}
+  - {fileID: 185264541}
 --- !u!114 &1856187380
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -16612,7 +16821,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1780540072472984242, guid: f7accc274a2da5c4abb43e1346c97a23, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -1.034
+      value: -2.9229999
       objectReference: {fileID: 0}
     - target: {fileID: 1780540072472984242, guid: f7accc274a2da5c4abb43e1346c97a23, type: 3}
       propertyPath: m_LocalRotation.w
@@ -16726,7 +16935,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: heart of our family
+  m_text: the heart of our family
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: e29aeb49b5a1f7c41b9bf9284c119256, type: 2}
   m_sharedMaterial: {fileID: 8331235707719290799, guid: e29aeb49b5a1f7c41b9bf9284c119256, type: 2}
@@ -16753,7 +16962,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 47.3
+  m_fontSize: 38.6
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -17373,7 +17582,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1780540072472984242, guid: f7accc274a2da5c4abb43e1346c97a23, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 3.84
+      value: 3.408
       objectReference: {fileID: 0}
     - target: {fileID: 1780540072472984242, guid: f7accc274a2da5c4abb43e1346c97a23, type: 3}
       propertyPath: m_LocalRotation.w
@@ -19456,7 +19665,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6689590689283095144, guid: 4bde9a95557703f43836befc3c3e8d70, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -1.66
+      value: -3.5489998
       objectReference: {fileID: 0}
     - target: {fileID: 6689590689283095144, guid: 4bde9a95557703f43836befc3c3e8d70, type: 3}
       propertyPath: m_LocalRotation.w
@@ -19634,7 +19843,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1249620081059609920, guid: c32e80aaea32a33468d3c626d8bbb0a3, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 6.84
+      value: 7.01
       objectReference: {fileID: 0}
     - target: {fileID: 1249620081059609920, guid: c32e80aaea32a33468d3c626d8bbb0a3, type: 3}
       propertyPath: m_LocalPosition.y
@@ -19642,7 +19851,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1249620081059609920, guid: c32e80aaea32a33468d3c626d8bbb0a3, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -5.18
+      value: 2.62
       objectReference: {fileID: 0}
     - target: {fileID: 1249620081059609920, guid: c32e80aaea32a33468d3c626d8bbb0a3, type: 3}
       propertyPath: m_LocalRotation.w
