@@ -38,9 +38,9 @@ MonoBehaviour:
   - id: 1
     fields:
     - title: Name
-      value: Narration
+      value: '   '
       type: 0
-      typeString: 
+      typeString: CustomFieldType_Text
     - title: Pictures
       value: '[]'
       type: 3
@@ -53,8 +53,8 @@ MonoBehaviour:
       value: False
       type: 2
       typeString: CustomFieldType_Boolean
-    - title: Display Name
-      value: Narration
+    - title: NodeColor
+      value: '#ce3800ff'
       type: 0
       typeString: 
     portrait: {fileID: 0}
@@ -66,7 +66,7 @@ MonoBehaviour:
     - title: Name
       value: Player
       type: 0
-      typeString: 
+      typeString: CustomFieldType_Text
     - title: Pictures
       value: '[]'
       type: 3
@@ -82,11 +82,11 @@ MonoBehaviour:
     - title: NodeColor
       value: '#000000ff'
       type: 0
-      typeString: 
+      typeString: CustomFieldType_Text
     - title: Display Name
       value: Player
       type: 0
-      typeString: 
+      typeString: CustomFieldType_Text
     portrait: {fileID: 0}
     spritePortrait: {fileID: 0}
     alternatePortraits: []
@@ -113,6 +113,10 @@ MonoBehaviour:
       value: '#1f074fff'
       type: 0
       typeString: CustomFieldType_Text
+    - title: Display Name
+      value: Death
+      type: 0
+      typeString: 
     portrait: {fileID: 0}
     spritePortrait: {fileID: 0}
     alternatePortraits: []
@@ -122,7 +126,7 @@ MonoBehaviour:
     - title: Name
       value: NPCA
       type: 0
-      typeString: 
+      typeString: CustomFieldType_Text
     - title: Pictures
       value: '[]'
       type: 3
@@ -144,7 +148,7 @@ MonoBehaviour:
     - title: Name
       value: NPCB
       type: 0
-      typeString: 
+      typeString: CustomFieldType_Text
     - title: Pictures
       value: '[]'
       type: 3
@@ -183,6 +187,10 @@ MonoBehaviour:
       value: '#8414b2ff'
       type: 0
       typeString: CustomFieldType_Text
+    - title: Display Name
+      value: Bargaining guest
+      type: 0
+      typeString: 
     portrait: {fileID: 0}
     spritePortrait: {fileID: 0}
     alternatePortraits: []
@@ -207,6 +215,10 @@ MonoBehaviour:
       typeString: CustomFieldType_Boolean
     - title: NodeColor
       value: '#a83636ff'
+      type: 0
+      typeString: 
+    - title: Display Name
+      value: Angry guest
       type: 0
       typeString: 
     portrait: {fileID: 0}
@@ -234,7 +246,7 @@ MonoBehaviour:
     - title: NodeColor
       value: '#31844fff'
       type: 0
-      typeString: 
+      typeString: CustomFieldType_Text
     portrait: {fileID: 0}
     spritePortrait: {fileID: 0}
     alternatePortraits: []
@@ -259,6 +271,10 @@ MonoBehaviour:
       typeString: CustomFieldType_Boolean
     - title: NodeColor
       value: '#384badff'
+      type: 0
+      typeString: 
+    - title: Display Name
+      value: Depressed guest
       type: 0
       typeString: 
     portrait: {fileID: 0}
@@ -1018,7 +1034,7 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 169
+        x: 171.12766
         y: 890
         width: 160
         height: 30
@@ -1078,7 +1094,7 @@ MonoBehaviour:
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 0, y: 0}
+    canvasScrollPosition: {x: 0, y: 354.2553}
     canvasZoom: 0.94000006
   - id: 26
     fields:
@@ -1760,7 +1776,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: Do you want to explore their grief?
+        value: <i>Do you want to explore their grief?</i>
         type: 0
         typeString: 
       - title: Sequence
@@ -2068,7 +2084,7 @@ MonoBehaviour:
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 23.951468, y: 30.184448}
+    canvasScrollPosition: {x: 0.65050316, y: 85.52426}
     canvasZoom: 1.03
   - id: 12
     fields:
@@ -3632,7 +3648,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: Do you want to explore their grief?
+        value: <i>Do you want to explore their grief?</i>
         type: 0
         typeString: 
       - title: Sequence
@@ -9398,7 +9414,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: Do you want to explore their grief?
+        value: <i>Do you want to explore their grief?</i>
         type: 0
         typeString: 
       - title: Sequence
@@ -9814,7 +9830,7 @@ MonoBehaviour:
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 0, y: 445.45496}
+    canvasScrollPosition: {x: 0, y: 5}
     canvasZoom: 1
   - id: 27
     fields:
@@ -10484,7 +10500,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
-        value: SetActive(FlowerHolder, true);
+        value: 
         type: 0
         typeString: 
       conversationID: 21
@@ -10539,7 +10555,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
-        value: 
+        value: SendMessage(StartIntroSequence,,GameManager)
         type: 0
         typeString: 
       conversationID: 21
@@ -10604,7 +10620,7 @@ MonoBehaviour:
       - originConversationID: 21
         originDialogueID: 6
         destinationConversationID: 21
-        destinationDialogueID: 7
+        destinationDialogueID: 10
         isConnector: 0
         priority: 2
       conditionsString: 
@@ -10614,8 +10630,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 162.74728
-        y: 317.1044
+        x: 164.63406
+        y: 318.04782
         width: 160
         height: 30
     - id: 7
@@ -10646,7 +10662,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
-        value: SetActive(BlackMask,false);
+        value: 
         type: 0
         typeString: 
       conversationID: 21
@@ -10697,7 +10713,8 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: 
+        value: There is also no need to rush. Take you time. If you are done with
+          everything, look for the light in the middle of the room.
         type: 0
         typeString: 
       - title: Sequence
@@ -10715,6 +10732,61 @@ MonoBehaviour:
       - originConversationID: 21
         originDialogueID: 8
         destinationConversationID: 21
+        destinationDialogueID: 9
+        isConnector: 0
+        priority: 2
+      conditionsString: 
+      userScript: 
+      onExecute:
+        m_PersistentCalls:
+          m_Calls: []
+      canvasRect:
+        serializedVersion: 2
+        x: 222.65585
+        y: 471.2165
+        width: 160
+        height: 30
+    - id: 9
+      fields:
+      - title: Title
+        value: 
+        type: 0
+        typeString: 
+      - title: Description
+        value: 
+        type: 0
+        typeString: 
+      - title: Actor
+        value: 7
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Conversant
+        value: 4
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Menu Text
+        value: 
+        type: 0
+        typeString: 
+      - title: Dialogue Text
+        value: I will be waiting for you. See you later, enjoy your last stay.
+        type: 0
+        typeString: 
+      - title: Sequence
+        value: 
+        type: 0
+        typeString: 
+      conversationID: 21
+      isRoot: 0
+      isGroup: 0
+      nodeColor: 
+      delaySimStatus: 0
+      falseConditionAction: Block
+      conditionPriority: 2
+      outgoingLinks:
+      - originConversationID: 21
+        originDialogueID: 9
+        destinationConversationID: 21
         destinationDialogueID: 5
         isConnector: 0
         priority: 2
@@ -10725,13 +10797,68 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 247.18416
-        y: 494.80133
+        x: 283.03323
+        y: 567.44293
+        width: 160
+        height: 30
+    - id: 10
+      fields:
+      - title: Title
+        value: 
+        type: 0
+        typeString: 
+      - title: Description
+        value: 
+        type: 0
+        typeString: 
+      - title: Actor
+        value: 4
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Conversant
+        value: 7
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Menu Text
+        value: 
+        type: 0
+        typeString: 
+      - title: Dialogue Text
+        value: 
+        type: 0
+        typeString: 
+      - title: Sequence
+        value: SetActive(Flower Handler,true);
+        type: 0
+        typeString: 
+      conversationID: 21
+      isRoot: 0
+      isGroup: 0
+      nodeColor: 
+      delaySimStatus: 0
+      falseConditionAction: Block
+      conditionPriority: 2
+      outgoingLinks:
+      - originConversationID: 21
+        originDialogueID: 10
+        destinationConversationID: 21
+        destinationDialogueID: 7
+        isConnector: 0
+        priority: 2
+      conditionsString: 
+      userScript: 
+      onExecute:
+        m_PersistentCalls:
+          m_Calls: []
+      canvasRect:
+        serializedVersion: 2
+        x: 432.42087
+        y: 369.7314
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 93.13581, y: 82.77493}
-    canvasZoom: 1.06
+    canvasScrollPosition: {x: 0, y: 197.87225}
+    canvasZoom: 0.94000006
   - id: 28
     fields:
     - title: Title
@@ -15502,11 +15629,11 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Actor
-        value: 2
+        value: 1
         type: 5
         typeString: CustomFieldType_Actor
       - title: Conversant
-        value: 1
+        value: 2
         type: 5
         typeString: CustomFieldType_Actor
       - title: Menu Text
@@ -15514,9 +15641,9 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: You just woke up in a hospital bed. You look around and see your family
-          members with worry written on their faces. You can't remember what has
-          happend to you.
+        value: <i>You just woke up in a hospital bed. You look around and see your
+          family members with worry written on their faces. You can't remember what
+          has happend to you.</i>
         type: 0
         typeString: 
       - title: Sequence
@@ -15571,8 +15698,8 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: You try to say something, but you can't speak. You try to reach out
-          but you can't move. All you can do is to look at them.
+        value: <i>You try to say something, but you can't speak. You try to reach
+          out but you can't move. All you can do is to look at them.</i>
         type: 0
         typeString: 
       - title: Sequence
@@ -15600,7 +15727,7 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 2441.8718
+        x: 2440.3794
         y: 963.19666
         width: 160
         height: 30
@@ -15615,11 +15742,11 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Actor
-        value: 2
+        value: 1
         type: 5
         typeString: CustomFieldType_Actor
       - title: Conversant
-        value: 1
+        value: 2
         type: 5
         typeString: CustomFieldType_Actor
       - title: Menu Text
@@ -15627,11 +15754,11 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: 'Even though everyone looks worried, you can''t help but smile. Seeing
-          your loved ones fills you with a warm feeling and the moment seems lasting
-          forever.
+        value: '<i>Even though everyone looks worried, you can''t help but smile.
+          Seeing your loved ones fills you with a warm feeling and the moment seems
+          lasting forever.
 
-          Until....'
+          Until....</i>'
         type: 0
         typeString: 
       - title: Sequence
@@ -15686,7 +15813,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: ' ...it doesn''t.'
+        value: <i> ...it doesn't.</i>
         type: 0
         typeString: 
       - title: Sequence
@@ -15733,11 +15860,11 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Actor
-        value: 2
+        value: 1
         type: 5
         typeString: CustomFieldType_Actor
       - title: Conversant
-        value: 1
+        value: 2
         type: 5
         typeString: CustomFieldType_Actor
       - title: Menu Text
@@ -17914,8 +18041,8 @@ MonoBehaviour:
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 2035.7659, y: 270.9895}
-    canvasZoom: 0.7899997
+    canvasScrollPosition: {x: 1927.2258, y: 495.0433}
+    canvasZoom: 0.6699998
   - id: 14
     fields:
     - title: Title
@@ -23592,7 +23719,7 @@ MonoBehaviour:
       canvasRect:
         serializedVersion: 2
         x: 165.21951
-        y: 190
+        y: 195
         width: 160
         height: 30
     - id: 3
@@ -23818,8 +23945,8 @@ MonoBehaviour:
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 0, y: 0}
-    canvasZoom: 0.8200002
+    canvasScrollPosition: {x: 73.30932, y: 0}
+    canvasZoom: 1
   - id: 49
     fields:
     - title: Title

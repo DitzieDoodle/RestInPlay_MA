@@ -38,9 +38,9 @@ MonoBehaviour:
   - id: 1
     fields:
     - title: Name
-      value: Narration
+      value: '   '
       type: 0
-      typeString: 
+      typeString: CustomFieldType_Text
     - title: Pictures
       value: '[]'
       type: 3
@@ -53,8 +53,8 @@ MonoBehaviour:
       value: False
       type: 2
       typeString: CustomFieldType_Boolean
-    - title: Display Name
-      value: Narration
+    - title: NodeColor
+      value: '#ce3800ff'
       type: 0
       typeString: 
     portrait: {fileID: 0}
@@ -66,7 +66,7 @@ MonoBehaviour:
     - title: Name
       value: Player
       type: 0
-      typeString: 
+      typeString: CustomFieldType_Text
     - title: Pictures
       value: '[]'
       type: 3
@@ -82,11 +82,11 @@ MonoBehaviour:
     - title: NodeColor
       value: '#000000ff'
       type: 0
-      typeString: 
+      typeString: CustomFieldType_Text
     - title: Display Name
       value: Player
       type: 0
-      typeString: 
+      typeString: CustomFieldType_Text
     portrait: {fileID: 0}
     spritePortrait: {fileID: 0}
     alternatePortraits: []
@@ -113,6 +113,10 @@ MonoBehaviour:
       value: '#1f074fff'
       type: 0
       typeString: CustomFieldType_Text
+    - title: Display Name
+      value: Death
+      type: 0
+      typeString: 
     portrait: {fileID: 0}
     spritePortrait: {fileID: 0}
     alternatePortraits: []
@@ -122,7 +126,7 @@ MonoBehaviour:
     - title: Name
       value: NPCA
       type: 0
-      typeString: 
+      typeString: CustomFieldType_Text
     - title: Pictures
       value: '[]'
       type: 3
@@ -144,7 +148,7 @@ MonoBehaviour:
     - title: Name
       value: NPCB
       type: 0
-      typeString: 
+      typeString: CustomFieldType_Text
     - title: Pictures
       value: '[]'
       type: 3
@@ -183,6 +187,10 @@ MonoBehaviour:
       value: '#8414b2ff'
       type: 0
       typeString: CustomFieldType_Text
+    - title: Display Name
+      value: Bargaining guest
+      type: 0
+      typeString: 
     portrait: {fileID: 0}
     spritePortrait: {fileID: 0}
     alternatePortraits: []
@@ -207,6 +215,10 @@ MonoBehaviour:
       typeString: CustomFieldType_Boolean
     - title: NodeColor
       value: '#a83636ff'
+      type: 0
+      typeString: 
+    - title: Display Name
+      value: Angry guest
       type: 0
       typeString: 
     portrait: {fileID: 0}
@@ -234,7 +246,7 @@ MonoBehaviour:
     - title: NodeColor
       value: '#31844fff'
       type: 0
-      typeString: 
+      typeString: CustomFieldType_Text
     portrait: {fileID: 0}
     spritePortrait: {fileID: 0}
     alternatePortraits: []
@@ -259,6 +271,10 @@ MonoBehaviour:
       typeString: CustomFieldType_Boolean
     - title: NodeColor
       value: '#384badff'
+      type: 0
+      typeString: 
+    - title: Display Name
+      value: Depressed guest
       type: 0
       typeString: 
     portrait: {fileID: 0}
@@ -634,7 +650,7 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 161
+        x: 162.06381
         y: 239
         width: 160
         height: 30
@@ -661,8 +677,10 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: I always asked:"Why you? Why did you have to die?" I've looked for
-          answers. I've even looked for someone to blame.
+        value: 'I always asked: <i>"Why you? Why did you have to die?"</i>
+
+          I''ve
+          looked for answers. I''ve even looked for someone to blame.'
         type: 0
         typeString: 
       - title: Sequence
@@ -940,8 +958,8 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: So I was thinking about picking some flowers for you... But which
-          ones?
+        value: So I was thinking about <b>picking some flowers</b> for you...but
+          which ones?
         type: 0
         typeString: 
       - title: Sequence
@@ -1018,7 +1036,7 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 169
+        x: 171.12766
         y: 890
         width: 160
         height: 30
@@ -1760,7 +1778,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: Do you want to explore their grief?
+        value: <i>Do you want to explore their grief?</i>
         type: 0
         typeString: 
       - title: Sequence
@@ -2068,7 +2086,7 @@ MonoBehaviour:
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 23.951468, y: 30.184448}
+    canvasScrollPosition: {x: 0.65050316, y: 85.52426}
     canvasZoom: 1.03
   - id: 12
     fields:
@@ -2636,10 +2654,8 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: 'I thought this part would be easy. Just pick a photo, how hard can
+        value: I thought this part would be easy. Just pick a photo, how hard can
           it be?
-
-'
         type: 0
         typeString: 
       - title: Sequence
@@ -2694,7 +2710,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: They look happy here... but that's not how it ended.
+        value: You look happy here... but that's not how it ended.
         type: 0
         typeString: 
       - title: Sequence
@@ -2781,7 +2797,7 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 389.69778
+        x: 388.5213
         y: 629.89197
         width: 160
         height: 30
@@ -2808,9 +2824,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: 'And this one is useless. They are not even facing the camera.
-
-'
+        value: And this one is useless.You are not even facing the camera.
         type: 0
         typeString: 
       - title: Sequence
@@ -2922,7 +2936,7 @@ MonoBehaviour:
         typeString: 
       - title: Dialogue Text
         value: "I don\u2019t want to choose the memory that\u2019s supposed to represent
-          a whole life! (Add shake here)"
+          <b>a whole life!</b>"
         type: 0
         typeString: 
       - title: Sequence
@@ -3065,7 +3079,7 @@ MonoBehaviour:
       canvasRect:
         serializedVersion: 2
         x: 376.2303
-        y: 95.156876
+        y: 96.33336
         width: 160
         height: 30
     - id: 9
@@ -3450,8 +3464,8 @@ MonoBehaviour:
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 47.82614, y: 936.5221}
-    canvasZoom: 1.1499999
+    canvasScrollPosition: {x: 191.52078, y: 561.17645}
+    canvasZoom: 0.85000014
   - id: 32
     fields:
     - title: Title
@@ -3632,7 +3646,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: Do you want to explore their grief?
+        value: <i>Do you want to explore their grief?</i>
         type: 0
         typeString: 
       - title: Sequence
@@ -4689,8 +4703,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 166
-        y: 201
+        x: 168.35294
+        y: 202.17648
         width: 160
         height: 30
     - id: 2
@@ -4820,7 +4834,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: much much MUCH WORSE!!
+        value: much much <b>MUCH WORSE!!</b>
         type: 0
         typeString: 
       - title: Sequence
@@ -4969,7 +4983,7 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 307.4945
+        x: 308.67096
         y: 308
         width: 160
         height: 30
@@ -5155,7 +5169,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: I hate to feel so helpless !
+        value: I hate to feel so helpless!
         type: 0
         typeString: 
       - title: Sequence
@@ -5183,7 +5197,7 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 202.02065
+        x: 204.0825
         y: 232.51541
         width: 160
         height: 30
@@ -5210,7 +5224,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: JUST NO!!
+        value: <b>JUST NO!!</b>
         type: 0
         typeString: 
       - title: Sequence
@@ -5506,7 +5520,7 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 169.03093
+        x: 170.03093
         y: 132
         width: 160
         height: 30
@@ -5698,7 +5712,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: AHHHHH!!!!
+        value: <b>AHHHHH!!!!</b>
         type: 0
         typeString: 
       - title: Sequence
@@ -6354,9 +6368,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: 'Which material would have picked ?
-
-'
+        value: Which material would you pick for your urn?
         type: 0
         typeString: 
       - title: Sequence
@@ -6710,7 +6722,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: "Stone feels permanent\u2026 maybe too permanent."
+        value: Stone feels permanent. maybe too permanent...
         type: 0
         typeString: 
       - title: Sequence
@@ -6930,7 +6942,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: Hm...what about a symbol? Something that reflects more of your personality.
+        value: Hm...what about a symbol? Something that reflects more of your personality...
         type: 0
         typeString: 
       - title: Sequence
@@ -6982,7 +6994,7 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 1441.1841
+        x: 1442.1841
         y: 1697.6812
         width: 160
         height: 30
@@ -7229,7 +7241,8 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: "It looks like something you\u2019d want to hold."
+        value: "It looks like something you\u2019d want to hold. Something beautiful.
+          A gift from nature."
         type: 0
         typeString: 
       - title: Sequence
@@ -7284,7 +7297,8 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: "This feels distant\u2026 like a concept, not a person."
+        value: "This feels distant\u2026 like a concept, not a person. But maybe
+          this is what you would have wanted."
         type: 0
         typeString: 
       - title: Sequence
@@ -7394,7 +7408,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: "Rounded feels softer\u2026 somehow kinder."
+        value: "Rounded feels softer\u2026somehow kinder. Kind like your soul."
         type: 0
         typeString: 
       - title: Sequence
@@ -7504,7 +7518,8 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: 'What about a nice casket? Something more comfortable? '
+        value: What about a nice casket? Something more comfortable? With some very
+          comfy bedding inside?
         type: 0
         typeString: 
       - title: Sequence
@@ -8018,7 +8033,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: So many choices...
+        value: <b>So many choices...</b>
         type: 0
         typeString: 
       - title: Sequence
@@ -8130,7 +8145,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: An urn ? Really? Is this what you've really wanted?
+        value: An urn? Really? Is this what you've wanted?
         type: 0
         typeString: 
       - title: Sequence
@@ -8240,7 +8255,8 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: Is this right for the occasion? You were a funny person though.
+        value: Is this right for the occasion? You were a funny person though. Always
+          making people laugh.
         type: 0
         typeString: 
       - title: Sequence
@@ -8622,8 +8638,8 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: Or what about a beautiful sea burial? Scattering your ashes into the
-          see. You've always liked the sea!
+        value: Or how about a beautiful sea burial? Scattering your ashes into the
+          ocean. You've always liked the ocean!
         type: 0
         typeString: 
       - title: Sequence
@@ -8678,8 +8694,8 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: Made out of some beautiful wood. Like oak maybe? Or What about Teak?
-          Wiait...that's a bit expensive, isn't it?
+        value: Made out of some beautiful wood. Like oak maybe? Or What about teak?
+          Wait...that's a bit expensive, isn't it?
         type: 0
         typeString: 
       - title: Sequence
@@ -9073,7 +9089,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: A jar maybe? Maybe thats too bizarre...but you always liked 'odd'
+        value: A jar? Maybe that's a bit too bizarre...but you always liked 'odd'
           things, didn't you?
         type: 0
         typeString: 
@@ -9217,8 +9233,8 @@ MonoBehaviour:
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 1092.9424, y: 635.78}
-    canvasZoom: 1.0899996
+    canvasScrollPosition: {x: 1100.2466, y: 2544.0002}
+    canvasZoom: 0.99999964
   - id: 31
     fields:
     - title: Title
@@ -9398,7 +9414,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: Do you want to explore their grief?
+        value: <i>Do you want to explore their grief?</i>
         type: 0
         typeString: 
       - title: Sequence
@@ -9814,7 +9830,7 @@ MonoBehaviour:
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 0, y: 445.45496}
+    canvasScrollPosition: {x: 0, y: 5}
     canvasZoom: 1
   - id: 27
     fields:
@@ -10841,7 +10857,7 @@ MonoBehaviour:
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 0, y: 197.87225}
+    canvasScrollPosition: {x: 0, y: 0}
     canvasZoom: 0.94000006
   - id: 28
     fields:
@@ -11026,7 +11042,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: This can't be happening
+        value: This <b>can't</b> be happening.
         type: 0
         typeString: 
       - title: Sequence
@@ -11055,7 +11071,7 @@ MonoBehaviour:
       canvasRect:
         serializedVersion: 2
         x: 165
-        y: 190
+        y: 188.57141
         width: 160
         height: 30
     - id: 3
@@ -11247,8 +11263,8 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: That's right... maybe I'm just imagining things. Yeah... you didn't
-          die, it was just a bad dream!
+        value: That's right... maybe I'm <b>just imagining things. Yeah... you didn't
+          die, it was just a bad dream!</b>
         type: 0
         typeString: 
       - title: Sequence
@@ -11276,7 +11292,7 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 166
+        x: 167.42856
         y: 555.21954
         width: 160
         height: 30
@@ -11677,7 +11693,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: Do you want to explore their grief?
+        value: <i>Do you want to explore their grief?</i>
         type: 0
         typeString: 
       - title: Sequence
@@ -12612,7 +12628,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: "I\u2019m here\u2026 but it doesn\u2019t feel like I am. Everything
+        value: "I\u2019m here\u2026but it doesn\u2019t feel like I am. Everything
           feels far away."
         type: 0
         typeString: 
@@ -12668,8 +12684,10 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: No final goodbye. You were just gone. Just like that... what am I
-          supposed to do now?
+        value: 'No final goodbye. You were just gone. Just like that...
+
+          what
+          am I supposed to do now?'
         type: 0
         typeString: 
       - title: Sequence
@@ -12779,8 +12797,8 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: "I feel like I\u2019m sinking, and no one can see it. I don't know
-          what to do without you."
+        value: "I feel like <b>I\u2019m sinking</b>, and no one can see it. I don't
+          know what to do without you... <b>you light is gone...</b>"
         type: 0
         typeString: 
       - title: Sequence
@@ -12888,7 +12906,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: "I\u2019m so tired."
+        value: "I\u2019m so tired..."
         type: 0
         typeString: 
       - title: Sequence
@@ -12916,7 +12934,7 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 273
+        x: 275
         y: 542
         width: 160
         height: 30
@@ -13102,7 +13120,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: Do you want to explore their grief?
+        value: <i>Do you want to explore their grief?</i>
         type: 0
         typeString: 
       - title: Sequence
@@ -13136,7 +13154,7 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 167
+        x: 168.03093
         y: 394
         width: 160
         height: 30
@@ -14460,7 +14478,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Actor
-        value: 11
+        value: 1
         type: 5
         typeString: CustomFieldType_Actor
       - title: Conversant
@@ -14472,7 +14490,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: 'Do you want to go back to the ceremony? '
+        value: <i>Do you want to go back to the ceremony?</i>
         type: 0
         typeString: 
       - title: Sequence
@@ -14810,7 +14828,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: How many flowers would you like to leave in quiet remembrance?
+        value: <i>How many flowers would you like to leave in quiet remembrance?</i>
         type: 0
         typeString: 
       - title: Sequence
@@ -15091,7 +15109,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: You don't have any flowers left to give.
+        value: <i>You don't have any flowers left to give.</i>
         type: 0
         typeString: 
       - title: Sequence
@@ -15358,7 +15376,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: The guest book that holds memories from your loved ones.
+        value: <i>The guest book that holds memories from your loved ones</i>
         type: 0
         typeString: 
       - title: Sequence
@@ -15613,11 +15631,11 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Actor
-        value: 2
+        value: 1
         type: 5
         typeString: CustomFieldType_Actor
       - title: Conversant
-        value: 1
+        value: 2
         type: 5
         typeString: CustomFieldType_Actor
       - title: Menu Text
@@ -15625,9 +15643,9 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: You just woke up in a hospital bed. You look around and see your family
-          members with worry written on their faces. You can't remember what has
-          happend to you.
+        value: <i>You just woke up in a hospital bed. You look around and see your
+          family members with worry written on their faces. You can't remember what
+          has happend to you.</i>
         type: 0
         typeString: 
       - title: Sequence
@@ -15682,8 +15700,8 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: You try to say something, but you can't speak. You try to reach out
-          but you can't move. All you can do is to look at them.
+        value: <i>You try to say something, but you can't speak. You try to reach
+          out but you can't move. All you can do is to look at them.</i>
         type: 0
         typeString: 
       - title: Sequence
@@ -15711,7 +15729,7 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 2441.8718
+        x: 2440.3794
         y: 963.19666
         width: 160
         height: 30
@@ -15726,11 +15744,11 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Actor
-        value: 2
+        value: 1
         type: 5
         typeString: CustomFieldType_Actor
       - title: Conversant
-        value: 1
+        value: 2
         type: 5
         typeString: CustomFieldType_Actor
       - title: Menu Text
@@ -15738,11 +15756,11 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: 'Even though everyone looks worried, you can''t help but smile. Seeing
-          your loved ones fills you with a warm feeling and the moment seems lasting
-          forever.
+        value: '<i>Even though everyone looks worried, you can''t help but smile.
+          Seeing your loved ones fills you with a warm feeling and the moment seems
+          lasting forever.
 
-          Until....'
+          Until....</i>'
         type: 0
         typeString: 
       - title: Sequence
@@ -15797,7 +15815,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: ' ...it doesn''t.'
+        value: <i> ...it doesn't.</i>
         type: 0
         typeString: 
       - title: Sequence
@@ -15844,11 +15862,11 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Actor
-        value: 2
+        value: 1
         type: 5
         typeString: CustomFieldType_Actor
       - title: Conversant
-        value: 1
+        value: 2
         type: 5
         typeString: CustomFieldType_Actor
       - title: Menu Text
@@ -18025,8 +18043,8 @@ MonoBehaviour:
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 2022.9094, y: 1437.4204}
-    canvasZoom: 0.57999986
+    canvasScrollPosition: {x: 1927.2258, y: 495.0433}
+    canvasZoom: 0.6699998
   - id: 14
     fields:
     - title: Title
@@ -18483,7 +18501,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: A stereo.
+        value: <i>A stereo.</i>
         type: 0
         typeString: 
       - title: Sequence
@@ -18587,7 +18605,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: What kind of music would you like to listen to at your service?
+        value: <i>What kind of music would you like to listen to at your service?</i>
         type: 0
         typeString: 
       - title: Sequence
@@ -19047,7 +19065,7 @@ MonoBehaviour:
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 133.04349, y: 203.47826}
+    canvasScrollPosition: {x: 165.21744, y: 0}
     canvasZoom: 1.1499999
   - id: 2
     fields:
@@ -22374,7 +22392,7 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 160
+        x: 161
         y: 714
         width: 160
         height: 30
@@ -22493,7 +22511,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Actor
-        value: 2
+        value: 1
         type: 5
         typeString: CustomFieldType_Actor
       - title: Conversant
@@ -22505,7 +22523,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: A fridge.
+        value: <i>A fridge.</i>
         type: 0
         typeString: 
       - title: Sequence
@@ -22560,7 +22578,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: What kind of food would you like to have served at your service?
+        value: <i>What kind of food would you like to have served at your service?</i>
         type: 0
         typeString: 
       - title: Sequence
@@ -22798,7 +22816,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: Somethink like this?
+        value: <i>Something like this?</i>
         type: 0
         typeString: 
       - title: Sequence
@@ -23703,7 +23721,7 @@ MonoBehaviour:
       canvasRect:
         serializedVersion: 2
         x: 165.21951
-        y: 190
+        y: 195
         width: 160
         height: 30
     - id: 3
@@ -23929,8 +23947,8 @@ MonoBehaviour:
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 0, y: 0}
-    canvasZoom: 0.8200002
+    canvasScrollPosition: {x: 73.30932, y: 0}
+    canvasZoom: 1
   - id: 49
     fields:
     - title: Title
