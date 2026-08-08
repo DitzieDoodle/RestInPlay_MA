@@ -10368,7 +10368,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: 'How do you feel? A bit chilly maybe? '
+        value: How do you feel? I this new form is not too uncomfortable.
         type: 0
         typeString: 
       - title: Sequence
@@ -10396,7 +10396,7 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 158.40002
+        x: 159.66585
         y: 125.600006
         width: 160
         height: 30
@@ -10423,8 +10423,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: There are 5 relatives of yours that need your help. Listen to them
-          and look into their emotions to help them through their grief
+        value: 'Let me explaing how I have planned this last visit for you:'
         type: 0
         typeString: 
       - title: Sequence
@@ -10479,12 +10478,13 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: Give them some flowers before you leave, as a token of your (Gedenken).
-          Here are 10 .
+        value: You are free to roam around at your own funeral service. You probably
+          want to talk to your friends and family but since you are a ghost, they
+          can not see or hear you. You are simply an observer, a listener.
         type: 0
         typeString: 
       - title: Sequence
-        value: SetActive(FlowerHolder, true);
+        value: 
         type: 0
         typeString: 
       conversationID: 21
@@ -10557,8 +10557,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 162.97931
-        y: 449.8069
+        x: 129.33948
+        y: 699.50836
         width: 160
         height: 30
     - id: 6
@@ -10584,7 +10584,9 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: gl hf
+        value: There are five guest in particular that are having trouble to cope
+          with their grief. Listen to them and try to help them sort their feelings.
+          Maybe there is something you can do for them.
         type: 0
         typeString: 
       - title: Sequence
@@ -10602,7 +10604,7 @@ MonoBehaviour:
       - originConversationID: 21
         originDialogueID: 6
         destinationConversationID: 21
-        destinationDialogueID: 7
+        destinationDialogueID: 10
         isConnector: 0
         priority: 2
       conditionsString: 
@@ -10612,8 +10614,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 161.48148
-        y: 314.57275
+        x: 164.63406
+        y: 318.04782
         width: 160
         height: 30
     - id: 7
@@ -10639,11 +10641,12 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: 
+        value: 'Here are some flowers. You can leave up to three for any of these
+          five grieving guests. But be mindful- I can only give you 10 to gift. '
         type: 0
         typeString: 
       - title: Sequence
-        value: SetActive(BlackMask,false);
+        value: 
         type: 0
         typeString: 
       conversationID: 21
@@ -10657,6 +10660,117 @@ MonoBehaviour:
       - originConversationID: 21
         originDialogueID: 7
         destinationConversationID: 21
+        destinationDialogueID: 8
+        isConnector: 0
+        priority: 2
+      conditionsString: 
+      userScript: 
+      onExecute:
+        m_PersistentCalls:
+          m_Calls: []
+      canvasRect:
+        serializedVersion: 2
+        x: 160.39174
+        y: 393.85794
+        width: 160
+        height: 30
+    - id: 8
+      fields:
+      - title: Title
+        value: 
+        type: 0
+        typeString: 
+      - title: Description
+        value: 
+        type: 0
+        typeString: 
+      - title: Actor
+        value: 7
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Conversant
+        value: 4
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Menu Text
+        value: 
+        type: 0
+        typeString: 
+      - title: Dialogue Text
+        value: There is also no need to rush. Take you time. If you are done with
+          everything, look for the light in the middle of the room.
+        type: 0
+        typeString: 
+      - title: Sequence
+        value: 
+        type: 0
+        typeString: 
+      conversationID: 21
+      isRoot: 0
+      isGroup: 0
+      nodeColor: 
+      delaySimStatus: 0
+      falseConditionAction: Block
+      conditionPriority: 2
+      outgoingLinks:
+      - originConversationID: 21
+        originDialogueID: 8
+        destinationConversationID: 21
+        destinationDialogueID: 9
+        isConnector: 0
+        priority: 2
+      conditionsString: 
+      userScript: 
+      onExecute:
+        m_PersistentCalls:
+          m_Calls: []
+      canvasRect:
+        serializedVersion: 2
+        x: 222.65585
+        y: 471.2165
+        width: 160
+        height: 30
+    - id: 9
+      fields:
+      - title: Title
+        value: 
+        type: 0
+        typeString: 
+      - title: Description
+        value: 
+        type: 0
+        typeString: 
+      - title: Actor
+        value: 7
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Conversant
+        value: 4
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Menu Text
+        value: 
+        type: 0
+        typeString: 
+      - title: Dialogue Text
+        value: I will be waiting for you. See you later, enjoy your last stay.
+        type: 0
+        typeString: 
+      - title: Sequence
+        value: 
+        type: 0
+        typeString: 
+      conversationID: 21
+      isRoot: 0
+      isGroup: 0
+      nodeColor: 
+      delaySimStatus: 0
+      falseConditionAction: Block
+      conditionPriority: 2
+      outgoingLinks:
+      - originConversationID: 21
+        originDialogueID: 9
+        destinationConversationID: 21
         destinationDialogueID: 5
         isConnector: 0
         priority: 2
@@ -10667,13 +10781,68 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 158.18254
-        y: 381.89233
+        x: 283.03323
+        y: 567.44293
+        width: 160
+        height: 30
+    - id: 10
+      fields:
+      - title: Title
+        value: 
+        type: 0
+        typeString: 
+      - title: Description
+        value: 
+        type: 0
+        typeString: 
+      - title: Actor
+        value: 4
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Conversant
+        value: 7
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Menu Text
+        value: 
+        type: 0
+        typeString: 
+      - title: Dialogue Text
+        value: 
+        type: 0
+        typeString: 
+      - title: Sequence
+        value: SetActive(FlowerHolder, true);
+        type: 0
+        typeString: 
+      conversationID: 21
+      isRoot: 0
+      isGroup: 0
+      nodeColor: 
+      delaySimStatus: 0
+      falseConditionAction: Block
+      conditionPriority: 2
+      outgoingLinks:
+      - originConversationID: 21
+        originDialogueID: 10
+        destinationConversationID: 21
+        destinationDialogueID: 7
+        isConnector: 0
+        priority: 2
+      conditionsString: 
+      userScript: 
+      onExecute:
+        m_PersistentCalls:
+          m_Calls: []
+      canvasRect:
+        serializedVersion: 2
+        x: 432.42087
+        y: 369.7314
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 0, y: 0}
-    canvasZoom: 0.7900002
+    canvasScrollPosition: {x: 107.44151, y: 6.3829346}
+    canvasZoom: 0.94000006
   - id: 28
     fields:
     - title: Title
