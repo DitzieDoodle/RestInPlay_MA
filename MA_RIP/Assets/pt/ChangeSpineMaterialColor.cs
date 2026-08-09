@@ -4,29 +4,46 @@ using Spine.Unity;
 public class ChangeSpineMaterialColor : MonoBehaviour
 {
     [SerializeField] private SkeletonRenderer skeletonRenderer;  // Referenz zum SkeletonRenderer
+    [SerializeField] private SkeletonGraphic skeletonGraphic;  // Referenz zum SkeletonGraphic
     [SerializeField] private Color targetColor = Color.red;     // Zielfarbe, die auf das Material angewendet werden soll
 
     void Start()
     {
-        // Überprüfen, ob der SkeletonRenderer gesetzt wurde
+        SetSkeletonRendererColor();
+        // SetSkeletonGraphicColor();
+    }
+
+    void SetSkeletonRendererColor()
+    {
+        // ï¿½berprï¿½fen, ob der SkeletonRenderer gesetzt wurde
         if (skeletonRenderer == null)
         {
-            Debug.LogError("SkeletonRenderer reference is missing!");
             return;
         }
 
         // Hole das Material des SkeletonRenderers
         Material material = skeletonRenderer.GetComponent<Renderer>().material;
 
-        // Überprüfen, ob das Material existiert
+        // ï¿½berprï¿½fen, ob das Material existiert
         if (material != null)
         {
-            // Setze die Farbe des Materials (in vielen Spine-Shadern ist der Parameter "_Color" für die Hauptfarbe zuständig)
+            // Setze die Farbe des Materials (in vielen Spine-Shadern ist der Parameter "_Color" fï¿½r die Hauptfarbe zustï¿½ndig)
             material.SetColor("_Color", targetColor);  // "_Color" oder "Color" je nach Shader
         }
         else
         {
             Debug.LogError("Material not found!");
         }
+    }
+
+    void SetSkeletonGraphicColor()
+    {
+        // ï¿½berprï¿½fen, ob der SkeletonGraphic gesetzt wurde
+        if (skeletonGraphic == null)
+        {
+            return;
+        }
+
+        skeletonGraphic.color = targetColor;  // Setze die Farbe direkt auf das SkeletonGraphic
     }
 }

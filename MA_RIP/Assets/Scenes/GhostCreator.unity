@@ -1210,19 +1210,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 257561934}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1777314107}
-        m_TargetAssemblyTypeName: SkinsMatcher, Assembly-CSharp
-        m_MethodName: NextEyeSkin
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!114 &257561934
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1470,19 +1458,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 379093577}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1777314107}
-        m_TargetAssemblyTypeName: SkinsMatcher, Assembly-CSharp
-        m_MethodName: PreviousMouthSkin
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!114 &379093577
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1915,19 +1891,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 504435777}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1777314112}
-        m_TargetAssemblyTypeName: GhostColorPicker, Assembly-CSharp
-        m_MethodName: ChangeToPreviousColor
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!1 &591547760
 GameObject:
   m_ObjectHideFlags: 0
@@ -2286,19 +2250,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 603914184}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1777314107}
-        m_TargetAssemblyTypeName: SkinsMatcher, Assembly-CSharp
-        m_MethodName: PreviousEyeSkin
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!114 &603914184
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2755,19 +2707,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 640791617}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1777314107}
-        m_TargetAssemblyTypeName: SkinsMatcher, Assembly-CSharp
-        m_MethodName: NextMouthSkin
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!114 &640791617
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2898,19 +2838,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 765126719}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1777314112}
-        m_TargetAssemblyTypeName: GhostColorPicker, Assembly-CSharp
-        m_MethodName: ChangeToNextColor
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!222 &765126721
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -3651,19 +3579,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 997006005}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1777314107}
-        m_TargetAssemblyTypeName: SkinsMatcher, Assembly-CSharp
-        m_MethodName: PreviousBodySkin
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!114 &997006005
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4058,7 +3974,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1161053602}
   m_Layer: 5
-  m_Name: EyesParent
+  m_Name: HatsParent
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4445,19 +4361,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1445229173}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1777314107}
-        m_TargetAssemblyTypeName: SkinsMatcher, Assembly-CSharp
-        m_MethodName: NextEyeSkin
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!114 &1445229173
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5149,39 +5053,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 619.28, y: 149.6076}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1777314107 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 4864658198841976851, guid: 633ea4a2f6493c04fad5be35b3366a91, type: 3}
-  m_PrefabInstance: {fileID: 7246258752290988837}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9c657f7bb66ea0d4eb10c296e7d6f4a8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &1777314112 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 3174272329238809027, guid: 633ea4a2f6493c04fad5be35b3366a91, type: 3}
-  m_PrefabInstance: {fileID: 7246258752290988837}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d5d33ebbe3b6dfa41aebbb40922835c3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &1777314114 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 2023507229523711944, guid: 633ea4a2f6493c04fad5be35b3366a91, type: 3}
-  m_PrefabInstance: {fileID: 7246258752290988837}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d247ba06193faa74d9335f5481b2b56c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!4 &1777314117 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 9156863490806375832, guid: 633ea4a2f6493c04fad5be35b3366a91, type: 3}
@@ -5269,19 +5140,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1838040707}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1777314107}
-        m_TargetAssemblyTypeName: SkinsMatcher, Assembly-CSharp
-        m_MethodName: NextBodySkin
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!114 &1838040707
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5331,9 +5190,6 @@ GameObject:
   - component: {fileID: 1838148233}
   - component: {fileID: 1838148238}
   - component: {fileID: 1838148237}
-  - component: {fileID: 1838148236}
-  - component: {fileID: 1838148235}
-  - component: {fileID: 1838148234}
   m_Layer: 0
   m_Name: SkeletonGraphic (skeleton 1)
   m_TagString: Untagged
@@ -5360,66 +5216,6 @@ RectTransform:
   m_AnchoredPosition: {x: 155, y: -482}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1838148234
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1838148232}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c96841636e76bde4eb928151d453c2cd, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  skeletonRenderer: {fileID: 1777314114}
-  targetColor: {r: 1, g: 0.18396229, b: 0.18396229, a: 1}
---- !u!114 &1838148235
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1838148232}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d5d33ebbe3b6dfa41aebbb40922835c3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  skeletonAnimation: {fileID: 1777314114}
-  prevColorButton: {fileID: 504435779}
-  nextColorButton: {fileID: 765126720}
-  colorPreview: {fileID: 1664838161}
-  colorArray:
-  - {r: 0.73134285, g: 0.60742253, b: 0.735849, a: 1}
-  - {r: 0.9433962, g: 0.6507687, b: 0.6452474, a: 1}
-  - {r: 0.9528302, g: 0.76212054, b: 0.63372195, a: 1}
-  - {r: 1, g: 0.89086986, b: 0.6933962, a: 1}
-  - {r: 0.82876474, g: 0.9056604, b: 0.7903168, a: 1}
-  - {r: 0.62357605, g: 0.7474726, b: 0.764151, a: 1}
-  - {r: 0.8915094, g: 0.9819182, b: 1, a: 1}
-  - {r: 0.1981132, g: 0.1981132, b: 0.1981132, a: 1}
---- !u!114 &1838148236
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1838148232}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9c657f7bb66ea0d4eb10c296e7d6f4a8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  skeletonAnimation: {fileID: 1777314114}
-  colorPicker: {fileID: 1777314112}
-  nextEyeButton: {fileID: 1445229172}
-  previousEyeButton: {fileID: 603914183}
-  nextMouthButton: {fileID: 640791616}
-  previousMouthButton: {fileID: 379093576}
-  nextBodyButton: {fileID: 1838040706}
-  previousBodyButton: {fileID: 997006004}
-  playerNameInputField: {fileID: 113221154}
 --- !u!114 &1838148237
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5573,19 +5369,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1846954108}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1777314107}
-        m_TargetAssemblyTypeName: SkinsMatcher, Assembly-CSharp
-        m_MethodName: PreviousEyeSkin
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!114 &1846954108
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5771,7 +5555,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2024414515}
   m_Layer: 5
-  m_Name: EyesParent (1)
+  m_Name: EyesParent
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6097,6 +5881,10 @@ PrefabInstance:
       propertyPath: prevColorButton
       value: 
       objectReference: {fileID: 504435779}
+    - target: {fileID: 3174272329238809027, guid: 633ea4a2f6493c04fad5be35b3366a91, type: 3}
+      propertyPath: skeletonGraphic
+      value: 
+      objectReference: {fileID: 1838148237}
     - target: {fileID: 3435813891757065181, guid: 633ea4a2f6493c04fad5be35b3366a91, type: 3}
       propertyPath: m_Name
       value: PlayerSpineObject
@@ -6108,6 +5896,10 @@ PrefabInstance:
     - target: {fileID: 4864658198841976851, guid: 633ea4a2f6493c04fad5be35b3366a91, type: 3}
       propertyPath: nextEyeButton
       value: 
+      objectReference: {fileID: 257561933}
+    - target: {fileID: 4864658198841976851, guid: 633ea4a2f6493c04fad5be35b3366a91, type: 3}
+      propertyPath: nextHatButton
+      value: 
       objectReference: {fileID: 1445229172}
     - target: {fileID: 4864658198841976851, guid: 633ea4a2f6493c04fad5be35b3366a91, type: 3}
       propertyPath: nextBodyButton
@@ -6118,7 +5910,15 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 640791616}
     - target: {fileID: 4864658198841976851, guid: 633ea4a2f6493c04fad5be35b3366a91, type: 3}
+      propertyPath: skeletonGraphic
+      value: 
+      objectReference: {fileID: 1838148237}
+    - target: {fileID: 4864658198841976851, guid: 633ea4a2f6493c04fad5be35b3366a91, type: 3}
       propertyPath: previousEyeButton
+      value: 
+      objectReference: {fileID: 1846954107}
+    - target: {fileID: 4864658198841976851, guid: 633ea4a2f6493c04fad5be35b3366a91, type: 3}
+      propertyPath: previousHatButton
       value: 
       objectReference: {fileID: 603914183}
     - target: {fileID: 4864658198841976851, guid: 633ea4a2f6493c04fad5be35b3366a91, type: 3}
@@ -6133,6 +5933,10 @@ PrefabInstance:
       propertyPath: playerNameInputField
       value: 
       objectReference: {fileID: 113221154}
+    - target: {fileID: 6490699612758280649, guid: 633ea4a2f6493c04fad5be35b3366a91, type: 3}
+      propertyPath: skeletonGraphic
+      value: 
+      objectReference: {fileID: 1838148237}
     - target: {fileID: 8282161958287339656, guid: 633ea4a2f6493c04fad5be35b3366a91, type: 3}
       propertyPath: m_SortingLayer
       value: 0

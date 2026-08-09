@@ -10,6 +10,7 @@ public class GhostColorPicker : MonoBehaviour
     const string PREFS_KEY = "GhostColorIndex";
 
     [SerializeField] private SkeletonAnimation skeletonAnimation;
+    [SerializeField] private SkeletonGraphic skeletonGraphic;
     [SerializeField] private Button prevColorButton;
     [SerializeField] private Button nextColorButton;
     [SerializeField] private Image colorPreview;
@@ -57,13 +58,45 @@ public class GhostColorPicker : MonoBehaviour
         {
             UnityColor selectedColor = colorArray[currentColorIndex];
             ChangeSlotColor(targetSlotName, selectedColor);
+            ChangeSlotColorGraphic(targetSlotName, selectedColor);
             if (colorPreview) colorPreview.color = selectedColor;  // Vorschau aktualisieren
             Debug.Log($"Applied color {selectedColor} to slot '{targetSlotName}'");
         }
     }
 
+    private void ChangeSlotColorGraphic(string slotName, UnityColor color)
+    {
+        if (skeletonGraphic == null)
+        {
+            return;
+        }
+
+        Slot slot = skeletonGraphic.Skeleton.FindSlot(slotName);
+        if (slot == null)
+        {
+            Debug.LogError($"Slot '{slotName}' not found!");
+            return;
+        }
+
+        slot.SetColor(color);
+
+        // Update das Skelett, damit �nderungen sichtbar werden
+        skeletonGraphic.Update(0);  // Dies sollte das Skelett aktualisieren
+        skeletonGraphic.LateUpdate();  // �berpr�fe, ob das zu einer sichtbaren �nderung f�hrt
+
+        PlayerPrefs.SetInt(PREFS_KEY, currentColorIndex);
+        PlayerPrefs.Save();
+
+        Debug.Log($"Color for slot '{slotName}' changed to {color}. Current index saved as {currentColorIndex}.");
+    }
+
     private void ChangeSlotColor(string slotName, UnityColor color)
     {
+        if (skeletonAnimation == null)
+        {
+            return;
+        }
+
         Slot slot = skeletonAnimation.Skeleton.FindSlot(slotName);
         if (slot == null)
         {
