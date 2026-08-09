@@ -33030,7 +33030,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &1128575100
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -64887,6 +64887,18 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 232080178947988162, guid: 0bb0476c06ed64246813381dfa409307, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.101
+      objectReference: {fileID: 0}
+    - target: {fileID: 232080178947988162, guid: 0bb0476c06ed64246813381dfa409307, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1.221
+      objectReference: {fileID: 0}
+    - target: {fileID: 232080178947988162, guid: 0bb0476c06ed64246813381dfa409307, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.042
+      objectReference: {fileID: 0}
     - target: {fileID: 239797759141067043, guid: 0bb0476c06ed64246813381dfa409307, type: 3}
       propertyPath: m_Color.b
       value: 0.7019608
@@ -64974,6 +64986,10 @@ PrefabInstance:
     - target: {fileID: 4276062670623211861, guid: 0bb0476c06ed64246813381dfa409307, type: 3}
       propertyPath: m_Color.r
       value: 0.94117653
+      objectReference: {fileID: 0}
+    - target: {fileID: 4521714466212703452, guid: 0bb0476c06ed64246813381dfa409307, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4645999490047489431, guid: 0bb0476c06ed64246813381dfa409307, type: 3}
       propertyPath: m_LocalScale.y
@@ -75931,6 +75947,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: '::'
   musicSource: {fileID: 703498529}
   volumeOnMusicPlayed: 0.1
+  tweenDuration: 1
 --- !u!4 &7592769857117614048
 Transform:
   m_ObjectHideFlags: 0
