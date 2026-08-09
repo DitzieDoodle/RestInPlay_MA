@@ -17947,6 +17947,11 @@ PrefabInstance:
       insertIndex: 2
       addedObject: {fileID: 1283166458}
   m_SourcePrefab: {fileID: 100100000, guid: 4bde9a95557703f43836befc3c3e8d70, type: 3}
+--- !u!82 &703498529 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 2438545290241528925, guid: 8d86e64fd23c95d42a9b91a6be525abc, type: 3}
+  m_PrefabInstance: {fileID: 7591775105321729524}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &711790051
 GameObject:
   m_ObjectHideFlags: 0
@@ -69729,6 +69734,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 1247303808944225888, guid: 4bde9a95557703f43836befc3c3e8d70, type: 3}
   m_PrefabInstance: {fileID: 692155831}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &2112687394 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5757703096497403856, guid: 8d86e64fd23c95d42a9b91a6be525abc, type: 3}
+  m_PrefabInstance: {fileID: 7591775105321729524}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &2112898526
 GameObject:
   m_ObjectHideFlags: 0
@@ -75895,6 +75905,9 @@ PrefabInstance:
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 5757703096497403856, guid: 8d86e64fd23c95d42a9b91a6be525abc, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 7591775105321729526}
     - targetCorrespondingSourceObject: {fileID: 8286662355651873493, guid: 8d86e64fd23c95d42a9b91a6be525abc, type: 3}
       insertIndex: -1
       addedObject: {fileID: 623764174}
@@ -75904,6 +75917,20 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 6788068094945914008, guid: 8d86e64fd23c95d42a9b91a6be525abc, type: 3}
   m_PrefabInstance: {fileID: 7591775105321729524}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &7591775105321729526
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2112687394}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d12b06a5c82e3cf4ba1b55642c2834a7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: '::'
+  musicSource: {fileID: 703498529}
+  volumeOnMusicPlayed: 0.1
 --- !u!4 &7592769857117614048
 Transform:
   m_ObjectHideFlags: 0

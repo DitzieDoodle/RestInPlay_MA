@@ -1,9 +1,13 @@
 using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
+using UnityEngine.Events;
 
 public class MusicBoxManager : MonoBehaviour
 {
+    public UnityEvent OnMusicPlayed = new();
+    public UnityEvent OnMusicStopped = new();
+
     [Header("Clips")]
     public AudioClip melancholic;
     public AudioClip acoustic;
@@ -128,6 +132,8 @@ public class MusicBoxManager : MonoBehaviour
             StopCoroutine(fadeCoroutine);
 
         fadeCoroutine = StartCoroutine(CrossfadeTo(clip));
+
+        OnMusicPlayed?.Invoke();
     }
 
     private IEnumerator CrossfadeTo(AudioClip newClip)
