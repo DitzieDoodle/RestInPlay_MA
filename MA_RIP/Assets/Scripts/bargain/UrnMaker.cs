@@ -52,6 +52,11 @@ public class UrnMaker : MonoBehaviour
     public AudioClip starSFX;
     public AudioClip heartSFX;
 
+    public AudioClip naturalSFX;
+    public AudioClip mellowSFX;
+    public AudioClip popSFX;
+    public AudioClip coolSFX;
+
     public SpriteRenderer UrnRenderer;
     public SpriteRenderer DecorRenderer;
 
@@ -171,24 +176,24 @@ public class UrnMaker : MonoBehaviour
 
     public void SetColorNatural()
     {
-        SetColorFromHex("#AB8777");
+        SetColorFromHex("#AB8777", naturalSFX);
         Save("ColorNatural");
     }
 
     public void SetColorMellow()
     {
-        SetColorFromHex("#F1E363");
+        SetColorFromHex("#F1E363", mellowSFX);
         Save("ColorMellow");
     }
 
     public void SetColorPop()
     {
-        SetColorFromHex("#F94FFF");
+        SetColorFromHex("#F94FFF", popSFX);
         Save("ColorPop");
     }
     public void SetColorCool()
     {
-        SetColorFromHex("#589DFF");
+        SetColorFromHex("#589DFF", coolSFX);
         Save("ColorCool");
     }
 
@@ -233,7 +238,7 @@ public class UrnMaker : MonoBehaviour
         Save("DecorHeart");
     }
 
-    public void SetColorFromHex(string hexCode)
+    public void SetColorFromHex(string hexCode, AudioClip sfx = null)
     {
         if (UrnRenderer == null) return;
 
@@ -245,6 +250,12 @@ public class UrnMaker : MonoBehaviour
         if (ColorUtility.TryParseHtmlString(hexCode, out color))
         {
             UrnRenderer.color = color;
+
+            if (initialized)
+            {
+                audioSource.clip = sfx;
+                audioSource.Play();
+            }
         }
         else
         {
