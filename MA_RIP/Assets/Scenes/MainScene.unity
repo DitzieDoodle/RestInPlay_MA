@@ -3258,7 +3258,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &127921615
 RectTransform:
   m_ObjectHideFlags: 0
@@ -7558,7 +7558,7 @@ Camera:
     height: 1
   near clip plane: 0.1
   far clip plane: 5000
-  field of view: 89.1
+  field of view: 100
   orthographic: 0
   orthographic size: 10
   m_Depth: -1
@@ -7584,8 +7584,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 330585543}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.39231566, y: 0, z: 0, w: 0.9198307}
-  m_LocalPosition: {x: 8.01, y: 1.3089999, z: -11.28}
+  m_LocalRotation: {x: 0.27915868, y: 0, z: 0, w: 0.960245}
+  m_LocalPosition: {x: 8.11, y: 1.8889999, z: -12.05}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -16914,7 +16914,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!82 &655909089
 AudioSource:
   m_ObjectHideFlags: 0
@@ -33733,7 +33733,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Hold <Space>
+  m_text: Hold <Space> to depart.
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 47e79468d6260454e86704e909953a7e, type: 2}
   m_sharedMaterial: {fileID: 8214625514859866777, guid: 47e79468d6260454e86704e909953a7e, type: 2}
@@ -39265,7 +39265,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!199 &1312962831
 ParticleSystemRenderer:
   serializedVersion: 7
@@ -48372,7 +48372,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1489645179
 Transform:
   m_ObjectHideFlags: 0
@@ -60114,7 +60114,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1776989292
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -60279,14 +60279,14 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1776989291}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.39231566, y: -0, z: -0, w: 0.9198307}
+  m_LocalRotation: {x: 0.3273404, y: -0, z: -0, w: 0.94490653}
   m_LocalPosition: {x: -0.019999504, y: 1.3089999, z: -5.47}
-  m_LocalScale: {x: 1.1679, y: 1.1679, z: 1.1679}
+  m_LocalScale: {x: 0.83, y: 1.1679, z: 1.1679}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1377274163}
   m_Father: {fileID: 363208747}
-  m_LocalEulerAnglesHint: {x: 46.197, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 38.215, y: 0, z: 0}
 --- !u!1 &1786112194
 GameObject:
   m_ObjectHideFlags: 0
@@ -69058,7 +69058,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &2093611555
 Transform:
   m_ObjectHideFlags: 0

@@ -11145,7 +11145,7 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 162
+        x: 163.42859
         y: 100
         width: 160
         height: 30
@@ -11508,7 +11508,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
-        value: SendMessage(StartGame,,Denial Game Canvas)
+        value: SendMessage(StartGame,,Denial Game Canvas);Continue()
         type: 0
         typeString: 
       conversationID: 28
@@ -11518,13 +11518,7 @@ MonoBehaviour:
       delaySimStatus: 0
       falseConditionAction: Block
       conditionPriority: 2
-      outgoingLinks:
-      - originConversationID: 28
-        originDialogueID: 8
-        destinationConversationID: 28
-        destinationDialogueID: 10
-        isConnector: 0
-        priority: 2
+      outgoingLinks: []
       conditionsString: 
       userScript: 
       onExecute:
@@ -11533,7 +11527,7 @@ MonoBehaviour:
       canvasRect:
         serializedVersion: 2
         x: 168.42859
-        y: 880
+        y: 875.7143
         width: 160
         height: 30
     - id: 9
@@ -11591,57 +11585,8 @@ MonoBehaviour:
         y: 636
         width: 160
         height: 30
-    - id: 10
-      fields:
-      - title: Title
-        value: 
-        type: 0
-        typeString: 
-      - title: Description
-        value: 
-        type: 0
-        typeString: 
-      - title: Actor
-        value: 17
-        type: 0
-        typeString: CustomFieldType_Actor
-      - title: Conversant
-        value: 4
-        type: 0
-        typeString: CustomFieldType_Actor
-      - title: Menu Text
-        value: 
-        type: 0
-        typeString: 
-      - title: Dialogue Text
-        value: 
-        type: 0
-        typeString: 
-      - title: Sequence
-        value: 
-        type: 0
-        typeString: 
-      conversationID: 28
-      isRoot: 0
-      isGroup: 0
-      nodeColor: 
-      delaySimStatus: 0
-      falseConditionAction: Block
-      conditionPriority: 2
-      outgoingLinks: []
-      conditionsString: 
-      userScript: 
-      onExecute:
-        m_PersistentCalls:
-          m_Calls: []
-      canvasRect:
-        serializedVersion: 2
-        x: 162
-        y: 1053
-        width: 160
-        height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 0, y: 0}
+    canvasScrollPosition: {x: 0, y: 500.91724}
     canvasZoom: 0.7000003
   - id: 33
     fields:
@@ -16071,7 +16016,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: "Strange, isn\u2019t it? How swiftly life can fade away."
+        value: Strange, is it not? How swiftly life can fade away.
         type: 0
         typeString: 
       - title: Sequence
@@ -16584,8 +16529,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: "Of course. Everyone feels fear when faced with death. It\u2019s only
-          natural."
+        value: Of course. Everyone feels fear when faced with death. It is only natural.
         type: 0
         typeString: 
       - title: Sequence
@@ -16640,8 +16584,8 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: "Oh, that\u2019s quite alright. I understand \u2014 discovering that
-          you\u2019re dead must come as a shock."
+        value: "Oh, that\u2019s quite alright. I understand. discovering that you
+          are dead must come as a shock!"
         type: 0
         typeString: 
       - title: Sequence
@@ -16670,7 +16614,7 @@ MonoBehaviour:
       canvasRect:
         serializedVersion: 2
         x: 2478.5542
-        y: 2069.8154
+        y: 2068.679
         width: 160
         height: 30
     - id: 26
@@ -16973,7 +16917,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: 'While it is stil sad to your friends and loved ones that you are
+        value: 'While it is still sad to your friends and loved ones that you are
           dead, I am glad to hear you are not afraid.
 
           Do not worry, everything
@@ -17259,8 +17203,8 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: Not to mention the added burden of funeral arrangements. Talking about
-          death in advance and perhaps even making thoughtful, informed preparations
+        value: Not to mention the added burden of making funeral arrangements. Talking
+          about death in advance and even making thoughtful, informed preparations
           can spare you a great deal of heartbreak later. It gives you the space
           to grieve more peacefully when the time comes.
         type: 0
@@ -17526,7 +17470,7 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 2519.8323
+        x: 2521.0088
         y: 3098.6343
         width: 160
         height: 30
@@ -17970,7 +17914,7 @@ MonoBehaviour:
       canvasRect:
         serializedVersion: 2
         x: 2516.303
-        y: 3589.923
+        y: 3588.7466
         width: 160
         height: 30
     - id: 49
@@ -19667,8 +19611,8 @@ MonoBehaviour:
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 2207.4302, y: 1287.7064}
-    canvasZoom: 0.87999976
+    canvasScrollPosition: {x: 2225.4658, y: 3329.3162}
+    canvasZoom: 0.8499998
   - id: 14
     fields:
     - title: Title
@@ -23637,7 +23581,7 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 161
+        x: 160
         y: 121
         width: 160
         height: 30
@@ -23858,7 +23802,7 @@ MonoBehaviour:
       canvasRect:
         serializedVersion: 2
         x: 165
-        y: 486
+        y: 485
         width: 160
         height: 30
     - id: 6
@@ -23913,7 +23857,7 @@ MonoBehaviour:
       canvasRect:
         serializedVersion: 2
         x: 164
-        y: 612
+        y: 613
         width: 160
         height: 30
     - id: 7
@@ -25457,7 +25401,7 @@ MonoBehaviour:
       canvasRect:
         serializedVersion: 2
         x: 165.21951
-        y: 457
+        y: 458
         width: 160
         height: 30
     - id: 9
@@ -25516,8 +25460,8 @@ MonoBehaviour:
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 73.30932, y: 0}
-    canvasZoom: 1
+    canvasScrollPosition: {x: 0, y: 0}
+    canvasZoom: 0.7000003
   - id: 49
     fields:
     - title: Title
