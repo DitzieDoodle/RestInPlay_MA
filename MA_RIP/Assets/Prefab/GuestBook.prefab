@@ -686,7 +686,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &141497155045149250
 Transform:
   m_ObjectHideFlags: 0
@@ -1242,7 +1242,7 @@ MonoBehaviour:
     m_uiText: {fileID: 2489303930574692435}
   useMessageText:
     m_uiText: {fileID: 3618548937949320165}
-  inRangeColor: {r: 1, g: 1, b: 1, a: 1}
+  inRangeColor: {r: 0.56078434, g: 0.22352943, b: 0.61960787, a: 1}
   outOfRangeColor: {r: 0.5, g: 0.5, b: 0.5, a: 1}
   reticleInRange: {fileID: 8304745743110078404}
   reticleOutOfRange: {fileID: 1580084218787805772}
@@ -1424,8 +1424,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 274b80ab5b659c646ba9338870d14625, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_overrideName: Tester NPC
-  m_overrideUseMessage: Talk to
+  m_overrideName: Guestbook
+  m_overrideUseMessage: look at
   maxUseDistance: 10
   events:
     onSelect:
