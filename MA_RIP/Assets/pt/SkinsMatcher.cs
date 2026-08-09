@@ -15,10 +15,10 @@ public class SkinsMatcher : MonoBehaviour
     private Skin combinedSkinGraphic;
 
     // Arrays der Skin-Namen
-    private string[] Hats = { "Hat_A", "Hat_B", "Hat_C" };
-    private string[] Eyes = { "Eyes_A", "Eyes_B", "Eyes_C" };
-    private string[] Mouths = { "Mouth_A", "Mouth_B", "Mouth_C" };
-    private string[] Body = { "Body_A", "Body_B", "Body_C" };
+    private string[] Hats = { "Hat_A", "Hat_B", "Hat_C", "Hat_D", "Hat_E", "Hat_F", "Hat_G", };
+    private string[] Eyes = { "Eyes_A", "Eyes_B", "Eyes_C", "Eyes_D", "Eyes_E", "Eyes_F", "Eyes_G", "Eyes_H" };
+    private string[] Mouths = { "Mouth_A", "Mouth_B", "Mouth_C", "Mouth_D", "Mouth_E", "Mouth_F", "Mouth_G" };
+    private string[] Body = { "Body_A", "Body_B", "Body_C", "Body_D" };
 
     private int currentEyeIndex = 0;
     private int currentMouthIndex = 0;

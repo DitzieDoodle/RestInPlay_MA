@@ -5894,6 +5894,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 0}
     - target: {fileID: 4864658198841976851, guid: 633ea4a2f6493c04fad5be35b3366a91, type: 3}
+      propertyPath: isHatsEnabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4864658198841976851, guid: 633ea4a2f6493c04fad5be35b3366a91, type: 3}
       propertyPath: nextEyeButton
       value: 
       objectReference: {fileID: 257561933}
