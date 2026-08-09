@@ -2515,6 +2515,11 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
+--- !u!1 &97635554 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8765732672928040831, guid: 4c362781e726a514fa59223d210f3df5, type: 3}
+  m_PrefabInstance: {fileID: 1775861100}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &103666669
 GameObject:
   m_ObjectHideFlags: 0
@@ -5649,20 +5654,28 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 292521998796134716, guid: 8ecff980c3496be48aa0f8c2bbca7c77, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 292521998796134716, guid: 8ecff980c3496be48aa0f8c2bbca7c77, type: 3}
       propertyPath: m_AnchorMin.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 292521998796134716, guid: 8ecff980c3496be48aa0f8c2bbca7c77, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 35.88765
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 292521998796134716, guid: 8ecff980c3496be48aa0f8c2bbca7c77, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -50
+      value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1182374965823434502, guid: 8ecff980c3496be48aa0f8c2bbca7c77, type: 3}
+      propertyPath: radialFillImage
+      value: 
+      objectReference: {fileID: 1053394806}
+    - target: {fileID: 1182374965823434502, guid: 8ecff980c3496be48aa0f8c2bbca7c77, type: 3}
+      propertyPath: feedbackContainer
+      value: 
+      objectReference: {fileID: 735855834}
     - target: {fileID: 2605664877770532000, guid: 8ecff980c3496be48aa0f8c2bbca7c77, type: 3}
       propertyPath: m_LocalPosition.x
       value: 23.44978
@@ -5717,19 +5730,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6109224082002658908, guid: 8ecff980c3496be48aa0f8c2bbca7c77, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6109224082002658908, guid: 8ecff980c3496be48aa0f8c2bbca7c77, type: 3}
       propertyPath: m_AnchorMin.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6109224082002658908, guid: 8ecff980c3496be48aa0f8c2bbca7c77, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 128.83115
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6109224082002658908, guid: 8ecff980c3496be48aa0f8c2bbca7c77, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -50
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6589891101605743230, guid: 8ecff980c3496be48aa0f8c2bbca7c77, type: 3}
       propertyPath: m_IsActive
@@ -5855,14 +5868,23 @@ PrefabInstance:
       propertyPath: colorMap.Array.data[9].color.r
       value: 0.60784316
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 6656619641305602378, guid: 8ecff980c3496be48aa0f8c2bbca7c77, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 288015481619956289, guid: 8ecff980c3496be48aa0f8c2bbca7c77, type: 3}
       insertIndex: -1
       addedObject: {fileID: 685646787}
+    - targetCorrespondingSourceObject: {fileID: 288015481619956289, guid: 8ecff980c3496be48aa0f8c2bbca7c77, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 685646788}
   m_SourcePrefab: {fileID: 100100000, guid: 8ecff980c3496be48aa0f8c2bbca7c77, type: 3}
+--- !u!1 &246989952 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2086576744300885677, guid: 8ecff980c3496be48aa0f8c2bbca7c77, type: 3}
+  m_PrefabInstance: {fileID: 246989951}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &247525494
 GameObject:
   m_ObjectHideFlags: 0
@@ -8039,6 +8061,11 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
+--- !u!4 &338071423 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4425283126278364004, guid: 4c362781e726a514fa59223d210f3df5, type: 3}
+  m_PrefabInstance: {fileID: 1775861100}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &340198136
 GameObject:
   m_ObjectHideFlags: 0
@@ -17563,6 +17590,19 @@ MonoBehaviour:
   descentDuration: 3
   descentEase: 6
   delayBeforeDescent: 0.3
+--- !u!114 &685646788
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 685646781}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 83e5b60b4b1846e4a84cb9e80b749cc8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PauseMenu
+  pauseCanvas: {fileID: 246989952}
 --- !u!1 &689564183
 GameObject:
   m_ObjectHideFlags: 0
@@ -19016,6 +19056,11 @@ PrefabInstance:
 Transform:
   m_CorrespondingSourceObject: {fileID: 5579537686266532842, guid: 9063214ebc95b8c4e8e6e869f47e3b6d, type: 3}
   m_PrefabInstance: {fileID: 733239815}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &735855834 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4771161157883894727, guid: 8ecff980c3496be48aa0f8c2bbca7c77, type: 3}
+  m_PrefabInstance: {fileID: 246989951}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &738381111
 GameObject:
@@ -29619,6 +29664,17 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
+--- !u!114 &1053394806 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8441139434804255341, guid: 8ecff980c3496be48aa0f8c2bbca7c77, type: 3}
+  m_PrefabInstance: {fileID: 246989951}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
 --- !u!1001 &1056744125
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -59927,6 +59983,22 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2798110806923316227, guid: 4c362781e726a514fa59223d210f3df5, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2798110806923316227, guid: 4c362781e726a514fa59223d210f3df5, type: 3}
+      propertyPath: setActiveActions.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2798110806923316227, guid: 4c362781e726a514fa59223d210f3df5, type: 3}
+      propertyPath: setActiveActions.Array.data[0].state
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2798110806923316227, guid: 4c362781e726a514fa59223d210f3df5, type: 3}
+      propertyPath: setActiveActions.Array.data[0].target
+      value: 
+      objectReference: {fileID: 338071423}
     - target: {fileID: 4108362598225784915, guid: 4c362781e726a514fa59223d210f3df5, type: 3}
       propertyPath: m_Sprite
       value: 
@@ -59935,6 +60007,10 @@ PrefabInstance:
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: 21300000, guid: 925987cee7ceb6944bc905eb0e753585, type: 3}
+    - target: {fileID: 5745422132315014112, guid: 4c362781e726a514fa59223d210f3df5, type: 3}
+      propertyPath: m_overrideName
+      value: A place for your urn
+      objectReference: {fileID: 0}
     - target: {fileID: 5984209358666317194, guid: 4c362781e726a514fa59223d210f3df5, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.018
@@ -60009,7 +60085,10 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 6145970053563844813, guid: 4c362781e726a514fa59223d210f3df5, type: 3}
       insertIndex: -1
       addedObject: {fileID: 3386992465009636702}
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 8765732672928040831, guid: 4c362781e726a514fa59223d210f3df5, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2019894830}
   m_SourcePrefab: {fileID: 100100000, guid: 4c362781e726a514fa59223d210f3df5, type: 3}
 --- !u!1 &1776989291
 GameObject:
@@ -67037,6 +67116,93 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 6145970053563844813, guid: 4c362781e726a514fa59223d210f3df5, type: 3}
   m_PrefabInstance: {fileID: 1775861100}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &2019894830
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 97635554}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c593457cd8105e148906690e1707c592, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp-firstpass::PixelCrushers.DialogueSystem.Wrappers.DialogueSystemTrigger
+  trigger: 2
+  condition:
+    luaConditions: []
+    questConditions: []
+    acceptedTags: []
+    acceptedGameObjects: []
+    luaWizardIndex: -1
+    lastEvaluationValue: 0
+  setQuestState: 1
+  questName: 
+  questState: 0
+  setQuestEntryState: 0
+  questEntryNumber: 1
+  questEntryState: 0
+  setAnotherQuestEntryState: 0
+  anotherQuestEntryNumber: 1
+  anotherQuestEntryState: 0
+  luaCode: 
+  sequence: 
+  sequenceSpeaker: {fileID: 0}
+  sequenceListener: {fileID: 0}
+  waitOneFrameOnStartOrEnable: 1
+  alertMessage: 
+  textTable: {fileID: 0}
+  alertDuration: 0
+  sendMessages: []
+  barkSource: 0
+  barkConversation: 
+  barkEntryID: -1
+  barkEntryTitle: 
+  barkText: 
+  barkTextSequence: 
+  barker: {fileID: 0}
+  barkTarget: {fileID: 0}
+  barkOrder: 0
+  allowBarksDuringConversations: 0
+  skipBarkIfNoValidEntries: 0
+  cacheBarkLines: 0
+  conversation: 
+  conversationConversant: {fileID: 0}
+  conversationActor: {fileID: 0}
+  startConversationEntryID: -1
+  startConversationEntryTitle: 
+  overrideDialogueUI: {fileID: 0}
+  exclusive: 0
+  replace: 0
+  queue: 0
+  skipIfNoValidEntries: 0
+  preventRestartOnSameFrameEnded: 0
+  stopConversationOnTriggerExit: 0
+  marginToAllowTriggerExit: 0.2
+  stopConversationIfTooFar: 0
+  maxConversationDistance: 5
+  monitorConversationDistanceFrequency: 1
+  showCursorDuringConversation: 0
+  pauseGameDuringConversation: 0
+  setActiveActions:
+  - condition:
+      luaConditions: []
+      questConditions: []
+      acceptedTags: []
+      acceptedGameObjects: []
+      luaWizardIndex: 0
+      lastEvaluationValue: 0
+    target: {fileID: 338071423}
+    state: 1
+  setEnabledActions: []
+  setAnimatorStateActions: []
+  onExecute:
+    m_PersistentCalls:
+      m_Calls: []
+  useConversationTitlePicker: 1
+  useBarkTitlePicker: 1
+  useQuestNamePicker: 1
+  selectedDatabase: {fileID: 11400000, guid: 1ddf13999859a9148bb1d7f47f69438b, type: 2}
 --- !u!1001 &2026353966
 PrefabInstance:
   m_ObjectHideFlags: 0
