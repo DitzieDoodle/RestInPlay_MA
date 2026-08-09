@@ -228,7 +228,7 @@ MonoBehaviour:
   - id: 8
     fields:
     - title: Name
-      value: Accepting guest
+      value: Acceptance guest
       type: 0
       typeString: CustomFieldType_Text
     - title: Pictures
@@ -425,6 +425,136 @@ MonoBehaviour:
     spritePortrait: {fileID: 0}
     alternatePortraits: []
     spritePortraits: []
+  - id: 16
+    fields:
+    - title: Name
+      value: Anger
+      type: 0
+      typeString: CustomFieldType_Text
+    - title: Pictures
+      value: '[]'
+      type: 3
+      typeString: CustomFieldType_Files
+    - title: Description
+      value: 
+      type: 0
+      typeString: CustomFieldType_Text
+    - title: IsPlayer
+      value: False
+      type: 2
+      typeString: CustomFieldType_Boolean
+    - title: NodeColor
+      value: '#b20055ff'
+      type: 0
+      typeString: CustomFieldType_Text
+    portrait: {fileID: 0}
+    spritePortrait: {fileID: 0}
+    alternatePortraits: []
+    spritePortraits: []
+  - id: 17
+    fields:
+    - title: Name
+      value: Denial
+      type: 0
+      typeString: CustomFieldType_Text
+    - title: Pictures
+      value: '[]'
+      type: 3
+      typeString: CustomFieldType_Files
+    - title: Description
+      value: 
+      type: 0
+      typeString: CustomFieldType_Text
+    - title: IsPlayer
+      value: False
+      type: 2
+      typeString: CustomFieldType_Boolean
+    - title: NodeColor
+      value: '#a8772dff'
+      type: 0
+      typeString: CustomFieldType_Text
+    portrait: {fileID: 0}
+    spritePortrait: {fileID: 0}
+    alternatePortraits: []
+    spritePortraits: []
+  - id: 18
+    fields:
+    - title: Name
+      value: Depression
+      type: 0
+      typeString: CustomFieldType_Text
+    - title: Pictures
+      value: '[]'
+      type: 3
+      typeString: CustomFieldType_Files
+    - title: Description
+      value: 
+      type: 0
+      typeString: CustomFieldType_Text
+    - title: IsPlayer
+      value: False
+      type: 2
+      typeString: CustomFieldType_Boolean
+    - title: NodeColor
+      value: '#25319cff'
+      type: 0
+      typeString: CustomFieldType_Text
+    portrait: {fileID: 0}
+    spritePortrait: {fileID: 0}
+    alternatePortraits: []
+    spritePortraits: []
+  - id: 19
+    fields:
+    - title: Name
+      value: Acceptance
+      type: 0
+      typeString: CustomFieldType_Text
+    - title: Pictures
+      value: '[]'
+      type: 3
+      typeString: CustomFieldType_Files
+    - title: Description
+      value: 
+      type: 0
+      typeString: CustomFieldType_Text
+    - title: IsPlayer
+      value: False
+      type: 2
+      typeString: CustomFieldType_Boolean
+    - title: NodeColor
+      value: '#31844fff'
+      type: 0
+      typeString: CustomFieldType_Text
+    portrait: {fileID: 0}
+    spritePortrait: {fileID: 0}
+    alternatePortraits: []
+    spritePortraits: []
+  - id: 20
+    fields:
+    - title: Name
+      value: Bargaining
+      type: 0
+      typeString: CustomFieldType_Text
+    - title: Pictures
+      value: '[]'
+      type: 3
+      typeString: CustomFieldType_Files
+    - title: Description
+      value: 
+      type: 0
+      typeString: CustomFieldType_Text
+    - title: IsPlayer
+      value: False
+      type: 2
+      typeString: CustomFieldType_Boolean
+    - title: NodeColor
+      value: '#8414b2ff'
+      type: 0
+      typeString: CustomFieldType_Text
+    portrait: {fileID: 0}
+    spritePortrait: {fileID: 0}
+    alternatePortraits: []
+    spritePortraits: []
   items: []
   locations: []
   variables:
@@ -555,12 +685,12 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Actor
-        value: 8
-        type: 5
+        value: 19
+        type: 0
         typeString: CustomFieldType_Actor
       - title: Conversant
         value: 1
-        type: 5
+        type: 0
         typeString: CustomFieldType_Actor
       - title: Menu Text
         value: 
@@ -610,12 +740,12 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Actor
-        value: 8
-        type: 5
+        value: 19
+        type: 0
         typeString: CustomFieldType_Actor
       - title: Conversant
         value: 1
-        type: 5
+        type: 0
         typeString: CustomFieldType_Actor
       - title: Menu Text
         value: 
@@ -665,12 +795,12 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Actor
-        value: 8
-        type: 5
+        value: 19
+        type: 0
         typeString: CustomFieldType_Actor
       - title: Conversant
         value: 1
-        type: 5
+        type: 0
         typeString: CustomFieldType_Actor
       - title: Menu Text
         value: 
@@ -723,12 +853,12 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Actor
-        value: 8
-        type: 5
+        value: 19
+        type: 0
         typeString: CustomFieldType_Actor
       - title: Conversant
         value: 1
-        type: 5
+        type: 0
         typeString: CustomFieldType_Actor
       - title: Menu Text
         value: 
@@ -778,12 +908,12 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Actor
-        value: 8
-        type: 5
+        value: 19
+        type: 0
         typeString: CustomFieldType_Actor
       - title: Conversant
         value: 1
-        type: 5
+        type: 0
         typeString: CustomFieldType_Actor
       - title: Menu Text
         value: 
@@ -835,12 +965,12 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Actor
-        value: 8
-        type: 5
+        value: 19
+        type: 0
         typeString: CustomFieldType_Actor
       - title: Conversant
         value: 1
-        type: 5
+        type: 0
         typeString: CustomFieldType_Actor
       - title: Menu Text
         value: 
@@ -890,12 +1020,12 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Actor
-        value: 8
-        type: 5
+        value: 19
+        type: 0
         typeString: CustomFieldType_Actor
       - title: Conversant
         value: 1
-        type: 5
+        type: 0
         typeString: CustomFieldType_Actor
       - title: Menu Text
         value: 
@@ -946,12 +1076,12 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Actor
-        value: 8
-        type: 5
+        value: 19
+        type: 0
         typeString: CustomFieldType_Actor
       - title: Conversant
         value: 1
-        type: 5
+        type: 0
         typeString: CustomFieldType_Actor
       - title: Menu Text
         value: 
@@ -987,8 +1117,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 165
-        y: 802
+        x: 168.65854
+        y: 797.12195
         width: 160
         height: 30
     - id: 9
@@ -1097,7 +1227,7 @@ MonoBehaviour:
         height: 30
     entryGroups: []
     canvasScrollPosition: {x: 0, y: 0}
-    canvasZoom: 0.94000006
+    canvasZoom: 0.8200002
   - id: 26
     fields:
     - title: Title
@@ -2642,7 +2772,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Actor
-        value: 6
+        value: 16
         type: 0
         typeString: CustomFieldType_Actor
       - title: Conversant
@@ -2698,7 +2828,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Actor
-        value: 6
+        value: 16
         type: 0
         typeString: CustomFieldType_Actor
       - title: Conversant
@@ -2757,7 +2887,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Actor
-        value: 6
+        value: 16
         type: 0
         typeString: CustomFieldType_Actor
       - title: Conversant
@@ -2812,7 +2942,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Actor
-        value: 6
+        value: 16
         type: 0
         typeString: CustomFieldType_Actor
       - title: Conversant
@@ -2867,7 +2997,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Actor
-        value: 6
+        value: 16
         type: 0
         typeString: CustomFieldType_Actor
       - title: Conversant
@@ -2923,7 +3053,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Actor
-        value: 6
+        value: 16
         type: 0
         typeString: CustomFieldType_Actor
       - title: Conversant
@@ -2979,12 +3109,12 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Actor
-        value: 6
-        type: 5
+        value: 16
+        type: 0
         typeString: CustomFieldType_Actor
       - title: Conversant
         value: 4
-        type: 5
+        type: 0
         typeString: CustomFieldType_Actor
       - title: Menu Text
         value: 
@@ -3034,12 +3164,12 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Actor
-        value: 6
-        type: 5
+        value: 16
+        type: 0
         typeString: CustomFieldType_Actor
       - title: Conversant
         value: 4
-        type: 5
+        type: 0
         typeString: CustomFieldType_Actor
       - title: Menu Text
         value: 
@@ -3203,12 +3333,12 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Actor
-        value: 6
-        type: 5
+        value: 16
+        type: 0
         typeString: CustomFieldType_Actor
       - title: Conversant
         value: 4
-        type: 5
+        type: 0
         typeString: CustomFieldType_Actor
       - title: Menu Text
         value: 
@@ -3464,8 +3594,8 @@ MonoBehaviour:
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 191.52078, y: 561.17645}
-    canvasZoom: 0.85000014
+    canvasScrollPosition: {x: 103.86671, y: 0}
+    canvasZoom: 0.6100004
   - id: 32
     fields:
     - title: Title
@@ -4663,12 +4793,12 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Actor
-        value: 6
-        type: 5
+        value: 16
+        type: 0
         typeString: CustomFieldType_Actor
       - title: Conversant
         value: 4
-        type: 5
+        type: 0
         typeString: CustomFieldType_Actor
       - title: Menu Text
         value: 
@@ -4767,12 +4897,12 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Actor
-        value: 6
-        type: 5
+        value: 16
+        type: 0
         typeString: CustomFieldType_Actor
       - title: Conversant
         value: 4
-        type: 5
+        type: 0
         typeString: CustomFieldType_Actor
       - title: Menu Text
         value: 
@@ -4822,12 +4952,12 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Actor
-        value: 6
-        type: 5
+        value: 16
+        type: 0
         typeString: CustomFieldType_Actor
       - title: Conversant
         value: 4
-        type: 5
+        type: 0
         typeString: CustomFieldType_Actor
       - title: Menu Text
         value: 
@@ -4943,12 +5073,12 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Actor
-        value: 6
-        type: 5
+        value: 16
+        type: 0
         typeString: CustomFieldType_Actor
       - title: Conversant
         value: 4
-        type: 5
+        type: 0
         typeString: CustomFieldType_Actor
       - title: Menu Text
         value: 
@@ -5102,12 +5232,12 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Actor
-        value: 6
-        type: 5
+        value: 16
+        type: 0
         typeString: CustomFieldType_Actor
       - title: Conversant
         value: 4
-        type: 5
+        type: 0
         typeString: CustomFieldType_Actor
       - title: Menu Text
         value: 
@@ -5157,12 +5287,12 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Actor
-        value: 6
-        type: 5
+        value: 16
+        type: 0
         typeString: CustomFieldType_Actor
       - title: Conversant
         value: 4
-        type: 5
+        type: 0
         typeString: CustomFieldType_Actor
       - title: Menu Text
         value: 
@@ -5212,12 +5342,12 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Actor
-        value: 6
-        type: 5
+        value: 16
+        type: 0
         typeString: CustomFieldType_Actor
       - title: Conversant
         value: 4
-        type: 5
+        type: 0
         typeString: CustomFieldType_Actor
       - title: Menu Text
         value: 
@@ -5321,12 +5451,12 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Actor
-        value: 6
-        type: 5
+        value: 16
+        type: 0
         typeString: CustomFieldType_Actor
       - title: Conversant
         value: 4
-        type: 5
+        type: 0
         typeString: CustomFieldType_Actor
       - title: Menu Text
         value: 
@@ -5480,12 +5610,12 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Actor
-        value: 6
-        type: 5
+        value: 16
+        type: 0
         typeString: CustomFieldType_Actor
       - title: Conversant
         value: 4
-        type: 5
+        type: 0
         typeString: CustomFieldType_Actor
       - title: Menu Text
         value: 
@@ -5535,12 +5665,12 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Actor
-        value: 6
-        type: 5
+        value: 16
+        type: 0
         typeString: CustomFieldType_Actor
       - title: Conversant
         value: 4
-        type: 5
+        type: 0
         typeString: CustomFieldType_Actor
       - title: Menu Text
         value: 
@@ -5591,12 +5721,12 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Actor
-        value: 6
-        type: 5
+        value: 16
+        type: 0
         typeString: CustomFieldType_Actor
       - title: Conversant
         value: 4
-        type: 5
+        type: 0
         typeString: CustomFieldType_Actor
       - title: Menu Text
         value: 
@@ -5700,12 +5830,12 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Actor
-        value: 6
-        type: 5
+        value: 16
+        type: 0
         typeString: CustomFieldType_Actor
       - title: Conversant
         value: 4
-        type: 5
+        type: 0
         typeString: CustomFieldType_Actor
       - title: Menu Text
         value: 
@@ -6301,12 +6431,12 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Actor
-        value: 5
-        type: 5
+        value: 20
+        type: 0
         typeString: CustomFieldType_Actor
       - title: Conversant
         value: 4
-        type: 5
+        type: 0
         typeString: CustomFieldType_Actor
       - title: Menu Text
         value: 
@@ -6356,12 +6486,12 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Actor
-        value: 5
-        type: 5
+        value: 20
+        type: 0
         typeString: CustomFieldType_Actor
       - title: Conversant
-        value: 1
-        type: 5
+        value: 4
+        type: 0
         typeString: CustomFieldType_Actor
       - title: Menu Text
         value: 
@@ -6600,12 +6730,12 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Actor
-        value: 5
-        type: 5
+        value: 20
+        type: 0
         typeString: CustomFieldType_Actor
       - title: Conversant
         value: 4
-        type: 5
+        type: 0
         typeString: CustomFieldType_Actor
       - title: Menu Text
         value: 
@@ -6655,12 +6785,12 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Actor
-        value: 5
-        type: 5
+        value: 20
+        type: 0
         typeString: CustomFieldType_Actor
       - title: Conversant
-        value: 5
-        type: 5
+        value: 4
+        type: 0
         typeString: CustomFieldType_Actor
       - title: Menu Text
         value: 
@@ -6710,12 +6840,12 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Actor
-        value: 5
-        type: 5
+        value: 20
+        type: 0
         typeString: CustomFieldType_Actor
       - title: Conversant
         value: 4
-        type: 5
+        type: 0
         typeString: CustomFieldType_Actor
       - title: Menu Text
         value: 
@@ -6765,12 +6895,12 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Actor
-        value: 5
-        type: 5
+        value: 20
+        type: 0
         typeString: CustomFieldType_Actor
       - title: Conversant
         value: 4
-        type: 5
+        type: 0
         typeString: CustomFieldType_Actor
       - title: Menu Text
         value: 
@@ -6820,12 +6950,12 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Actor
-        value: 5
-        type: 5
+        value: 20
+        type: 0
         typeString: CustomFieldType_Actor
       - title: Conversant
         value: 4
-        type: 5
+        type: 0
         typeString: CustomFieldType_Actor
       - title: Menu Text
         value: 
@@ -6875,12 +7005,12 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Actor
-        value: 5
-        type: 5
+        value: 20
+        type: 0
         typeString: CustomFieldType_Actor
       - title: Conversant
         value: 4
-        type: 5
+        type: 0
         typeString: CustomFieldType_Actor
       - title: Menu Text
         value: 
@@ -6930,12 +7060,12 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Actor
-        value: 5
-        type: 5
+        value: 20
+        type: 0
         typeString: CustomFieldType_Actor
       - title: Conversant
-        value: 1
-        type: 5
+        value: 4
+        type: 0
         typeString: CustomFieldType_Actor
       - title: Menu Text
         value: 
@@ -7229,12 +7359,12 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Actor
-        value: 5
-        type: 5
+        value: 20
+        type: 0
         typeString: CustomFieldType_Actor
       - title: Conversant
         value: 4
-        type: 5
+        type: 0
         typeString: CustomFieldType_Actor
       - title: Menu Text
         value: 
@@ -7285,12 +7415,12 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Actor
-        value: 5
-        type: 5
+        value: 20
+        type: 0
         typeString: CustomFieldType_Actor
       - title: Conversant
         value: 4
-        type: 5
+        type: 0
         typeString: CustomFieldType_Actor
       - title: Menu Text
         value: 
@@ -7341,12 +7471,12 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Actor
-        value: 5
-        type: 5
+        value: 20
+        type: 0
         typeString: CustomFieldType_Actor
       - title: Conversant
         value: 4
-        type: 5
+        type: 0
         typeString: CustomFieldType_Actor
       - title: Menu Text
         value: 
@@ -7396,12 +7526,12 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Actor
-        value: 5
-        type: 5
+        value: 20
+        type: 0
         typeString: CustomFieldType_Actor
       - title: Conversant
         value: 4
-        type: 5
+        type: 0
         typeString: CustomFieldType_Actor
       - title: Menu Text
         value: 
@@ -7451,12 +7581,12 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Actor
-        value: 5
-        type: 5
+        value: 20
+        type: 0
         typeString: CustomFieldType_Actor
       - title: Conversant
         value: 4
-        type: 5
+        type: 0
         typeString: CustomFieldType_Actor
       - title: Menu Text
         value: 
@@ -7506,12 +7636,12 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Actor
-        value: 5
-        type: 5
+        value: 20
+        type: 0
         typeString: CustomFieldType_Actor
       - title: Conversant
         value: 4
-        type: 5
+        type: 0
         typeString: CustomFieldType_Actor
       - title: Menu Text
         value: 
@@ -7547,7 +7677,7 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 1451.3574
+        x: 1449.3167
         y: 330.55453
         width: 160
         height: 30
@@ -7562,12 +7692,12 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Actor
-        value: 5
-        type: 5
+        value: 20
+        type: 0
         typeString: CustomFieldType_Actor
       - title: Conversant
         value: 4
-        type: 5
+        type: 0
         typeString: CustomFieldType_Actor
       - title: Menu Text
         value: 
@@ -7618,12 +7748,12 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Actor
-        value: 5
-        type: 5
+        value: 20
+        type: 0
         typeString: CustomFieldType_Actor
       - title: Conversant
-        value: 1
-        type: 5
+        value: 4
+        type: 0
         typeString: CustomFieldType_Actor
       - title: Menu Text
         value: 
@@ -7673,7 +7803,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Actor
-        value: 5
+        value: 20
         type: 5
         typeString: CustomFieldType_Actor
       - title: Conversant
@@ -7966,12 +8096,12 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Actor
-        value: 5
-        type: 5
+        value: 20
+        type: 0
         typeString: CustomFieldType_Actor
       - title: Conversant
         value: 4
-        type: 5
+        type: 0
         typeString: CustomFieldType_Actor
       - title: Menu Text
         value: 
@@ -8007,7 +8137,7 @@ MonoBehaviour:
       canvasRect:
         serializedVersion: 2
         x: 1164.0044
-        y: 1496.8353
+        y: 1494.7946
         width: 160
         height: 30
     - id: 46
@@ -8021,12 +8151,12 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Actor
-        value: 5
-        type: 5
+        value: 20
+        type: 0
         typeString: CustomFieldType_Actor
       - title: Conversant
         value: 4
-        type: 5
+        type: 0
         typeString: CustomFieldType_Actor
       - title: Menu Text
         value: 
@@ -8076,12 +8206,12 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Actor
-        value: 5
-        type: 5
+        value: 20
+        type: 0
         typeString: CustomFieldType_Actor
       - title: Conversant
         value: 4
-        type: 5
+        type: 0
         typeString: CustomFieldType_Actor
       - title: Menu Text
         value: 
@@ -8118,7 +8248,7 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 1457.8358
+        x: 1455.795
         y: 105.394775
         width: 160
         height: 30
@@ -8133,12 +8263,12 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Actor
-        value: 5
-        type: 5
+        value: 20
+        type: 0
         typeString: CustomFieldType_Actor
       - title: Conversant
         value: 4
-        type: 5
+        type: 0
         typeString: CustomFieldType_Actor
       - title: Menu Text
         value: 
@@ -8173,7 +8303,7 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 1459.3907
+        x: 1457.35
         y: 173.44402
         width: 160
         height: 30
@@ -8243,12 +8373,12 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Actor
-        value: 5
-        type: 5
+        value: 20
+        type: 0
         typeString: CustomFieldType_Actor
       - title: Conversant
         value: 4
-        type: 5
+        type: 0
         typeString: CustomFieldType_Actor
       - title: Menu Text
         value: 
@@ -8299,12 +8429,12 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Actor
-        value: 5
-        type: 5
+        value: 20
+        type: 0
         typeString: CustomFieldType_Actor
       - title: Conversant
         value: 4
-        type: 5
+        type: 0
         typeString: CustomFieldType_Actor
       - title: Menu Text
         value: 
@@ -8341,7 +8471,7 @@ MonoBehaviour:
       canvasRect:
         serializedVersion: 2
         x: 1356.3906
-        y: 1557.5609
+        y: 1555.5201
         width: 160
         height: 30
     - id: 52
@@ -8355,12 +8485,12 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Actor
-        value: 5
-        type: 5
+        value: 20
+        type: 0
         typeString: CustomFieldType_Actor
       - title: Conversant
         value: 4
-        type: 5
+        type: 0
         typeString: CustomFieldType_Actor
       - title: Menu Text
         value: 
@@ -8396,8 +8526,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 1562.0815
-        y: 1539.3909
+        x: 1564.1223
+        y: 1537.3501
         width: 160
         height: 30
     - id: 53
@@ -8411,12 +8541,12 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Actor
-        value: 5
-        type: 5
+        value: 20
+        type: 0
         typeString: CustomFieldType_Actor
       - title: Conversant
         value: 4
-        type: 5
+        type: 0
         typeString: CustomFieldType_Actor
       - title: Menu Text
         value: 
@@ -8452,8 +8582,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 1739.3223
-        y: 1500.4584
+        x: 1741.363
+        y: 1498.4176
         width: 160
         height: 30
     - id: 54
@@ -8467,12 +8597,12 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Actor
-        value: 5
-        type: 5
+        value: 20
+        type: 0
         typeString: CustomFieldType_Actor
       - title: Conversant
         value: 4
-        type: 5
+        type: 0
         typeString: CustomFieldType_Actor
       - title: Menu Text
         value: 
@@ -8571,12 +8701,12 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Actor
-        value: 5
-        type: 5
+        value: 20
+        type: 0
         typeString: CustomFieldType_Actor
       - title: Conversant
         value: 4
-        type: 5
+        type: 0
         typeString: CustomFieldType_Actor
       - title: Menu Text
         value: 
@@ -8611,8 +8741,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 1663.3379
-        y: 326.9451
+        x: 1661.2971
+        y: 324.90427
         width: 160
         height: 30
     - id: 58
@@ -8626,12 +8756,12 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Actor
-        value: 5
-        type: 5
+        value: 20
+        type: 0
         typeString: CustomFieldType_Actor
       - title: Conversant
         value: 4
-        type: 5
+        type: 0
         typeString: CustomFieldType_Actor
       - title: Menu Text
         value: 
@@ -8668,7 +8798,7 @@ MonoBehaviour:
       canvasRect:
         serializedVersion: 2
         x: 1451.9154
-        y: 460.5261
+        y: 458.48526
         width: 160
         height: 30
     - id: 59
@@ -8682,12 +8812,12 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Actor
-        value: 5
-        type: 5
+        value: 20
+        type: 0
         typeString: CustomFieldType_Actor
       - title: Conversant
         value: 4
-        type: 5
+        type: 0
         typeString: CustomFieldType_Actor
       - title: Menu Text
         value: 
@@ -8723,7 +8853,7 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 1452.6731
+        x: 1450.6323
         y: 384.50192
         width: 160
         height: 30
@@ -8738,12 +8868,12 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Actor
-        value: 5
-        type: 5
+        value: 20
+        type: 0
         typeString: CustomFieldType_Actor
       - title: Conversant
         value: 4
-        type: 5
+        type: 0
         typeString: CustomFieldType_Actor
       - title: Menu Text
         value: 
@@ -8779,7 +8909,7 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 1456.7594
+        x: 1454.7186
         y: 259.8399
         width: 160
         height: 30
@@ -8794,12 +8924,12 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Actor
-        value: 5
-        type: 5
+        value: 20
+        type: 0
         typeString: CustomFieldType_Actor
       - title: Conversant
         value: 4
-        type: 5
+        type: 0
         typeString: CustomFieldType_Actor
       - title: Menu Text
         value: 
@@ -8849,12 +8979,12 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Actor
-        value: 5
-        type: 5
+        value: 20
+        type: 0
         typeString: CustomFieldType_Actor
       - title: Conversant
         value: 4
-        type: 5
+        type: 0
         typeString: CustomFieldType_Actor
       - title: Menu Text
         value: 
@@ -8965,12 +9095,12 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Actor
-        value: 5
-        type: 5
+        value: 20
+        type: 0
         typeString: CustomFieldType_Actor
       - title: Conversant
         value: 4
-        type: 5
+        type: 0
         typeString: CustomFieldType_Actor
       - title: Menu Text
         value: 
@@ -9006,7 +9136,7 @@ MonoBehaviour:
       canvasRect:
         serializedVersion: 2
         x: 1571.2103
-        y: 2721.2922
+        y: 2718.351
         width: 160
         height: 30
     - id: 66
@@ -9077,12 +9207,12 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Actor
-        value: 5
-        type: 5
+        value: 20
+        type: 0
         typeString: CustomFieldType_Actor
       - title: Conversant
         value: 4
-        type: 5
+        type: 0
         typeString: CustomFieldType_Actor
       - title: Menu Text
         value: 
@@ -9133,12 +9263,12 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Actor
-        value: 5
-        type: 5
+        value: 20
+        type: 0
         typeString: CustomFieldType_Actor
       - title: Conversant
         value: 4
-        type: 5
+        type: 0
         typeString: CustomFieldType_Actor
       - title: Menu Text
         value: 
@@ -9233,8 +9363,8 @@ MonoBehaviour:
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 792.4813, y: 998.1605}
-    canvasZoom: 0.49000007
+    canvasScrollPosition: {x: 698.6461, y: 0}
+    canvasZoom: 0.34000006
   - id: 31
     fields:
     - title: Title
@@ -9999,12 +10129,12 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Actor
-        value: 5
-        type: 5
+        value: 20
+        type: 0
         typeString: CustomFieldType_Actor
       - title: Conversant
         value: 4
-        type: 5
+        type: 0
         typeString: CustomFieldType_Actor
       - title: Menu Text
         value: 
@@ -10040,7 +10170,7 @@ MonoBehaviour:
       canvasRect:
         serializedVersion: 2
         x: 164
-        y: 202
+        y: 198.90726
         width: 160
         height: 30
     - id: 3
@@ -10054,12 +10184,12 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Actor
-        value: 5
-        type: 5
+        value: 20
+        type: 0
         typeString: CustomFieldType_Actor
       - title: Conversant
         value: 4
-        type: 5
+        type: 0
         typeString: CustomFieldType_Actor
       - title: Menu Text
         value: 
@@ -10095,7 +10225,7 @@ MonoBehaviour:
       canvasRect:
         serializedVersion: 2
         x: 164
-        y: 300
+        y: 297.9382
         width: 160
         height: 30
     - id: 4
@@ -10109,12 +10239,12 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Actor
-        value: 5
-        type: 5
+        value: 20
+        type: 0
         typeString: CustomFieldType_Actor
       - title: Conversant
         value: 4
-        type: 5
+        type: 0
         typeString: CustomFieldType_Actor
       - title: Menu Text
         value: 
@@ -10150,7 +10280,7 @@ MonoBehaviour:
       canvasRect:
         serializedVersion: 2
         x: 166
-        y: 431
+        y: 429.9691
         width: 160
         height: 30
     - id: 5
@@ -10219,7 +10349,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Actor
-        value: 5
+        value: 20
         type: 5
         typeString: CustomFieldType_Actor
       - title: Conversant
@@ -10439,7 +10569,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: 'Let me explaing how I have planned this last visit for you:'
+        value: 'Let me explain how I have planned this last visit for you:'
         type: 0
         typeString: 
       - title: Sequence
@@ -10857,7 +10987,7 @@ MonoBehaviour:
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 0, y: 0}
+    canvasScrollPosition: {x: 121.27658, y: 24.46811}
     canvasZoom: 0.94000006
   - id: 28
     fields:
@@ -11030,12 +11160,12 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Actor
-        value: 10
-        type: 5
+        value: 17
+        type: 0
         typeString: CustomFieldType_Actor
       - title: Conversant
         value: 4
-        type: 5
+        type: 0
         typeString: CustomFieldType_Actor
       - title: Menu Text
         value: 
@@ -11085,12 +11215,12 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Actor
-        value: 10
-        type: 5
+        value: 17
+        type: 0
         typeString: CustomFieldType_Actor
       - title: Conversant
         value: 4
-        type: 5
+        type: 0
         typeString: CustomFieldType_Actor
       - title: Menu Text
         value: 
@@ -11140,12 +11270,12 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Actor
-        value: 10
-        type: 5
+        value: 17
+        type: 0
         typeString: CustomFieldType_Actor
       - title: Conversant
         value: 4
-        type: 5
+        type: 0
         typeString: CustomFieldType_Actor
       - title: Menu Text
         value: 
@@ -11196,12 +11326,12 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Actor
-        value: 10
-        type: 5
+        value: 17
+        type: 0
         typeString: CustomFieldType_Actor
       - title: Conversant
         value: 4
-        type: 5
+        type: 0
         typeString: CustomFieldType_Actor
       - title: Menu Text
         value: 
@@ -11251,12 +11381,12 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Actor
-        value: 10
-        type: 5
+        value: 17
+        type: 0
         typeString: CustomFieldType_Actor
       - title: Conversant
         value: 4
-        type: 5
+        type: 0
         typeString: CustomFieldType_Actor
       - title: Menu Text
         value: 
@@ -11307,12 +11437,12 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Actor
-        value: 10
-        type: 5
+        value: 17
+        type: 0
         typeString: CustomFieldType_Actor
       - title: Conversant
         value: 4
-        type: 5
+        type: 0
         typeString: CustomFieldType_Actor
       - title: Menu Text
         value: 
@@ -11348,7 +11478,7 @@ MonoBehaviour:
       canvasRect:
         serializedVersion: 2
         x: 166
-        y: 752
+        y: 750.5714
         width: 160
         height: 30
     - id: 8
@@ -11472,12 +11602,12 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Actor
-        value: 10
-        type: 5
+        value: 17
+        type: 0
         typeString: CustomFieldType_Actor
       - title: Conversant
         value: 4
-        type: 5
+        type: 0
         typeString: CustomFieldType_Actor
       - title: Menu Text
         value: 
@@ -12616,12 +12746,12 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Actor
-        value: 9
-        type: 5
+        value: 18
+        type: 0
         typeString: CustomFieldType_Actor
       - title: Conversant
         value: 4
-        type: 5
+        type: 0
         typeString: CustomFieldType_Actor
       - title: Menu Text
         value: 
@@ -12672,12 +12802,12 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Actor
-        value: 9
-        type: 5
+        value: 18
+        type: 0
         typeString: CustomFieldType_Actor
       - title: Conversant
         value: 4
-        type: 5
+        type: 0
         typeString: CustomFieldType_Actor
       - title: Menu Text
         value: 
@@ -12730,12 +12860,12 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Actor
-        value: 9
-        type: 5
+        value: 18
+        type: 0
         typeString: CustomFieldType_Actor
       - title: Conversant
         value: 4
-        type: 5
+        type: 0
         typeString: CustomFieldType_Actor
       - title: Menu Text
         value: 
@@ -12785,12 +12915,12 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Actor
-        value: 9
-        type: 5
+        value: 18
+        type: 0
         typeString: CustomFieldType_Actor
       - title: Conversant
         value: 4
-        type: 5
+        type: 0
         typeString: CustomFieldType_Actor
       - title: Menu Text
         value: 
@@ -12894,12 +13024,12 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Actor
-        value: 9
-        type: 5
+        value: 18
+        type: 0
         typeString: CustomFieldType_Actor
       - title: Conversant
         value: 4
-        type: 5
+        type: 0
         typeString: CustomFieldType_Actor
       - title: Menu Text
         value: 
@@ -13988,12 +14118,12 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Actor
-        value: 9
-        type: 5
+        value: 18
+        type: 0
         typeString: CustomFieldType_Actor
       - title: Conversant
         value: 4
-        type: 5
+        type: 0
         typeString: CustomFieldType_Actor
       - title: Menu Text
         value: 
@@ -14043,12 +14173,12 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Actor
-        value: 9
-        type: 5
+        value: 18
+        type: 0
         typeString: CustomFieldType_Actor
       - title: Conversant
         value: 4
-        type: 5
+        type: 0
         typeString: CustomFieldType_Actor
       - title: Menu Text
         value: 
@@ -14153,12 +14283,12 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Actor
-        value: 9
-        type: 5
+        value: 18
+        type: 0
         typeString: CustomFieldType_Actor
       - title: Conversant
         value: 4
-        type: 5
+        type: 0
         typeString: CustomFieldType_Actor
       - title: Menu Text
         value: 
@@ -14209,12 +14339,12 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Actor
-        value: 9
-        type: 5
+        value: 18
+        type: 0
         typeString: CustomFieldType_Actor
       - title: Conversant
         value: 4
-        type: 5
+        type: 0
         typeString: CustomFieldType_Actor
       - title: Menu Text
         value: 
@@ -14364,7 +14494,7 @@ MonoBehaviour:
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 0, y: 0}
+    canvasScrollPosition: {x: 56.603775, y: 26.4151}
     canvasZoom: 1.06
   - id: 24
     fields:
@@ -14978,7 +15108,7 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 496.79922
+        x: 498.22775
         y: 430.93616
         width: 160
         height: 30
@@ -15245,13 +15375,13 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 148
-        y: 397
+        x: 23.71434
+        y: 404.14294
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 0, y: 0}
-    canvasZoom: 1
+    canvasScrollPosition: {x: 113.8643, y: 0}
+    canvasZoom: 0.49000046
   - id: 29
     fields:
     - title: Title

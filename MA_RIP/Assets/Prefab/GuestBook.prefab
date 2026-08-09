@@ -1035,7 +1035,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Hier kommt der Player Satz Rein
+  m_text: 
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8c0022567f2efbf47b54f939b1b237bb, type: 2}
   m_sharedMaterial: {fileID: 51486185850678171, guid: 8c0022567f2efbf47b54f939b1b237bb, type: 2}
@@ -1444,7 +1444,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5979334647203523307}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: dbe71c31b1e991442977e1cf07824334, type: 3}
   m_Name: 
