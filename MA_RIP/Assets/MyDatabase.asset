@@ -9233,8 +9233,8 @@ MonoBehaviour:
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 1077.6621, y: 1595.8774}
-    canvasZoom: 0.8499998
+    canvasScrollPosition: {x: 792.4813, y: 998.1605}
+    canvasZoom: 0.49000007
   - id: 31
     fields:
     - title: Title
@@ -17086,7 +17086,7 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 2501.0088
+        x: 2499.7893
         y: 2632.752
         width: 160
         height: 30
@@ -17113,10 +17113,10 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: Not to mention the added burden of funeral arrangements, for example.
-          Talking about death in advance-and perhaps even making thoughtful, informed
-          preparations  can spare you a great deal of heartbreak later. It gives
-          you the space to grieve more peacefully when the time comes.
+        value: Not to mention the added burden of funeral arrangements. Talking about
+          death in advance and perhaps even making thoughtful, informed preparations
+          can spare you a great deal of heartbreak later. It gives you the space
+          to grieve more peacefully when the time comes.
         type: 0
         typeString: 
       - title: Sequence
@@ -18043,8 +18043,8 @@ MonoBehaviour:
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 1927.2258, y: 495.0433}
-    canvasZoom: 0.6699998
+    canvasScrollPosition: {x: 2219.3596, y: 2095.8823}
+    canvasZoom: 0.81999964
   - id: 14
     fields:
     - title: Title
